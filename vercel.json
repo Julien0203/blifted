@@ -1,0 +1,44 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/territoires/provence",      "destination": "/territoires/provence.html" },
+    { "source": "/territoires/french-riviera","destination": "/territoires/french-riviera.html" },
+    { "source": "/territoires/megeve",        "destination": "/territoires/megeve.html" },
+    { "source": "/territoires/dubai",         "destination": "/territoires/dubai.html" },
+    { "source": "/services",                  "destination": "/services.html" },
+    { "source": "/flotte",                    "destination": "/flotte.html" },
+    { "source": "/mariages",                  "destination": "/mariages.html" },
+    { "source": "/a-propos",                  "destination": "/a-propos.html" },
+    { "source": "/contact",                   "destination": "/contact.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options",    "value": "nosniff" },
+        { "key": "X-Frame-Options",           "value": "SAMEORIGIN" },
+        { "key": "X-XSS-Protection",          "value": "1; mode=block" },
+        { "key": "Referrer-Policy",           "value": "strict-origin-when-cross-origin" }
+      ]
+    },
+    {
+      "source": "/css/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/js/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/images/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    }
+  ]
+}

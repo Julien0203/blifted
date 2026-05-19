@@ -1,0 +1,190 @@
+/* ============================================================
+   B.LIFTED France — Design System v3.0
+   Ultra-Moderne · Féminin · Éditorial · Clair
+   Palette : Crème · Blush · Rose Chaud · Or
+   ============================================================ */
+
+:root {
+
+  /* ── FONDS ──────────────────────────────────────────────── */
+  --bg:           #FAFAF6;
+  --bg-warm:      #F5F0E8;
+  --bg-blush:     #EDE7DB;
+  --bg-deep:      #E4DCCC;
+  --bg-glass:     rgba(250,250,250,0.85);
+  --bg-dark:      #1A1C1A;
+  --bg-darker:    #111311;
+  --bg-card:      #FFFFFF;
+
+  /* ── TEXTES ─────────────────────────────────────────────── */
+  --text:         #2E2824;
+  --text-soft:    #5A4E48;
+  --text-muted:   #9A8A80;
+  --text-light:   #C4B8B0;
+  --text-inv:     #FAFAF8;
+  --text-inv-soft:rgba(250,250,248,0.72);
+
+  /* ── OR CHAMPAGNE (accent principal) ───────────────────── */
+  --rose:         #B08D5A;
+  --rose-deep:    #7A5F2E;
+  --rose-mid:     #C4A46A;
+  --rose-light:   #D9C090;
+  --rose-pale:    #F0E5CC;
+  --rose-ultra:   #FAF6EF;
+
+  /* ── OR (même palette, alias utilitaires) ───────────────── */
+  --gold:         #B08D5A;
+  --gold-deep:    #7A5F2E;
+  --gold-light:   #D9C090;
+  --gold-pale:    #F0E5CC;
+
+  /* ── ALIAS ──────────────────────────────────────────────── */
+  --sage:         #B08D5A;
+  --sage-deep:    #7A5F2E;
+  --sage-light:   #C4A46A;
+  --sage-pale:    #F0E5CC;
+
+  /* ── BORDURES ───────────────────────────────────────────── */
+  --border:       #E8E0D0;
+  --border-soft:  #F0EAE0;
+  --border-warm:  #D4C4A0;
+  --border-dark:  rgba(250,250,248,0.12);
+
+  /* ── OMBRES ─────────────────────────────────────────────── */
+  --shadow-xs:    0 1px 6px rgba(40,50,38,.05);
+  --shadow-sm:    0 2px 14px rgba(40,50,38,.07);
+  --shadow:       0 4px 28px rgba(40,50,38,.09);
+  --shadow-lg:    0 8px 56px rgba(40,50,38,.12);
+  --shadow-xl:    0 16px 80px rgba(40,50,38,.16);
+  --shadow-rose:  0 4px 32px rgba(176,141,90,.22);
+  --shadow-gold:  0 4px 32px rgba(196,160,106,.20);
+  --shadow-inset: inset 0 1px 0 rgba(255,255,255,0.6);
+
+
+  /* ── TYPOGRAPHIE ────────────────────────────────────────── */
+  --font-serif:   'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-sans:    'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+
+  --t-xs:    0.6875rem;   /* 11px */
+  --t-sm:    0.8125rem;   /* 13px */
+  --t-base:  1rem;        /* 16px */
+  --t-lg:    1.125rem;    /* 18px */
+  --t-xl:    1.375rem;    /* 22px */
+  --t-2xl:   1.75rem;     /* 28px */
+  --t-3xl:   2.25rem;     /* 36px */
+  --t-4xl:   3rem;        /* 48px */
+  --t-5xl:   3rem;        /* 48px */
+  --t-6xl:   3.75rem;    /* 60px */
+  --t-7xl:   4.5rem;     /* 72px */
+  --t-8xl:   5.5rem;     /* 88px */
+
+  --lh-tight:   1.05;
+  --lh-snug:    1.2;
+  --lh-normal:  1.5;
+  --lh-relaxed: 1.72;
+
+  --ls-tight:   -0.025em;
+  --ls-normal:  0;
+  --ls-wide:    0.06em;
+  --ls-wider:   0.12em;
+  --ls-widest:  0.20em;
+
+
+  /* ── ESPACEMENT ─────────────────────────────────────────── */
+  --sp-1:   0.25rem;
+  --sp-2:   0.5rem;
+  --sp-3:   0.75rem;
+  --sp-4:   1rem;
+  --sp-5:   1.25rem;
+  --sp-6:   1.5rem;
+  --sp-8:   2rem;
+  --sp-10:  2.5rem;
+  --sp-12:  3rem;
+  --sp-16:  4rem;
+  --sp-20:  5rem;
+  --sp-24:  6rem;
+  --sp-32:  8rem;
+  --sp-40:  10rem;
+
+
+  /* ── LAYOUT ─────────────────────────────────────────────── */
+  --container:     1320px;
+  --container-lg:  1480px;
+  --container-sm:  960px;
+  --container-xs:  720px;
+  --gutter:        clamp(1.5rem, 4.5vw, 3rem);
+  --section-py:    clamp(5rem, 10vw, 9rem);
+  --section-py-sm: clamp(3rem, 6vw, 5rem);
+
+
+  /* ── RAYONS ─────────────────────────────────────────────── */
+  --r-xs:   4px;
+  --r-sm:   8px;
+  --r:      14px;
+  --r-md:   20px;
+  --r-lg:   32px;
+  --r-xl:   52px;
+  --r-full: 9999px;
+
+
+  /* ── TRANSITIONS ────────────────────────────────────────── */
+  --ease:        cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-sharp:  cubic-bezier(0.4, 0, 0.2, 1);
+
+  --dur-fast:  0.18s;
+  --dur:       0.42s;
+  --dur-slow:  0.68s;
+  --dur-x:     0.95s;
+  --dur-xx:    1.35s;
+
+
+  /* ── Z-INDEX ────────────────────────────────────────────── */
+  --z-back:    -1;
+  --z-base:     0;
+  --z-raised:   10;
+  --z-sticky:   100;
+  --z-header:   200;
+  --z-overlay:  300;
+  --z-modal:    400;
+  --z-curtain:  800;
+  --z-cursor:   9999;
+
+
+  /* ── COMPOSANTS ─────────────────────────────────────────── */
+  --header-h:   80px;
+  --btn-h:      52px;
+  --btn-h-sm:   42px;
+  --input-h:    54px;
+}
+
+/* ── RESPONSIVE ──────────────────────────────────────────── */
+@media (max-width: 1200px) {
+  :root { --t-6xl: 3.25rem; --t-7xl: 4rem; }
+}
+@media (max-width: 1024px) {
+  :root { --header-h: 72px; --t-5xl: 2.625rem; --t-6xl: 3rem; --t-7xl: 3.5rem; }
+}
+@media (max-width: 768px) {
+  :root {
+    --header-h: 64px;
+    --gutter: 1.5rem;
+    --t-4xl: 2.25rem;
+    --t-5xl: 2.5rem;
+    --t-6xl: 2.875rem;
+    --t-7xl: 3.25rem;
+    --section-py: clamp(3.5rem, 8vw, 6rem);
+  }
+}
+@media (max-width: 480px) {
+  :root {
+    --header-h: 60px;
+    --gutter: 1.25rem;
+    --t-3xl: 1.875rem;
+    --t-4xl: 2rem;
+    --t-5xl: 2.25rem;
+    --t-6xl: 2.625rem;
+    --t-7xl: 3rem;
+  }
+}

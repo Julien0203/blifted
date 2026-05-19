@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À propos de B.LIFTED France — Fondatrice, Philosophie, Positionnement</title>
+  <meta name="description" content="B.LIFTED est fondée et dirigée par une femme personnellement impliquée dans chaque mission. Positionnement anti-volume, ultra-sélectif, discrétion absolue. Transport privé haut de gamme.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://bliftedfrance.com/a-propos.html">
+  <meta property="og:title" content="À propos de B.LIFTED France">
+  <meta property="og:description" content="Une responsabilité incarnée. B.LIFTED n'est pas une plateforme — derrière chaque mission, une fondatrice impliquée.">
+  <meta property="og:url" content="https://bliftedfrance.com/a-propos.html">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Organization","name":"B.LIFTED France","url":"https://bliftedfrance.com","description":"Service de transport privé haut de gamme fondé et dirigé par une femme, positionnement anti-volume, ultra-sélectif","foundingDate":"2020","areaServed":["Provence","French Riviera","Megève","Dubaï"],"contactPoint":{"@type":"ContactPoint","telephone":"+33636017235","email":"contact@bliftedfrance.com","contactType":"customer service"}}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/typography.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/components.css">
+  <style>
+    .manifeste {
+      background: var(--ivoire);
+      padding: var(--sp-40) 0;
+    }
+    .manifeste__inner {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 0 var(--gutter);
+    }
+    .manifeste__text {
+      font-family: var(--font-serif);
+      font-size: var(--t-3xl);
+      font-weight: 300;
+      line-height: 1.5;
+      color: var(--texte);
+    }
+    .manifeste__text em { color: var(--or); font-style: italic; }
+    .manifeste__text strong { font-weight: 500; }
+
+    .philosophy {
+      background: var(--noir-lt);
+      padding: var(--sp-32) 0;
+    }
+    .philosophy__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--sp-6);
+      margin-top: var(--sp-16);
+    }
+    .philosophy-item {
+      padding: var(--sp-8) var(--sp-6);
+      border-top: 2px solid rgba(184,151,90,0.15);
+      transition: border-color var(--transition);
+    }
+    .philosophy-item:hover { border-top-color: var(--or); }
+    .philosophy-item__title {
+      font-family: var(--font-serif);
+      font-size: var(--t-2xl);
+      font-weight: 300;
+      color: var(--blanc);
+      margin-bottom: var(--sp-4);
+    }
+    .philosophy-item__text {
+      font-size: var(--t-sm);
+      color: rgba(255,255,255,0.4);
+      font-weight: 300;
+      line-height: 1.7;
+    }
+
+    .not-for-everyone {
+      background: var(--noir);
+      padding: var(--sp-32) 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .not-for-everyone::before {
+      content: '∅';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      font-size: 30rem;
+      color: rgba(255,255,255,0.012);
+      pointer-events: none;
+    }
+    .not-for-everyone__inner {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 0 var(--gutter);
+    }
+
+    .partners-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--sp-5);
+      margin-top: var(--sp-12);
+    }
+    .partner-item {
+      padding: var(--sp-6);
+      background: var(--ivoire);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--or-border);
+      text-align: center;
+      transition: all var(--transition-fast);
+    }
+    .partner-item:hover {
+      background: var(--or-glow);
+      border-color: var(--or-lt);
+    }
+    .partner-item__icon {
+      width: 40px;
+      height: 40px;
+      margin: 0 auto var(--sp-4);
+      color: var(--or);
+    }
+    .partner-item__name {
+      font-family: var(--font-serif);
+      font-size: var(--t-lg);
+      font-weight: 400;
+      margin-bottom: var(--sp-2);
+    }
+    .partner-item__text {
+      font-size: var(--t-sm);
+      color: var(--texte-lt);
+      font-weight: 300;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 900px) {
+      .philosophy__grid { grid-template-columns: 1fr; }
+      .partners-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .partners-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="scroll-progress"></div>
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+<header class="header" id="header">
+  <div class="header__inner">
+    <a href="index.html" class="header__logo" aria-label="B.LIFTED France — Accueil">
+      B · LIFTED
+    </a>
+    <nav class="header__nav" aria-label="Navigation principale">
+      <a href="services.html"  class="header__nav-link" data-i18n="nav.services">Prestations</a>
+      <a href="flotte.html"    class="header__nav-link" data-i18n="nav.fleet">Flotte</a>
+      <a href="territoires/provence.html" class="header__nav-link" data-i18n="nav.territories">Territoires</a>
+      <a href="mariages.html"  class="header__nav-link" data-i18n="nav.weddings">Mariages</a>
+      <a href="a-propos.html"  class="header__nav-link" data-i18n="nav.about">À propos</a>
+    </nav>
+    <div class="header__actions">
+      <a href="contact.html" class="btn btn-primary btn--sm">
+        <span data-i18n="nav.book">Réserver</span> <span class="btn-arrow">→</span>
+      </a>
+            <div class="header__lang">
+        <button class="header__lang-btn is-active" data-lang="fr">FR</button>
+        <span class="header__lang-sep">|</span>
+        <button class="header__lang-btn" data-lang="en">EN</button>
+      </div>
+      <button
+        class="header__burger"
+        id="burger"
+        aria-label="Ouvrir le menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ── Menu mobile ── -->
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu principal">
+  <nav class="mobile-menu__nav">
+    <a href="services.html"  class="mobile-menu__link" data-i18n="nav.services">Prestations</a>
+    <a href="flotte.html"    class="mobile-menu__link" data-i18n="nav.fleet">Flotte</a>
+    <a href="territoires/provence.html" class="mobile-menu__link" data-i18n="nav.territories">Territoires</a>
+    <a href="mariages.html"  class="mobile-menu__link" data-i18n="nav.weddings">Mariages</a>
+    <a href="a-propos.html"  class="mobile-menu__link" data-i18n="nav.about">À propos</a>
+  </nav>
+  <div class="mobile-menu__foot">
+    <div class="mobile-menu__cta">
+      <a href="contact.html" class="btn btn-primary"><span data-i18n="nav.entrust">Confier un déplacement</span> →</a>
+    </div>
+    <div class="mobile-menu__info">
+      <span>+(33) 6 36 01 72 35</span>
+      <span>contact@bliftedfrance.com</span>
+    </div>
+  </div>
+</div>
+
+<!-- Hero -->
+<section class="page-hero" style="padding-top:calc(var(--header-h,60px) + 3rem);">
+  <div class="page-hero__bg">
+    <img src="assets/images/a-propos-hero.png" alt="Intérieur Mercedes B.LIFTED" loading="eager">
+  </div>
+  <div class="page-hero__overlay"></div>
+  <div class="container page-hero__content">
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+      <a href="/">Accueil</a><span class="breadcrumb__sep">—</span><span data-i18n="nav.about">À propos</span>
+    </nav>
+    <span class="eyebrow text-or" data-reveal="fade">B.LIFTED France</span>
+    <h1 class="headline text-inv" data-reveal="up" data-delay="100">
+      Une responsabilité<br><em style="color:var(--or-lt)">incarnée.</em>
+    </h1>
+    <p class="body-lead text-inv-lt" style="max-width:540px;margin-top:var(--sp-5);" data-reveal="up" data-delay="200">
+      B.LIFTED n'est pas une plateforme. Derrière chaque mission, une fondatrice impliquée. Une continuité humaine, pas une interface anonyme.
+    </p>
+  </div>
+</section>
+
+<!-- Manifeste -->
+<section class="manifeste" id="approche">
+  <div class="manifeste__inner">
+    <span class="eyebrow" data-reveal="fade">Notre philosophie</span>
+    <div class="rule rule-center" data-reveal="scale" data-delay="100"></div>
+    <p class="manifeste__text" data-reveal="up" data-delay="150">
+      Il y a des déplacements ordinaires.<br>
+      Et puis il y a ceux qui engagent<br>
+      <em>plus que votre ponctualité.</em><br><br>
+      B.LIFTED intervient lorsque<br>
+      la <strong>fiabilité</strong> doit être absolue,<br>
+      la <strong>discrétion</strong> doit être totale,<br>
+      la <strong>continuité</strong> ne peut pas se rompre.
+    </p>
+    <div style="margin-top:var(--sp-10);" data-reveal="up" data-delay="250">
+      <a href="contact.html" class="btn btn-outline">Confier un déplacement</a>
+    </div>
+  </div>
+</section>
+
+<!-- La fondatrice -->
+<section class="section" id="fondatrice">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-20);align-items:center;" class="about-split">
+      <div style="aspect-ratio:3/4;border-radius:var(--radius-lg);overflow:hidden;position:relative;background:linear-gradient(160deg,rgba(184,151,90,0.1) 0%,rgba(13,12,20,0.9) 100%);" data-reveal="right">
+        <!-- Aucune photo — confidentialité totale -->
+        <div style="position:absolute;bottom:var(--sp-8);left:var(--sp-8);right:var(--sp-8);">
+          <div style="padding:var(--sp-5);background:rgba(13,12,20,0.85);backdrop-filter:blur(12px);border:1px solid var(--or-border);border-radius:var(--radius-md);">
+            <p style="font-family:var(--font-serif);font-size:var(--t-lg);font-style:italic;color:rgba(255,255,255,0.6);line-height:1.5;">"La fondatrice est personnellement impliquée dans chaque mission critique."</p>
+          </div>
+        </div>
+      </div>
+      <div data-reveal="left">
+        <span class="eyebrow">La fondatrice</span>
+        <div class="rule"></div>
+        <h2 class="subtitle">Fondée et dirigée<br><em>par une femme.</em></h2>
+        <div style="height:var(--sp-6);"></div>
+        <p class="body-lead">
+          B.LIFTED est fondée et dirigée par une femme non nommée publiquement — un choix délibéré qui reflète le positionnement du service : discrétion, profil bas, résultats.
+        </p>
+        <div style="height:var(--sp-5);"></div>
+        <p class="body-text">
+          Elle est personnellement impliquée dans chaque mission à fort enjeu. Sa présence sur le terrain n'est pas une exception — c'est une méthode. Lorsque le contexte l'exige, elle répond.
+        </p>
+        <p class="body-text" style="margin-top:var(--sp-4);">
+          Un service impersonnel délègue. Un service incarné répond. B.LIFTED a choisi son camp depuis le premier jour.
+        </p>
+        <div style="display:flex;flex-wrap:wrap;gap:var(--sp-3);margin-top:var(--sp-8);">
+          <span class="value-badge">Anti-volume</span>
+          <span class="value-badge">Ultra-sélectif</span>
+          <span class="value-badge">Implication directe</span>
+          <span class="value-badge">Profil bas</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Philosophie / piliers -->
+<section class="philosophy" id="piliers">
+  <div class="container">
+    <header class="section-header centered" data-reveal="up">
+      <span class="eyebrow text-or">Les piliers</span>
+      <div class="rule rule-center"></div>
+      <h2 class="title text-inv">Ce qui ne change pas,<br><em style="color:var(--or-lt)">quelle que soit la mission.</em></h2>
+    </header>
+    <div class="philosophy__grid stagger-children">
+      <div class="philosophy-item" data-reveal="up">
+        <h3 class="philosophy-item__title">Responsabilité</h3>
+        <p class="philosophy-item__text">Chaque mission a un responsable identifié. Pas de numéro de ticket, pas de centre d'appel. Une personne. Un téléphone. Une réponse.</p>
+      </div>
+      <div class="philosophy-item" data-reveal="up" data-delay="100">
+        <h3 class="philosophy-item__title">Discrétion</h3>
+        <p class="philosophy-item__text">Confidentialité contractuelle systématique. Ce que vous nous confiez ne quitte jamais notre périmètre. Vos clients, vos déplacements, vos agendas.</p>
+      </div>
+      <div class="philosophy-item" data-reveal="up" data-delay="200">
+        <h3 class="philosophy-item__title">Fiabilité</h3>
+        <p class="philosophy-item__text">La fiabilité n'est pas une promesse marketing. C'est une méthode. Anticipation, sélection, supervision, coordination — jusqu'à l'arrivée.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Ce que B.LIFTED n'est pas -->
+<section class="not-for-everyone" id="positionnement">
+  <div class="not-for-everyone__inner">
+    <span class="eyebrow text-or" data-reveal="fade">Sélectivité assumée</span>
+    <div class="rule rule-center" data-reveal="scale" data-delay="100"></div>
+    <h2 class="title text-inv" data-reveal="up" data-delay="150">
+      B.LIFTED n'est probablement<br><em style="color:var(--or-lt)">pas faite pour vous.</em>
+    </h2>
+    <p class="body-lead text-inv-lt" style="margin-top:var(--sp-6);" data-reveal="up" data-delay="200">
+      Si vous cherchez la course la moins chère. Si la rapidité prime sur la rigueur. Si vous n'avez pas besoin que quelqu'un prenne vraiment la responsabilité.
+    </p>
+    <p class="body-lead text-inv-lt" style="margin-top:var(--sp-4);" data-reveal="up" data-delay="250">
+      D'autres solutions existent.<br>
+      Nous intervenons lorsque l'imprévu <strong style="color:var(--texte-inv)">n'est pas une option.</strong>
+    </p>
+    <div style="margin-top:var(--sp-10);" data-reveal="up" data-delay="300">
+      <a href="contact.html" class="btn btn-or">Initier la coordination</a>
+    </div>
+  </div>
+</section>
+
+<!-- Partenaires -->
+<section class="section section-ivoire-dk" id="partenaires">
+  <div class="container">
+    <header class="section-header centered" data-reveal="up">
+      <span class="eyebrow">Écosystème de confiance</span>
+      <div class="rule rule-center"></div>
+      <h2 class="subtitle">Avec qui<br><em>B.LIFTED travaille.</em></h2>
+    </header>
+    <div class="partners-grid stagger-children">
+      <div class="partner-item" data-reveal="up">
+        <svg class="partner-item__icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M20 8l2.5 7h7l-5.5 4 2.5 7L20 22l-6.5 4 2.5-7-5.5-4h7L20 8z"/></svg>
+        <h3 class="partner-item__name">Wedding Planners</h3>
+        <p class="partner-item__text">Synchronisation complète pour les mariages haut de gamme. Votre wedding planner coordonne l'émotion, nous sécurisons la mobilité.</p>
+      </div>
+      <div class="partner-item" data-reveal="up" data-delay="100">
+        <svg class="partner-item__icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="8" y="16" width="24" height="18" rx="2"/><path d="M14 16V12a6 6 0 0112 0v4"/><circle cx="20" cy="26" r="3"/></svg>
+        <h3 class="partner-item__name">Conciergeries Privées</h3>
+        <p class="partner-item__text">Un partenaire de transport à la hauteur de votre promesse client. Disponibilité, discrétion, constance.</p>
+      </div>
+      <div class="partner-item" data-reveal="up" data-delay="200">
+        <svg class="partner-item__icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M8 32V18l12-10 12 10v14M16 32V22h8v10"/></svg>
+        <h3 class="partner-item__name">Gestionnaires de Chalets</h3>
+        <p class="partner-item__text">Transferts montagne, accès privés, conditions hivernales. Couverture Megève et Alpes de référence.</p>
+      </div>
+      <div class="partner-item" data-reveal="up" data-delay="100">
+        <svg class="partner-item__icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="6" y="12" width="28" height="22" rx="2"/><path d="M12 12V9a8 8 0 0116 0v3"/></svg>
+        <h3 class="partner-item__name">Hôtels 5 Étoiles</h3>
+        <p class="partner-item__text">L'expérience commence dès l'aéroport. Partenaire de transport pour vos clients les plus exigeants.</p>
+      </div>
+      <div class="partner-item" data-reveal="up" data-delay="200">
+        <svg class="partner-item__icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M6 28l14-20 14 20M12 28h16"/></svg>
+        <h3 class="partner-item__name">Aviation Privée</h3>
+        <p class="partner-item__text">Coordination tarmac-destination. La continuité entre le jet privé et la destination finale, sans rupture de service.</p>
+      </div>
+      <div class="partner-item" data-reveal="up" data-delay="300">
+        <svg class="partner-item__icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="20" cy="20" r="14"/><path d="M20 12v8l5 5"/></svg>
+        <h3 class="partner-item__name">Agences Événementielles</h3>
+        <p class="partner-item__text">Mobilité premium pour vos événements corporate, lancements, soirées privées et séminaires de direction.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:var(--sp-12);" data-reveal="up">
+      <a href="contact.html?type=partenariat" class="btn btn-outline">Proposer un partenariat</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer__inner">
+
+    <div class="footer__top">
+
+      <!-- Brand -->
+      <div class="footer__brand">
+        <a href="index.html" class="footer__brand-logo" aria-label="B.LIFTED France">
+          B · LIFTED
+        </a>
+        <p class="footer__brand-desc">
+          Service de transport privé haut de gamme en Provence, French Riviera, Megève et Dubaï. Discrétion absolue, fiabilité sans compromis.
+        </p>
+        <div class="footer__social">
+          <a href="https://www.instagram.com/bliftedfrance" class="footer__social-link" aria-label="Instagram B.LIFTED" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
+            </svg>
+          </a>
+          <a href="https://www.facebook.com/bliftedfrance" class="footer__social-link" aria-label="Facebook B.LIFTED" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Services -->
+      <div class="footer__col">
+        <p class="footer__col-title">Services</p>
+        <nav class="footer__nav" aria-label="Navigation services">
+          <a href="services.html" class="footer__nav-link">Transfert aéroport</a>
+          <a href="services.html" class="footer__nav-link">Mise à disposition</a>
+          <a href="mariages.html" class="footer__nav-link">Mariages &amp; événements</a>
+          <a href="services.html" class="footer__nav-link">Séjours &amp; coordination</a>
+          <a href="flotte.html" class="footer__nav-link">Notre flotte</a>
+        </nav>
+      </div>
+
+      <!-- Territoires -->
+      <div class="footer__col">
+        <p class="footer__col-title" data-i18n="nav.territories">Territoires</p>
+        <nav class="footer__nav" aria-label="Navigation territoires">
+          <a href="territoires/provence.html" class="footer__nav-link">Provence</a>
+          <a href="territoires/french-riviera.html" class="footer__nav-link">French Riviera</a>
+          <a href="territoires/megeve.html" class="footer__nav-link">Megève</a>
+          <a href="territoires/dubai.html" class="footer__nav-link">Dubaï</a>
+        </nav>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer__col">
+        <p class="footer__col-title">Contact</p>
+        <div class="footer__contact-item">
+          <svg class="footer__contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81C2.18 7.22 2 4.92 2 4a2 2 0 012-2h3a2 2 0 012 1.72c.13 1 .4 1.97.71 2.9a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.93.31 1.9.58 2.9.71A2 2 0 0122 16.92z"/>
+          </svg>
+          <p class="footer__contact-text">
+            <a href="tel:+33636017235">+(33) 6 36 01 72 35</a>
+          </p>
+        </div>
+        <div class="footer__contact-item">
+          <svg class="footer__contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+          </svg>
+          <p class="footer__contact-text">
+            <a href="mailto:contact@bliftedfrance.com">contact@bliftedfrance.com</a>
+          </p>
+        </div>
+        <div style="margin-top: 1.5rem;">
+          <a href="contact.html" class="btn btn-primary btn--sm">
+            <span data-i18n="nav.book">Réserver</span> <span class="btn-arrow">→</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <p class="footer__copy">
+        &copy; <span id="footer-year">2026</span> B.LIFTED France · Tous droits réservés
+      </p>
+      <div class="footer__legal">
+        <a href="/mentions-legales">Mentions légales</a>
+        <a href="/confidentialite">Confidentialité</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+<a href="https://wa.me/33636017235" class="whatsapp-float" aria-label="WhatsApp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+<script src="js/nav.js" defer></script>
+<script src="js/scroll-reveal.js" defer></script>
+<script src="js/main.js" defer></script>
+<style>
+  .about-split { }
+  @media(max-width:900px){ .about-split { grid-template-columns: 1fr !important; } }
+</style>
+<script src="js/i18n.js" defer></script>
+
+</body>
+</html>

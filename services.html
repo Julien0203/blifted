@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prestations de Transport Privé Haut de Gamme | B.LIFTED France</title>
+  <meta name="description" content="Transferts aéroport, mise à disposition, coordination mariage, événements multi-sites. B.LIFTED France — service de transport privé haut de gamme en Provence, French Riviera et Megève.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://bliftedfrance.com/services.html">
+  <meta property="og:title" content="Services | B.LIFTED France">
+  <meta property="og:description" content="Quatre expertises complémentaires. Une seule exigence : l'irréprochable.">
+  <meta property="og:url" content="https://bliftedfrance.com/services.html">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Service","name":"Transport Privé Haut de Gamme B.LIFTED","provider":{"@type":"LocalBusiness","name":"B.LIFTED France"},"areaServed":["Provence","French Riviera","Megève","Dubaï"],"serviceType":"Chauffeur Privé"}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/typography.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/components.css">
+  <style>
+    body.no-scroll { overflow: hidden; }
+    #menu-overlay { position:fixed; inset:0; background:rgba(28,26,23,0.4); z-index:calc(var(--z-header) - 2); opacity:0; visibility:hidden; transition:opacity var(--dur) var(--ease),visibility var(--dur); }
+    #menu-overlay.is-active { opacity:1; visibility:visible; }
+    .page-hero { padding: calc(var(--header-h) + 3rem) 0 0; background: var(--bg); }
+    .page-hero__inner { max-width: var(--container); margin-inline: auto; padding-inline: var(--gutter); display: grid; grid-template-columns: 1fr 1fr; gap: clamp(3rem,5vw,6rem); align-items: center; min-height: 55vh; }
+    .page-hero__text { display: flex; flex-direction: column; gap: var(--sp-5); }
+    .page-hero__img { aspect-ratio: 5/6; border-radius: var(--r-xl); overflow: hidden; box-shadow: var(--shadow-lg); }
+    .page-hero__img img { width:100%; height:100%; object-fit:cover; display:block; }
+    @media (max-width: 900px) {
+      .page-hero__inner { grid-template-columns: 1fr; min-height: auto; padding-bottom: 3rem; }
+      .page-hero__img { aspect-ratio: 16/9; }
+    }
+    .service-block { padding-block: var(--section-py); border-bottom: 1px solid var(--border-soft); }
+    .service-block:last-child { border-bottom: none; }
+    .service-block__inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .service-block__inner.reverse { direction: rtl; }
+    .service-block__inner.reverse > * { direction: ltr; }
+    .service-block__image { aspect-ratio: 4/3; border-radius: var(--radius-lg); overflow: hidden; background: var(--bg-warm); }
+    .service-block__image img { width:100%; height:100%; object-fit:cover; }
+    .service-block__text { display: flex; flex-direction: column; gap: var(--sp-6); }
+    .service-block__title { font-family: var(--font-serif); font-size: var(--t-5xl); font-weight: 300; line-height: var(--lh-tight); letter-spacing: var(--ls-tight); }
+    .service-block__title em { font-style: italic; color: var(--rose); display: block; }
+    .service-block__desc { font-size: var(--t-lg); font-weight: 300; color: var(--text-soft); line-height: var(--lh-relaxed); max-width: 42ch; }
+    .service-block__list { display: flex; flex-direction: column; gap: var(--sp-3); }
+    .service-block__item { display: flex; align-items: flex-start; gap: var(--sp-3); font-size: var(--t-sm); color: var(--text-muted); max-width: none; }
+    .service-block__item::before { content: '—'; color: var(--rose); flex-shrink: 0; margin-top: 1px; }
+    .standards { background: var(--bg-dark); padding-block: var(--section-py); }
+    .standards__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-8); }
+    .standard-card { padding: var(--sp-8); border: 1px solid var(--border-dark); border-radius: var(--radius-md); }
+    .standard-card__num { font-family: var(--font-serif); font-size: var(--t-5xl); font-weight: 300; color: var(--rose-mid); line-height: 1; margin-bottom: var(--sp-4); }
+    .standard-card__title { font-family: var(--font-serif); font-size: var(--t-xl); font-weight: 400; color: var(--text-inv); margin-bottom: var(--sp-3); }
+    .standard-card__text { font-size: var(--t-sm); color: var(--text-inv-soft); font-weight: 300; line-height: var(--lh-relaxed); max-width: none; }
+    @media (max-width: 900px) {
+      .service-block__inner { grid-template-columns: 1fr; gap: 2.5rem; direction: ltr !important; }
+      .standards__grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 540px) {
+      .standards__grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body class="no-scroll">
+<div class="loader" id="loader"><div class="loader__inner"><div class="loader__logo">B · LIFTED</div><div class="loader__bar"><div class="loader__bar-fill"></div></div></div></div>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<div class="scroll-progress" id="scroll-progress"></div>
+<div id="menu-overlay"></div>
+
+<header class="header" id="header">
+  <div class="header__inner">
+    <a href="index.html" class="header__logo">B · LIFTED<span></span></a>
+    <nav class="header__nav">
+      <a href="index.html#services" class="header__nav-link is-active" data-i18n="nav.services">Prestations</a>
+      <a href="flotte.html" class="header__nav-link" data-i18n="nav.fleet">Flotte</a>
+      <a href="index.html#territoires" class="header__nav-link" data-i18n="nav.territories">Territoires</a>
+      <a href="mariages.html" class="header__nav-link" data-i18n="nav.weddings">Mariages</a>
+      <a href="a-propos.html" class="header__nav-link" data-i18n="nav.about">À propos</a>
+    </nav>
+    <div class="header__cta">
+      <a href="contact.html" class="btn btn-primary btn--sm">Confier un déplacement <span class="btn-arrow">→</span></a>
+            <div class="header__lang">
+        <button class="header__lang-btn is-active" data-lang="fr">FR</button>
+        <span class="header__lang-sep">|</span>
+        <button class="header__lang-btn" data-lang="en">EN</button>
+      </div>
+      <button class="header__burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobile-menu">
+  <nav class="mobile-menu__nav">
+    <a href="index.html#services" class="mobile-menu__link" data-i18n="nav.services">Prestations</a>
+    <a href="flotte.html" class="mobile-menu__link" data-i18n="nav.fleet">Flotte</a>
+    <a href="index.html#territoires" class="mobile-menu__link" data-i18n="nav.territories">Territoires</a>
+    <a href="mariages.html" class="mobile-menu__link" data-i18n="nav.weddings">Mariages</a>
+    <a href="a-propos.html" class="mobile-menu__link" data-i18n="nav.about">À propos</a>
+  </nav>
+  <div class="mobile-menu__bottom">
+    <a href="contact.html" class="btn btn-primary"><span data-i18n="nav.entrust">Confier un déplacement</span> →</a>
+    <p class="mobile-menu__contact">+(33) 6 36 01 72 35</p>
+  </div>
+</div>
+
+<main>
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="page-hero__inner">
+      <div class="page-hero__text">
+        <span class="eyebrow" data-reveal="fade">Nos prestations</span>
+        <h1 class="section-title" style="font-size:clamp(var(--t-4xl),5vw,var(--t-6xl));" data-reveal="up">
+          Ce que nous <em>coordonnons</em>
+        </h1>
+        <p class="body-lead" style="max-width:46ch;" data-reveal="up" data-delay="150">
+          Quatre expertises complémentaires. Une seule exigence : l'irréprochable, à chaque étape.
+        </p>
+        <div data-reveal="up" data-delay="250">
+          <a href="contact.html" class="btn btn-primary">Confier un déplacement <span class="btn-arrow">→</span></a>
+        </div>
+      </div>
+      <div class="page-hero__img" data-reveal="scale">
+        <img src="assets/images/hero.jpg" alt="Mercedes Classe S — B.LIFTED" loading="eager">
+      </div>
+    </div>
+  </section>
+
+  <!-- Transfert -->
+  <section class="service-block section" id="transfert">
+    <div class="container">
+      <div class="service-block__inner">
+        <div class="service-block__text" data-reveal="right">
+          <span class="eyebrow">01 / Transfert</span>
+          <h2 class="service-block__title">Avant que vous<br><em>n'atterrissiez.</em></h2>
+          <p class="service-block__desc">Ponctualité absolue, même quand votre vol est en avance. Le véhicule est en position avant votre sortie de douane.</p>
+          <ul class="service-block__list">
+            <li class="service-block__item">Suivi de vol en temps réel — départ et arrivée</li>
+            <li class="service-block__item">Accueil personnalisé en zone d'arrivée</li>
+            <li class="service-block__item">Transferts aéroport, gare, hôtel, villa</li>
+            <li class="service-block__item">Coordination avec l'aéroport d'Avignon-Provence</li>
+            <li class="service-block__item">Disponible 24h/24, 7j/7</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary" style="margin-top:var(--sp-4);">Demander un transfert <span class="btn-arrow">→</span></a>
+        </div>
+        <div class="service-block__image" data-reveal="left">
+          <img src="assets/images/services-transfert.jpg" alt="Transfert aéroport privé" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mise à disposition -->
+  <section class="service-block section section--bg-alt" id="disposition">
+    <div class="container">
+      <div class="service-block__inner reverse">
+        <div class="service-block__text" data-reveal="left">
+          <span class="eyebrow">02 / Mise à disposition</span>
+          <h2 class="service-block__title">Votre chauffeur<br><em>pour la journée.</em></h2>
+          <p class="service-block__desc">Itinéraire ajusté à votre rythme, pas au nôtre. Demi-journée, journée complète ou séjour de plusieurs jours.</p>
+          <ul class="service-block__list">
+            <li class="service-block__item">Demi-journée, journée ou multi-jours</li>
+            <li class="service-block__item">Itinéraires personnalisés selon vos rendez-vous</li>
+            <li class="service-block__item">Attente sur site sans limite de durée</li>
+            <li class="service-block__item">Gestion des imprévus et modifications en temps réel</li>
+            <li class="service-block__item">Un seul interlocuteur tout au long du séjour</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary" style="margin-top:var(--sp-4);">Confier une journée <span class="btn-arrow">→</span></a>
+        </div>
+        <div class="service-block__image" data-reveal="right">
+          <img src="assets/images/services-disposition.jpg" alt="Mise à disposition chauffeur" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mariage -->
+  <section class="service-block section" id="mariage">
+    <div class="container">
+      <div class="service-block__inner">
+        <div class="service-block__text" data-reveal="right">
+          <span class="eyebrow">03 / Coordination mariage</span>
+          <h2 class="service-block__title">Le timing de votre<br><em>grand jour.</em></h2>
+          <p class="service-block__desc">Coordination de la flotte complète. Chaque véhicule, chaque rotation, chaque arrivée — synchronisée à la minute.</p>
+          <ul class="service-block__list">
+            <li class="service-block__item">Réunion de briefing avec votre wedding planner</li>
+            <li class="service-block__item">Coordination multi-véhicules simultanée</li>
+            <li class="service-block__item">Arrivées échelonnées des invités</li>
+            <li class="service-block__item">Transferts villa / cérémonie / réception</li>
+            <li class="service-block__item">Contact direct le Jour J — aucun intermédiaire</li>
+          </ul>
+          <a href="mariages.html" class="btn btn-primary" style="margin-top:var(--sp-4);">En savoir plus sur les mariages <span class="btn-arrow">→</span></a>
+        </div>
+        <div class="service-block__image" data-reveal="left">
+          <img src="assets/images/services-mariage.jpg" alt="Transport mariage coordination" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Multi-sites -->
+  <section class="service-block section section--bg-alt" id="multievent">
+    <div class="container">
+      <div class="service-block__inner reverse">
+        <div class="service-block__text" data-reveal="left">
+          <span class="eyebrow">04 / Événement multi-sites</span>
+          <h2 class="service-block__title">Plusieurs véhicules.<br><em>Une seule coordination.</em></h2>
+          <p class="service-block__desc">Séminaires, tournées presse, événements privés. Plusieurs véhicules gérés simultanément depuis un poste de coordination central.</p>
+          <ul class="service-block__list">
+            <li class="service-block__item">Déploiement simultané de la flotte</li>
+            <li class="service-block__item">Coordination en temps réel entre les véhicules</li>
+            <li class="service-block__item">Planning horaire fourni en amont</li>
+            <li class="service-block__item">Adaptable sur 1 à 5+ jours</li>
+            <li class="service-block__item">Rapport de mission disponible sur demande</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary" style="margin-top:var(--sp-4);">Confier l'événement <span class="btn-arrow">→</span></a>
+        </div>
+        <div class="service-block__image" data-reveal="right">
+          <img src="assets/images/services-event.jpg" alt="Événement multi-sites transport" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Standards invariants -->
+  <section class="standards">
+    <div class="container">
+      <div class="section-header section-header--center" style="margin-bottom:var(--sp-16);" data-stagger>
+        <span class="eyebrow eyebrow--light" data-reveal="fade">Nos standards</span>
+        <h2 class="section-title" style="color:var(--text-inv);" data-reveal="up">Ce qui ne varie <em style="color:var(--rose-light)">jamais.</em></h2>
+      </div>
+      <div class="standards__grid" data-stagger>
+        <div class="standard-card" data-reveal="up" data-delay="100">
+          <div class="standard-card__num">01</div>
+          <h3 class="standard-card__title">Discrétion totale</h3>
+          <p class="standard-card__text">Aucun nom, aucune photo, aucune mission n'est communiquée. La confidentialité est opérationnelle, pas rhétorique.</p>
+        </div>
+        <div class="standard-card" data-reveal="up" data-delay="200">
+          <div class="standard-card__num">02</div>
+          <h3 class="standard-card__title">Un seul interlocuteur</h3>
+          <p class="standard-card__text">Vous n'aurez jamais à répéter votre contexte. Une personne connaît votre dossier de A à Z et reste disponible tout au long de la mission.</p>
+        </div>
+        <div class="standard-card" data-reveal="up" data-delay="300">
+          <div class="standard-card__num">03</div>
+          <h3 class="standard-card__title">Ponctualité sans négo</h3>
+          <p class="standard-card__text">Le véhicule est en position avant l'heure. Toujours. Suivi de vol, anticipation des aléas routiers, plan B intégré.</p>
+        </div>
+        <div class="standard-card" data-reveal="up" data-delay="100">
+          <div class="standard-card__num">04</div>
+          <h3 class="standard-card__title">Véhicule parfait</h3>
+          <p class="standard-card__text">Intérieur impeccable, plein fait, climatisation réglée, eau minérale disponible. Rien n'est laissé au hasard.</p>
+        </div>
+        <div class="standard-card" data-reveal="up" data-delay="200">
+          <div class="standard-card__num">05</div>
+          <h3 class="standard-card__title">Tenue et posture</h3>
+          <p class="standard-card__text">Tenue sobre et professionnelle, attitude discrète. Conversation limitée à ce que le client initie. Présence utile, jamais envahissante.</p>
+        </div>
+        <div class="standard-card" data-reveal="up" data-delay="300">
+          <div class="standard-card__num">06</div>
+          <h3 class="standard-card__title">Réponse sous 24h</h3>
+          <p class="standard-card__text">Chaque demande reçoit une réponse personnelle. Pas un accusé automatique — une vraie prise en charge dans les 24 heures.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2 class="cta-section__title" data-split="words">Décrivez votre mission.</h2>
+      <p class="cta-section__sub" data-reveal="up" data-delay="200">Nous vous rappelons personnellement. Aucune réservation automatique.</p>
+      <div class="cta-section__actions" data-reveal="up" data-delay="300">
+        <a href="contact.html" class="btn btn-primary">Confier un déplacement <span class="btn-arrow">→</span></a>
+        <a href="index.html#simulateur" class="btn btn-outline">Estimer le budget</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer__inner">
+
+    <div class="footer__top">
+
+      <!-- Brand -->
+      <div class="footer__brand">
+        <a href="index.html" class="footer__brand-logo" aria-label="B.LIFTED France">
+          B · LIFTED
+        </a>
+        <p class="footer__brand-desc">
+          Service de transport privé haut de gamme en Provence, French Riviera, Megève et Dubaï. Discrétion absolue, fiabilité sans compromis.
+        </p>
+        <div class="footer__social">
+          <a href="https://www.instagram.com/bliftedfrance" class="footer__social-link" aria-label="Instagram B.LIFTED" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
+            </svg>
+          </a>
+          <a href="https://www.facebook.com/bliftedfrance" class="footer__social-link" aria-label="Facebook B.LIFTED" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Services -->
+      <div class="footer__col">
+        <p class="footer__col-title">Services</p>
+        <nav class="footer__nav" aria-label="Navigation services">
+          <a href="services.html" class="footer__nav-link">Transfert aéroport</a>
+          <a href="services.html" class="footer__nav-link">Mise à disposition</a>
+          <a href="mariages.html" class="footer__nav-link">Mariages &amp; événements</a>
+          <a href="services.html" class="footer__nav-link">Séjours &amp; coordination</a>
+          <a href="flotte.html" class="footer__nav-link">Notre flotte</a>
+        </nav>
+      </div>
+
+      <!-- Territoires -->
+      <div class="footer__col">
+        <p class="footer__col-title" data-i18n="nav.territories">Territoires</p>
+        <nav class="footer__nav" aria-label="Navigation territoires">
+          <a href="territoires/provence.html" class="footer__nav-link">Provence</a>
+          <a href="territoires/french-riviera.html" class="footer__nav-link">French Riviera</a>
+          <a href="territoires/megeve.html" class="footer__nav-link">Megève</a>
+          <a href="territoires/dubai.html" class="footer__nav-link">Dubaï</a>
+        </nav>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer__col">
+        <p class="footer__col-title">Contact</p>
+        <div class="footer__contact-item">
+          <svg class="footer__contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81C2.18 7.22 2 4.92 2 4a2 2 0 012-2h3a2 2 0 012 1.72c.13 1 .4 1.97.71 2.9a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.93.31 1.9.58 2.9.71A2 2 0 0122 16.92z"/>
+          </svg>
+          <p class="footer__contact-text">
+            <a href="tel:+33636017235">+(33) 6 36 01 72 35</a>
+          </p>
+        </div>
+        <div class="footer__contact-item">
+          <svg class="footer__contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+          </svg>
+          <p class="footer__contact-text">
+            <a href="mailto:contact@bliftedfrance.com">contact@bliftedfrance.com</a>
+          </p>
+        </div>
+        <div style="margin-top: 1.5rem;">
+          <a href="contact.html" class="btn btn-primary btn--sm">
+            <span data-i18n="nav.book">Réserver</span> <span class="btn-arrow">→</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <p class="footer__copy">
+        &copy; <span id="footer-year">2026</span> B.LIFTED France · Tous droits réservés
+      </p>
+      <div class="footer__legal">
+        <a href="/mentions-legales">Mentions légales</a>
+        <a href="/confidentialite">Confidentialité</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script src="js/nav.js" defer></script>
+<script src="js/scroll-reveal.js" defer></script>
+<script src="js/main.js" defer></script>
+<script src="js/i18n.js" defer></script>
+
+</body>
+</html>

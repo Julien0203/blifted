@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chauffeur Privé Dubaï — Transferts & Mise à Disposition | B.LIFTED France</title>
+  <meta name="description" content="Service de chauffeur privé à Dubaï : transferts DXB/DWC, mise à disposition journée, Palm Jumeirah, Downtown, DIFC. Véhicules de luxe, discrétion absolue.">
+  <meta name="keywords" content="chauffeur privé Dubaï, transfert aéroport Dubai, chauffeur Dubai luxe, mise à disposition Dubaï, Palm Jumeirah chauffeur, DIFC transfert, Downtown Dubai VTC luxe">
+
+  <!-- Geo SEO -->
+  <meta name="geo.region" content="AE-DU">
+  <meta name="geo.placename" content="Dubai">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://bliftedfrance.com/territoires/dubai">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Chauffeur Privé Dubaï | B.LIFTED France">
+  <meta property="og:description" content="Service de chauffeur privé à Dubaï — transferts aéroport, mise à disposition, événements. Flotte Mercedes premium, disponibilité 24h/24.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bliftedfrance.com/territoires/dubai">
+  <meta property="og:image" content="https://bliftedfrance.com/images/og-dubai.jpg">
+  <meta property="og:locale" content="fr_FR">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/typography.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/components.css">
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Chauffeur Privé Dubaï — B.LIFTED France",
+    "description": "Service de chauffeur privé à Dubaï : transferts aéroport DXB et DWC, mise à disposition, Palm Jumeirah, Downtown, DIFC, Marina.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "B.LIFTED France",
+      "url": "https://bliftedfrance.com",
+      "telephone": "+33600000000",
+      "email": "contact@bliftedfrance.com"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Dubai",
+      "addressCountry": "AE"
+    },
+    "serviceType": "Chauffeur Privé de Luxe",
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+  </script>
+
+  <style>
+    /* ── Hero Dubaï — dégradé or désert ── */
+    .territory-hero {
+      background: linear-gradient(160deg, #c9a850 0%, #8b6b28 35%, #1a1826 100%);
+    }
+    .territory-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 70% 40%, rgba(201,168,80,0.25) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 60% at 20% 80%, rgba(26,24,38,0.6) 0%, transparent 70%);
+    }
+
+    /* ── Badges ── */
+    .territory-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .6rem;
+      margin-top: 2rem;
+    }
+    .territory-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .45rem 1rem;
+      background: rgba(184,151,90,.15);
+      border: 1px solid rgba(184,151,90,.4);
+      border-radius: 2rem;
+      font-family: var(--font-sans);
+      font-size: .75rem;
+      letter-spacing: .06em;
+      color: var(--or);
+      text-transform: uppercase;
+    }
+    .territory-badge::before {
+      content: '✦';
+      font-size: .6rem;
+    }
+
+    /* ── Zones grid ── */
+    .zones-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    @media (max-width: 900px) { .zones-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) { .zones-grid { grid-template-columns: 1fr; } }
+
+    .zone-card {
+      background: var(--ivoire);
+      border: 1px solid rgba(0,0,0,.08);
+      border-radius: 4px;
+      padding: 2rem;
+      transition: transform .3s var(--ease), box-shadow .3s var(--ease);
+    }
+    .zone-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(0,0,0,.1);
+    }
+    .zone-card__icon {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+    .zone-card__name {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--noir);
+      margin-bottom: .5rem;
+    }
+    .zone-card__desc {
+      font-family: var(--font-sans);
+      font-size: .875rem;
+      color: var(--taupe);
+      line-height: 1.6;
+    }
+    .zone-card__time {
+      margin-top: 1rem;
+      font-family: var(--font-sans);
+      font-size: .75rem;
+      color: var(--or);
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    /* ── Présentation 2 colonnes ── */
+    .territory-intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+      padding: 6rem 0;
+    }
+    @media (max-width: 900px) {
+      .territory-intro { grid-template-columns: 1fr; gap: 3rem; }
+    }
+    .territory-intro__image {
+      aspect-ratio: 4/5;
+      border-radius: 4px;
+      overflow: hidden;
+      position: relative;
+    }
+    .territory-intro__image-inner {
+      width: 100%;
+      height: 100%;
+      /* Remplacer par une vraie photo : Dubai skyline, Burj Khalifa, ou voiture sur Sheikh Zayed Road */
+      background: linear-gradient(135deg, #c9a850 0%, #8b6b28 40%, #2d2440 100%);
+    }
+    .territory-intro__quote {
+      position: absolute;
+      bottom: 2rem;
+      left: 2rem;
+      right: 2rem;
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1.1rem;
+      color: #fff;
+      line-height: 1.5;
+      background: rgba(13,12,20,.6);
+      backdrop-filter: blur(8px);
+      padding: 1.5rem;
+      border-left: 2px solid var(--or);
+    }
+
+    /* ── Services sombre ── */
+    .territory-services {
+      background: var(--noir);
+      padding: 6rem 0;
+    }
+    .territory-services__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    @media (max-width: 900px) { .territory-services__grid { grid-template-columns: 1fr; } }
+
+    .territory-service-card {
+      padding: 2.5rem;
+      border: 1px solid rgba(184,151,90,.2);
+      border-radius: 4px;
+      background: rgba(255,255,255,.03);
+      transition: background .3s var(--ease), border-color .3s var(--ease);
+    }
+    .territory-service-card:hover {
+      background: rgba(184,151,90,.07);
+      border-color: rgba(184,151,90,.4);
+    }
+    .territory-service-card__icon {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+    }
+    .territory-service-card__title {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      color: var(--ivoire);
+      margin-bottom: .75rem;
+    }
+    .territory-service-card__desc {
+      font-family: var(--font-sans);
+      font-size: .875rem;
+      color: rgba(248,245,239,.6);
+      line-height: 1.7;
+    }
+
+    /* ── Autres territoires ── */
+    .other-territories {
+      padding: 5rem 0;
+      background: var(--ivoire);
+    }
+    .other-territories__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    @media (max-width: 900px) { .other-territories__grid { grid-template-columns: 1fr; } }
+
+    .other-territory-card {
+      display: block;
+      padding: 2rem;
+      text-decoration: none;
+      border: 1px solid rgba(0,0,0,.1);
+      border-radius: 4px;
+      transition: transform .3s var(--ease), box-shadow .3s var(--ease), border-color .3s var(--ease);
+      background: #fff;
+    }
+    .other-territory-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(0,0,0,.1);
+      border-color: var(--or);
+    }
+    .other-territory-card__name {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--noir);
+      margin-bottom: .4rem;
+    }
+    .other-territory-card__desc {
+      font-family: var(--font-sans);
+      font-size: .8rem;
+      color: var(--taupe);
+    }
+    .other-territory-card__arrow {
+      display: inline-block;
+      margin-top: 1rem;
+      font-size: .8rem;
+      color: var(--or);
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    /* ── Stat band ── */
+    .territory-stats {
+      background: var(--noir);
+      padding: 3rem 0;
+      border-top: 1px solid rgba(184,151,90,.2);
+      border-bottom: 1px solid rgba(184,151,90,.2);
+    }
+    .territory-stats__grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      text-align: center;
+    }
+    @media (max-width: 600px) { .territory-stats__grid { grid-template-columns: repeat(2, 1fr); } }
+
+    .territory-stat__number {
+      font-family: var(--font-serif);
+      font-size: 2.5rem;
+      color: var(--or);
+      font-weight: 300;
+    }
+    .territory-stat__label {
+      font-family: var(--font-sans);
+      font-size: .75rem;
+      color: rgba(248,245,239,.5);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-top: .3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══ Scroll Progress ══ -->
+  <div class="scroll-progress" role="progressbar" aria-hidden="true"></div>
+
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <!-- ══ HEADER ══ -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="../index.html" class="header__logo" aria-label="B.LIFTED France — Accueil">
+        B · LIFTED
+      </a>
+      <nav class="header__nav" aria-label="Navigation principale">
+        <a href="../services.html"  class="header__nav-link" data-i18n="nav.services">Prestations</a>
+        <a href="../flotte.html"    class="header__nav-link" data-i18n="nav.fleet">Flotte</a>
+        <a href="provence.html"     class="header__nav-link" data-i18n="nav.territories">Territoires</a>
+        <a href="../mariages.html"  class="header__nav-link" data-i18n="nav.weddings">Mariages</a>
+        <a href="../a-propos.html"  class="header__nav-link" data-i18n="nav.about">À propos</a>
+      </nav>
+      <div class="header__actions">
+        <a href="../contact.html" class="btn btn-primary btn--sm">
+          <span data-i18n="nav.book">Réserver</span> <span class="btn-arrow">→</span>
+        </a>
+              <div class="header__lang">
+        <button class="header__lang-btn is-active" data-lang="fr">FR</button>
+        <span class="header__lang-sep">|</span>
+        <button class="header__lang-btn" data-lang="en">EN</button>
+      </div>
+      <button
+          class="header__burger"
+          id="burger"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── Menu mobile ── -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu principal">
+    <nav class="mobile-menu__nav">
+      <a href="../services.html"  class="mobile-menu__link" data-i18n="nav.services">Prestations</a>
+      <a href="../flotte.html"    class="mobile-menu__link" data-i18n="nav.fleet">Flotte</a>
+      <a href="provence.html"     class="mobile-menu__link" data-i18n="nav.territories">Territoires</a>
+      <a href="../mariages.html"  class="mobile-menu__link" data-i18n="nav.weddings">Mariages</a>
+      <a href="../a-propos.html"  class="mobile-menu__link" data-i18n="nav.about">À propos</a>
+    </nav>
+    <div class="mobile-menu__foot">
+      <div class="mobile-menu__cta">
+        <a href="../contact.html" class="btn btn-primary"><span data-i18n="nav.entrust">Confier un déplacement</span> →</a>
+      </div>
+      <div class="mobile-menu__info">
+        <span>+(33) 6 36 01 72 35</span>
+        <span>contact@bliftedfrance.com</span>
+      </div>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ══ HERO ══ -->
+    <section class="page-hero territory-hero" aria-label="Dubaï — Chauffeur Privé">
+      <div class="page-hero__bg">
+        <img src="https://images.unsplash.com/photo-1753029111752-f12018752cd3?auto=format&fit=crop&w=1920&q=80" alt="" style="width:100%;height:100%;object-fit:cover;">
+      </div>
+      <div class="page-hero__overlay"></div>
+      <div class="container page-hero__inner">
+        <nav class="breadcrumb" aria-label="Fil d'Ariane">
+          <a href="../index.html">Accueil</a>
+          <span aria-hidden="true">›</span>
+          <a href="#" data-i18n="nav.territories">Territoires</a>
+          <span aria-hidden="true">›</span>
+          <span>Dubaï</span>
+        </nav>
+
+        <p class="eyebrow" style="color: var(--or);" data-reveal="fade">Territoire · Dubaï</p>
+        <h1 class="display" style="color: var(--ivoire);" data-reveal="up" data-delay="100">
+          Dubaï,<br>
+          <em>l'excellence<br>au bout du monde</em>
+        </h1>
+        <p class="subtitle" style="color:rgba(248,245,239,.75); max-width: 520px;" data-reveal="up" data-delay="200">
+          Une présence française de confiance sur l'une des scènes les plus exigeantes du monde.
+          Véhicules haut de gamme, chauffeurs bilingues, discrétion garantie.
+        </p>
+
+        <div class="territory-badges" data-reveal="up" data-delay="300">
+          <span class="territory-badge">Aéroport DXB</span>
+          <span class="territory-badge">Aéroport DWC</span>
+          <span class="territory-badge">Palm Jumeirah</span>
+          <span class="territory-badge">DIFC & Downtown</span>
+          <span class="territory-badge">Événements & Salons</span>
+          <span class="territory-badge">24h / 24 · 7j / 7</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ STATS BAND ══ -->
+    <div class="territory-stats" aria-label="Chiffres clés Dubaï">
+      <div class="container">
+        <div class="territory-stats__grid">
+          <div>
+            <div class="territory-stat__number" data-count="24" data-suffix="h">0h</div>
+            <div class="territory-stat__label">Disponibilité</div>
+          </div>
+          <div>
+            <div class="territory-stat__number" data-count="30" data-suffix="min">0min</div>
+            <div class="territory-stat__label">Prise en charge DXB</div>
+          </div>
+          <div>
+            <div class="territory-stat__number" data-count="4" data-suffix="">0</div>
+            <div class="territory-stat__label">Véhicules premium</div>
+          </div>
+          <div>
+            <div class="territory-stat__number" data-count="100" data-suffix="%">0%</div>
+            <div class="territory-stat__label">Bilingue FR / EN</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ PRÉSENTATION ══ -->
+    <section class="section" aria-labelledby="intro-heading">
+      <div class="container">
+        <div class="territory-intro">
+          <div class="territory-intro__image" data-reveal="left">
+            <div class="territory-intro__image-inner">
+              <!-- Remplacer par une photo : skyline Dubai de nuit, Sheikh Zayed Road, ou Mercedes devant Burj Khalifa -->
+            </div>
+            <blockquote class="territory-intro__quote">
+              « À Dubaï, le détail fait tout. Un chauffeur discret, ponctuel, bilingue — c'est votre première impression. »
+            </blockquote>
+          </div>
+
+          <div data-reveal="right">
+            <p class="eyebrow">Notre présence à Dubaï</p>
+            <h2 class="headline" id="intro-heading">
+              Une expertise<br>
+              <em>française au cœur<br>de l'Émirat</em>
+            </h2>
+            <p class="body-text" style="margin-top: 1.5rem; color: var(--taupe);">
+              Dubaï exige une prestation sans faille. Que vous soyez en déplacement professionnel pour
+              le GITEX, l'Arabian Travel Market ou une négociation en chambre, ou en séjour de prestige
+              sur le Palm ou au Burj Al Arab, notre service s'adapte à l'exigence de cet écosystème unique.
+            </p>
+            <p class="body-text" style="margin-top: 1rem; color: var(--taupe);">
+              Nos chauffeurs parlent français et anglais, connaissent les codes de la ville, les accès
+              VIP et les contraintes de protocole. Pas de taxi. Pas d'application. Une vraie relation
+              de confiance.
+            </p>
+
+            <ul style="margin-top: 2rem; list-style: none; display: flex; flex-direction: column; gap: .75rem;">
+              <li style="display:flex; align-items:flex-start; gap:.75rem; font-family: var(--font-sans); font-size: .875rem; color: var(--taupe);">
+                <span style="color: var(--or); flex-shrink:0; margin-top:.1rem;">✦</span>
+                Flotte Mercedes : Classe V, GLE, Classe E, Classe S
+              </li>
+              <li style="display:flex; align-items:flex-start; gap:.75rem; font-family: var(--font-sans); font-size: .875rem; color: var(--taupe);">
+                <span style="color: var(--or); flex-shrink:0; margin-top:.1rem;">✦</span>
+                Suivi de vol en temps réel — prise en charge adaptée aux retards
+              </li>
+              <li style="display:flex; align-items:flex-start; gap:.75rem; font-family: var(--font-sans); font-size: .875rem; color: var(--taupe);">
+                <span style="color: var(--or); flex-shrink:0; margin-top:.1rem;">✦</span>
+                Facturation en euros ou en dirhams selon votre préférence
+              </li>
+              <li style="display:flex; align-items:flex-start; gap:.75rem; font-family: var(--font-sans); font-size: .875rem; color: var(--taupe);">
+                <span style="color: var(--or); flex-shrink:0; margin-top:.1rem;">✦</span>
+                Devis personnalisé sous 2h pour tout séjour multi-jours
+              </li>
+            </ul>
+
+            <div style="margin-top: 2.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+              <a href="../contact.html" class="btn btn--primary">Demander un devis</a>
+              <a href="../flotte.html" class="btn btn--outline">Voir la flotte</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ ZONES ══ -->
+    <section class="section" style="background: var(--ivoire); padding: 5rem 0;" aria-labelledby="zones-heading">
+      <div class="container">
+        <div class="section-header" style="text-align:center;" data-reveal="up">
+          <p class="eyebrow">Zones desservies</p>
+          <h2 class="headline" id="zones-heading">
+            De l'aéroport<br>
+            <em>à chaque adresse emblématique</em>
+          </h2>
+        </div>
+
+        <div class="zones-grid stagger-children">
+          <div class="zone-card" data-reveal="up">
+            <span class="zone-card__icon">✈</span>
+            <h3 class="zone-card__name">Aéroport DXB</h3>
+            <p class="zone-card__desc">
+              Terminal 1, 2 & 3. Accueil en zone d'arrivée, pancarte nominative, suivi de vol en temps réel.
+              Transfert immédiat vers n'importe quel point de Dubaï.
+            </p>
+            <p class="zone-card__time">↳ Prise en charge dès l'atterrissage</p>
+          </div>
+
+          <div class="zone-card" data-reveal="up">
+            <span class="zone-card__icon">✈</span>
+            <h3 class="zone-card__name">Aéroport DWC</h3>
+            <p class="zone-card__desc">
+              Al Maktoum International. Service identique sur le second hub dubaiote, de plus en plus
+              prisé pour les vols privés et charters.
+            </p>
+            <p class="zone-card__time">↳ Vol privé ou commercial — même standard</p>
+          </div>
+
+          <div class="zone-card" data-reveal="up">
+            <span class="zone-card__icon">🌴</span>
+            <h3 class="zone-card__name">Palm Jumeirah</h3>
+            <p class="zone-card__desc">
+              Hôtels Atlantis, One & Only, Waldorf Astoria. Transferts discrets depuis et vers les
+              résidences et hôtels de la Palm, avec accès aux fronds.
+            </p>
+            <p class="zone-card__time">↳ 25 min depuis DXB</p>
+          </div>
+
+          <div class="zone-card" data-reveal="up">
+            <span class="zone-card__icon">🏙</span>
+            <h3 class="zone-card__name">Downtown & Burj Khalifa</h3>
+            <p class="zone-card__desc">
+              Hôtels Address, Armani, Four Seasons DIFC. Dépose et prise en charge aux entrées
+              discrètes, gestion du stationnement incluse.
+            </p>
+            <p class="zone-card__time">↳ Cœur économique de Dubaï</p>
+          </div>
+
+          <div class="zone-card" data-reveal="up">
+            <span class="zone-card__icon">💼</span>
+            <h3 class="zone-card__name">DIFC & Business Bay</h3>
+            <p class="zone-card__desc">
+              Centre financier international, tours de bureaux, Gate Village.
+              Mise à disposition à la journée pour vos rendez-vous d'affaires enchaînés.
+            </p>
+            <p class="zone-card__time">↳ Mise à dispo dès 4h</p>
+          </div>
+
+          <div class="zone-card" data-reveal="up">
+            <span class="zone-card__icon">🛳</span>
+            <h3 class="zone-card__name">Marina & JBR</h3>
+            <p class="zone-card__desc">
+              Intercontinental, W Dubai, Sofitel Jumeirah Beach. Transferts en soirée,
+              sorties restaurant, accès aux terminaux de croisière.
+            </p>
+            <p class="zone-card__time">↳ Port Rashid · Dubai Cruise Terminal</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ SERVICES SOMBRE ══ -->
+    <section class="territory-services" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="section-header" style="text-align:center;" data-reveal="up">
+          <p class="eyebrow" style="color: var(--or);">Nos prestations à Dubaï</p>
+          <h2 class="headline" id="services-heading" style="color: var(--ivoire);">
+            Trois façons<br>
+            <em style="color: var(--champagne);">de nous confier votre mobilité</em>
+          </h2>
+        </div>
+
+        <div class="territory-services__grid stagger-children">
+          <div class="territory-service-card" data-reveal="up">
+            <div class="territory-service-card__icon">🛬</div>
+            <h3 class="territory-service-card__title">Transfert aéroport</h3>
+            <p class="territory-service-card__desc">
+              Prise en charge à DXB ou DWC avec accueil nominatif. Suivi de vol,
+              gestion des retards, aide aux bagages. Tarif fixe communiqué à la réservation —
+              aucune surprise.
+            </p>
+          </div>
+
+          <div class="territory-service-card" data-reveal="up">
+            <div class="territory-service-card__icon">🕐</div>
+            <h3 class="territory-service-card__title">Mise à disposition</h3>
+            <p class="territory-service-card__desc">
+              Votre chauffeur reste disponible pour toute la durée de votre séjour ou de votre
+              journée business. Rendez-vous DIFC, visites, dîners, shopping — vous décidez du programme.
+            </p>
+          </div>
+
+          <div class="territory-service-card" data-reveal="up">
+            <div class="territory-service-card__icon">🎪</div>
+            <h3 class="territory-service-card__title">Événements & Salons</h3>
+            <p class="territory-service-card__desc">
+              GITEX, Arabian Travel Market, Dubai Airshow, Art Dubai, ADIPEC.
+              Coordination de flotte pour délégations et groupes. Facturation unique
+              pour entreprises.
+            </p>
+          </div>
+        </div>
+
+        <div style="text-align:center; margin-top: 3rem;" data-reveal="up">
+          <a href="../contact.html" class="btn btn--or">Demander un devis personnalisé</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ AUTRES TERRITOIRES ══ -->
+    <section class="other-territories" aria-labelledby="other-heading">
+      <div class="container">
+        <div class="section-header" style="text-align:center;" data-reveal="up">
+          <p class="eyebrow">Nos autres territoires</p>
+          <h2 class="headline" id="other-heading">
+            B.LIFTED est aussi<br>
+            <em>votre chauffeur en France</em>
+          </h2>
+        </div>
+
+        <div class="other-territories__grid stagger-children">
+          <a href="provence.html" class="other-territory-card" data-reveal="up">
+            <div class="other-territory-card__name">Provence</div>
+            <p class="other-territory-card__desc">Avignon, Lubéron, Aix-en-Provence, Alpilles, Camargue</p>
+            <span class="other-territory-card__arrow">Découvrir →</span>
+          </a>
+
+          <a href="french-riviera.html" class="other-territory-card" data-reveal="up">
+            <div class="other-territory-card__name">French Riviera</div>
+            <p class="other-territory-card__desc">Nice, Cannes, Monaco, Saint-Tropez, Menton</p>
+            <span class="other-territory-card__arrow">Découvrir →</span>
+          </a>
+
+          <a href="megeve.html" class="other-territory-card" data-reveal="up">
+            <div class="other-territory-card__name">Megève & Alpes</div>
+            <p class="other-territory-card__desc">Megève, Chamonix, Courchevel, Genève, Annecy</p>
+            <span class="other-territory-card__arrow">Découvrir →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ CTA BANDE ══ -->
+    <section style="background: var(--noir); padding: 5rem 0; text-align: center;" aria-labelledby="cta-heading">
+      <div class="container">
+        <p class="eyebrow" style="color: var(--or);" data-reveal="fade">Prêt à réserver ?</p>
+        <h2 class="headline" id="cta-heading" style="color: var(--ivoire);" data-reveal="up">
+          Votre chauffeur à Dubaï<br>
+          <em style="color: var(--champagne);">vous attend</em>
+        </h2>
+        <p class="body-text" style="color: rgba(248,245,239,.6); max-width: 460px; margin: 1.5rem auto 0;" data-reveal="up" data-delay="100">
+          Répondez à notre formulaire en 2 minutes et recevez un devis personnalisé sous 2 heures.
+        </p>
+        <div style="margin-top: 2.5rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;" data-reveal="up" data-delay="200">
+          <a href="../contact.html" class="btn btn--or">Faire une demande</a>
+          <a href="tel:+33600000000" class="btn btn--outline" style="color: var(--ivoire); border-color: rgba(248,245,239,.3);">Appeler directement</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══ FOOTER ══ -->
+    <footer class="footer" role="contentinfo">
+  <div class="footer__inner">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a href="../index.html" class="footer__brand-logo" aria-label="B.LIFTED France">B · LIFTED</a>
+        <p class="footer__brand-desc">Service de transport privé haut de gamme en Provence, French Riviera, Megève et Dubaï. Discrétion absolue, fiabilité sans compromis.</p>
+        <div class="footer__social">
+          <a href="https://www.instagram.com/bliftedfrance" class="footer__social-link" aria-label="Instagram B.LIFTED" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg></a>
+          <a href="https://www.facebook.com/bliftedfrance" class="footer__social-link" aria-label="Facebook B.LIFTED" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <p class="footer__col-title">Services</p>
+        <nav class="footer__nav">
+          <a href="../services.html" class="footer__nav-link">Transfert aéroport</a>
+          <a href="../services.html" class="footer__nav-link">Mise à disposition</a>
+          <a href="../mariages.html" class="footer__nav-link">Mariages &amp; événements</a>
+          <a href="../flotte.html" class="footer__nav-link">Notre flotte</a>
+        </nav>
+      </div>
+      <div class="footer__col">
+        <p class="footer__col-title" data-i18n="nav.territories">Territoires</p>
+        <nav class="footer__nav">
+          <a href="provence.html" class="footer__nav-link">Provence</a>
+          <a href="french-riviera.html" class="footer__nav-link">French Riviera</a>
+          <a href="megeve.html" class="footer__nav-link">Megève</a>
+          <a href="dubai.html" class="footer__nav-link">Dubaï</a>
+        </nav>
+      </div>
+      <div class="footer__col">
+        <p class="footer__col-title">Contact</p>
+        <div class="footer__contact-item">
+          <svg class="footer__contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81C2.18 7.22 2 4.92 2 4a2 2 0 012-2h3a2 2 0 012 1.72c.13 1 .4 1.97.71 2.9a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.93.31 1.9.58 2.9.71A2 2 0 0122 16.92z"/></svg>
+          <p class="footer__contact-text"><a href="tel:+33636017235">+(33) 6 36 01 72 35</a></p>
+        </div>
+        <div class="footer__contact-item">
+          <svg class="footer__contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <p class="footer__contact-text"><a href="mailto:contact@bliftedfrance.com">contact@bliftedfrance.com</a></p>
+        </div>
+        <div style="margin-top:1.5rem;">
+          <a href="../contact.html" class="btn btn-primary btn--sm"><span data-i18n="nav.book">Réserver</span> <span class="btn-arrow">→</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">&copy; <span id="footer-year">2026</span> B.LIFTED France · Tous droits réservés</p>
+      <div class="footer__legal"><a href="/mentions-legales">Mentions légales</a><a href="/confidentialite">Confidentialité</a></div>
+    </div>
+  </div>
+  </footer>
+
+  <!-- ══ WhatsApp Float ══ -->
+  <a href="https://wa.me/33600000000?text=Bonjour%2C%20je%20souhaite%20un%20chauffeur%20%C3%A0%20Duba%C3%AF"
+     class="whatsapp-float" target="_blank" rel="noopener" aria-label="Nous contacter sur WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.855L.057 23.943l6.24-1.637A11.942 11.942 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.847 0-3.576-.49-5.077-1.345l-.364-.216-3.773.99 1.007-3.671-.237-.378A9.953 9.953 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+    </svg>
+    <span class="whatsapp-float__tooltip">Réserver via WhatsApp</span>
+  </a>
+
+  <!-- ══ JS ══ -->
+  <script src="../js/nav.js"></script>
+  <script src="../js/scroll-reveal.js"></script>
+  <script src="../js/main.js"></script>
+<script src="../js/i18n.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chauffeur Privé Provence Haut de Gamme — Avignon, Lubéron, Alpilles, Aix | B.LIFTED</title>
+  <meta name="description" content="Service de chauffeur privé haut de gamme en Provence : Avignon, Lubéron, Alpilles, Aix-en-Provence. Partenaire officiel Aéroport d'Avignon-Provence. Transferts, mise à disposition, mariages.">
+  <meta name="keywords" content="chauffeur privé Provence, VTC haut de gamme Avignon, transport privé Lubéron, chauffeur Aix-en-Provence, transfert aéroport Avignon, transport mariage Provence">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://bliftedfrance.com/territoires/provence.html">
+  <meta property="og:title" content="Chauffeur Privé Provence — B.LIFTED France">
+  <meta property="og:description" content="Transport privé haut de gamme en Provence. Avignon, Lubéron, Alpilles, Aix-en-Provence.">
+  <meta property="og:url" content="https://bliftedfrance.com/territoires/provence.html">
+  <meta name="geo.region" content="FR-PAC">
+  <meta name="geo.placename" content="Provence, France">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Service","name":"Chauffeur Privé Provence — B.LIFTED France","provider":{"@type":"LocalBusiness","name":"B.LIFTED France","telephone":"+33636017235","email":"contact@bliftedfrance.com"},"areaServed":{"@type":"Place","name":"Provence","containedInPlace":{"@type":"Place","name":"France"}},"serviceType":"Transport privé haut de gamme","description":"Service de chauffeur privé haut de gamme en Provence : Avignon, Lubéron, Alpilles, Aix-en-Provence. Partenaire Aéroport d'Avignon-Provence."}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/typography.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <style>
+    body.no-scroll { overflow: hidden; }
+    #menu-overlay { position:fixed; inset:0; background:rgba(28,26,23,0.4); z-index:calc(var(--z-header) - 2); opacity:0; visibility:hidden; transition:opacity 0.3s,visibility 0.3s; }
+    #menu-overlay.is-active { opacity:1; visibility:visible; }
+
+    .territory-hero { background: linear-gradient(160deg, #7a8460 0%, #4a5235 30%, #1a1826 100%); }
+    .zones-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-5);margin-top:var(--sp-12); }
+    .zone-card { padding:var(--sp-7);background:var(--blanc);border:1px solid var(--ivoire-dk);border-radius:var(--radius-md);transition:all var(--transition); }
+    .zone-card:hover { border-color:var(--or-border);box-shadow:var(--shadow-sm); }
+    .zone-card__name { font-family:var(--font-serif);font-size:var(--t-xl);font-weight:400;margin-bottom:var(--sp-3); }
+    .zone-card__text { font-size:var(--t-sm);color:var(--texte-lt);font-weight:300;line-height:1.65; }
+    .partner-badge { display:inline-flex;align-items:center;gap:var(--sp-3);padding:var(--sp-3) var(--sp-6);background:var(--or-glow);border:1px solid var(--or-border);border-radius:var(--radius-full);font-size:var(--t-sm);color:var(--or-deep);font-weight:500;margin-bottom:var(--sp-8); }
+    @media(max-width:900px){.zones-grid{grid-template-columns:repeat(2,1fr);}}
+    @media(max-width:600px){.zones-grid{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+<div class="scroll-progress"></div>
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+<header class="header" id="header">
+  <div class="header__inner">
+    <a href="../index.html" class="header__logo" aria-label="B.LIFTED France — Accueil">
+      B · LIFTED
+    </a>
+    <nav class="header__nav" aria-label="Navigation principale">
+      <a href="../services.html"  class="header__nav-link" data-i18n="nav.services">Prestations</a>
+      <a href="../flotte.html"    class="header__nav-link" data-i18n="nav.fleet">Flotte</a>
+      <a href="provence.html"     class="header__nav-link" data-i18n="nav.territories">Territoires</a>
+      <a href="../mariages.html"  class="header__nav-link" data-i18n="nav.weddings">Mariages</a>
+      <a href="../a-propos.html"  class="header__nav-link" data-i18n="nav.about">À propos</a>
+    </nav>
+    <div class="header__actions">
+      <a href="../contact.html" class="btn btn-primary btn--sm">
+        <span data-i18n="nav.book">Réserver</span> <span class="btn-arrow">→</span>
+      </a>
+            <div class="header__lang">
+        <button class="header__lang-btn is-active" data-lang="fr">FR</button>
+        <span class="header__lang-sep">|</span>
+        <button class="header__lang-btn" data-lang="en">EN</button>
+      </div>
+      <button
+        class="header__burger"
+        id="burger"
+        aria-label="Ouvrir le menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ── Menu mobile ── -->
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu principal">
+  <nav class="mobile-menu__nav">
+    <a href="../services.html"  class="mobile-menu__link" data-i18n="nav.services">Prestations</a>
+    <a href="../flotte.html"    class="mobile-menu__link" data-i18n="nav.fleet">Flotte</a>
+    <a href="provence.html"     class="mobile-menu__link" data-i18n="nav.territories">Territoires</a>
+    <a href="../mariages.html"  class="mobile-menu__link" data-i18n="nav.weddings">Mariages</a>
+    <a href="../a-propos.html"  class="mobile-menu__link" data-i18n="nav.about">À propos</a>
+  </nav>
+  <div class="mobile-menu__foot">
+    <div class="mobile-menu__cta">
+      <a href="../contact.html" class="btn btn-primary"><span data-i18n="nav.entrust">Confier un déplacement</span> →</a>
+    </div>
+    <div class="mobile-menu__info">
+      <span>+(33) 6 36 01 72 35</span>
+      <span>contact@bliftedfrance.com</span>
+    </div>
+  </div>
+</div>
+
+<section class="page-hero territory-hero">
+  <div class="page-hero__bg">
+    <img src="https://images.unsplash.com/photo-1722616587547-d12ab3d62b68?auto=format&fit=crop&w=1920&q=80" alt="" style="width:100%;height:100%;object-fit:cover;">
+  </div>
+  <div class="page-hero__overlay"></div>
+  <div class="container page-hero__content">
+    <nav class="breadcrumb"><a href="/">Accueil</a><span class="breadcrumb__sep">—</span><a href="provence.html" data-i18n="nav.territories">Territoires</a><span class="breadcrumb__sep">—</span><span>Provence</span></nav>
+    <span class="eyebrow text-or" data-reveal="fade">Territoire — Provence</span>
+    <h1 class="headline text-inv" data-reveal="up" data-delay="100">Chauffeur privé<br><em style="color:var(--or-lt)">en Provence.</em></h1>
+    <p class="body-lead text-inv-lt" style="max-width:520px;margin-top:var(--sp-5);" data-reveal="up" data-delay="200">Avignon, Lubéron, Alpilles, Aix-en-Provence. Un territoire d'exception pour des déplacements qui ne tolèrent pas l'improvisation.</p>
+  </div>
+</section>
+
+<section class="section section-ivoire" id="presentation">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-20);align-items:center;" class="territory-split">
+      <div data-reveal="right">
+        <div class="partner-badge">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M10 2l3 7h7l-5.5 4 2 7L10 16l-6.5 4 2-7L0 9h7L10 2z"/></svg>
+          Partenaire officiel — Aéroport d'Avignon-Provence
+        </div>
+        <span class="eyebrow">Provence</span>
+        <div class="rule"></div>
+        <h2 class="subtitle">L'exigence au cœur<br><em>du territoire.</em></h2>
+        <p class="body-text" style="margin-top:var(--sp-5);">La Provence est le territoire d'origine de B.LIFTED. Un ancrage fort, une connaissance intime des routes, des accès privés, des domaines viticoles, des bastides et des propriétés isolées.</p>
+        <p class="body-text" style="margin-top:var(--sp-4);">Partenaire officiel de l'Aéroport d'Avignon-Provence, B.LIFTED assure une continuité parfaite entre votre vol et votre destination finale, quel que soit l'horaire.</p>
+        <div style="margin-top:var(--sp-8);">
+          <a href="../contact.html" class="btn btn-primary">Organiser un transfert Provence</a>
+        </div>
+      </div>
+      <div style="aspect-ratio:4/3;border-radius:var(--radius-lg);overflow:hidden;background:url('https://images.unsplash.com/photo-1735653279088-c906bb6dc362?auto=format&fit=crop&w=900&q=80') center/cover no-repeat, linear-gradient(160deg,#9B8C6A 0%,#7A6A4A 60%,#2A2218 100%);" data-reveal="left"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-ivoire-dk" id="zones">
+  <div class="container">
+    <header class="section-header" data-reveal="up">
+      <span class="eyebrow">Zones couvertes</span>
+      <div class="rule"></div>
+      <h2 class="subtitle">Partout en Provence,<br><em>avec le même niveau d'exigence.</em></h2>
+    </header>
+    <div class="zones-grid stagger-children">
+      <div class="zone-card" data-reveal="up"><h3 class="zone-card__name">Avignon & Grand Avignon</h3><p class="zone-card__text">Palais des Papes, Festival, villas privées, hôtels prestige. Partenaire officiel de l'aéroport d'Avignon-Caumont.</p></div>
+      <div class="zone-card" data-reveal="up" data-delay="100"><h3 class="zone-card__name">Lubéron</h3><p class="zone-card__text">Gordes, Bonnieux, Lacoste, Ménerbes. Accès aux domaines et propriétés isolées. Routes de montagne maîtrisées.</p></div>
+      <div class="zone-card" data-reveal="up" data-delay="200"><h3 class="zone-card__name">Alpilles</h3><p class="zone-card__text">Saint-Rémy-de-Provence, Les Baux-de-Provence, Eygalières. Le cœur élégant de la Provence.</p></div>
+      <div class="zone-card" data-reveal="up" data-delay="100"><h3 class="zone-card__name">Aix-en-Provence</h3><p class="zone-card__text">Centre-ville, Festival de musique, venues de mariage. Connexions TGV et aéroport Marseille-Provence.</p></div>
+      <div class="zone-card" data-reveal="up" data-delay="200"><h3 class="zone-card__name">Marseille & Aéroport</h3><p class="zone-card__text">Transferts MRS, déplacements d'affaires, accès aux Calanques. Port privé et marina.</p></div>
+      <div class="zone-card" data-reveal="up" data-delay="300"><h3 class="zone-card__name">Camargue & Arles</h3><p class="zone-card__text">Mas privés, domaines viticoles, itinéraires sur-mesure dans la Camargue sauvage.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark" id="services-provence">
+  <div class="container">
+    <header class="section-header centered" data-reveal="up">
+      <span class="eyebrow text-or">Services en Provence</span>
+      <div class="rule rule-center"></div>
+      <h2 class="title text-inv">Adaptés au territoire,<br><em style="color:var(--or-lt)">à ses contraintes et à son niveau.</em></h2>
+    </header>
+    <div class="services-grid stagger-children" style="margin-top:var(--sp-12);background:transparent;border:none;display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-5);">
+      <div style="padding:var(--sp-8);border:1px solid rgba(255,255,255,0.06);border-radius:var(--radius-md);" data-reveal="up"><h3 style="font-family:var(--font-serif);font-size:var(--t-xl);color:var(--blanc);margin-bottom:var(--sp-3);">Transferts aéroport</h3><p style="font-size:var(--t-sm);color:rgba(255,255,255,0.4);font-weight:300;line-height:1.65;">Avignon-Provence, Marseille, Nîmes, Lyon. Suivi de vol, adaptation aux retards.</p></div>
+      <div style="padding:var(--sp-8);border:1px solid rgba(255,255,255,0.06);border-radius:var(--radius-md);" data-reveal="up" data-delay="100"><h3 style="font-family:var(--font-serif);font-size:var(--t-xl);color:var(--blanc);margin-bottom:var(--sp-3);">Mariages en Provence</h3><p style="font-size:var(--t-sm);color:rgba(255,255,255,0.4);font-weight:300;line-height:1.65;">Bastides, domaines viticoles, châteaux. Coordination complète pour vos mariages de rêve.</p></div>
+      <div style="padding:var(--sp-8);border:1px solid rgba(255,255,255,0.06);border-radius:var(--radius-md);" data-reveal="up" data-delay="200"><h3 style="font-family:var(--font-serif);font-size:var(--t-xl);color:var(--blanc);margin-bottom:var(--sp-3);">Séjours & mise à dispo</h3><p style="font-size:var(--t-sm);color:rgba(255,255,255,0.4);font-weight:300;line-height:1.65;">Chauffeur dédié pour votre séjour complet en Provence. Découverte, rendez-vous, activités.</p></div>
+    </div>
+    <div style="text-align:center;margin-top:var(--sp-12);" data-reveal="up">
+      <a href="../contact.html" class="btn btn-or">Confier un déplacement en Provence</a>
+    </div>
+  </div>
+</section>
+
+<!-- Autres territoires -->
+<section class="section section-ivoire-dk" id="autres-territoires">
+  <div class="container">
+    <header class="section-header centered" data-reveal="up">
+      <span class="eyebrow">Autres territoires</span>
+      <div class="rule rule-center"></div>
+      <h2 class="subtitle">B.LIFTED<br><em>partout où vous allez.</em></h2>
+    </header>
+    <div class="territories__grid" style="margin-top:var(--sp-10);">
+      <a href="french-riviera.html" class="territory-card territory-card--riviera" data-reveal="up"><img class="territory-card__img" src="https://images.unsplash.com/photo-1602253009722-9418de46b5e4?auto=format&fit=crop&w=800&q=80" alt="French Riviera" loading="lazy"><div class="territory-card__overlay"></div><div class="territory-card__content"><h3 class="territory-card__name">French Riviera</h3><span class="territory-card__tag">Nice · Cannes · Monaco</span></div><div class="territory-card__arrow"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" width="12" height="12"><path d="M1 7h12M7.5 1.5L13 7l-5.5 5.5"/></svg></div></a>
+      <a href="megeve.html" class="territory-card territory-card--megeve" data-reveal="up" data-delay="100"><img class="territory-card__img" src="https://images.unsplash.com/photo-1641504681054-c5e845e183fd?auto=format&fit=crop&w=800&q=80" alt="Megève" loading="lazy"><div class="territory-card__overlay"></div><div class="territory-card__content"><h3 class="territory-card__name">Megève</h3><span class="territory-card__tag">Alpes · Ski · Chalets</span></div><div class="territory-card__arrow"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" width="12" height="12"><path d="M1 7h12M7.5 1.5L13 7l-5.5 5.5"/></svg></div></a>
+      <a href="dubai.html" class="territory-card territory-card--dubai" data-reveal="up" data-delay="200"><img class="territory-card__img" src="https://images.unsplash.com/photo-1753029111752-f12018752cd3?auto=format&fit=crop&w=800&q=80" alt="Dubaï" loading="lazy"><div class="territory-card__overlay"></div><div class="territory-card__content"><h3 class="territory-card__name">Dubaï</h3><span class="territory-card__tag">Émirats · VIP · HNWI</span></div><div class="territory-card__arrow"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" width="12" height="12"><path d="M1 7h12M7.5 1.5L13 7l-5.5 5.5"/></svg></div></a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer__inner">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a href="../index.html" class="footer__brand-logo" aria-label="B.LIFTED France">B · LIFTED</a>
+        <p class="footer__brand-desc">Service de transport privé haut de gamme en Provence, French Riviera, Megève et Dubaï. Discrétion absolue, fiabilité sans compromis.</p>
+        <div class="footer__social">
+          <a href="https://www.instagram.com/bliftedfrance" class="footer__social-link" aria-label="Instagram B.LIFTED" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg></a>
+          <a href="https://www.facebook.com/bliftedfrance" class="footer__social-link" aria-label="Facebook B.LIFTED" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <p class="footer__col-title">Services</p>
+        <nav class="footer__nav">
+          <a href="../services.html" class="footer__nav-link">Transfert aéroport</a>
+          <a href="../services.html" class="footer__nav-link">Mise à disposition</a>
+          <a href="../mariages.html" class="footer__nav-link">Mariages &amp; événements</a>
+          <a href="../flotte.html" class="footer__nav-link">Notre flotte</a>
+        </nav>
+      </div>
+      <div class="footer__col">
+        <p class="footer__col-title" data-i18n="nav.territories">Territoires</p>
+        <nav class="footer__nav">
+          <a href="provence.html" class="footer__nav-link">Provence</a>
+          <a href="french-riviera.html" class="footer__nav-link">French Riviera</a>
+          <a href="megeve.html" class="footer__nav-link">Megève</a>
+          <a href="dubai.html" class="footer__nav-link">Dubaï</a>
+        </nav>
+      </div>
+      <div class="footer__col">
+        <p class="footer__col-title">Contact</p>
+        <div class="footer__contact-item">
+          <svg class="footer__contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81C2.18 7.22 2 4.92 2 4a2 2 0 012-2h3a2 2 0 012 1.72c.13 1 .4 1.97.71 2.9a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.93.31 1.9.58 2.9.71A2 2 0 0122 16.92z"/></svg>
+          <p class="footer__contact-text"><a href="tel:+33636017235">+(33) 6 36 01 72 35</a></p>
+        </div>
+        <div class="footer__contact-item">
+          <svg class="footer__contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <p class="footer__contact-text"><a href="mailto:contact@bliftedfrance.com">contact@bliftedfrance.com</a></p>
+        </div>
+        <div style="margin-top:1.5rem;">
+          <a href="../contact.html" class="btn btn-primary btn--sm"><span data-i18n="nav.book">Réserver</span> <span class="btn-arrow">→</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">&copy; <span id="footer-year">2026</span> B.LIFTED France · Tous droits réservés</p>
+      <div class="footer__legal"><a href="/mentions-legales">Mentions légales</a><a href="/confidentialite">Confidentialité</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/nav.js" defer></script>
+<script src="../js/scroll-reveal.js" defer></script>
+<script src="../js/main.js" defer></script>
+<style>.territory-split{} @media(max-width:900px){.territory-split{grid-template-columns:1fr!important;}} .territories__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-5);} @media(max-width:700px){.territories__grid{grid-template-columns:1fr!important;}}</style>
+<script src="../js/i18n.js" defer></script>
+
+</body>
+</html>

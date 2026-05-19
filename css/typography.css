@@ -1,0 +1,184 @@
+/* ============================================================
+   B.LIFTED France — Typographie v3.0
+   ============================================================ */
+
+/* ── CONTENEUR ──────────────────────────────────────────── */
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+.container--lg { max-width: var(--container-lg); }
+.container--sm { max-width: var(--container-sm); }
+.container--xs { max-width: var(--container-xs); }
+
+/* ── SECTION ────────────────────────────────────────────── */
+.section {
+  padding-block: var(--section-py);
+}
+.section--sm {
+  padding-block: var(--section-py-sm);
+}
+
+/* ── EN-TÊTES ───────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+  color: var(--text);
+}
+
+h1 { font-size: var(--t-6xl); }
+h2 { font-size: var(--t-4xl); }
+h3 { font-size: var(--t-2xl); }
+h4 { font-size: var(--t-xl); }
+
+/* ── ITALIQUE SERIF ─────────────────────────────────────── */
+em {
+  font-style: italic;
+  font-family: var(--font-serif);
+}
+
+/* ── TEXTE UTILITAIRES ──────────────────────────────────── */
+.text-xs    { font-size: var(--t-xs); }
+.text-sm    { font-size: var(--t-sm); }
+.text-base  { font-size: var(--t-base); }
+.text-lg    { font-size: var(--t-lg); }
+.text-xl    { font-size: var(--t-xl); }
+.text-2xl   { font-size: var(--t-2xl); }
+.text-3xl   { font-size: var(--t-3xl); font-family: var(--font-serif); }
+.text-4xl   { font-size: var(--t-4xl); font-family: var(--font-serif); }
+.text-5xl   { font-size: var(--t-5xl); font-family: var(--font-serif); }
+.text-6xl   { font-size: var(--t-6xl); font-family: var(--font-serif); }
+
+.text-muted  { color: var(--text-muted); }
+.text-soft   { color: var(--text-soft); }
+.text-rose   { color: var(--rose); }
+.text-gold   { color: var(--gold); }
+.text-center { text-align: center; }
+
+/* ── EYEBROW ────────────────────────────────────────────── */
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: var(--t-xs);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--rose);
+}
+
+/* ── SECTION HEADER ─────────────────────────────────────── */
+.section-header {
+  margin-bottom: clamp(3rem, 6vw, 5rem);
+}
+.section-header--center {
+  text-align: center;
+  max-width: 720px;
+  margin-inline: auto;
+  margin-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-size: clamp(var(--t-3xl), 4vw, var(--t-5xl));
+  font-weight: 400;
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-tight);
+  margin-top: var(--sp-4);
+  color: var(--text);
+}
+.section-title em {
+  color: var(--rose);
+}
+
+.section-sub {
+  font-size: var(--t-lg);
+  color: var(--text-soft);
+  line-height: var(--lh-relaxed);
+  margin-top: var(--sp-5);
+  max-width: 560px;
+  font-weight: 300;
+}
+.section-header--center .section-sub {
+  margin-inline: auto;
+}
+
+/* ── LIEN ───────────────────────────────────────────────── */
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-size: var(--t-sm);
+  font-weight: 600;
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  color: var(--rose);
+  transition: gap var(--dur-fast) var(--ease-out);
+}
+.link:hover { gap: var(--sp-4); }
+.link::after {
+  content: '→';
+  font-family: var(--font-sans);
+}
+
+/* ── PILL TAG ───────────────────────────────────────────── */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: var(--sp-2) var(--sp-4);
+  background: var(--rose-ultra);
+  border: 1px solid var(--rose-pale);
+  border-radius: var(--r-full);
+  font-size: var(--t-xs);
+  font-weight: 600;
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+  color: var(--rose);
+}
+.pill--gold {
+  background: var(--gold-pale);
+  border-color: var(--gold-pale);
+  color: var(--gold-deep);
+}
+.pill--sage {
+  background: var(--sage-pale);
+  border-color: var(--sage-pale);
+  color: var(--sage-deep);
+}
+.pill--neutral {
+  background: var(--bg-warm);
+  border-color: var(--border);
+  color: var(--text-soft);
+}
+
+/* ── DIVIDER ────────────────────────────────────────────── */
+.divider {
+  width: 40px;
+  height: 1px;
+  background: var(--rose-light);
+  margin-top: var(--sp-6);
+}
+.divider--center { margin-inline: auto; }
+
+/* ── QUOTE ──────────────────────────────────────────────── */
+.quote-mark {
+  font-family: var(--font-serif);
+  font-size: var(--t-8xl);
+  line-height: 0.7;
+  color: var(--rose-pale);
+  font-style: normal;
+  display: block;
+  margin-bottom: var(--sp-4);
+}
+
+/* ── REDUCED MOTION ─────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

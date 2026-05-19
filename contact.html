@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confier un Déplacement | B.LIFTED France</title>
+  <meta name="description" content="Décrivez votre contexte de déplacement. B.LIFTED vous rappelle personnellement dans les 24h. Transport privé haut de gamme, Provence, French Riviera, Megève, Dubaï.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://bliftedfrance.com/contact.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/typography.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/components.css">
+
+  <style>
+    /* ── Hero ── */
+    .c-hero {
+      position: relative;
+      min-height: 42vh;
+      display: flex;
+      align-items: flex-end;
+      padding-top: calc(var(--header-h) + 2rem);
+      padding-bottom: var(--sp-16);
+      background: var(--bg-darker);
+      overflow: hidden;
+    }
+    .c-hero__bg {
+      position: absolute;
+      inset: 0;
+      background: url('assets/images/fleet-classe-s.jpg') center/cover no-repeat;
+      opacity: 0.15;
+    }
+    .c-hero__overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(17,19,17,0.96) 40%, rgba(17,19,17,0.55) 100%);
+    }
+    .c-hero__inner {
+      position: relative;
+      z-index: 1;
+    }
+    .c-hero__eyebrow {
+      display: block;
+      font-size: var(--t-xs);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: var(--sp-4);
+    }
+    .c-hero__title {
+      font-family: var(--font-serif);
+      font-size: clamp(2.8rem, 5vw, 4.5rem);
+      font-weight: 300;
+      color: var(--text-inv);
+      line-height: 1.05;
+    }
+    .c-hero__title em { font-style: italic; color: var(--rose-light); }
+
+    /* ── Section principale ── */
+    .c-section {
+      background: var(--bg-dark);
+      padding: var(--sp-20) 0 var(--sp-32);
+    }
+    .c-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.25fr;
+      gap: clamp(3rem, 6vw, 7rem);
+      align-items: start;
+    }
+
+    /* ── Colonne gauche ── */
+    .c-lead {
+      font-family: var(--font-serif);
+      font-size: var(--t-xl);
+      font-weight: 300;
+      color: var(--text-inv-soft);
+      line-height: 1.6;
+      margin-bottom: var(--sp-10);
+    }
+    .c-lead em { font-style: italic; color: var(--rose-light); }
+
+    .c-channels { display: flex; flex-direction: column; gap: var(--sp-3); margin-bottom: var(--sp-12); }
+    .c-channel {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-4);
+      padding: var(--sp-4) var(--sp-5);
+      background: rgba(250,250,248,0.03);
+      border: 1px solid var(--border-dark);
+      border-radius: var(--r);
+      text-decoration: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .c-channel:hover { background: rgba(250,250,248,0.06); border-color: rgba(176,141,90,0.35); }
+    .c-channel__icon {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: rgba(176,141,90,0.08);
+      border: 1px solid rgba(176,141,90,0.25);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--rose);
+      flex-shrink: 0;
+    }
+    .c-channel__label {
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: 2px;
+    }
+    .c-channel__value { font-size: var(--t-sm); color: rgba(250,250,248,0.65); font-weight: 300; }
+
+    .c-process { padding-top: var(--sp-10); border-top: 1px solid rgba(250,250,248,0.06); }
+    .c-process__label { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(250,250,248,0.25); margin-bottom: var(--sp-7); }
+    .c-step { display: flex; gap: var(--sp-4); margin-bottom: var(--sp-5); }
+    .c-step:last-child { margin-bottom: 0; }
+    .c-step__num { font-family: var(--font-serif); font-size: var(--t-2xl); color: rgba(176,141,90,0.2); font-weight: 300; line-height: 1; flex-shrink: 0; width: 28px; }
+    .c-step__title { font-family: var(--font-serif); font-size: var(--t-base); color: rgba(250,250,248,0.7); font-weight: 300; margin-bottom: 4px; }
+    .c-step__text { font-size: var(--t-sm); color: rgba(250,250,248,0.3); font-weight: 300; line-height: 1.6; }
+
+    /* ── Formulaire ── */
+    .c-form-wrap {
+      background: rgba(250,250,248,0.03);
+      border: 1px solid rgba(250,250,248,0.08);
+      border-radius: var(--r-md);
+      padding: var(--sp-10);
+    }
+    .c-form-wrap__title {
+      font-family: var(--font-serif);
+      font-size: var(--t-3xl);
+      font-weight: 300;
+      color: var(--text-inv);
+      margin-bottom: var(--sp-2);
+    }
+    .c-form-wrap__sub {
+      font-size: var(--t-sm);
+      color: rgba(250,250,248,0.35);
+      margin-bottom: var(--sp-8);
+    }
+
+    .c-label {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(250,250,248,0.38);
+      margin-bottom: var(--sp-2);
+    }
+    .c-input, .c-select, .c-textarea {
+      width: 100%;
+      background: rgba(250,250,248,0.05);
+      border: 1px solid rgba(250,250,248,0.1);
+      border-radius: var(--r-sm);
+      padding: 12px 14px;
+      color: var(--text-inv);
+      font-size: var(--t-sm);
+      font-family: var(--font-sans);
+      font-weight: 300;
+      outline: none;
+      transition: border-color 0.2s;
+      margin-bottom: var(--sp-5);
+      -webkit-appearance: none;
+    }
+    .c-input:focus, .c-select:focus, .c-textarea:focus { border-color: rgba(176,141,90,0.5); }
+    .c-input::placeholder, .c-textarea::placeholder { color: rgba(250,250,248,0.2); }
+    .c-select option { background: #111311; color: #fafaf8; }
+    .c-textarea { resize: vertical; min-height: 110px; }
+
+    .c-row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-4); }
+
+    /* Chips */
+    .c-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: var(--sp-6); }
+    .c-chip {
+      padding: 7px 14px;
+      background: rgba(250,250,248,0.04);
+      border: 1px solid rgba(250,250,248,0.1);
+      border-radius: var(--r-full);
+      font-size: var(--t-sm);
+      color: rgba(250,250,248,0.45);
+      cursor: pointer;
+      transition: all 0.18s;
+      user-select: none;
+    }
+    .c-chip:hover { border-color: rgba(176,141,90,0.4); color: rgba(250,250,248,0.8); }
+    .c-chip.is-on { background: rgba(176,141,90,0.12); border-color: var(--rose); color: var(--rose); }
+
+    /* Submit */
+    .c-foot {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--sp-4);
+      flex-wrap: wrap;
+      margin-top: var(--sp-6);
+      padding-top: var(--sp-6);
+      border-top: 1px solid rgba(250,250,248,0.06);
+    }
+    .c-foot__note { font-size: var(--t-xs); color: rgba(250,250,248,0.22); line-height: 1.5; }
+
+    /* Succès */
+    .c-success {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: var(--sp-12) 0;
+    }
+    .c-success.is-visible { display: flex; }
+    .c-success__icon {
+      width: 56px; height: 56px;
+      border-radius: 50%;
+      background: rgba(176,141,90,0.1);
+      border: 1px solid rgba(176,141,90,0.3);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--rose);
+      margin-bottom: var(--sp-6);
+    }
+    .c-success__title { font-family: var(--font-serif); font-size: var(--t-3xl); font-weight: 300; color: var(--text-inv); margin-bottom: var(--sp-3); }
+    .c-success__text { font-size: var(--t-sm); color: rgba(250,250,248,0.4); line-height: 1.7; max-width: 340px; margin-bottom: var(--sp-8); }
+
+    /* ── Responsive ── */
+    @media (max-width: 960px) {
+      .c-grid { grid-template-columns: 1fr; gap: var(--sp-12); }
+    }
+    @media (max-width: 580px) {
+      .c-row { grid-template-columns: 1fr; gap: 0; }
+      .c-form-wrap { padding: var(--sp-6) var(--sp-5); }
+      .c-foot { flex-direction: column; align-items: stretch; text-align: center; }
+      .c-foot .btn { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="scroll-progress"></div>
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+<header class="header" id="header">
+  <div class="header__inner">
+    <a href="index.html" class="header__logo" aria-label="B.LIFTED France — Accueil">
+      B · LIFTED
+    </a>
+    <nav class="header__nav" aria-label="Navigation principale">
+      <a href="services.html"  class="header__nav-link" data-i18n="nav.services">Prestations</a>
+      <a href="flotte.html"    class="header__nav-link" data-i18n="nav.fleet">Flotte</a>
+      <a href="territoires/provence.html" class="header__nav-link" data-i18n="nav.territories">Territoires</a>
+      <a href="mariages.html"  class="header__nav-link" data-i18n="nav.weddings">Mariages</a>
+      <a href="a-propos.html"  class="header__nav-link" data-i18n="nav.about">À propos</a>
+    </nav>
+    <div class="header__actions">
+      <a href="contact.html" class="btn btn-primary btn--sm"><span data-i18n="nav.book">Réserver</span> <span class="btn-arrow">→</span></a>
+            <div class="header__lang">
+        <button class="header__lang-btn is-active" data-lang="fr">FR</button>
+        <span class="header__lang-sep">|</span>
+        <button class="header__lang-btn" data-lang="en">EN</button>
+      </div>
+      <button class="header__burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu principal">
+  <nav class="mobile-menu__nav">
+    <a href="services.html"  class="mobile-menu__link" data-i18n="nav.services">Prestations</a>
+    <a href="flotte.html"    class="mobile-menu__link" data-i18n="nav.fleet">Flotte</a>
+    <a href="territoires/provence.html" class="mobile-menu__link" data-i18n="nav.territories">Territoires</a>
+    <a href="mariages.html"  class="mobile-menu__link" data-i18n="nav.weddings">Mariages</a>
+    <a href="a-propos.html"  class="mobile-menu__link" data-i18n="nav.about">À propos</a>
+  </nav>
+  <div class="mobile-menu__foot">
+    <div class="mobile-menu__cta">
+      <a href="contact.html" class="btn btn-primary"><span data-i18n="nav.entrust">Confier un déplacement</span> →</a>
+    </div>
+    <div class="mobile-menu__info">
+      <span>+(33) 6 36 01 72 35</span>
+      <span>contact@bliftedfrance.com</span>
+    </div>
+  </div>
+</div>
+
+<!-- ── Hero ── -->
+<section class="c-hero">
+  <div class="c-hero__bg"></div>
+  <div class="c-hero__overlay"></div>
+  <div class="container c-hero__inner">
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+      <a href="index.html">Accueil</a><span class="breadcrumb__sep">—</span><span>Contact</span>
+    </nav>
+    <span class="c-hero__eyebrow" data-reveal="fade">Initier une demande</span>
+    <h1 class="c-hero__title" data-reveal="up" data-delay="100">
+      Décrivez<br><em>le contexte.</em>
+    </h1>
+  </div>
+</section>
+
+<!-- ── Contenu ── -->
+<section class="c-section">
+  <div class="container">
+    <div class="c-grid">
+
+      <!-- Gauche : infos -->
+      <div data-reveal="right">
+        <p class="c-lead">
+          Un déplacement sensible ne commence jamais par une réservation.
+          Il commence par une <em>compréhension précise de l'enjeu.</em>
+        </p>
+
+        <div class="c-channels">
+          <a href="tel:+33636017235" class="c-channel">
+            <div class="c-channel__icon">
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16">
+                <path d="M5 4h3l1.5 3.5-2 1.5a9 9 0 004.5 4.5l1.5-2L17 13v3a1 1 0 01-1 1A14 14 0 013 4a1 1 0 011-1h1z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="c-channel__label">Téléphone</div>
+              <div class="c-channel__value">+33 6 36 01 72 35</div>
+            </div>
+          </a>
+          <a href="mailto:contact@bliftedfrance.com" class="c-channel">
+            <div class="c-channel__icon">
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16">
+                <rect x="2" y="5" width="16" height="12" rx="1"/><path d="M2 5l8 7 8-7"/>
+              </svg>
+            </div>
+            <div>
+              <div class="c-channel__label">Email</div>
+              <div class="c-channel__value">contact@bliftedfrance.com</div>
+            </div>
+          </a>
+          <a href="https://wa.me/33636017235?text=Bonjour%2C%20je%20souhaite%20confier%20un%20d%C3%A9placement%20%C3%A0%20B.LIFTED." class="c-channel" target="_blank" rel="noopener">
+            <div class="c-channel__icon" style="background:rgba(37,211,102,0.08);border-color:rgba(37,211,102,0.2);color:#25D366;">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="c-channel__label" style="color:#25D366;">WhatsApp</div>
+              <div class="c-channel__value">Réponse rapide</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="c-process">
+          <div class="c-process__label">Ce qui se passe après</div>
+          <div class="c-step">
+            <div class="c-step__num">1</div>
+            <div>
+              <div class="c-step__title">Analyse personnelle</div>
+              <p class="c-step__text">Votre demande est lue et analysée personnellement. Chaque détail compte.</p>
+            </div>
+          </div>
+          <div class="c-step">
+            <div class="c-step__num">2</div>
+            <div>
+              <div class="c-step__title">Rappel sous 24h</div>
+              <p class="c-step__text">Un échange direct pour affiner les paramètres. Pas de devis automatisé.</p>
+            </div>
+          </div>
+          <div class="c-step">
+            <div class="c-step__num">3</div>
+            <div>
+              <div class="c-step__title">Confirmation ou refus motivé</div>
+              <p class="c-step__text">La mission est confirmée — ou refusée si le niveau d'exigence ne peut être garanti.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Droite : formulaire -->
+      <div data-reveal="left">
+        <div class="c-form-wrap">
+          <div class="c-form-wrap__title">Votre demande</div>
+          <div class="c-form-wrap__sub">Décrivez votre déplacement — nous revenons vers vous personnellement.</div>
+
+          <form id="contact-form" novalidate>
+
+            <label class="c-label">Type de mission</label>
+            <div class="c-chips" id="c-chips">
+              <span class="c-chip" data-val="transfert">Transfert aéroport</span>
+              <span class="c-chip" data-val="disposition">Mise à disposition</span>
+              <span class="c-chip" data-val="mariage">Mariage</span>
+              <span class="c-chip" data-val="evenement">Événement</span>
+              <span class="c-chip" data-val="sejour">Séjour VIP</span>
+              <span class="c-chip" data-val="autre">Autre</span>
+            </div>
+            <input type="hidden" name="mission" id="f-mission">
+
+            <div class="c-row">
+              <div>
+                <label class="c-label" for="f-territoire">Territoire</label>
+                <select class="c-select" id="f-territoire" name="territoire">
+                  <option value="" disabled selected>Sélectionner</option>
+                  <option value="provence">Provence</option>
+                  <option value="french-riviera">French Riviera</option>
+                  <option value="megeve">Megève &amp; Alpes</option>
+                  <option value="dubai">Dubaï</option>
+                  <option value="autre">Autre</option>
+                </select>
+              </div>
+              <div>
+                <label class="c-label" for="f-date">Date souhaitée</label>
+                <input class="c-input" type="date" id="f-date" name="date">
+              </div>
+            </div>
+
+            <div class="c-row">
+              <div>
+                <label class="c-label" for="f-prenom">Prénom</label>
+                <input class="c-input" type="text" id="f-prenom" name="prenom" placeholder="Votre prénom" required autocomplete="given-name">
+              </div>
+              <div>
+                <label class="c-label" for="f-nom">Nom</label>
+                <input class="c-input" type="text" id="f-nom" name="nom" placeholder="Votre nom" required autocomplete="family-name">
+              </div>
+            </div>
+
+            <div class="c-row">
+              <div>
+                <label class="c-label" for="f-email">Email</label>
+                <input class="c-input" type="email" id="f-email" name="email" placeholder="votre@email.com" required autocomplete="email">
+              </div>
+              <div>
+                <label class="c-label" for="f-tel">Téléphone</label>
+                <input class="c-input" type="tel" id="f-tel" name="tel" placeholder="+33 6 00 00 00 00" autocomplete="tel">
+              </div>
+            </div>
+
+            <label class="c-label" for="f-contexte">Contexte du déplacement</label>
+            <textarea class="c-textarea" id="f-contexte" name="contexte" placeholder="Lieu de départ, destination, contraintes, nombre de personnes, enjeu particulier…"></textarea>
+
+            <div class="c-foot">
+              <p class="c-foot__note">Réponse personnelle<br>sous 24h ouvrées</p>
+              <button type="submit" class="btn btn-primary">
+                Envoyer la demande <span class="btn-arrow">→</span>
+              </button>
+            </div>
+
+          </form>
+
+          <div class="c-success" id="form-success" role="status" aria-live="polite">
+            <div class="c-success__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24">
+                <path d="M5 12l5 5L20 7"/>
+              </svg>
+            </div>
+            <div class="c-success__title">Demande reçue</div>
+            <p class="c-success__text">Nous avons bien reçu votre demande et vous rappellerons personnellement sous 24h.</p>
+            <div style="display:flex;gap:var(--sp-4);flex-wrap:wrap;justify-content:center;">
+              <a href="tel:+33636017235" class="btn btn-primary">Appeler directement</a>
+              <a href="index.html" class="btn btn-secondary">Retour à l'accueil</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer class="footer" role="contentinfo">
+  <div class="footer__inner">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__brand-logo" aria-label="B.LIFTED France">B · LIFTED</a>
+        <p class="footer__brand-desc">Service de transport privé haut de gamme en Provence, French Riviera, Megève et Dubaï. Discrétion absolue, fiabilité sans compromis.</p>
+        <div class="footer__social">
+          <a href="https://www.instagram.com/bliftedfrance" class="footer__social-link" aria-label="Instagram B.LIFTED" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+          </a>
+          <a href="https://www.facebook.com/bliftedfrance" class="footer__social-link" aria-label="Facebook B.LIFTED" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <p class="footer__col-title">Services</p>
+        <nav class="footer__nav">
+          <a href="services.html" class="footer__nav-link">Transfert aéroport</a>
+          <a href="services.html" class="footer__nav-link">Mise à disposition</a>
+          <a href="mariages.html" class="footer__nav-link">Mariages &amp; événements</a>
+          <a href="flotte.html"   class="footer__nav-link">Notre flotte</a>
+        </nav>
+      </div>
+      <div class="footer__col">
+        <p class="footer__col-title" data-i18n="nav.territories">Territoires</p>
+        <nav class="footer__nav">
+          <a href="territoires/provence.html"       class="footer__nav-link">Provence</a>
+          <a href="territoires/french-riviera.html" class="footer__nav-link">French Riviera</a>
+          <a href="territoires/megeve.html"         class="footer__nav-link">Megève</a>
+          <a href="territoires/dubai.html"          class="footer__nav-link">Dubaï</a>
+        </nav>
+      </div>
+      <div class="footer__col">
+        <p class="footer__col-title">Contact</p>
+        <div class="footer__contact-item">
+          <svg class="footer__contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81C2.18 7.22 2 4.92 2 4a2 2 0 012-2h3a2 2 0 012 1.72c.13 1 .4 1.97.71 2.9a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.93.31 1.9.58 2.9.71A2 2 0 0122 16.92z"/></svg>
+          <p class="footer__contact-text"><a href="tel:+33636017235">+(33) 6 36 01 72 35</a></p>
+        </div>
+        <div class="footer__contact-item">
+          <svg class="footer__contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <p class="footer__contact-text"><a href="mailto:contact@bliftedfrance.com">contact@bliftedfrance.com</a></p>
+        </div>
+        <div style="margin-top:1.5rem;">
+          <a href="contact.html" class="btn btn-primary btn--sm"><span data-i18n="nav.book">Réserver</span> <span class="btn-arrow">→</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">&copy; <span id="footer-year">2026</span> B.LIFTED France · Tous droits réservés</p>
+      <div class="footer__legal">
+        <a href="/mentions-legales">Mentions légales</a>
+        <a href="/confidentialite">Confidentialité</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/33636017235" class="whatsapp-float" aria-label="WhatsApp" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+  // Chips
+  document.querySelectorAll('#c-chips .c-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      document.querySelectorAll('#c-chips .c-chip').forEach(c => c.classList.remove('is-on'));
+      chip.classList.add('is-on');
+      document.getElementById('f-mission').value = chip.dataset.val;
+    });
+  });
+
+  // Envoi
+  const form = document.getElementById('contact-form');
+  const success = document.getElementById('form-success');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('[type="submit"]');
+    btn.disabled = true;
+    btn.textContent = 'Envoi…';
+    await new Promise(r => setTimeout(r, 700));
+    form.style.display = 'none';
+    success.classList.add('is-visible');
+  });
+
+  // Footer year
+  const fy = document.getElementById('footer-year');
+  if (fy) fy.textContent = new Date().getFullYear();
+</script>
+
+<script src="js/nav.js" defer></script>
+<script src="js/scroll-reveal.js" defer></script>
+<script src="js/main.js" defer></script>
+<script src="js/i18n.js" defer></script>
+
+</body>
+</html>

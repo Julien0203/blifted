@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flotte Mercedes Haut de Gamme — Classe V, GLE, Classe E & S | B.LIFTED France</title>
+  <meta name="description" content="Flotte Mercedes haut de gamme sélectionnée selon le contexte : Classe V pour les groupes, GLE pour la montagne, Classe E & S pour les missions executives et ultra-prestige.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://bliftedfrance.com/flotte.html">
+  <meta property="og:title" content="Flotte B.LIFTED — Mercedes Classe V, GLE, E & S">
+  <meta property="og:description" content="Le véhicule n'est pas l'argument. Il est le cadre.">
+  <meta property="og:url" content="https://bliftedfrance.com/flotte.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/typography.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/components.css">
+  <style>
+    body.no-scroll { overflow: hidden; }
+    #menu-overlay { position:fixed; inset:0; background:rgba(28,26,23,0.4); z-index:calc(var(--z-header) - 2); opacity:0; visibility:hidden; transition:opacity var(--dur) var(--ease),visibility var(--dur); }
+    #menu-overlay.is-active { opacity:1; visibility:visible; }
+
+    .page-hero { position:relative; min-height:70vh; display:flex; align-items:center; overflow:hidden; }
+    .page-hero__bg { position:absolute; inset:0; background:url('assets/images/fleet-gle.jpg') center/cover no-repeat; }
+    .page-hero__overlay { position:absolute; inset:0; background:linear-gradient(to right, rgba(17,19,17,0.88) 0%, rgba(17,19,17,0.6) 55%, rgba(17,19,17,0.2) 100%); }
+    .page-hero__content { position:relative; z-index:1; width:100%; max-width:var(--container); margin-inline:auto; padding: calc(var(--header-h) + 3rem) var(--gutter) 4rem; }
+    .page-hero__content .eyebrow { color:var(--rose-light); }
+    .page-hero__content h1 { color:var(--text-inv); }
+    .page-hero__content h1 em { color:var(--rose-light); }
+    .page-hero__content .body-lead { color:rgba(253,250,246,0.75); }
+
+    /* Grille véhicules */
+    .vehicle-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:var(--sp-6); }
+    .vehicle-card { background:var(--bg-card); border:1px solid var(--border-soft); border-radius:var(--radius-lg); overflow:hidden; transition:box-shadow var(--dur) var(--ease), transform var(--dur) var(--ease); }
+    .vehicle-card:hover { box-shadow:var(--shadow-lg); transform:translateY(-6px); }
+    .vehicle-card__img { width:100%; aspect-ratio:16/9; object-fit:cover; transition:transform var(--dur-slow) var(--ease-out); }
+    .vehicle-card:hover .vehicle-card__img { transform:scale(1.04); }
+    .vehicle-card__body { padding:var(--sp-8) var(--sp-8) var(--sp-10); display:flex; flex-direction:column; gap:var(--sp-5); }
+    .vehicle-card__brand { font-size:var(--t-xs); letter-spacing:var(--ls-widest); text-transform:uppercase; color:var(--rose); }
+    .vehicle-card__name { font-family:var(--font-serif); font-size:var(--t-3xl); font-weight:300; color:var(--text); line-height:var(--lh-snug); }
+    .vehicle-card__desc { font-size:var(--t-base); color:var(--text-muted); font-weight:300; line-height:var(--lh-relaxed); max-width:none; }
+    .vehicle-card__specs { display:flex; gap:var(--sp-6); flex-wrap:wrap; padding-top:var(--sp-5); border-top:1px solid var(--border-soft); }
+    .vehicle-spec { display:flex; flex-direction:column; gap:var(--sp-1); }
+    .vehicle-spec__label { font-size:var(--t-xs); letter-spacing:var(--ls-wide); text-transform:uppercase; color:var(--text-light); }
+    .vehicle-spec__val { font-size:var(--t-base); color:var(--text-soft); font-weight:400; }
+    .vehicle-card__contexts { display:flex; flex-wrap:wrap; gap:var(--sp-2); margin-top:var(--sp-2); }
+    .vehicle-tag { display:inline-flex; padding:var(--sp-2) var(--sp-4); background:var(--rose-ultra); border:1px solid var(--rose-pale); border-radius:var(--radius-full); font-size:var(--t-xs); letter-spacing:var(--ls-wide); color:var(--rose-deep); }
+
+    /* Philosophie */
+    .philosophy { background:var(--bg-dark); padding-block:var(--section-py); }
+    .philosophy__inner { display:grid; grid-template-columns:1fr 1fr; gap:6rem; align-items:center; }
+    .philosophy__text { display:flex; flex-direction:column; gap:var(--sp-8); }
+    .philosophy__quote { font-family:var(--font-serif); font-size:clamp(var(--t-3xl),5vw,var(--t-5xl)); font-weight:300; line-height:var(--lh-snug); color:var(--text-inv); }
+    .philosophy__quote em { display:block; font-style:italic; color:var(--rose-light); }
+    .philosophy__body { font-size:var(--t-lg); color:var(--text-inv-soft); font-weight:300; line-height:var(--lh-relaxed); max-width:44ch; }
+    .philosophy__img { aspect-ratio:3/4; border-radius:var(--radius-lg); overflow:hidden; background:var(--bg-warm); }
+    .philosophy__img img { width:100%; height:100%; object-fit:cover; }
+
+    @media (max-width: 900px) {
+      .vehicle-grid { grid-template-columns:1fr; }
+      .philosophy__inner { grid-template-columns:1fr; gap:3rem; }
+    }
+  </style>
+</head>
+<body class="no-scroll">
+<div class="loader" id="loader"><div class="loader__inner"><div class="loader__logo">B · LIFTED</div><div class="loader__bar"><div class="loader__bar-fill"></div></div></div></div>
+<div class="cursor" id="cursor"></div><div class="cursor-ring" id="cursorRing"></div>
+<div class="scroll-progress" id="scroll-progress"></div>
+<div id="menu-overlay"></div>
+
+<header class="header" id="header">
+  <div class="header__inner">
+    <a href="index.html" class="header__logo">B · LIFTED<span></span></a>
+    <nav class="header__nav">
+      <a href="services.html" class="header__nav-link" data-i18n="nav.services">Prestations</a>
+      <a href="flotte.html" class="header__nav-link is-active" data-i18n="nav.fleet">Flotte</a>
+      <a href="index.html#territoires" class="header__nav-link" data-i18n="nav.territories">Territoires</a>
+      <a href="mariages.html" class="header__nav-link" data-i18n="nav.weddings">Mariages</a>
+      <a href="a-propos.html" class="header__nav-link" data-i18n="nav.about">À propos</a>
+    </nav>
+    <div class="header__cta">
+      <a href="contact.html" class="btn btn-primary btn--sm">Confier un déplacement <span class="btn-arrow">→</span></a>
+            <div class="header__lang">
+        <button class="header__lang-btn is-active" data-lang="fr">FR</button>
+        <span class="header__lang-sep">|</span>
+        <button class="header__lang-btn" data-lang="en">EN</button>
+      </div>
+      <button class="header__burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobile-menu">
+  <nav class="mobile-menu__nav">
+    <a href="services.html" class="mobile-menu__link" data-i18n="nav.services">Prestations</a>
+    <a href="flotte.html" class="mobile-menu__link" data-i18n="nav.fleet">Flotte</a>
+    <a href="index.html#territoires" class="mobile-menu__link" data-i18n="nav.territories">Territoires</a>
+    <a href="mariages.html" class="mobile-menu__link" data-i18n="nav.weddings">Mariages</a>
+    <a href="a-propos.html" class="mobile-menu__link" data-i18n="nav.about">À propos</a>
+  </nav>
+  <div class="mobile-menu__bottom">
+    <a href="contact.html" class="btn btn-primary"><span data-i18n="nav.entrust">Confier un déplacement</span> →</a>
+    <p class="mobile-menu__contact">+(33) 6 36 01 72 35</p>
+  </div>
+</div>
+
+<main>
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="page-hero__bg"></div>
+    <div class="page-hero__overlay"></div>
+    <div class="page-hero__content">
+      <span class="eyebrow" data-reveal="fade">Notre flotte</span>
+      <h1 style="font-family:var(--font-serif); font-size:clamp(var(--t-4xl),6vw,var(--t-7xl)); font-weight:300; line-height:var(--lh-tight); letter-spacing:var(--ls-tight); margin-top:var(--sp-5); max-width:14ch;" data-reveal="up">
+        Le véhicule n'est pas l'argument. <em style="font-style:italic;">C'est le cadre.</em>
+      </h1>
+      <p class="body-lead" style="margin-top:var(--sp-6); max-width:46ch;" data-reveal="up" data-delay="150">
+        Chaque véhicule est sélectionné selon le contexte de la mission. Pas de flamboyance inutile — la bonne voiture pour la bonne situation.
+      </p>
+    </div>
+  </section>
+
+  <!-- Véhicules -->
+  <section class="section">
+    <div class="container">
+      <div class="vehicle-grid" data-stagger>
+
+        <!-- Classe V -->
+        <div class="vehicle-card" data-reveal="up" data-delay="100">
+          <img src="assets/images/fleet-classe-v.jpg" alt="Mercedes Classe V" class="vehicle-card__img" loading="lazy">
+          <div class="vehicle-card__body">
+            <span class="vehicle-card__brand">Mercedes-Benz</span>
+            <h2 class="vehicle-card__name">Classe V</h2>
+            <p class="vehicle-card__desc">Le choix pour les groupes, familles et transferts nécessitant de l'espace. Jusqu'à 7 passagers avec bagages. Intérieur modulable, confort premium.</p>
+            <div class="vehicle-card__specs">
+              <div class="vehicle-spec"><span class="vehicle-spec__label">Passagers</span><span class="vehicle-spec__val">Jusqu'à 7</span></div>
+              <div class="vehicle-spec"><span class="vehicle-spec__label">Bagages</span><span class="vehicle-spec__val">Grand volume</span></div>
+              <div class="vehicle-spec"><span class="vehicle-spec__label">Finition</span><span class="vehicle-spec__val">Business Select</span></div>
+            </div>
+            <div class="vehicle-card__contexts">
+              <span class="vehicle-tag">Familles</span>
+              <span class="vehicle-tag">Groupes</span>
+              <span class="vehicle-tag" data-i18n="nav.weddings">Mariages</span>
+              <span class="vehicle-tag">Séjours</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- GLE -->
+        <div class="vehicle-card" data-reveal="up" data-delay="200">
+          <img src="assets/images/fleet-gle.jpg" alt="Mercedes GLE" class="vehicle-card__img" loading="lazy">
+          <div class="vehicle-card__body">
+            <span class="vehicle-card__brand">Mercedes-Benz</span>
+            <h2 class="vehicle-card__name">GLE</h2>
+            <p class="vehicle-card__desc">SUV de prestige pour les routes de montagne et les missions nécessitant une stature affirmée. La référence pour Megève et les Alpes.</p>
+            <div class="vehicle-card__specs">
+              <div class="vehicle-spec"><span class="vehicle-spec__label">Passagers</span><span class="vehicle-spec__val">Jusqu'à 5</span></div>
+              <div class="vehicle-spec"><span class="vehicle-spec__label">Terrain</span><span class="vehicle-spec__val">Tout-terrain</span></div>
+              <div class="vehicle-spec"><span class="vehicle-spec__label">Finition</span><span class="vehicle-spec__val">AMG Line</span></div>
+            </div>
+            <div class="vehicle-card__contexts">
+              <span class="vehicle-tag">Alpes</span>
+              <span class="vehicle-tag">Megève</span>
+              <span class="vehicle-tag">Villas</span>
+              <span class="vehicle-tag">Prestige</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Classe E -->
+        <div class="vehicle-card" data-reveal="up" data-delay="100">
+          <img src="assets/images/fleet-classe-e.jpg" alt="Mercedes Classe E" class="vehicle-card__img" loading="lazy">
+          <div class="vehicle-card__body">
+            <span class="vehicle-card__brand">Mercedes-Benz</span>
+            <h2 class="vehicle-card__name">Classe E</h2>
+            <p class="vehicle-card__desc">Élégance et discrétion pour les déplacements professionnels. Silhouette sobre qui ne s'impose pas — la bonne voiture quand la sobriété est de mise.</p>
+            <div class="vehicle-card__specs">
+              <div class="vehicle-spec"><span class="vehicle-spec__label">Passagers</span><span class="vehicle-spec__val">Jusqu'à 4</span></div>
+              <div class="vehicle-spec"><span class="vehicle-spec__label">Ambiance</span><span class="vehicle-spec__val">Discrète</span></div>
+              <div class="vehicle-spec"><span class="vehicle-spec__label">Finition</span><span class="vehicle-spec__val">Executive</span></div>
+            </div>
+            <div class="vehicle-card__contexts">
+              <span class="vehicle-tag">Business</span>
+              <span class="vehicle-tag">Solo</span>
+              <span class="vehicle-tag">Discret</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Classe S -->
+        <div class="vehicle-card" data-reveal="up" data-delay="200">
+          <img src="assets/images/fleet-classe-s.jpg" alt="Mercedes Classe S" class="vehicle-card__img" loading="lazy">
+          <div class="vehicle-card__body">
+            <span class="vehicle-card__brand">Mercedes-Benz</span>
+            <h2 class="vehicle-card__name">Classe S</h2>
+            <p class="vehicle-card__desc">Le summum. Pour les missions qui exigent le symbole autant que la substance. Confort actif, technologie de pointe, présence incontestable.</p>
+            <div class="vehicle-card__specs">
+              <div class="vehicle-spec"><span class="vehicle-spec__label">Passagers</span><span class="vehicle-spec__val">Jusqu'à 4</span></div>
+              <div class="vehicle-spec"><span class="vehicle-spec__label">Ambiance</span><span class="vehicle-spec__val">Ultra-prestige</span></div>
+              <div class="vehicle-spec"><span class="vehicle-spec__label">Finition</span><span class="vehicle-spec__val">Long</span></div>
+            </div>
+            <div class="vehicle-card__contexts">
+              <span class="vehicle-tag">VIP</span>
+              <span class="vehicle-tag">Cérémonies</span>
+              <span class="vehicle-tag">Ultra-prestige</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Philosophie -->
+  <section class="philosophy">
+    <div class="container">
+      <div class="philosophy__inner">
+        <div class="philosophy__text" data-reveal="right">
+          <h2 class="philosophy__quote">
+            Le choix du véhicule<br><em>n'est pas anodin.</em>
+          </h2>
+          <p class="philosophy__body">Un GLE dans les Alpes n'est pas un choix d'image — c'est une décision de sécurité et de compétence terrain. Une Classe S pour une réunion confidentielle n'est pas de la vanité — c'est le signal que vous accordez à votre interlocuteur une attention totale.</p>
+          <p class="philosophy__body">Chez B.LIFTED, le véhicule est sélectionné après la mission. Jamais avant.</p>
+          <a href="contact.html" class="btn btn-ghost" style="margin-top:var(--sp-4);">Décrire votre contexte <span class="btn-arrow">→</span></a>
+        </div>
+        <div class="philosophy__img" data-reveal="left">
+          <img src="assets/images/flotte-philosophie.jpg" alt="Flotte B.LIFTED" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2 class="cta-section__title" data-split="words">Quel véhicule pour votre <em>prochaine mission&nbsp;?</em></h2>
+      <p class="cta-section__sub" data-reveal="up" data-delay="200">Nous recommandons le véhicule adapté après avoir compris votre contexte.</p>
+      <div class="cta-section__actions" data-reveal="up" data-delay="300">
+        <a href="contact.html" class="btn btn-primary">Confier un déplacement <span class="btn-arrow">→</span></a>
+        <a href="index.html#simulateur" class="btn btn-outline">Estimer le budget</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer__inner">
+
+    <div class="footer__top">
+
+      <!-- Brand -->
+      <div class="footer__brand">
+        <a href="index.html" class="footer__brand-logo" aria-label="B.LIFTED France">
+          B · LIFTED
+        </a>
+        <p class="footer__brand-desc">
+          Service de transport privé haut de gamme en Provence, French Riviera, Megève et Dubaï. Discrétion absolue, fiabilité sans compromis.
+        </p>
+        <div class="footer__social">
+          <a href="https://www.instagram.com/bliftedfrance" class="footer__social-link" aria-label="Instagram B.LIFTED" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
+            </svg>
+          </a>
+          <a href="https://www.facebook.com/bliftedfrance" class="footer__social-link" aria-label="Facebook B.LIFTED" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Services -->
+      <div class="footer__col">
+        <p class="footer__col-title">Services</p>
+        <nav class="footer__nav" aria-label="Navigation services">
+          <a href="services.html" class="footer__nav-link">Transfert aéroport</a>
+          <a href="services.html" class="footer__nav-link">Mise à disposition</a>
+          <a href="mariages.html" class="footer__nav-link">Mariages &amp; événements</a>
+          <a href="services.html" class="footer__nav-link">Séjours &amp; coordination</a>
+          <a href="flotte.html" class="footer__nav-link">Notre flotte</a>
+        </nav>
+      </div>
+
+      <!-- Territoires -->
+      <div class="footer__col">
+        <p class="footer__col-title" data-i18n="nav.territories">Territoires</p>
+        <nav class="footer__nav" aria-label="Navigation territoires">
+          <a href="territoires/provence.html" class="footer__nav-link">Provence</a>
+          <a href="territoires/french-riviera.html" class="footer__nav-link">French Riviera</a>
+          <a href="territoires/megeve.html" class="footer__nav-link">Megève</a>
+          <a href="territoires/dubai.html" class="footer__nav-link">Dubaï</a>
+        </nav>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer__col">
+        <p class="footer__col-title">Contact</p>
+        <div class="footer__contact-item">
+          <svg class="footer__contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81C2.18 7.22 2 4.92 2 4a2 2 0 012-2h3a2 2 0 012 1.72c.13 1 .4 1.97.71 2.9a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.93.31 1.9.58 2.9.71A2 2 0 0122 16.92z"/>
+          </svg>
+          <p class="footer__contact-text">
+            <a href="tel:+33636017235">+(33) 6 36 01 72 35</a>
+          </p>
+        </div>
+        <div class="footer__contact-item">
+          <svg class="footer__contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+          </svg>
+          <p class="footer__contact-text">
+            <a href="mailto:contact@bliftedfrance.com">contact@bliftedfrance.com</a>
+          </p>
+        </div>
+        <div style="margin-top: 1.5rem;">
+          <a href="contact.html" class="btn btn-primary btn--sm">
+            <span data-i18n="nav.book">Réserver</span> <span class="btn-arrow">→</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <p class="footer__copy">
+        &copy; <span id="footer-year">2026</span> B.LIFTED France · Tous droits réservés
+      </p>
+      <div class="footer__legal">
+        <a href="/mentions-legales">Mentions légales</a>
+        <a href="/confidentialite">Confidentialité</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script src="js/nav.js" defer></script>
+<script src="js/scroll-reveal.js" defer></script>
+<script src="js/main.js" defer></script>
+<script src="js/i18n.js" defer></script>
+
+</body>
+</html>
