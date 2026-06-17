@@ -1,36 +1,36 @@
 /* ============================================================
    B.LIFTED France — Simulateur v3.0
-   Estimation de tarif en 4 étapes
+   Configurateur en 4 étapes → WhatsApp
    ============================================================ */
 
 (function () {
   'use strict';
 
-  /* ── GRILLES TARIFAIRES ─────────────────────────────────── */
-  const BASE_TERRITORY = {
-    provence: 680,
-    riviera:  820,
-    megeve:   1050,
-    dubai:    900,
+  /* ── LABELS POUR MESSAGE WHATSAPP ───────────────────────── */
+  const SERVICE_LABEL = {
+    transfert:   'Transfert',
+    disposition: 'Mise à disposition',
+    mariage:     'Mariage',
+    sejour:      'Séjour',
   };
 
-  const SERVICE_MULTIPLIER = {
-    transfert:  0.32,   // Tarif à la course — fraction de la base
-    disposition: 1.0,   // Mise à dispo = base entière
-    mariage:    1.75,   // Majoration événement
-    sejour:     1.40,   // Séjour multi-étapes
+  const TERRITORY_LABEL = {
+    provence: 'Provence',
+    riviera:  'Côte d\'Azur',
+    megeve:   'Megève',
+    dubai:    'Dubaï',
   };
 
-  const DURATION_MULTIPLIER = {
-    half:  0.65,
-    full:  1.0,
-    multi: 2.20,
+  const DURATION_LABEL = {
+    half:  'Demi-journée',
+    full:  'Journée complète',
+    multi: 'Multi-jours',
   };
 
-  const PASSENGER_MULTIPLIER = {
-    small:  1.0,
-    medium: 1.30,
-    large:  1.65,
+  const PASSENGER_LABEL = {
+    small:  '1 à 3 passagers',
+    medium: '4 à 7 passagers',
+    large:  '8 passagers et plus',
   };
 
 
@@ -59,7 +59,7 @@
   lines['3-4'] = document.getElementById('line-3-4');
 
   const resultPanel  = document.getElementById('sim-result');
-  const resultPrice  = document.getElementById('result-price');
+  const waLink       = document.getElementById('sim-whatsapp');
 
   if (!panels[1]) return; // Pas de simulateur sur cette page
 
@@ -177,37 +177,24 @@
   }
 
 
-  /* ── CALCUL ─────────────────────────────────────────────── */
-  function calculatePrice() {
-    const base     = BASE_TERRITORY[state.territory]     || 700;
-    const svcMult  = SERVICE_MULTIPLIER[state.service]   || 1.0;
-    const durMult  = DURATION_MULTIPLIER[state.duration] || 1.0;
-    const pasMult  = PASSENGER_MULTIPLIER[state.passengers] || 1.0;
-
-    return Math.round(base * svcMult * durMult * pasMult);
-  }
-
-
-  /* ── RÉSULTAT ───────────────────────────────────────────── */
+  /* ── RÉSULTAT → WHATSAPP ────────────────────────────────── */
   function showResult() {
-    const price = calculatePrice();
-    if (!resultPrice) return;
+    if (!waLink) return;
 
-    // Animation compteur
-    let current = 0;
-    const target   = price;
-    const duration = 900;
-    const start    = performance.now();
+    const svc  = SERVICE_LABEL[state.service]       || state.service    || '–';
+    const ter  = TERRITORY_LABEL[state.territory]   || state.territory  || '–';
+    const dur  = DURATION_LABEL[state.duration]     || state.duration   || '–';
+    const pas  = PASSENGER_LABEL[state.passengers]  || state.passengers || '–';
 
-    function updateCount(now) {
-      const elapsed  = now - start;
-      const progress = Math.min(elapsed / duration, 1);
-      const ease     = 1 - Math.pow(1 - progress, 3);
-      current        = Math.round(target * ease);
-      resultPrice.textContent = current.toLocaleString('fr-FR');
-      if (progress < 1) requestAnimationFrame(updateCount);
-    }
-    requestAnimationFrame(updateCount);
+    const msg = encodeURIComponent(
+      'Bonjour, je souhaite un devis B.LIFTED :\n' +
+      '• Prestation : ' + svc  + '\n' +
+      '• Territoire : ' + ter  + '\n' +
+      '• Durée : '      + dur  + '\n' +
+      '• Groupe : '     + pas
+    );
+
+    waLink.href = 'https://wa.me/33636017235?text=' + msg;
   }
 
 })();

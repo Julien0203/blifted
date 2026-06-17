@@ -64,7 +64,7 @@
       'home.svc4.link':          'En savoir plus',
 
       /* ── HOME — SIMULATOR ────────────────────────────── */
-      'home.sim.eyebrow':        'Simulateur de tarif',
+      'home.sim.eyebrow':        'Configurateur',
       'home.sim.q1':             'Quelle prestation souhaitez-vous ?',
       'home.sim.q1.hint':        'Sélectionnez la nature de votre déplacement',
       'home.sim.q2':             'Quel est votre territoire ?',
@@ -75,11 +75,10 @@
       'home.sim.q4.hint':        'Pour adapter le véhicule à votre groupe',
       'home.sim.next':           'Continuer',
       'home.sim.back':           '← Retour',
-      'home.sim.calc':           'Voir mon estimation',
-      'home.sim.result.label':   'Estimation personnalisée',
-      'home.sim.result.prefix':  'À partir de',
-      'home.sim.result.note':    'Estimation indicative · Devis précis sur demande · TVA et frais inclus',
-      'home.sim.result.cta':     'Demander un devis',
+      'home.sim.calc':           'Soumettre ma demande',
+      'home.sim.result.label':   'Votre sélection',
+      'home.sim.result.note':    'Nos tarifs sont établis sur mesure. Parlez-nous de votre projet directement.',
+      'home.sim.result.cta':     'Discuter sur WhatsApp',
       'home.sim.restart':        'Nouvelle simulation',
 
       /* ── HOME — TERRITORIES ──────────────────────────── */
@@ -337,7 +336,7 @@
       'home.svc4.link':          'Learn more',
 
       /* ── HOME — SIMULATOR ────────────────────────────── */
-      'home.sim.eyebrow':        'Rate estimator',
+      'home.sim.eyebrow':        'Configurator',
       'home.sim.q1':             'Which service do you need?',
       'home.sim.q1.hint':        'Select the type of journey',
       'home.sim.q2':             'Which destination?',
@@ -348,12 +347,11 @@
       'home.sim.q4.hint':        'To select the right vehicle',
       'home.sim.next':           'Continue',
       'home.sim.back':           '← Back',
-      'home.sim.calc':           'Get my estimate',
-      'home.sim.result.label':   'Personalised estimate',
-      'home.sim.result.prefix':  'From',
-      'home.sim.result.note':    'Indicative estimate · Exact quote on request · All taxes & fees included',
-      'home.sim.result.cta':     'Request a quote',
-      'home.sim.restart':        'New estimate',
+      'home.sim.calc':           'Submit my request',
+      'home.sim.result.label':   'Your selection',
+      'home.sim.result.note':    'Our rates are tailored to your project. Let\'s talk directly.',
+      'home.sim.result.cta':     'Chat on WhatsApp',
+      'home.sim.restart':        'New configuration',
 
       /* ── HOME — TERRITORIES ──────────────────────────── */
       'home.territories.eyebrow': 'Our destinations',
