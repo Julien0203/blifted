@@ -144,4 +144,28 @@
     });
   });
 
+  /* ── WHATSAPP WIDGET ─────────────────────────────────────── */
+  const waToggle = document.getElementById('whatsapp-toggle');
+  const waPopup  = document.getElementById('whatsapp-popup');
+  const waClose  = document.getElementById('whatsapp-close');
+
+  if (waToggle && waPopup) {
+    waToggle.addEventListener('click', () => {
+      const open = waPopup.classList.toggle('is-open');
+      waPopup.setAttribute('aria-hidden', String(!open));
+    });
+    if (waClose) {
+      waClose.addEventListener('click', () => {
+        waPopup.classList.remove('is-open');
+        waPopup.setAttribute('aria-hidden', 'true');
+      });
+    }
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.whatsapp-widget')) {
+        waPopup.classList.remove('is-open');
+        waPopup.setAttribute('aria-hidden', 'true');
+      }
+    });
+  }
+
 })();

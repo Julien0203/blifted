@@ -157,6 +157,31 @@
   --btn-h:      52px;
   --btn-h-sm:   42px;
   --input-h:    54px;
+
+  /* ── ALIAS COMPLÉMENTAIRES ───────────────────────────────── */
+  --ivoire:         #FAFAF6;
+  --ivoire-dk:      #EAE5D8;
+  --blanc:          #FFFFFF;
+  --texte-lt:       #9A8A80;
+
+  --or:             #B08D5A;
+  --or-lt:          #D9C090;
+  --or-deep:        #7A5F2E;
+  --or-border:      rgba(176,141,90,0.20);
+  --or-glow:        rgba(176,141,90,0.08);
+
+  --radius-md:      20px;
+  --radius-lg:      32px;
+  --radius-full:    9999px;
+
+  --transition:      0.42s cubic-bezier(0.25,0.46,0.45,0.94);
+  --transition-fast: 0.18s cubic-bezier(0.25,0.46,0.45,0.94);
+
+  --sp-7:           1.75rem;
+
+  --noir:            #1A1C1A;
+  --taupe:           #9A8A80;
+  --champagne:       #E8D5A0;
 }
 
 /* ── RESPONSIVE ──────────────────────────────────────────── */

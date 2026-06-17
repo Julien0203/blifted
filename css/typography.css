@@ -20,6 +20,9 @@
 .section--sm {
   padding-block: var(--section-py-sm);
 }
+.section-dark {
+  background: var(--bg-dark);
+}
 
 /* ── EN-TÊTES ───────────────────────────────────────────── */
 h1, h2, h3, h4, h5, h6 {
@@ -57,6 +60,9 @@ em {
 .text-soft   { color: var(--text-soft); }
 .text-rose   { color: var(--rose); }
 .text-gold   { color: var(--gold); }
+.text-or     { color: var(--or); }
+.text-inv    { color: var(--text-inv) !important; }
+.text-inv-lt { color: var(--text-inv-soft); }
 .text-center { text-align: center; }
 
 /* ── EYEBROW ────────────────────────────────────────────── */

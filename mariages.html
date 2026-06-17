@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Transport Mariage Haut de Gamme Provence & French Riviera | B.LIFTED France</title>
-  <meta name="description" content="Coordination transport mariage luxury en Provence et French Riviera. Multi-véhicules, timing précis, liaison wedding planner. B.LIFTED France.">
+  <title>Chauffeur Mariage Provence & Côte d'Azur — Transport Haut de Gamme | B.LIFTED France</title>
+  <meta name="description" content="Chauffeur privé pour votre mariage en Provence et sur la Côte d'Azur. Coordination multi-véhicules, synchronisation wedding planner, voitures de luxe Mercedes. Disponible du Lubéron à Monaco.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://bliftedfrance.com/mariages.html">
-  <meta property="og:title" content="Transport Mariage Haut de Gamme | B.LIFTED France">
+  <meta property="og:title" content="Chauffeur Mariage Provence & Côte d'Azur | B.LIFTED France">
   <meta property="og:description" content="Coordination complète du transport de votre mariage. Synchronisation wedding planner, multi-véhicules, arrivées échelonnées.">
   <meta property="og:url" content="https://bliftedfrance.com/mariages.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,14 +23,6 @@
     #menu-overlay { position:fixed; inset:0; background:rgba(28,26,23,0.4); z-index:calc(var(--z-header) - 2); opacity:0; visibility:hidden; transition:opacity var(--dur) var(--ease),visibility var(--dur); }
     #menu-overlay.is-active { opacity:1; visibility:visible; }
 
-    /* Hero cinématique pleine hauteur */
-    .mariage-hero { position:relative; min-height:100dvh; display:flex; align-items:center; overflow:hidden; }
-    .mariage-hero__img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
-    .mariage-hero__overlay { position:absolute; inset:0; background:linear-gradient(to right, rgba(253,250,246,0.92) 0%, rgba(253,250,246,0.65) 40%, transparent 75%); }
-    .mariage-hero__content { position:relative; z-index:1; max-width:var(--container); margin-inline:auto; padding: calc(var(--header-h) + 4rem) var(--gutter) 4rem; display:flex; flex-direction:column; gap:var(--sp-8); max-width:680px; }
-    .mariage-hero__title { font-family:var(--font-serif); font-size:clamp(var(--t-4xl),7vw,var(--t-7xl)); font-weight:300; line-height:var(--lh-tight); letter-spacing:var(--ls-tight); }
-    .mariage-hero__title em { display:block; font-style:italic; color:var(--rose); }
-
     /* Processus */
     .process-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:var(--sp-8); }
     .process-step { display:flex; flex-direction:column; gap:var(--sp-5); }
@@ -40,7 +32,7 @@
 
     /* Ce qu'on coordonne */
     .coord-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:var(--sp-5); }
-    .coord-item { padding:var(--sp-7) var(--sp-8); background:var(--bg-card); border:1px solid var(--border-soft); border-radius:var(--radius-md); display:flex; flex-direction:column; gap:var(--sp-4); transition:border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease); }
+    .coord-item { padding:var(--sp-6) var(--sp-8); background:var(--bg-card); border:1px solid var(--border-soft); border-radius:var(--radius-md); display:flex; flex-direction:column; gap:var(--sp-4); transition:border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease); }
     .coord-item:hover { border-color:var(--rose-light); box-shadow:var(--shadow-md); }
     .coord-item__title { font-family:var(--font-serif); font-size:var(--t-xl); font-weight:400; color:var(--text); }
     .coord-item__text { font-size:var(--t-sm); color:var(--text-muted); font-weight:300; line-height:var(--lh-relaxed); max-width:none; }
@@ -57,10 +49,36 @@
     .wp-section__image { aspect-ratio:4/3; border-radius:var(--radius-lg); overflow:hidden; background:var(--bg-warm); }
     .wp-section__image img { width:100%; height:100%; object-fit:cover; }
 
+    /* Galerie 2 photos */
+    .wedding-duo { display:grid; grid-template-columns:1.3fr 1fr; gap:var(--sp-4); height:520px; }
+    .wedding-duo__item { border-radius:var(--r-lg); overflow:hidden; }
+    .wedding-duo__item img { width:100%; height:100%; object-fit:cover; display:block; }
+
+    /* CTA mariage — plein écran éditorial */
+    .mariage-finale { position:relative; height:85vh; min-height:640px; display:flex; flex-direction:column; justify-content:flex-end; overflow:hidden; }
+    .mariage-finale__bg { position:absolute; inset:0; }
+    .mariage-finale__bg img { width:100%; height:100%; object-fit:cover; object-position:center 40%; display:block; }
+    .mariage-finale__overlay { position:absolute; inset:0; background:linear-gradient(to bottom, rgba(16,14,10,0.1) 0%, rgba(16,14,10,0.45) 45%, rgba(16,14,10,0.88) 100%); }
+    .mariage-finale__content { position:relative; padding-bottom:clamp(3rem,6vw,5rem); padding-top:clamp(3rem,6vw,5rem); }
+    .mariage-finale__eyebrow { font-size:var(--t-xs); letter-spacing:var(--ls-widest); text-transform:uppercase; color:var(--or); margin-bottom:var(--sp-6); display:block; }
+    .mariage-finale__title { font-family:var(--font-serif); font-size:clamp(3rem,7vw,6.5rem); font-weight:300; line-height:0.95; letter-spacing:-0.03em; color:var(--text-inv); margin-bottom:clamp(2.5rem,5vw,4rem); }
+    .mariage-finale__title em { display:block; font-style:italic; color:var(--rose-light); }
+    .mariage-finale__bar { display:flex; justify-content:space-between; align-items:flex-end; gap:var(--sp-8); border-top:1px solid rgba(250,250,248,0.12); padding-top:var(--sp-8); }
+    .mariage-finale__sub { font-size:var(--t-base); color:var(--text-inv-soft); font-weight:300; line-height:var(--lh-relaxed); max-width:34ch; }
+    .mariage-finale__actions { display:flex; align-items:center; gap:var(--sp-5); flex-shrink:0; flex-wrap:wrap; justify-content:flex-end; }
+    .mariage-finale__trust { font-size:var(--t-xs); letter-spacing:var(--ls-wide); text-transform:uppercase; color:rgba(250,250,248,0.35); margin-top:var(--sp-3); text-align:right; }
+    .mariage-finale .btn { background:var(--ivoire); color:var(--text); border-color:var(--ivoire); }
+    .mariage-finale .btn:hover { background:var(--blanc); color:var(--text); border-color:var(--blanc); }
+
     @media (max-width: 900px) {
-      .mariage-hero__overlay { background:rgba(253,250,246,0.85); }
       .process-grid, .coord-grid { grid-template-columns:1fr 1fr; }
       .wp-section__inner { grid-template-columns:1fr; gap:2.5rem; }
+      .wedding-duo { grid-template-columns:1fr; height:auto; }
+      .wedding-duo__item:last-child { display:none; }
+      .wedding-duo__item { height:280px; }
+      .mariage-finale__bar { flex-direction:column; align-items:flex-start; }
+      .mariage-finale__actions { justify-content:flex-start; }
+      .mariage-finale__trust { text-align:left; }
     }
     @media (max-width: 540px) {
       .process-grid, .coord-grid { grid-template-columns:1fr; }
@@ -68,7 +86,7 @@
   </style>
 </head>
 <body class="no-scroll">
-<div class="loader" id="loader"><div class="loader__inner"><div class="loader__logo">B · LIFTED</div><div class="loader__bar"><div class="loader__bar-fill"></div></div></div></div>
+<div class="page-curtain" id="pageCurtain" aria-hidden="true"></div>
 <div class="cursor" id="cursor"></div><div class="cursor-ring" id="cursorRing"></div>
 <div class="scroll-progress" id="scroll-progress"></div>
 <div id="menu-overlay"></div>
@@ -83,9 +101,9 @@
       <a href="mariages.html" class="header__nav-link is-active" data-i18n="nav.weddings">Mariages</a>
       <a href="a-propos.html" class="header__nav-link" data-i18n="nav.about">À propos</a>
     </nav>
-    <div class="header__cta">
-      <a href="contact.html" class="btn btn-primary btn--sm">Confier un déplacement <span class="btn-arrow">→</span></a>
-            <div class="header__lang">
+    <div class="header__actions">
+      <a href="contact.html" class="header__cta btn btn-primary"><span data-i18n="nav.entrust">Confier un déplacement</span> →</a>
+      <div class="header__lang">
         <button class="header__lang-btn is-active" data-lang="fr">FR</button>
         <span class="header__lang-sep">|</span>
         <button class="header__lang-btn" data-lang="en">EN</button>
@@ -94,6 +112,7 @@
     </div>
   </div>
 </header>
+
 <div class="mobile-menu" id="mobile-menu">
   <nav class="mobile-menu__nav">
     <a href="services.html" class="mobile-menu__link" data-i18n="nav.services">Prestations</a>
@@ -109,23 +128,42 @@
 </div>
 
 <main>
-  <!-- Hero -->
-  <section class="mariage-hero">
-    <img src="assets/images/mariages-hero.jpg" alt="Transport mariage haut de gamme Provence" class="mariage-hero__img" loading="eager">
-    <div class="mariage-hero__overlay"></div>
-    <div class="mariage-hero__content">
-      <span class="eyebrow" data-reveal="fade">Transport mariage</span>
-      <h1 class="mariage-hero__title" data-reveal="up">
-        Votre grand jour<br><em>mérite cette précision.</em>
-      </h1>
-      <p style="font-size:var(--t-lg); color:var(--text-soft); font-weight:300; line-height:var(--lh-relaxed); max-width:40ch;" data-reveal="up" data-delay="150">
-        Coordination complète de la flotte, timing ajusté à la minute, liaison directe avec votre wedding planner.
-      </p>
-      <div style="display:flex; gap:var(--sp-4); flex-wrap:wrap;" data-reveal="up" data-delay="250">
-        <a href="contact.html" class="btn btn-rose">Synchroniser notre mariage <span class="btn-arrow">→</span></a>
-        <a href="#processus" class="btn btn-outline">Voir le processus</a>
+  <!-- Hero cinématique -->
+  <section class="hero page-hero" id="accueil" aria-label="Transport mariage haut de gamme">
+
+    <div class="hero__bg" aria-hidden="true">
+      <img src="assets/images/mariage-sparklers.jpg" alt="" loading="eager" fetchpriority="high">
+    </div>
+
+    <div class="hero__inner">
+      <div class="hero__content">
+        <div class="hero__eyebrow" data-reveal="fade">
+          <span class="hero__eyebrow-dot">✦</span>
+          <span data-i18n="weddings.hero.eyebrow">Transport Mariage · Haut de Gamme</span>
+        </div>
+        <h1 class="hero__title" data-split="words">Votre grand jour<br><em>mérite cette précision.</em></h1>
+        <p class="hero__geo">Provence · French Riviera · Megève · Dubaï</p>
+        <div class="hero__ctas">
+          <a href="contact.html" class="btn btn-primary"><span data-i18n="weddings.hero.cta1">Synchroniser notre mariage</span> →</a>
+          <a href="#processus" class="btn btn-ghost" data-i18n="weddings.hero.cta2">Voir le processus</a>
+        </div>
+      </div>
+      <div class="hero__stats" data-reveal="fade" data-delay="600">
+        <div class="hero__stat"><span class="hero__stat-accent">✦</span> Multi-véhicules coordonnés</div>
+        <div class="hero__stat-sep"></div>
+        <div class="hero__stat">Timing à la minute</div>
+        <div class="hero__stat-sep"></div>
+        <div class="hero__stat">Liaison wedding planner</div>
+        <div class="hero__stat-sep"></div>
+        <div class="hero__stat">Discrétion absolue</div>
       </div>
     </div>
+
+    <div class="hero-scroll" aria-hidden="true">
+      <div class="hero-scroll__line"></div>
+      <span class="hero-scroll__label">Défiler</span>
+    </div>
+
   </section>
 
   <!-- Statement -->
@@ -141,25 +179,25 @@
   <section class="section" id="coordination">
     <div class="container">
       <div class="section-header" data-stagger>
-        <span class="eyebrow" data-reveal="fade">Nos coordinations</span>
+        <span class="eyebrow" data-reveal="fade" data-i18n="weddings.coord.eyebrow">Nos coordinations</span>
         <h2 class="section-title" data-reveal="up">Ce que nous <em>gérons</em></h2>
         <p class="section-sub" data-reveal="up" data-delay="150">De la veille au lendemain — chaque trajet planifié, chaque rotation anticipée.</p>
       </div>
       <div class="coord-grid" data-stagger>
         <div class="coord-item" data-reveal="up" data-delay="100">
-          <h3 class="coord-item__title">Transferts aéroport / gare</h3>
+          <h3 class="coord-item__title" data-i18n="weddings.coord1.title">Transferts aéroport / gare</h3>
           <p class="coord-item__text">Arrivée des invités venant de loin : accueil personnalisé, transfert direct vers le lieu de réception ou l'hébergement.</p>
         </div>
         <div class="coord-item" data-reveal="up" data-delay="150">
-          <h3 class="coord-item__title">Arrivées échelonnées des mariés</h3>
+          <h3 class="coord-item__title" data-i18n="weddings.coord2.title">Arrivées échelonnées des mariés</h3>
           <p class="coord-item__text">Timing protocolaire respecté à la minute. Le cortège n'attend jamais, les invités non plus.</p>
         </div>
         <div class="coord-item" data-reveal="up" data-delay="200">
-          <h3 class="coord-item__title">Rotations villa → cérémonie → réception</h3>
+          <h3 class="coord-item__title" data-i18n="weddings.coord3.title">Rotations villa → cérémonie → réception</h3>
           <p class="coord-item__text">Coordination fluide entre les sites. Chaque véhicule sait où il va et à quelle heure, sans communication en temps réel avec les invités.</p>
         </div>
         <div class="coord-item" data-reveal="up" data-delay="250">
-          <h3 class="coord-item__title">Transferts de fin de soirée</h3>
+          <h3 class="coord-item__title" data-i18n="weddings.coord4.title">Transferts de fin de soirée</h3>
           <p class="coord-item__text">Retour hôtel, villa ou gare : les invités ne cherchent pas leur véhicule. Tout est annoncé, coordonné, fluide.</p>
         </div>
       </div>
@@ -170,24 +208,38 @@
   <section class="section section--bg-alt" id="processus">
     <div class="container">
       <div class="section-header section-header--center" data-stagger>
-        <span class="eyebrow" data-reveal="fade">Notre processus</span>
+        <span class="eyebrow" data-reveal="fade" data-i18n="weddings.proc.eyebrow">Notre processus</span>
         <h2 class="section-title" data-reveal="up">Comment nous <em>travaillons</em></h2>
       </div>
       <div class="process-grid" data-stagger>
         <div class="process-step" data-reveal="up" data-delay="100">
           <div class="process-step__num">01</div>
-          <h3 class="process-step__title">Réunion de briefing</h3>
+          <h3 class="process-step__title" data-i18n="weddings.proc1.title">Réunion de briefing</h3>
           <p class="process-step__text">Échange avec vous et votre wedding planner pour comprendre le programme détaillé, les lieux, les horaires, les contraintes.</p>
         </div>
         <div class="process-step" data-reveal="up" data-delay="200">
           <div class="process-step__num">02</div>
-          <h3 class="process-step__title">Planning de transport</h3>
+          <h3 class="process-step__title" data-i18n="weddings.proc2.title">Planning de transport</h3>
           <p class="process-step__text">Nous construisons le plan de transport complet : chaque véhicule, chaque trajet, chaque heure — validé avec vous avant le Jour J.</p>
         </div>
         <div class="process-step" data-reveal="up" data-delay="300">
           <div class="process-step__num">03</div>
-          <h3 class="process-step__title">Coordination le Jour J</h3>
+          <h3 class="process-step__title" data-i18n="weddings.proc3.title">Coordination le Jour J</h3>
           <p class="process-step__text">Présence centrale, liaison directe avec le wedding planner, gestion des imprévus en silence. Vous ne savez pas qu'il y a eu un problème — parce que nous l'avons résolu avant.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galerie 2 photos -->
+  <section class="section">
+    <div class="container">
+      <div class="wedding-duo">
+        <div class="wedding-duo__item" data-reveal="up">
+          <img src="assets/images/mariage-tables-soir.jpg" alt="Réception de mariage en plein air au coucher du soleil" loading="lazy">
+        </div>
+        <div class="wedding-duo__item" data-reveal="up" data-delay="150">
+          <img src="assets/images/mariage-diner.jpg" alt="Dîner de mariage dans une serre de luxe" loading="lazy">
         </div>
       </div>
     </div>
@@ -197,8 +249,11 @@
   <section class="wp-section">
     <div class="container">
       <div class="wp-section__inner">
-        <div class="wp-section__text" data-reveal="right">
-          <span class="eyebrow eyebrow--light">Pour les wedding planners</span>
+        <div class="wp-section__image" data-reveal="right">
+          <img src="assets/images/mariage-couple-table.jpg" alt="Mariage de luxe — couple à la réception" loading="lazy">
+        </div>
+        <div class="wp-section__text" data-reveal="left">
+          <span class="eyebrow eyebrow--light" data-i18n="weddings.planners.eyebrow">Pour les wedding planners</span>
           <h2 class="wp-section__title">Votre partenaire<br><em>transport de confiance.</em></h2>
           <p style="font-size:var(--t-base); color:var(--text-inv-soft); font-weight:300; line-height:var(--lh-relaxed); max-width:42ch;">Nous travaillons directement avec les wedding planners : planning partagé, ligne dédiée le Jour J, rapport de mission si nécessaire.</p>
           <ul class="wp-list">
@@ -208,10 +263,7 @@
             <li class="wp-list__item">Devis personnalisé sous 48h</li>
             <li class="wp-list__item">Partenariat B2B formalisé sur demande</li>
           </ul>
-          <a href="contact.html?type=partenariat" class="btn btn-ghost" style="margin-top:var(--sp-4);">Proposer un partenariat <span class="btn-arrow">→</span></a>
-        </div>
-        <div class="wp-section__image" data-reveal="left">
-          <img src="assets/images/mariages-wp.jpg" alt="Partenariat wedding planner transport" loading="lazy">
+          <a href="contact.html?type=partenariat" class="btn btn-ghost" style="margin-top:var(--sp-4);"><span data-i18n="weddings.planners.cta">Proposer un partenariat</span> →</a>
         </div>
       </div>
     </div>
@@ -221,7 +273,7 @@
   <section class="section section--bg-alt">
     <div class="container">
       <div class="section-header section-header--center" data-stagger>
-        <span class="eyebrow" data-reveal="fade">Zones d'intervention</span>
+        <span class="eyebrow" data-reveal="fade" data-i18n="weddings.territories.eyebrow">Zones d'intervention</span>
         <h2 class="section-title" data-reveal="up">Nos <em>territoires mariage</em></h2>
       </div>
       <div class="territories__grid" data-stagger>
@@ -250,114 +302,115 @@
   </section>
 
   <!-- CTA -->
-  <section class="cta-section">
-    <div class="container">
-      <h2 class="cta-section__title" data-split="words">Votre mariage<br><em>commence ici.</em></h2>
-      <p class="cta-section__sub" data-reveal="up" data-delay="200">Décrivez-nous votre programme. Nous vous proposons un plan de transport complet.</p>
-      <div class="cta-section__actions" data-reveal="up" data-delay="300">
-        <a href="contact.html" class="btn btn-rose">Synchroniser notre mariage <span class="btn-arrow">→</span></a>
-        <a href="contact.html?type=partenariat" class="btn btn-outline">Partenariat wedding planner</a>
+  <section class="mariage-finale">
+    <div class="mariage-finale__bg" aria-hidden="true">
+      <img src="assets/images/mariage-sparklers.jpg" alt="">
+      <div class="mariage-finale__overlay"></div>
+    </div>
+    <div class="mariage-finale__content">
+      <div class="container">
+        <span class="mariage-finale__eyebrow" data-reveal="fade">Transport · Coordination · Élégance</span>
+        <h2 class="mariage-finale__title" data-reveal="up">Votre mariage<br><em>commence ici.</em></h2>
+        <div class="mariage-finale__bar" data-reveal="up" data-delay="200">
+          <p class="mariage-finale__sub">Décrivez-nous votre programme.<br>Nous construisons le reste.</p>
+          <div>
+            <div class="mariage-finale__actions">
+              <a href="contact.html" class="btn btn-rose"><span data-i18n="weddings.cta.btn1">Synchroniser notre mariage</span> →</a>
+              <a href="contact.html?type=partenariat" class="btn btn-ghost" data-i18n="weddings.cta.btn2">Partenariat wedding planner</a>
+            </div>
+            <p class="mariage-finale__trust">Devis personnalisé · Réponse sous 24h · Discrétion garantie</p>
+          </div>
+        </div>
       </div>
-      <p class="cta-section__trust">Devis personnalisé · Réponse sous 24h · Discrétion garantie</p>
     </div>
   </section>
 </main>
 
 <footer class="footer" role="contentinfo">
   <div class="footer__inner">
-
     <div class="footer__top">
-
-      <!-- Brand -->
       <div class="footer__brand">
-        <a href="index.html" class="footer__brand-logo" aria-label="B.LIFTED France">
-          B · LIFTED
-        </a>
-        <p class="footer__brand-desc">
-          Service de transport privé haut de gamme en Provence, French Riviera, Megève et Dubaï. Discrétion absolue, fiabilité sans compromis.
-        </p>
+        <a href="index.html" class="footer__brand-logo" aria-label="B.LIFTED France">B · LIFTED</a>
+        <p class="footer__brand-desc" data-i18n="footer.desc">Service de transport privé haut de gamme en Provence, French Riviera, Megève et Dubaï. Discrétion absolue, fiabilité sans compromis.</p>
         <div class="footer__social">
           <a href="https://www.instagram.com/bliftedfrance" class="footer__social-link" aria-label="Instagram B.LIFTED" target="_blank" rel="noopener">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
-            </svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
           </a>
           <a href="https://www.facebook.com/bliftedfrance" class="footer__social-link" aria-label="Facebook B.LIFTED" target="_blank" rel="noopener">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
-            </svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
           </a>
         </div>
       </div>
-
-      <!-- Services -->
       <div class="footer__col">
-        <p class="footer__col-title">Services</p>
-        <nav class="footer__nav" aria-label="Navigation services">
-          <a href="services.html" class="footer__nav-link">Transfert aéroport</a>
-          <a href="services.html" class="footer__nav-link">Mise à disposition</a>
-          <a href="mariages.html" class="footer__nav-link">Mariages &amp; événements</a>
-          <a href="services.html" class="footer__nav-link">Séjours &amp; coordination</a>
-          <a href="flotte.html" class="footer__nav-link">Notre flotte</a>
+        <p class="footer__col-title" data-i18n="footer.col.services">Services</p>
+        <nav class="footer__nav">
+          <a href="services.html" class="footer__nav-link" data-i18n="footer.svc.transfer">Transfert aéroport</a>
+          <a href="services.html" class="footer__nav-link" data-i18n="footer.svc.disposal">Mise à disposition</a>
+          <a href="mariages.html" class="footer__nav-link" data-i18n="footer.svc.wedding">Mariages &amp; événements</a>
+          <a href="services.html" class="footer__nav-link" data-i18n="footer.svc.stay">Séjours &amp; coordination</a>
+          <a href="flotte.html" class="footer__nav-link" data-i18n="footer.svc.fleet">Notre flotte</a>
         </nav>
       </div>
-
-      <!-- Territoires -->
       <div class="footer__col">
-        <p class="footer__col-title" data-i18n="nav.territories">Territoires</p>
-        <nav class="footer__nav" aria-label="Navigation territoires">
+        <p class="footer__col-title" data-i18n="footer.col.territories">Territoires</p>
+        <nav class="footer__nav">
           <a href="territoires/provence.html" class="footer__nav-link">Provence</a>
           <a href="territoires/french-riviera.html" class="footer__nav-link">French Riviera</a>
           <a href="territoires/megeve.html" class="footer__nav-link">Megève</a>
           <a href="territoires/dubai.html" class="footer__nav-link">Dubaï</a>
         </nav>
       </div>
-
-      <!-- Contact -->
       <div class="footer__col">
-        <p class="footer__col-title">Contact</p>
+        <p class="footer__col-title" data-i18n="footer.col.contact">Contact</p>
         <div class="footer__contact-item">
-          <svg class="footer__contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81C2.18 7.22 2 4.92 2 4a2 2 0 012-2h3a2 2 0 012 1.72c.13 1 .4 1.97.71 2.9a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.93.31 1.9.58 2.9.71A2 2 0 0122 16.92z"/>
-          </svg>
-          <p class="footer__contact-text">
-            <a href="tel:+33636017235">+(33) 6 36 01 72 35</a>
-          </p>
+          <svg class="footer__contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81C2.18 7.22 2 4.92 2 4a2 2 0 012-2h3a2 2 0 012 1.72c.13 1 .4 1.97.71 2.9a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.93.31 1.9.58 2.9.71A2 2 0 0122 16.92z"/></svg>
+          <p class="footer__contact-text"><a href="tel:+33636017235">+(33) 6 36 01 72 35</a></p>
         </div>
         <div class="footer__contact-item">
-          <svg class="footer__contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
-          </svg>
-          <p class="footer__contact-text">
-            <a href="mailto:contact@bliftedfrance.com">contact@bliftedfrance.com</a>
-          </p>
+          <svg class="footer__contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <p class="footer__contact-text"><a href="mailto:contact@bliftedfrance.com">contact@bliftedfrance.com</a></p>
         </div>
         <div style="margin-top: 1.5rem;">
-          <a href="contact.html" class="btn btn-primary btn--sm">
-            <span data-i18n="nav.book">Réserver</span> <span class="btn-arrow">→</span>
-          </a>
+          <a href="contact.html" class="btn btn-primary btn--sm">Réserver →</a>
         </div>
       </div>
-
     </div>
-
     <div class="footer__bottom">
-      <p class="footer__copy">
-        &copy; <span id="footer-year">2026</span> B.LIFTED France · Tous droits réservés
-      </p>
+      <p class="footer__copy">&copy; <span id="footer-year">2026</span> B.LIFTED France · Tous droits réservés</p>
       <div class="footer__legal">
-        <a href="/mentions-legales">Mentions légales</a>
-        <a href="/confidentialite">Confidentialité</a>
+        <a href="mentions-legales.html" data-i18n="footer.legal.mentions">Mentions légales</a>
+        <a href="confidentialite.html" data-i18n="footer.legal.privacy">Confidentialité</a>
       </div>
     </div>
-
   </div>
 </footer>
 
 <script src="js/nav.js" defer></script>
 <script src="js/scroll-reveal.js" defer></script>
-<script src="js/main.js" defer></script>
 <script src="js/i18n.js" defer></script>
+<script src="js/main.js" defer></script>
+<script src="js/cookies.js" defer></script>
+
+<!-- Cookie Banner RGPD -->
+<div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Gestion des cookies">
+  <div class="cookie-banner__inner">
+    <p class="cookie-banner__text">Ce site utilise des cookies pour améliorer votre expérience. <a href="confidentialite.html" class="cookie-banner__link">En savoir plus</a></p>
+    <div class="cookie-banner__actions">
+      <button class="cookie-banner__btn cookie-banner__btn--accept" id="cookie-accept">Accepter</button>
+      <button class="cookie-banner__btn cookie-banner__btn--decline" id="cookie-decline">Refuser</button>
+    </div>
+  </div>
+</div>
+
+<div class="whatsapp-widget">
+  <div class="whatsapp-popup" id="whatsapp-popup" aria-hidden="true">
+    <button class="whatsapp-popup__close" id="whatsapp-close" aria-label="Fermer">✕</button>
+    <p class="whatsapp-popup__title">Confier un déplacement</p>
+    <p class="whatsapp-popup__msg">Bonjour,<br>Je suis disponible pour organiser votre transfert, répondre à vos questions et établir un devis personnalisé.</p>
+    <a href="https://wa.me/33636017235?text=Bonjour%2C%20je%20souhaite%20confier%20un%20d%C3%A9placement%20%C3%A0%20B.LIFTED." class="whatsapp-popup__cta" target="_blank" rel="noopener">Contacter sur WhatsApp</a>
+  </div>
+  <button class="whatsapp-float" id="whatsapp-toggle" aria-label="Contacter B.LIFTED par WhatsApp">WhatsApp</button>
+</div>
 
 </body>
 </html>

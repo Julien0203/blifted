@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Politique de confidentialité | B.LIFTED France</title>
+  <meta name="description" content="Politique de confidentialité et protection des données personnelles — B.LIFTED France, transport privé haut de gamme.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/typography.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/components.css">
+  <style>
+    .legal-hero {
+      background: var(--ivoire);
+      padding: calc(var(--header-h) + 4rem) 0 4rem;
+      border-bottom: 1px solid var(--border-soft);
+      position: relative;
+      overflow: hidden;
+    }
+    .legal-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(var(--border-soft) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border-soft) 1px, transparent 1px);
+      background-size: 60px 60px;
+      opacity: 0.4;
+    }
+    .legal-hero__inner { position: relative; z-index: 1; }
+    .legal-hero__eyebrow {
+      font-size: var(--t-xs);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: var(--sp-4);
+    }
+    .legal-hero__title {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: 300;
+      color: var(--text);
+      line-height: 1.1;
+    }
+    .legal-body {
+      padding: var(--sp-20) 0 var(--sp-32);
+      background: var(--bg);
+    }
+    .legal-content {
+      max-width: 760px;
+    }
+    .legal-content h2 {
+      font-family: var(--font-serif);
+      font-size: var(--t-2xl);
+      font-weight: 400;
+      color: var(--text);
+      margin-top: var(--sp-12);
+      margin-bottom: var(--sp-4);
+      padding-bottom: var(--sp-2);
+      border-bottom: 1px solid var(--border-soft);
+    }
+    .legal-content h3 {
+      font-family: var(--font-sans);
+      font-size: var(--t-base);
+      font-weight: 500;
+      color: var(--text);
+      margin-top: var(--sp-6);
+      margin-bottom: var(--sp-2);
+    }
+    .legal-content p {
+      color: var(--text-soft);
+      font-size: var(--t-base);
+      line-height: 1.75;
+      margin-bottom: var(--sp-4);
+    }
+    .legal-content a { color: var(--rose); text-decoration: underline; text-underline-offset: 3px; }
+    .legal-content ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: var(--sp-4);
+    }
+    .legal-content ul li {
+      color: var(--text-soft);
+      font-size: var(--t-base);
+      line-height: 1.75;
+      padding-left: var(--sp-5);
+      position: relative;
+      margin-bottom: var(--sp-2);
+    }
+    .legal-content ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--rose);
+    }
+    .legal-date {
+      font-size: var(--t-sm);
+      color: var(--text-muted);
+      margin-top: var(--sp-16);
+      padding-top: var(--sp-6);
+      border-top: 1px solid var(--border-soft);
+    }
+  </style>
+</head>
+<body class="no-scroll">
+<div class="page-curtain" id="pageCurtain" aria-hidden="true"></div>
+<div class="cursor" id="cursor"></div><div class="cursor-ring" id="cursorRing"></div>
+<div class="scroll-progress" id="scroll-progress"></div>
+<div id="menu-overlay"></div>
+
+<header class="header" id="header">
+  <div class="header__inner">
+    <a href="index.html" class="header__logo">B · LIFTED<span></span></a>
+    <nav class="header__nav">
+      <a href="services.html" class="header__nav-link" data-i18n="nav.services">Prestations</a>
+      <a href="flotte.html" class="header__nav-link" data-i18n="nav.fleet">Flotte</a>
+      <a href="index.html#territoires" class="header__nav-link" data-i18n="nav.territories">Territoires</a>
+      <a href="mariages.html" class="header__nav-link" data-i18n="nav.weddings">Mariages</a>
+      <a href="a-propos.html" class="header__nav-link" data-i18n="nav.about">À propos</a>
+    </nav>
+    <div class="header__actions">
+      <a href="contact.html" class="header__cta btn btn-primary">
+        <span data-i18n="nav.entrust">Confier un déplacement</span> →
+      </a>
+      <div class="header__lang">
+        <button class="header__lang-btn is-active" data-lang="fr">FR</button>
+        <span class="header__lang-sep">|</span>
+        <button class="header__lang-btn" data-lang="en">EN</button>
+      </div>
+      <button class="header__burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <div class="mobile-menu__inner">
+    <nav class="mobile-menu__nav">
+      <a href="services.html" class="mobile-menu__link" data-i18n="nav.services">Prestations</a>
+      <a href="flotte.html" class="mobile-menu__link" data-i18n="nav.fleet">Flotte</a>
+      <a href="index.html#territoires" class="mobile-menu__link" data-i18n="nav.territories">Territoires</a>
+      <a href="mariages.html" class="mobile-menu__link" data-i18n="nav.weddings">Mariages</a>
+      <a href="a-propos.html" class="mobile-menu__link" data-i18n="nav.about">À propos</a>
+    </nav>
+    <div class="mobile-menu__cta">
+      <a href="contact.html" class="btn btn-primary"><span data-i18n="nav.entrust">Confier un déplacement</span> →</a>
+    </div>
+  </div>
+</div>
+
+<main>
+  <section class="legal-hero">
+    <div class="container legal-hero__inner">
+      <p class="legal-hero__eyebrow">Protection des données</p>
+      <h1 class="legal-hero__title">Politique de<br><em style="color:var(--rose)">confidentialité</em></h1>
+    </div>
+  </section>
+
+  <section class="legal-body">
+    <div class="container">
+      <div class="legal-content">
+
+        <h2>Responsable du traitement</h2>
+        <p><strong>B.LIFTED France</strong><br>
+        Fondatrice et directrice — responsable de la protection des données<br>
+        Contact : <a href="mailto:contact@bliftedfrance.com">contact@bliftedfrance.com</a><br>
+        Téléphone : <a href="tel:+33636017235">+(33) 6 36 01 72 35</a></p>
+
+        <h2>Données collectées</h2>
+        <p>Dans le cadre de son activité de transport privé, B.LIFTED France est amenée à collecter les données suivantes :</p>
+        <ul>
+          <li>Données d'identification : nom, prénom, coordonnées téléphoniques et email</li>
+          <li>Données de déplacement : lieux de prise en charge, destinations, horaires</li>
+          <li>Données de navigation : adresse IP, pages consultées, durée de visite (via cookies techniques)</li>
+          <li>Données formulaires : informations saisies dans nos formulaires de contact et de devis</li>
+        </ul>
+
+        <h2>Finalités du traitement</h2>
+        <p>Les données collectées sont utilisées pour :</p>
+        <ul>
+          <li>Traiter et organiser vos demandes de transport</li>
+          <li>Établir des devis personnalisés et des confirmations de réservation</li>
+          <li>Assurer la coordination logistique de vos déplacements</li>
+          <li>Vous contacter en cas de modification ou d'imprévu</li>
+          <li>Améliorer la qualité de nos services</li>
+          <li>Répondre à nos obligations légales et réglementaires</li>
+        </ul>
+
+        <h2>Base légale des traitements</h2>
+        <p>Les traitements de données sont fondés sur :</p>
+        <ul>
+          <li>L'exécution du contrat de transport (prestation commandée)</li>
+          <li>L'intérêt légitime de B.LIFTED France (amélioration des services, sécurité)</li>
+          <li>Votre consentement explicite (cookies, communications marketing)</li>
+          <li>Le respect d'obligations légales applicables aux activités VTC</li>
+        </ul>
+
+        <h2>Durée de conservation</h2>
+        <p>Vos données personnelles sont conservées pour les durées suivantes :</p>
+        <ul>
+          <li>Données de réservation et de mission : 5 ans à compter de la prestation (obligations comptables)</li>
+          <li>Données de contact non converties en mission : 3 ans à compter du dernier contact</li>
+          <li>Données de navigation (cookies) : 13 mois maximum</li>
+        </ul>
+
+        <h2>Destinataires des données</h2>
+        <p>Vos données ne sont jamais vendues à des tiers. Elles peuvent être partagées avec :</p>
+        <ul>
+          <li>Les chauffeurs partenaires de B.LIFTED France, dans le strict cadre de l'exécution de votre mission</li>
+          <li>Les prestataires techniques (hébergement, email) soumis à des obligations de confidentialité contractuelles</li>
+          <li>Les autorités compétentes, sur réquisition judiciaire uniquement</li>
+        </ul>
+        <p><strong>Confidentialité contractuelle systématique :</strong> Chaque mission fait l'objet d'un engagement de confidentialité. Vos déplacements, vos agendas et l'identité de vos clients ne quittent jamais notre périmètre.</p>
+
+        <h2>Vos droits</h2>
+        <p>Conformément au RGPD (Règlement UE 2016/679) et à la loi Informatique et Libertés modifiée, vous disposez des droits suivants :</p>
+        <ul>
+          <li><strong>Droit d'accès</strong> : obtenir une copie de vos données personnelles</li>
+          <li><strong>Droit de rectification</strong> : corriger des données inexactes ou incomplètes</li>
+          <li><strong>Droit à l'effacement</strong> : demander la suppression de vos données</li>
+          <li><strong>Droit à la limitation</strong> : restreindre le traitement de vos données</li>
+          <li><strong>Droit d'opposition</strong> : vous opposer à certains traitements</li>
+          <li><strong>Droit à la portabilité</strong> : récupérer vos données dans un format structuré</li>
+        </ul>
+        <p>Pour exercer ces droits, adressez votre demande à : <a href="mailto:contact@bliftedfrance.com">contact@bliftedfrance.com</a><br>
+        Nous répondrons dans un délai maximum de 30 jours. En cas de litige, vous pouvez saisir la CNIL (<a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a>).</p>
+
+        <h2>Cookies</h2>
+        <h3>Cookies techniques (obligatoires)</h3>
+        <p>Ces cookies sont indispensables au fonctionnement du site (mémorisation de vos préférences de langue, sécurité de navigation). Ils ne nécessitent pas votre consentement.</p>
+
+        <h3>Cookies analytiques (avec consentement)</h3>
+        <p>Si vous les acceptez, ces cookies nous permettent de comprendre comment vous utilisez le site (pages visitées, durée de consultation) afin d'améliorer votre expérience. Ces données sont anonymisées.</p>
+
+        <h3>Gestion des cookies</h3>
+        <p>Vous pouvez modifier vos préférences à tout moment via la bannière de cookies ou en configurant votre navigateur. Le refus des cookies analytiques n'affecte pas les fonctionnalités essentielles du site.</p>
+
+        <h2>Sécurité</h2>
+        <p>B.LIFTED France met en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données contre tout accès non autorisé, modification, divulgation ou destruction. Les communications entre votre navigateur et notre site sont chiffrées (HTTPS/TLS).</p>
+
+        <h2>Transferts hors UE</h2>
+        <p>Dans le cadre de nos prestations à Dubaï (Émirats Arabes Unis), certaines données de déplacement peuvent être traitées hors de l'Union Européenne. Ces transferts sont encadrés par des clauses contractuelles types approuvées par la Commission Européenne, garantissant un niveau de protection équivalent.</p>
+
+        <h2>Modifications de cette politique</h2>
+        <p>Cette politique de confidentialité peut être mise à jour pour refléter l'évolution de nos pratiques ou des exigences légales. La date de dernière mise à jour est indiquée ci-dessous. Nous vous encourageons à la consulter régulièrement.</p>
+
+        <p class="legal-date">Dernière mise à jour : juin 2026</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer__inner container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo">B · LIFTED</a>
+        <p class="footer__desc" data-i18n="footer.desc">Service de transport privé haut de gamme en Provence, French Riviera, Megève et Dubaï. Discrétion absolue, fiabilité sans compromis.</p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">&copy; <span id="footer-year">2026</span> B.LIFTED France · Tous droits réservés</p>
+      <div class="footer__legal">
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="confidentialite.html">Confidentialité</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="whatsapp-widget">
+  <div class="whatsapp-popup" id="whatsapp-popup" aria-hidden="true">
+    <button class="whatsapp-popup__close" id="whatsapp-close" aria-label="Fermer">✕</button>
+    <p class="whatsapp-popup__title">Confier un déplacement</p>
+    <p class="whatsapp-popup__msg">Bonjour,<br>Je suis disponible pour organiser votre transfert, répondre à vos questions et établir un devis personnalisé.</p>
+    <a href="https://wa.me/33636017235?text=Bonjour%2C%20je%20souhaite%20confier%20un%20d%C3%A9placement%20%C3%A0%20B.LIFTED." class="whatsapp-popup__cta" target="_blank" rel="noopener">Contacter sur WhatsApp</a>
+  </div>
+  <button class="whatsapp-float" id="whatsapp-toggle" aria-label="Contacter B.LIFTED par WhatsApp">WhatsApp</button>
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/i18n.js"></script>
+</body>
+</html>

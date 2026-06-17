@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prestations de Transport Privé Haut de Gamme | B.LIFTED France</title>
-  <meta name="description" content="Transferts aéroport, mise à disposition, coordination mariage, événements multi-sites. B.LIFTED France — service de transport privé haut de gamme en Provence, French Riviera et Megève.">
+  <title>Services Chauffeur Privé — Transferts, Mariages & Mise à Disposition | B.LIFTED France</title>
+  <meta name="description" content="Transferts aéroport, mise à disposition chauffeur, coordination mariage haut de gamme, événements privés. VTC de luxe en Provence, Côte d'Azur et Megève. Tarification sur mesure, disponibilité 24h/24.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://bliftedfrance.com/services.html">
   <meta property="og:title" content="Services | B.LIFTED France">
@@ -25,15 +25,6 @@
     body.no-scroll { overflow: hidden; }
     #menu-overlay { position:fixed; inset:0; background:rgba(28,26,23,0.4); z-index:calc(var(--z-header) - 2); opacity:0; visibility:hidden; transition:opacity var(--dur) var(--ease),visibility var(--dur); }
     #menu-overlay.is-active { opacity:1; visibility:visible; }
-    .page-hero { padding: calc(var(--header-h) + 3rem) 0 0; background: var(--bg); }
-    .page-hero__inner { max-width: var(--container); margin-inline: auto; padding-inline: var(--gutter); display: grid; grid-template-columns: 1fr 1fr; gap: clamp(3rem,5vw,6rem); align-items: center; min-height: 55vh; }
-    .page-hero__text { display: flex; flex-direction: column; gap: var(--sp-5); }
-    .page-hero__img { aspect-ratio: 5/6; border-radius: var(--r-xl); overflow: hidden; box-shadow: var(--shadow-lg); }
-    .page-hero__img img { width:100%; height:100%; object-fit:cover; display:block; }
-    @media (max-width: 900px) {
-      .page-hero__inner { grid-template-columns: 1fr; min-height: auto; padding-bottom: 3rem; }
-      .page-hero__img { aspect-ratio: 16/9; }
-    }
     .service-block { padding-block: var(--section-py); border-bottom: 1px solid var(--border-soft); }
     .service-block:last-child { border-bottom: none; }
     .service-block__inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
@@ -64,7 +55,7 @@
   </style>
 </head>
 <body class="no-scroll">
-<div class="loader" id="loader"><div class="loader__inner"><div class="loader__logo">B · LIFTED</div><div class="loader__bar"><div class="loader__bar-fill"></div></div></div></div>
+<div class="page-curtain" id="pageCurtain" aria-hidden="true"></div>
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
 <div class="scroll-progress" id="scroll-progress"></div>
@@ -80,14 +71,16 @@
       <a href="mariages.html" class="header__nav-link" data-i18n="nav.weddings">Mariages</a>
       <a href="a-propos.html" class="header__nav-link" data-i18n="nav.about">À propos</a>
     </nav>
-    <div class="header__cta">
-      <a href="contact.html" class="btn btn-primary btn--sm">Confier un déplacement <span class="btn-arrow">→</span></a>
-            <div class="header__lang">
+    <div class="header__actions">
+      <a href="contact.html" class="header__cta btn btn-primary">
+        <span data-i18n="nav.entrust">Confier un déplacement</span> →
+      </a>
+      <div class="header__lang">
         <button class="header__lang-btn is-active" data-lang="fr">FR</button>
         <span class="header__lang-sep">|</span>
         <button class="header__lang-btn" data-lang="en">EN</button>
       </div>
-      <button class="header__burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <button class="header__burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
     </div>
   </div>
 </header>
@@ -106,24 +99,37 @@
 </div>
 
 <main>
-  <!-- Page Hero -->
-  <section class="page-hero">
-    <div class="page-hero__inner">
-      <div class="page-hero__text">
-        <span class="eyebrow" data-reveal="fade">Nos prestations</span>
-        <h1 class="section-title" style="font-size:clamp(var(--t-4xl),5vw,var(--t-6xl));" data-reveal="up">
-          Ce que nous <em>coordonnons</em>
-        </h1>
-        <p class="body-lead" style="max-width:46ch;" data-reveal="up" data-delay="150">
-          Quatre expertises complémentaires. Une seule exigence : l'irréprochable, à chaque étape.
-        </p>
-        <div data-reveal="up" data-delay="250">
-          <a href="contact.html" class="btn btn-primary">Confier un déplacement <span class="btn-arrow">→</span></a>
+  <!-- Hero cinématique -->
+  <section class="hero page-hero" id="services-hero" aria-label="Nos prestations B.LIFTED">
+    <div class="hero__bg" aria-hidden="true">
+      <img src="assets/images/fleet-classe-s.jpg" alt="" loading="eager" fetchpriority="high">
+    </div>
+    <div class="hero__inner">
+      <div class="hero__content">
+        <div class="hero__eyebrow" data-reveal="fade">
+          <span class="hero__eyebrow-dot"></span>
+          <span data-i18n="services.hero.eyebrow">Nos prestations</span>
+        </div>
+        <h1 class="hero__title" data-split="words">Ce que nous<br><em>coordonnons.</em></h1>
+        <p class="hero__sub" data-reveal="up" data-delay="200">Quatre expertises complémentaires. Une seule exigence : l'irréprochable, à chaque étape.</p>
+        <div class="hero__ctas" data-reveal="up" data-delay="300">
+          <a href="contact.html" class="btn btn-primary" data-i18n="services.hero.cta">Confier un déplacement →</a>
+          <a href="#transfert" class="btn btn-ghost">Voir les prestations</a>
         </div>
       </div>
-      <div class="page-hero__img" data-reveal="scale">
-        <img src="assets/images/hero.jpg" alt="Mercedes Classe S — B.LIFTED" loading="eager">
+      <div class="hero__stats" data-reveal="fade" data-delay="600">
+        <div class="hero__stat"><span class="hero__stat-accent">✦</span> Transfert aéroport</div>
+        <div class="hero__stat-sep"></div>
+        <div class="hero__stat">Mise à disposition</div>
+        <div class="hero__stat-sep"></div>
+        <div class="hero__stat">Coordination mariage</div>
+        <div class="hero__stat-sep"></div>
+        <div class="hero__stat">Événements multi-sites</div>
       </div>
+    </div>
+    <div class="hero-scroll" aria-hidden="true">
+      <div class="hero-scroll__line"></div>
+      <span class="hero-scroll__label">Défiler</span>
     </div>
   </section>
 
@@ -132,8 +138,8 @@
     <div class="container">
       <div class="service-block__inner">
         <div class="service-block__text" data-reveal="right">
-          <span class="eyebrow">01 / Transfert</span>
-          <h2 class="service-block__title">Avant que vous<br><em>n'atterrissiez.</em></h2>
+          <span class="eyebrow" data-i18n="services.s1.eyebrow">01 / Transfert</span>
+          <h2 class="service-block__title">Transfert Aéroport<br><em>Avignon, Nice, Marseille.</em></h2>
           <p class="service-block__desc">Ponctualité absolue, même quand votre vol est en avance. Le véhicule est en position avant votre sortie de douane.</p>
           <ul class="service-block__list">
             <li class="service-block__item">Suivi de vol en temps réel — départ et arrivée</li>
@@ -142,7 +148,7 @@
             <li class="service-block__item">Coordination avec l'aéroport d'Avignon-Provence</li>
             <li class="service-block__item">Disponible 24h/24, 7j/7</li>
           </ul>
-          <a href="contact.html" class="btn btn-primary" style="margin-top:var(--sp-4);">Demander un transfert <span class="btn-arrow">→</span></a>
+          <a href="contact.html" class="btn btn-primary" style="margin-top:var(--sp-4);"><span data-i18n="services.s1.cta">Demander un transfert</span> →</a>
         </div>
         <div class="service-block__image" data-reveal="left">
           <img src="assets/images/services-transfert.jpg" alt="Transfert aéroport privé" loading="lazy">
@@ -156,8 +162,8 @@
     <div class="container">
       <div class="service-block__inner reverse">
         <div class="service-block__text" data-reveal="left">
-          <span class="eyebrow">02 / Mise à disposition</span>
-          <h2 class="service-block__title">Votre chauffeur<br><em>pour la journée.</em></h2>
+          <span class="eyebrow" data-i18n="services.s2.eyebrow">02 / Mise à disposition</span>
+          <h2 class="service-block__title">Mise à Disposition<br><em>Chauffeur Privé.</em></h2>
           <p class="service-block__desc">Itinéraire ajusté à votre rythme, pas au nôtre. Demi-journée, journée complète ou séjour de plusieurs jours.</p>
           <ul class="service-block__list">
             <li class="service-block__item">Demi-journée, journée ou multi-jours</li>
@@ -166,7 +172,7 @@
             <li class="service-block__item">Gestion des imprévus et modifications en temps réel</li>
             <li class="service-block__item">Un seul interlocuteur tout au long du séjour</li>
           </ul>
-          <a href="contact.html" class="btn btn-primary" style="margin-top:var(--sp-4);">Confier une journée <span class="btn-arrow">→</span></a>
+          <a href="contact.html" class="btn btn-primary" style="margin-top:var(--sp-4);"><span data-i18n="services.s2.cta">Confier une journée</span> →</a>
         </div>
         <div class="service-block__image" data-reveal="right">
           <img src="assets/images/services-disposition.jpg" alt="Mise à disposition chauffeur" loading="lazy">
@@ -180,8 +186,8 @@
     <div class="container">
       <div class="service-block__inner">
         <div class="service-block__text" data-reveal="right">
-          <span class="eyebrow">03 / Coordination mariage</span>
-          <h2 class="service-block__title">Le timing de votre<br><em>grand jour.</em></h2>
+          <span class="eyebrow" data-i18n="services.s3.eyebrow">03 / Coordination mariage</span>
+          <h2 class="service-block__title">Coordination Transport<br><em>Mariage Haut de Gamme.</em></h2>
           <p class="service-block__desc">Coordination de la flotte complète. Chaque véhicule, chaque rotation, chaque arrivée — synchronisée à la minute.</p>
           <ul class="service-block__list">
             <li class="service-block__item">Réunion de briefing avec votre wedding planner</li>
@@ -190,7 +196,7 @@
             <li class="service-block__item">Transferts villa / cérémonie / réception</li>
             <li class="service-block__item">Contact direct le Jour J — aucun intermédiaire</li>
           </ul>
-          <a href="mariages.html" class="btn btn-primary" style="margin-top:var(--sp-4);">En savoir plus sur les mariages <span class="btn-arrow">→</span></a>
+          <a href="mariages.html" class="btn btn-primary" style="margin-top:var(--sp-4);"><span data-i18n="services.s3.cta">En savoir plus sur les mariages</span> →</a>
         </div>
         <div class="service-block__image" data-reveal="left">
           <img src="assets/images/services-mariage.jpg" alt="Transport mariage coordination" loading="lazy">
@@ -204,8 +210,8 @@
     <div class="container">
       <div class="service-block__inner reverse">
         <div class="service-block__text" data-reveal="left">
-          <span class="eyebrow">04 / Événement multi-sites</span>
-          <h2 class="service-block__title">Plusieurs véhicules.<br><em>Une seule coordination.</em></h2>
+          <span class="eyebrow" data-i18n="services.s4.eyebrow">04 / Événement multi-sites</span>
+          <h2 class="service-block__title">Transport Événementiel<br><em>Multi-Véhicules.</em></h2>
           <p class="service-block__desc">Séminaires, tournées presse, événements privés. Plusieurs véhicules gérés simultanément depuis un poste de coordination central.</p>
           <ul class="service-block__list">
             <li class="service-block__item">Déploiement simultané de la flotte</li>
@@ -214,7 +220,7 @@
             <li class="service-block__item">Adaptable sur 1 à 5+ jours</li>
             <li class="service-block__item">Rapport de mission disponible sur demande</li>
           </ul>
-          <a href="contact.html" class="btn btn-primary" style="margin-top:var(--sp-4);">Confier l'événement <span class="btn-arrow">→</span></a>
+          <a href="contact.html" class="btn btn-primary" style="margin-top:var(--sp-4);"><span data-i18n="services.s4.cta">Confier l'événement</span> →</a>
         </div>
         <div class="service-block__image" data-reveal="right">
           <img src="assets/images/services-event.jpg" alt="Événement multi-sites transport" loading="lazy">
@@ -227,23 +233,23 @@
   <section class="standards">
     <div class="container">
       <div class="section-header section-header--center" style="margin-bottom:var(--sp-16);" data-stagger>
-        <span class="eyebrow eyebrow--light" data-reveal="fade">Nos standards</span>
+        <span class="eyebrow eyebrow--light" data-reveal="fade" data-i18n="services.standards.eyebrow">Nos standards</span>
         <h2 class="section-title" style="color:var(--text-inv);" data-reveal="up">Ce qui ne varie <em style="color:var(--rose-light)">jamais.</em></h2>
       </div>
       <div class="standards__grid" data-stagger>
         <div class="standard-card" data-reveal="up" data-delay="100">
           <div class="standard-card__num">01</div>
-          <h3 class="standard-card__title">Discrétion totale</h3>
+          <h3 class="standard-card__title" data-i18n="services.std1.title">Discrétion totale</h3>
           <p class="standard-card__text">Aucun nom, aucune photo, aucune mission n'est communiquée. La confidentialité est opérationnelle, pas rhétorique.</p>
         </div>
         <div class="standard-card" data-reveal="up" data-delay="200">
           <div class="standard-card__num">02</div>
-          <h3 class="standard-card__title">Un seul interlocuteur</h3>
+          <h3 class="standard-card__title" data-i18n="services.std2.title">Un seul interlocuteur</h3>
           <p class="standard-card__text">Vous n'aurez jamais à répéter votre contexte. Une personne connaît votre dossier de A à Z et reste disponible tout au long de la mission.</p>
         </div>
         <div class="standard-card" data-reveal="up" data-delay="300">
           <div class="standard-card__num">03</div>
-          <h3 class="standard-card__title">Ponctualité sans négo</h3>
+          <h3 class="standard-card__title" data-i18n="services.std3.title">Ponctualité sans négo</h3>
           <p class="standard-card__text">Le véhicule est en position avant l'heure. Toujours. Suivi de vol, anticipation des aléas routiers, plan B intégré.</p>
         </div>
         <div class="standard-card" data-reveal="up" data-delay="100">
@@ -288,7 +294,7 @@
         <a href="index.html" class="footer__brand-logo" aria-label="B.LIFTED France">
           B · LIFTED
         </a>
-        <p class="footer__brand-desc">
+        <p class="footer__brand-desc" data-i18n="footer.desc">
           Service de transport privé haut de gamme en Provence, French Riviera, Megève et Dubaï. Discrétion absolue, fiabilité sans compromis.
         </p>
         <div class="footer__social">
@@ -307,13 +313,13 @@
 
       <!-- Services -->
       <div class="footer__col">
-        <p class="footer__col-title">Services</p>
+        <p class="footer__col-title" data-i18n="footer.col.services">Services</p>
         <nav class="footer__nav" aria-label="Navigation services">
-          <a href="services.html" class="footer__nav-link">Transfert aéroport</a>
-          <a href="services.html" class="footer__nav-link">Mise à disposition</a>
-          <a href="mariages.html" class="footer__nav-link">Mariages &amp; événements</a>
-          <a href="services.html" class="footer__nav-link">Séjours &amp; coordination</a>
-          <a href="flotte.html" class="footer__nav-link">Notre flotte</a>
+          <a href="services.html" class="footer__nav-link" data-i18n="footer.svc.transfer">Transfert aéroport</a>
+          <a href="services.html" class="footer__nav-link" data-i18n="footer.svc.disposal">Mise à disposition</a>
+          <a href="mariages.html" class="footer__nav-link" data-i18n="footer.svc.wedding">Mariages &amp; événements</a>
+          <a href="services.html" class="footer__nav-link" data-i18n="footer.svc.stay">Séjours &amp; coordination</a>
+          <a href="flotte.html" class="footer__nav-link" data-i18n="footer.svc.fleet">Notre flotte</a>
         </nav>
       </div>
 
@@ -330,7 +336,7 @@
 
       <!-- Contact -->
       <div class="footer__col">
-        <p class="footer__col-title">Contact</p>
+        <p class="footer__col-title" data-i18n="footer.col.contact">Contact</p>
         <div class="footer__contact-item">
           <svg class="footer__contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
             <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81C2.18 7.22 2 4.92 2 4a2 2 0 012-2h3a2 2 0 012 1.72c.13 1 .4 1.97.71 2.9a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.93.31 1.9.58 2.9.71A2 2 0 0122 16.92z"/>
@@ -361,8 +367,8 @@
         &copy; <span id="footer-year">2026</span> B.LIFTED France · Tous droits réservés
       </p>
       <div class="footer__legal">
-        <a href="/mentions-legales">Mentions légales</a>
-        <a href="/confidentialite">Confidentialité</a>
+        <a href="mentions-legales.html" data-i18n="footer.legal.mentions">Mentions légales</a>
+        <a href="confidentialite.html" data-i18n="footer.legal.privacy">Confidentialité</a>
       </div>
     </div>
 
@@ -373,6 +379,31 @@
 <script src="js/scroll-reveal.js" defer></script>
 <script src="js/main.js" defer></script>
 <script src="js/i18n.js" defer></script>
+
+<script src="js/cookies.js" defer></script>
+
+<!-- Cookie Banner RGPD -->
+<div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Gestion des cookies">
+  <div class="cookie-banner__inner">
+    <p class="cookie-banner__text">Ce site utilise des cookies pour améliorer votre expérience. <a href="confidentialite.html" class="cookie-banner__link">En savoir plus</a></p>
+    <div class="cookie-banner__actions">
+      <button class="cookie-banner__btn cookie-banner__btn--accept" id="cookie-accept">Accepter</button>
+      <button class="cookie-banner__btn cookie-banner__btn--decline" id="cookie-decline">Refuser</button>
+    </div>
+  </div>
+</div>
+
+<div class="whatsapp-widget">
+  <div class="whatsapp-popup" id="whatsapp-popup" aria-hidden="true">
+    <button class="whatsapp-popup__close" id="whatsapp-close" aria-label="Fermer">✕</button>
+    <p class="whatsapp-popup__title">Confier un déplacement</p>
+    <p class="whatsapp-popup__msg">Bonjour,<br>Je suis disponible pour organiser votre transfert, répondre à vos questions et établir un devis personnalisé.</p>
+    <a href="https://wa.me/33636017235?text=Bonjour%2C%20je%20souhaite%20confier%20un%20d%C3%A9placement%20%C3%A0%20B.LIFTED." class="whatsapp-popup__cta" target="_blank" rel="noopener">Contacter sur WhatsApp</a>
+  </div>
+  <button class="whatsapp-float" id="whatsapp-toggle" aria-label="Contacter B.LIFTED par WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </button>
+</div>
 
 </body>
 </html>

@@ -43,7 +43,7 @@
     .manifeste__text strong { font-weight: 500; }
 
     .philosophy {
-      background: var(--noir-lt);
+      background: var(--bg-dark);
       padding: var(--sp-32) 0;
     }
     .philosophy__grid {
@@ -73,7 +73,7 @@
     }
 
     .not-for-everyone {
-      background: var(--noir);
+      background: var(--bg-darker);
       padding: var(--sp-32) 0;
       position: relative;
       overflow: hidden;
@@ -213,7 +213,7 @@
     <nav class="breadcrumb" aria-label="Fil d'Ariane">
       <a href="/">Accueil</a><span class="breadcrumb__sep">—</span><span data-i18n="nav.about">À propos</span>
     </nav>
-    <span class="eyebrow text-or" data-reveal="fade">B.LIFTED France</span>
+    <span class="eyebrow text-or" data-reveal="fade" data-i18n="about.hero.eyebrow">B.LIFTED France</span>
     <h1 class="headline text-inv" data-reveal="up" data-delay="100">
       Une responsabilité<br><em style="color:var(--or-lt)">incarnée.</em>
     </h1>
@@ -226,7 +226,7 @@
 <!-- Manifeste -->
 <section class="manifeste" id="approche">
   <div class="manifeste__inner">
-    <span class="eyebrow" data-reveal="fade">Notre philosophie</span>
+    <span class="eyebrow" data-reveal="fade" data-i18n="about.manifesto.eyebrow">Notre philosophie</span>
     <div class="rule rule-center" data-reveal="scale" data-delay="100"></div>
     <p class="manifeste__text" data-reveal="up" data-delay="150">
       Il y a des déplacements ordinaires.<br>
@@ -256,7 +256,7 @@
         </div>
       </div>
       <div data-reveal="left">
-        <span class="eyebrow">La fondatrice</span>
+        <span class="eyebrow" data-i18n="about.founder.eyebrow">La fondatrice</span>
         <div class="rule"></div>
         <h2 class="subtitle">Fondée et dirigée<br><em>par une femme.</em></h2>
         <div style="height:var(--sp-6);"></div>
@@ -285,7 +285,7 @@
 <section class="philosophy" id="piliers">
   <div class="container">
     <header class="section-header centered" data-reveal="up">
-      <span class="eyebrow text-or">Les piliers</span>
+      <span class="eyebrow text-or" data-i18n="about.pillars.eyebrow">Les piliers</span>
       <div class="rule rule-center"></div>
       <h2 class="title text-inv">Ce qui ne change pas,<br><em style="color:var(--or-lt)">quelle que soit la mission.</em></h2>
     </header>
@@ -309,7 +309,7 @@
 <!-- Ce que B.LIFTED n'est pas -->
 <section class="not-for-everyone" id="positionnement">
   <div class="not-for-everyone__inner">
-    <span class="eyebrow text-or" data-reveal="fade">Sélectivité assumée</span>
+    <span class="eyebrow text-or" data-reveal="fade" data-i18n="about.selective.eyebrow">Sélectivité assumée</span>
     <div class="rule rule-center" data-reveal="scale" data-delay="100"></div>
     <h2 class="title text-inv" data-reveal="up" data-delay="150">
       B.LIFTED n'est probablement<br><em style="color:var(--or-lt)">pas faite pour vous.</em>
@@ -331,7 +331,7 @@
 <section class="section section-ivoire-dk" id="partenaires">
   <div class="container">
     <header class="section-header centered" data-reveal="up">
-      <span class="eyebrow">Écosystème de confiance</span>
+      <span class="eyebrow" data-i18n="about.partners.eyebrow">Écosystème de confiance</span>
       <div class="rule rule-center"></div>
       <h2 class="subtitle">Avec qui<br><em>B.LIFTED travaille.</em></h2>
     </header>
@@ -383,7 +383,7 @@
         <a href="index.html" class="footer__brand-logo" aria-label="B.LIFTED France">
           B · LIFTED
         </a>
-        <p class="footer__brand-desc">
+        <p class="footer__brand-desc" data-i18n="footer.desc">
           Service de transport privé haut de gamme en Provence, French Riviera, Megève et Dubaï. Discrétion absolue, fiabilité sans compromis.
         </p>
         <div class="footer__social">
@@ -402,13 +402,13 @@
 
       <!-- Services -->
       <div class="footer__col">
-        <p class="footer__col-title">Services</p>
+        <p class="footer__col-title" data-i18n="footer.col.services">Services</p>
         <nav class="footer__nav" aria-label="Navigation services">
-          <a href="services.html" class="footer__nav-link">Transfert aéroport</a>
-          <a href="services.html" class="footer__nav-link">Mise à disposition</a>
-          <a href="mariages.html" class="footer__nav-link">Mariages &amp; événements</a>
-          <a href="services.html" class="footer__nav-link">Séjours &amp; coordination</a>
-          <a href="flotte.html" class="footer__nav-link">Notre flotte</a>
+          <a href="services.html" class="footer__nav-link" data-i18n="footer.svc.transfer">Transfert aéroport</a>
+          <a href="services.html" class="footer__nav-link" data-i18n="footer.svc.disposal">Mise à disposition</a>
+          <a href="mariages.html" class="footer__nav-link" data-i18n="footer.svc.wedding">Mariages &amp; événements</a>
+          <a href="services.html" class="footer__nav-link" data-i18n="footer.svc.stay">Séjours &amp; coordination</a>
+          <a href="flotte.html" class="footer__nav-link" data-i18n="footer.svc.fleet">Notre flotte</a>
         </nav>
       </div>
 
@@ -425,7 +425,7 @@
 
       <!-- Contact -->
       <div class="footer__col">
-        <p class="footer__col-title">Contact</p>
+        <p class="footer__col-title" data-i18n="footer.col.contact">Contact</p>
         <div class="footer__contact-item">
           <svg class="footer__contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
             <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81C2.18 7.22 2 4.92 2 4a2 2 0 012-2h3a2 2 0 012 1.72c.13 1 .4 1.97.71 2.9a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.93.31 1.9.58 2.9.71A2 2 0 0122 16.92z"/>
@@ -456,14 +456,24 @@
         &copy; <span id="footer-year">2026</span> B.LIFTED France · Tous droits réservés
       </p>
       <div class="footer__legal">
-        <a href="/mentions-legales">Mentions légales</a>
-        <a href="/confidentialite">Confidentialité</a>
+        <a href="mentions-legales.html" data-i18n="footer.legal.mentions">Mentions légales</a>
+        <a href="confidentialite.html" data-i18n="footer.legal.privacy">Confidentialité</a>
       </div>
     </div>
 
   </div>
 </footer>
-<a href="https://wa.me/33636017235" class="whatsapp-float" aria-label="WhatsApp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+<div class="whatsapp-widget">
+  <div class="whatsapp-popup" id="whatsapp-popup" aria-hidden="true">
+    <button class="whatsapp-popup__close" id="whatsapp-close" aria-label="Fermer">✕</button>
+    <p class="whatsapp-popup__title">Confier un déplacement</p>
+    <p class="whatsapp-popup__msg">Bonjour,<br>Je suis disponible pour organiser votre transfert, répondre à vos questions et établir un devis personnalisé.</p>
+    <a href="https://wa.me/33636017235?text=Bonjour%2C%20je%20souhaite%20confier%20un%20d%C3%A9placement%20%C3%A0%20B.LIFTED." class="whatsapp-popup__cta" target="_blank" rel="noopener">Contacter sur WhatsApp</a>
+  </div>
+  <button class="whatsapp-float" id="whatsapp-toggle" aria-label="Contacter B.LIFTED par WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </button>
+</div>
 <script src="js/nav.js" defer></script>
 <script src="js/scroll-reveal.js" defer></script>
 <script src="js/main.js" defer></script>
@@ -472,6 +482,19 @@
   @media(max-width:900px){ .about-split { grid-template-columns: 1fr !important; } }
 </style>
 <script src="js/i18n.js" defer></script>
+
+<script src="js/cookies.js" defer></script>
+
+<!-- Cookie Banner RGPD -->
+<div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Gestion des cookies">
+  <div class="cookie-banner__inner">
+    <p class="cookie-banner__text">Ce site utilise des cookies pour améliorer votre expérience. <a href="confidentialite.html" class="cookie-banner__link">En savoir plus</a></p>
+    <div class="cookie-banner__actions">
+      <button class="cookie-banner__btn cookie-banner__btn--accept" id="cookie-accept">Accepter</button>
+      <button class="cookie-banner__btn cookie-banner__btn--decline" id="cookie-decline">Refuser</button>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>

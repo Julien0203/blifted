@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- ── SEO ── -->
-  <title>Chauffeur Privé Haut de Gamme Provence & French Riviera | B.LIFTED France</title>
-  <meta name="description" content="Service de transport privé haut de gamme en Provence, French Riviera, Megève et Dubaï. Coordination experte, discrétion absolue, fiabilité sans compromis. Partenaire Aéroport d'Avignon-Provence.">
+  <title>Chauffeur Privé Provence, Côte d'Azur & Megève | B.LIFTED France</title>
+  <meta name="description" content="Chauffeur privé haut de gamme en Provence, Côte d'Azur, Megève et Dubaï. Transferts aéroport, mariages, mise à disposition. Partenaire officiel Aéroport d'Avignon-Provence. Réservation sur mesure.">
   <meta name="keywords" content="chauffeur privé Provence, transport privé French Riviera, VTC haut de gamme Avignon, chauffeur mariage Provence, mise à disposition chauffeur Megève, transport privé Dubaï">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://bliftedfrance.com/">
@@ -147,72 +147,69 @@
 <!-- ════════════════════════════════════════════════════════
      HERO
 ════════════════════════════════════════════════════════ -->
-<section class="hero" id="accueil" aria-label="En-tête principal">
+<section class="hero page-hero" id="accueil" aria-label="En-tête principal">
+
+  <!-- Fond image plein écran -->
+  <div class="hero__bg" aria-hidden="true">
+    <img
+      src="assets/images/hero.jpg"
+      alt=""
+      loading="eager"
+      fetchpriority="high"
+    >
+  </div>
+
   <div class="hero__inner">
 
     <!-- Contenu texte -->
     <div class="hero__content">
 
-      <div class="hero__eyebrow">
+      <div class="hero__eyebrow" data-reveal="fade">
         <div class="hero__dot" aria-hidden="true"></div>
-        <span class="eyebrow">Transport Privé · Haut de Gamme</span>
+        <span class="eyebrow" data-i18n="home.hero.eyebrow">Transport Privé · Haut de Gamme</span>
       </div>
 
-      <h1 class="hero__title" data-split="words">
+      <h1 class="hero__title" data-split="words" data-i18n-html="home.hero.title">
         Quand l'approximation<br>
         <em>n'est pas une option.</em>
       </h1>
 
-      <p class="hero__geo" data-reveal="fade" data-delay="300">
+      <p class="hero__geo" data-reveal="fade" data-delay="300" data-i18n="home.hero.geo">
         Provence &nbsp;·&nbsp; French Riviera &nbsp;·&nbsp; Megève &nbsp;·&nbsp; Dubaï
       </p>
 
       <div class="hero__ctas" data-reveal="up" data-delay="400">
         <a href="contact.html" class="btn btn-primary">
-          Confier un déplacement <span class="btn-arrow">→</span>
+          <span data-i18n="home.hero.cta1">Confier un déplacement</span> <span class="btn-arrow">→</span>
         </a>
-        <a href="a-propos.html" class="btn btn-outline">
+        <a href="a-propos.html" class="btn btn-ghost" data-i18n="home.hero.cta2">
           Notre approche
         </a>
       </div>
 
-      <div class="hero__trust" data-reveal="fade" data-delay="550">
-        <div class="hero__trust-dot" aria-hidden="true"></div>
-        <span>Partenaire officiel Aéroport d'Avignon-Provence</span>
-      </div>
-
     </div>
 
-    <!-- Image -->
-    <div class="hero__media" data-reveal="scale" data-delay="150">
-      <div class="hero__img-wrap">
-        <img
-          src="assets/images/hero.jpg"
-          alt="Chauffeur privé haut de gamme B.LIFTED France"
-          class="hero__img"
-          loading="eager"
-          fetchpriority="high"
-        >
-        <div class="hero__img-overlay" aria-hidden="true"></div>
+    <!-- Barre de stats -->
+    <div class="hero__stats" data-reveal="fade" data-delay="600">
+      <div class="hero__stat">
+        <span class="hero__stat-accent">✦</span>
+        <span data-i18n="home.hero.trust">Partenaire Aéroport Avignon-Provence</span>
       </div>
-
-      <div class="hero__badge" aria-hidden="true">
-        <div class="hero__badge-logo">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
-          </svg>
-        </div>
-        <span class="hero__badge-label">Partenaire officiel</span>
-        <span class="hero__badge-value">Aéroport Avignon-Provence</span>
-      </div>
+      <div class="hero__stat-sep" aria-hidden="true"></div>
+      <div class="hero__stat" data-i18n="home.hero.stat2">Disponible 24h/24 · 7j/7</div>
+      <div class="hero__stat-sep" aria-hidden="true"></div>
+      <div class="hero__stat" data-i18n="home.hero.stat3">Discrétion absolue</div>
+      <div class="hero__stat-sep" aria-hidden="true"></div>
+      <div class="hero__stat" data-i18n="home.hero.stat4">Flotte Mercedes exclusivement</div>
     </div>
 
   </div>
 
   <div class="hero-scroll" aria-hidden="true">
-    <span class="hero-scroll__label">Découvrir</span>
+    <span class="hero-scroll__label" data-i18n="home.hero.scroll">Découvrir</span>
     <div class="hero-scroll__line"></div>
   </div>
+
 </section>
 
 
@@ -248,13 +245,13 @@
 ════════════════════════════════════════════════════════ -->
 <section class="statement">
   <div class="container">
-    <p class="statement__text" data-split="words">
+    <p class="statement__text" data-split="words" data-i18n-html="home.statement.text">
       Chaque mission est confiée à une seule personne.
       Vous n'aurez <em>jamais à répéter</em> votre contexte.
     </p>
     <div class="statement__author" data-reveal="fade" data-delay="400">
       <div class="statement__line"></div>
-      <span class="statement__name">La promesse B.LIFTED</span>
+      <span class="statement__name" data-i18n="home.statement.author">La promesse B.LIFTED</span>
     </div>
   </div>
 </section>
@@ -268,19 +265,19 @@
     <div class="stats__grid">
       <div class="stats__item" data-reveal="up" data-delay="0">
         <span class="stats__number"><span data-count="4">0</span></span>
-        <span class="stats__label">Territoires d'excellence</span>
+        <span class="stats__label" data-i18n="home.stats.territories">Territoires d'excellence</span>
       </div>
       <div class="stats__item" data-reveal="up" data-delay="100">
         <span class="stats__number"><span data-count="100">0</span><span>%</span></span>
-        <span class="stats__label">Taux de satisfaction</span>
+        <span class="stats__label" data-i18n="home.stats.satisfaction">Taux de satisfaction</span>
       </div>
       <div class="stats__item" data-reveal="up" data-delay="200">
         <span class="stats__number"><span data-count="7">0</span><span>+</span></span>
-        <span class="stats__label">Années d'expérience</span>
+        <span class="stats__label" data-i18n="home.stats.experience">Années d'expérience</span>
       </div>
       <div class="stats__item" data-reveal="up" data-delay="300">
         <span class="stats__number"><span data-count="24">0</span><span>/7</span></span>
-        <span class="stats__label">Disponibilité totale</span>
+        <span class="stats__label" data-i18n="home.stats.availability">Disponibilité totale</span>
       </div>
     </div>
   </div>
@@ -294,11 +291,11 @@
   <div class="container">
 
     <div class="section-header" data-stagger>
-      <span class="eyebrow" data-reveal="fade">Nos prestations</span>
-      <h2 class="section-title" data-reveal="up">
+      <span class="eyebrow" data-reveal="fade" data-i18n="home.services.eyebrow">Nos prestations</span>
+      <h2 class="section-title" data-reveal="up" data-i18n-html="home.services.title">
         Ce que nous <em>coordonnons</em>
       </h2>
-      <p class="section-sub" data-reveal="up" data-delay="150">
+      <p class="section-sub" data-reveal="up" data-delay="150" data-i18n="home.services.sub">
         Quatre expertises complémentaires, une seule exigence : l'irréprochable.
       </p>
     </div>
@@ -313,16 +310,16 @@
             <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81C2.18 7.22 2 4.92 2 4a2 2 0 012-2h3a2 2 0 012 1.72c.13 1 .4 1.97.71 2.9a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.93.31 1.9.58 2.9.71A2 2 0 0122 16.92z"/>
           </svg>
         </div>
-        <h3 class="service-card__title">Transfert aéroport & gare</h3>
-        <p class="service-card__desc">
+        <h3 class="service-card__title" data-i18n="home.svc1.title">Transfert aéroport & gare</h3>
+        <p class="service-card__desc" data-i18n="home.svc1.desc">
           Prise en charge personnalisée, suivi des vols en temps réel, attente sans limite. Votre chauffeur vous attend, quelle que soit l'heure.
         </p>
         <div class="service-card__tags">
-          <span class="service-card__tag">Aéroport Avignon</span>
-          <span class="service-card__tag">Nice · Marseille</span>
-          <span class="service-card__tag">Gares TGV</span>
+          <span class="service-card__tag" data-i18n="home.svc1.tag1">Aéroport Avignon</span>
+          <span class="service-card__tag" data-i18n="home.svc1.tag2">Nice · Marseille</span>
+          <span class="service-card__tag" data-i18n="home.svc1.tag3">Gares TGV</span>
         </div>
-        <a href="services.html" class="service-card__link">En savoir plus</a>
+        <a href="services.html" class="service-card__link" data-i18n="home.svc1.link">En savoir plus</a>
       </div>
 
       <!-- Mise à disposition -->
@@ -333,16 +330,16 @@
             <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
           </svg>
         </div>
-        <h3 class="service-card__title">Mise à disposition</h3>
-        <p class="service-card__desc">
+        <h3 class="service-card__title" data-i18n="home.svc2.title">Mise à disposition</h3>
+        <p class="service-card__desc" data-i18n="home.svc2.desc">
           Votre chauffeur dédié, à votre entière disposition pour la journée ou la demi-journée. Liberté totale, agenda flexible.
         </p>
         <div class="service-card__tags">
-          <span class="service-card__tag">Demi-journée</span>
-          <span class="service-card__tag">Journée complète</span>
-          <span class="service-card__tag">Multi-jours</span>
+          <span class="service-card__tag" data-i18n="home.svc2.tag1">Demi-journée</span>
+          <span class="service-card__tag" data-i18n="home.svc2.tag2">Journée complète</span>
+          <span class="service-card__tag" data-i18n="home.svc2.tag3">Multi-jours</span>
         </div>
-        <a href="services.html" class="service-card__link">En savoir plus</a>
+        <a href="services.html" class="service-card__link" data-i18n="home.svc2.link">En savoir plus</a>
       </div>
 
       <!-- Mariages & Événements -->
@@ -353,16 +350,16 @@
             <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
           </svg>
         </div>
-        <h3 class="service-card__title">Mariages & événements</h3>
-        <p class="service-card__desc">
+        <h3 class="service-card__title" data-i18n="home.svc3.title">Mariages & événements</h3>
+        <p class="service-card__desc" data-i18n="home.svc3.desc">
           Coordination complète du transport pour votre jour J. Flotte adaptée, timing précis, discrétion absolue pour tous vos invités.
         </p>
         <div class="service-card__tags">
           <span class="service-card__tag" data-i18n="nav.weddings">Mariages</span>
-          <span class="service-card__tag">Séminaires</span>
-          <span class="service-card__tag">Soirées privées</span>
+          <span class="service-card__tag" data-i18n="home.svc3.tag2">Séminaires</span>
+          <span class="service-card__tag" data-i18n="home.svc3.tag3">Soirées privées</span>
         </div>
-        <a href="mariages.html" class="service-card__link">Découvrir</a>
+        <a href="mariages.html" class="service-card__link" data-i18n="home.svc3.link">Découvrir</a>
       </div>
 
       <!-- Multi-événements -->
@@ -373,16 +370,16 @@
             <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
           </svg>
         </div>
-        <h3 class="service-card__title">Séjour & coordination</h3>
-        <p class="service-card__desc">
+        <h3 class="service-card__title" data-i18n="home.svc4.title">Séjour & coordination</h3>
+        <p class="service-card__desc" data-i18n="home.svc4.desc">
           Accompagnement sur plusieurs jours pour vos séjours en Provence ou sur la Riviera. Votre chauffeur devient le fil conducteur de votre voyage.
         </p>
         <div class="service-card__tags">
-          <span class="service-card__tag">Séjours VIP</span>
-          <span class="service-card__tag">Familles</span>
-          <span class="service-card__tag">Groupes</span>
+          <span class="service-card__tag" data-i18n="home.svc4.tag1">Séjours VIP</span>
+          <span class="service-card__tag" data-i18n="home.svc4.tag2">Familles</span>
+          <span class="service-card__tag" data-i18n="home.svc4.tag3">Groupes</span>
         </div>
-        <a href="services.html" class="service-card__link">En savoir plus</a>
+        <a href="services.html" class="service-card__link" data-i18n="home.svc4.link">En savoir plus</a>
       </div>
 
     </div>
@@ -397,11 +394,11 @@
   <div class="container container--sm">
 
     <div class="section-header--center" data-stagger>
-      <span class="eyebrow" data-reveal="fade">Simulateur de tarif</span>
-      <h2 class="section-title" data-reveal="up">
+      <span class="eyebrow" data-reveal="fade" data-i18n="home.sim.eyebrow">Simulateur de tarif</span>
+      <h2 class="section-title" data-reveal="up" data-i18n-html="home.sim.title">
         Estimez votre <em>déplacement</em>
       </h2>
-      <p class="section-sub" data-reveal="up" data-delay="150">
+      <p class="section-sub" data-reveal="up" data-delay="150" data-i18n="home.sim.sub">
         En quelques clics, obtenez une estimation personnalisée pour votre prochain trajet.
       </p>
     </div>
@@ -421,17 +418,17 @@
 
       <!-- Étape 1 : Type de prestation -->
       <div class="simulator__panel is-active" id="sim-step-1" role="tabpanel">
-        <h3 class="simulator__question">Quelle prestation souhaitez-vous ?</h3>
-        <p class="simulator__hint">Sélectionnez la nature de votre déplacement</p>
+        <h3 class="simulator__question" data-i18n="home.sim.q1">Quelle prestation souhaitez-vous ?</h3>
+        <p class="simulator__hint" data-i18n="home.sim.q1.hint">Sélectionnez la nature de votre déplacement</p>
         <div class="simulator__options" id="sim-services">
           <button class="sim-option" data-value="transfert" type="button">
             <span class="sim-option__icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4 20-7z"/></svg>
             </span>
             <span class="sim-option__body">
-              <span class="sim-option__label">Transfert</span>
-              <span class="sim-option__sub">Aéroport / Gare</span>
-              <span class="sim-option__desc">Prise en charge porte-à-porte, suivi vol en temps réel</span>
+              <span class="sim-option__label" data-i18n="home.sim.svc1.label">Transfert</span>
+              <span class="sim-option__sub" data-i18n="home.sim.svc1.sub">Aéroport / Gare</span>
+              <span class="sim-option__desc" data-i18n="home.sim.svc1.desc">Prise en charge porte-à-porte, suivi vol en temps réel</span>
             </span>
           </button>
           <button class="sim-option" data-value="disposition" type="button">
@@ -439,9 +436,9 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
             </span>
             <span class="sim-option__body">
-              <span class="sim-option__label">Mise à disposition</span>
-              <span class="sim-option__sub">Chauffeur dédié</span>
-              <span class="sim-option__desc">Disponible à l'heure ou à la journée, selon votre agenda</span>
+              <span class="sim-option__label" data-i18n="home.sim.svc2.label">Mise à disposition</span>
+              <span class="sim-option__sub" data-i18n="home.sim.svc2.sub">Chauffeur dédié</span>
+              <span class="sim-option__desc" data-i18n="home.sim.svc2.desc">Disponible à l'heure ou à la journée, selon votre agenda</span>
             </span>
           </button>
           <button class="sim-option" data-value="mariage" type="button">
@@ -449,9 +446,9 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
             </span>
             <span class="sim-option__body">
-              <span class="sim-option__label">Mariage</span>
-              <span class="sim-option__sub">Jour J & invités</span>
-              <span class="sim-option__desc">Coordination complète, véhicules décorés sur demande</span>
+              <span class="sim-option__label" data-i18n="home.sim.svc3.label">Mariage</span>
+              <span class="sim-option__sub" data-i18n="home.sim.svc3.sub">Jour J & invités</span>
+              <span class="sim-option__desc" data-i18n="home.sim.svc3.desc">Coordination complète, véhicules décorés sur demande</span>
             </span>
           </button>
           <button class="sim-option" data-value="sejour" type="button">
@@ -459,24 +456,24 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>
             </span>
             <span class="sim-option__body">
-              <span class="sim-option__label">Séjour</span>
-              <span class="sim-option__sub">Multi-événements</span>
-              <span class="sim-option__desc">Itinéraires multi-étapes, assistance logistique intégrale</span>
+              <span class="sim-option__label" data-i18n="home.sim.svc4.label">Séjour</span>
+              <span class="sim-option__sub" data-i18n="home.sim.svc4.sub">Multi-événements</span>
+              <span class="sim-option__desc" data-i18n="home.sim.svc4.desc">Itinéraires multi-étapes, assistance logistique intégrale</span>
             </span>
           </button>
         </div>
         <div class="simulator__nav">
           <span></span>
           <button class="btn btn-primary" id="sim-next-1" type="button" disabled>
-            Continuer <span class="btn-arrow">→</span>
+            <span data-i18n="home.sim.next">Continuer</span> <span class="btn-arrow">→</span>
           </button>
         </div>
       </div>
 
       <!-- Étape 2 : Territoire -->
       <div class="simulator__panel" id="sim-step-2" role="tabpanel">
-        <h3 class="simulator__question">Quel est votre territoire ?</h3>
-        <p class="simulator__hint">Choisissez la zone de déplacement</p>
+        <h3 class="simulator__question" data-i18n="home.sim.q2">Quel est votre territoire ?</h3>
+        <p class="simulator__hint" data-i18n="home.sim.q2.hint">Choisissez la zone de déplacement</p>
         <div class="simulator__options" id="sim-territories">
           <button class="sim-option" data-value="provence" type="button">
             <span class="sim-option__icon">
@@ -485,7 +482,7 @@
             <span class="sim-option__body">
               <span class="sim-option__label">Provence</span>
               <span class="sim-option__sub">Alpilles · Luberon</span>
-              <span class="sim-option__desc">Avignon, Aix-en-Provence, Gordes, Les Baux</span>
+              <span class="sim-option__desc" data-i18n="home.sim.ter1.desc">Avignon, Aix-en-Provence, Gordes, Les Baux</span>
             </span>
           </button>
           <button class="sim-option" data-value="riviera" type="button">
@@ -495,7 +492,7 @@
             <span class="sim-option__body">
               <span class="sim-option__label">French Riviera</span>
               <span class="sim-option__sub">Nice · Cannes · Monaco</span>
-              <span class="sim-option__desc">Antibes, Saint-Tropez, Menton, côte d'Azur</span>
+              <span class="sim-option__desc" data-i18n="home.sim.ter2.desc">Antibes, Saint-Tropez, Menton, côte d'Azur</span>
             </span>
           </button>
           <button class="sim-option" data-value="megeve" type="button">
@@ -505,7 +502,7 @@
             <span class="sim-option__body">
               <span class="sim-option__label">Megève</span>
               <span class="sim-option__sub">Alpes · Mont-Blanc</span>
-              <span class="sim-option__desc">Chamonix, Courchevel, Val d'Isère, Albertville</span>
+              <span class="sim-option__desc" data-i18n="home.sim.ter3.desc">Chamonix, Courchevel, Val d'Isère, Albertville</span>
             </span>
           </button>
           <button class="sim-option" data-value="dubai" type="button">
@@ -514,32 +511,32 @@
             </span>
             <span class="sim-option__body">
               <span class="sim-option__label">Dubaï</span>
-              <span class="sim-option__sub">Émirats Arabes Unis</span>
-              <span class="sim-option__desc">Dubaï, Abu Dhabi, Sharjah — service bilingue</span>
+              <span class="sim-option__sub" data-i18n="home.sim.ter4.sub">Émirats Arabes Unis</span>
+              <span class="sim-option__desc" data-i18n="home.sim.ter4.desc">Dubaï, Abu Dhabi, Sharjah — service bilingue</span>
             </span>
           </button>
         </div>
         <div class="simulator__nav">
-          <button class="btn btn-outline" id="sim-prev-2" type="button">← Retour</button>
+          <button class="btn btn-outline" id="sim-prev-2" type="button" data-i18n="home.sim.back">← Retour</button>
           <button class="btn btn-primary" id="sim-next-2" type="button" disabled>
-            Continuer <span class="btn-arrow">→</span>
+            <span data-i18n="home.sim.next">Continuer</span> <span class="btn-arrow">→</span>
           </button>
         </div>
       </div>
 
       <!-- Étape 3 : Durée -->
       <div class="simulator__panel" id="sim-step-3" role="tabpanel">
-        <h3 class="simulator__question">Quelle durée prévoyez-vous ?</h3>
-        <p class="simulator__hint">Pour les mariages et séjours notamment</p>
+        <h3 class="simulator__question" data-i18n="home.sim.q3">Quelle durée prévoyez-vous ?</h3>
+        <p class="simulator__hint" data-i18n="home.sim.q3.hint">Pour les mariages et séjours notamment</p>
         <div class="simulator__options simulator__options--3col" id="sim-durations">
           <button class="sim-option" data-value="half" type="button">
             <span class="sim-option__icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 18a5 5 0 0 0-10 0"/><line x1="12" y1="2" x2="12" y2="9"/><line x1="4.22" y1="10.22" x2="5.64" y2="11.64"/><line x1="1" y1="18" x2="3" y2="18"/><line x1="21" y1="18" x2="23" y2="18"/><line x1="18.36" y1="11.64" x2="19.78" y2="10.22"/></svg>
             </span>
             <span class="sim-option__body">
-              <span class="sim-option__label">Demi-journée</span>
-              <span class="sim-option__sub">Jusqu'à 4h</span>
-              <span class="sim-option__desc">Idéal pour un transfert ou une excursion courte</span>
+              <span class="sim-option__label" data-i18n="home.sim.dur1.label">Demi-journée</span>
+              <span class="sim-option__sub" data-i18n="home.sim.dur1.sub">Jusqu'à 4h</span>
+              <span class="sim-option__desc" data-i18n="home.sim.dur1.desc">Idéal pour un transfert ou une excursion courte</span>
             </span>
           </button>
           <button class="sim-option" data-value="full" type="button">
@@ -547,9 +544,9 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
             </span>
             <span class="sim-option__body">
-              <span class="sim-option__label">Journée complète</span>
-              <span class="sim-option__sub">4h à 10h</span>
-              <span class="sim-option__desc">Visites, réunions d'affaires ou sorties culturelles</span>
+              <span class="sim-option__label" data-i18n="home.sim.dur2.label">Journée complète</span>
+              <span class="sim-option__sub" data-i18n="home.sim.dur2.sub">4h à 10h</span>
+              <span class="sim-option__desc" data-i18n="home.sim.dur2.desc">Visites, réunions d'affaires ou sorties culturelles</span>
             </span>
           </button>
           <button class="sim-option" data-value="multi" type="button">
@@ -557,33 +554,33 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="14" x2="16" y2="14"/><line x1="8" y1="18" x2="12" y2="18"/></svg>
             </span>
             <span class="sim-option__body">
-              <span class="sim-option__label">Multi-jours</span>
-              <span class="sim-option__sub">2 jours et plus</span>
-              <span class="sim-option__desc">Accompagnement sur l'ensemble de votre séjour</span>
+              <span class="sim-option__label" data-i18n="home.sim.dur3.label">Multi-jours</span>
+              <span class="sim-option__sub" data-i18n="home.sim.dur3.sub">2 jours et plus</span>
+              <span class="sim-option__desc" data-i18n="home.sim.dur3.desc">Accompagnement sur l'ensemble de votre séjour</span>
             </span>
           </button>
         </div>
         <div class="simulator__nav">
-          <button class="btn btn-outline" id="sim-prev-3" type="button">← Retour</button>
+          <button class="btn btn-outline" id="sim-prev-3" type="button" data-i18n="home.sim.back">← Retour</button>
           <button class="btn btn-primary" id="sim-next-3" type="button" disabled>
-            Continuer <span class="btn-arrow">→</span>
+            <span data-i18n="home.sim.next">Continuer</span> <span class="btn-arrow">→</span>
           </button>
         </div>
       </div>
 
       <!-- Étape 4 : Passagers -->
       <div class="simulator__panel" id="sim-step-4" role="tabpanel">
-        <h3 class="simulator__question">Combien de passagers ?</h3>
-        <p class="simulator__hint">Pour adapter le véhicule à votre groupe</p>
+        <h3 class="simulator__question" data-i18n="home.sim.q4">Combien de passagers ?</h3>
+        <p class="simulator__hint" data-i18n="home.sim.q4.hint">Pour adapter le véhicule à votre groupe</p>
         <div class="simulator__options simulator__options--3col" id="sim-passengers">
           <button class="sim-option" data-value="small" type="button">
             <span class="sim-option__icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
             </span>
             <span class="sim-option__body">
-              <span class="sim-option__label">1 à 4 passagers</span>
-              <span class="sim-option__sub">Berline Mercedes</span>
-              <span class="sim-option__desc">Mercedes Classe E ou S, confort premium garanti</span>
+              <span class="sim-option__label" data-i18n="home.sim.pax1.label">1 à 4 passagers</span>
+              <span class="sim-option__sub" data-i18n="home.sim.pax1.sub">Berline Mercedes</span>
+              <span class="sim-option__desc" data-i18n="home.sim.pax1.desc">Mercedes Classe E ou S, confort premium garanti</span>
             </span>
           </button>
           <button class="sim-option" data-value="medium" type="button">
@@ -591,9 +588,9 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
             </span>
             <span class="sim-option__body">
-              <span class="sim-option__label">5 à 7 passagers</span>
-              <span class="sim-option__sub">Mercedes Classe V</span>
-              <span class="sim-option__desc">Van luxe avec espace bagages généreux</span>
+              <span class="sim-option__label" data-i18n="home.sim.pax2.label">5 à 7 passagers</span>
+              <span class="sim-option__sub" data-i18n="home.sim.pax2.sub">Mercedes Classe V</span>
+              <span class="sim-option__desc" data-i18n="home.sim.pax2.desc">Van luxe avec espace bagages généreux</span>
             </span>
           </button>
           <button class="sim-option" data-value="large" type="button">
@@ -601,16 +598,16 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
             </span>
             <span class="sim-option__body">
-              <span class="sim-option__label">8 et plus</span>
-              <span class="sim-option__sub">Flotte multiple</span>
-              <span class="sim-option__desc">Flotte coordonnée, plusieurs véhicules si nécessaire</span>
+              <span class="sim-option__label" data-i18n="home.sim.pax3.label">8 et plus</span>
+              <span class="sim-option__sub" data-i18n="home.sim.pax3.sub">Flotte multiple</span>
+              <span class="sim-option__desc" data-i18n="home.sim.pax3.desc">Flotte coordonnée, plusieurs véhicules si nécessaire</span>
             </span>
           </button>
         </div>
         <div class="simulator__nav">
-          <button class="btn btn-outline" id="sim-prev-4" type="button">← Retour</button>
+          <button class="btn btn-outline" id="sim-prev-4" type="button" data-i18n="home.sim.back">← Retour</button>
           <button class="btn btn-primary" id="sim-calculate" type="button" disabled>
-            Voir mon estimation <span class="btn-arrow">→</span>
+            <span data-i18n="home.sim.calc">Voir mon estimation</span> <span class="btn-arrow">→</span>
           </button>
         </div>
       </div>
@@ -618,18 +615,18 @@
       <!-- Résultat -->
       <div class="simulator__panel" id="sim-result" role="tabpanel">
         <div class="simulator__result">
-          <p class="result__label">Estimation personnalisée</p>
+          <p class="result__label" data-i18n="home.sim.result.label">Estimation personnalisée</p>
           <div class="result__price">
-            À partir de <span id="result-price">–</span> €
+            <span data-i18n="home.sim.result.prefix">À partir de</span> <span id="result-price">–</span> €
           </div>
-          <p class="result__note">
+          <p class="result__note" data-i18n="home.sim.result.note">
             Estimation indicative · Devis précis sur demande · TVA et frais inclus
           </p>
           <div class="result__ctas">
             <a href="contact.html" class="btn btn-primary">
-              Demander un devis <span class="btn-arrow">→</span>
+              <span data-i18n="home.sim.result.cta">Demander un devis</span> <span class="btn-arrow">→</span>
             </a>
-            <button class="btn btn-outline" id="sim-restart" type="button">
+            <button class="btn btn-outline" id="sim-restart" type="button" data-i18n="home.sim.restart">
               Nouvelle simulation
             </button>
           </div>
@@ -648,11 +645,11 @@
   <div class="container">
 
     <div class="section-header" data-stagger>
-      <span class="eyebrow" data-reveal="fade">Nos destinations</span>
-      <h2 class="section-title" data-reveal="up">
+      <span class="eyebrow" data-reveal="fade" data-i18n="home.territories.eyebrow">Nos destinations</span>
+      <h2 class="section-title" data-reveal="up" data-i18n-html="home.territories.title">
         Quatre <em>territoires</em> d'exception
       </h2>
-      <p class="section-sub" data-reveal="up" data-delay="150">
+      <p class="section-sub" data-reveal="up" data-delay="150" data-i18n="home.territories.sub">
         De la Provence aux Émirats, une présence locale, une connaissance intime des routes.
       </p>
     </div>
@@ -666,8 +663,8 @@
           <div class="territory-card__bar" aria-hidden="true"></div>
           <span class="territory-card__eyebrow">France</span>
           <h3 class="territory-card__name">Provence</h3>
-          <p class="territory-card__desc">Alpilles, Luberon, Avignon. Le berceau de l'élégance provençale.</p>
-          <span class="territory-card__link">Explorer</span>
+          <p class="territory-card__desc" data-i18n="home.prov.desc">Alpilles, Luberon, Avignon. Le berceau de l'élégance provençale.</p>
+          <span class="territory-card__link" data-i18n="home.territories.explore">Explorer</span>
         </div>
       </a>
 
@@ -678,8 +675,8 @@
           <div class="territory-card__bar" aria-hidden="true"></div>
           <span class="territory-card__eyebrow">France</span>
           <h3 class="territory-card__name">French Riviera</h3>
-          <p class="territory-card__desc">Nice, Cannes, Monaco. La Côte d'Azur dans toute sa splendeur.</p>
-          <span class="territory-card__link">Explorer</span>
+          <p class="territory-card__desc" data-i18n="home.riv.desc">Nice, Cannes, Monaco. La Côte d'Azur dans toute sa splendeur.</p>
+          <span class="territory-card__link" data-i18n="home.territories.explore">Explorer</span>
         </div>
       </a>
 
@@ -690,8 +687,8 @@
           <div class="territory-card__bar" aria-hidden="true"></div>
           <span class="territory-card__eyebrow">France</span>
           <h3 class="territory-card__name">Megève</h3>
-          <p class="territory-card__desc">Alpes, Mont-Blanc. Le luxe discret des hauteurs enneigées.</p>
-          <span class="territory-card__link">Explorer</span>
+          <p class="territory-card__desc" data-i18n="home.meg.desc">Alpes, Mont-Blanc. Le luxe discret des hauteurs enneigées.</p>
+          <span class="territory-card__link" data-i18n="home.territories.explore">Explorer</span>
         </div>
       </a>
 
@@ -702,8 +699,8 @@
           <div class="territory-card__bar" aria-hidden="true"></div>
           <span class="territory-card__eyebrow">Émirats</span>
           <h3 class="territory-card__name">Dubaï</h3>
-          <p class="territory-card__desc">Émirats Arabes Unis. L'excellence au cœur du désert de cristal.</p>
-          <span class="territory-card__link">Explorer</span>
+          <p class="territory-card__desc" data-i18n="home.dub.desc">Émirats Arabes Unis. L'excellence au cœur du désert de cristal.</p>
+          <span class="territory-card__link" data-i18n="home.territories.explore">Explorer</span>
         </div>
       </a>
 
@@ -719,17 +716,17 @@
   <div class="fleet-teaser__inner">
 
     <div class="fleet-teaser__content">
-      <span class="eyebrow" data-reveal="fade">Notre flotte</span>
-      <h2 class="section-title" data-reveal="up">
+      <span class="eyebrow" data-reveal="fade" data-i18n="home.fleet.eyebrow">Notre flotte</span>
+      <h2 class="section-title" data-reveal="up" data-i18n-html="home.fleet.title">
         Le confort<br><em>à l'état pur</em>
       </h2>
       <div class="divider" data-reveal="fade" data-delay="200"></div>
-      <p class="section-sub" data-reveal="up" data-delay="250">
+      <p class="section-sub" data-reveal="up" data-delay="250" data-i18n="home.fleet.sub">
         Exclusivement Mercedes-Benz. Des véhicules entretenus selon les standards les plus exigeants, pour un confort irréprochable à chaque trajet.
       </p>
       <div data-reveal="up" data-delay="350" style="margin-top: 2.5rem;">
         <a href="flotte.html" class="btn btn-dark">
-          Découvrir la flotte <span class="btn-arrow">→</span>
+          <span data-i18n="home.fleet.cta">Découvrir la flotte</span> <span class="btn-arrow">→</span>
         </a>
       </div>
     </div>
@@ -737,19 +734,19 @@
     <div class="fleet-teaser__vehicles" data-stagger>
       <div class="fleet-mini" data-reveal="up" data-delay="100">
         <div class="fleet-mini__name">Classe V</div>
-        <div class="fleet-mini__type">Jusqu'à 7 passagers</div>
+        <div class="fleet-mini__type" data-i18n="home.fleet.v.pax">Jusqu'à 7 passagers</div>
       </div>
       <div class="fleet-mini" data-reveal="up" data-delay="150">
         <div class="fleet-mini__name">GLE</div>
-        <div class="fleet-mini__type">SUV haut de gamme</div>
+        <div class="fleet-mini__type" data-i18n="home.fleet.gle.type">SUV haut de gamme</div>
       </div>
       <div class="fleet-mini" data-reveal="up" data-delay="200">
         <div class="fleet-mini__name">Classe E</div>
-        <div class="fleet-mini__type">Berline executive</div>
+        <div class="fleet-mini__type" data-i18n="home.fleet.e.type">Berline executive</div>
       </div>
       <div class="fleet-mini" data-reveal="up" data-delay="250">
         <div class="fleet-mini__name">Classe S</div>
-        <div class="fleet-mini__type">Le summum du luxe</div>
+        <div class="fleet-mini__type" data-i18n="home.fleet.s.type">Le summum du luxe</div>
       </div>
     </div>
 
@@ -765,14 +762,14 @@
 
     <div class="wedding__img-wrap" data-reveal="scale">
       <div class="wedding__img" aria-hidden="true"></div>
-      <div class="wedding__img-badge" aria-hidden="true">
+      <div class="wedding__img-badge" aria-hidden="true" data-i18n="home.wedding.badge">
         Coordination complète
       </div>
     </div>
 
     <div class="wedding__content">
-      <span class="eyebrow" data-reveal="fade" data-i18n="nav.weddings">Mariages</span>
-      <h2 class="section-title" data-reveal="up">
+      <span class="eyebrow" data-reveal="fade" data-i18n="home.wedding.eyebrow">Mariages</span>
+      <h2 class="section-title" data-reveal="up" data-i18n-html="home.wedding.title">
         Votre <em>jour parfait</em>,<br>notre engagement.
       </h2>
       <div class="divider" data-reveal="fade" data-delay="150"></div>
@@ -780,27 +777,27 @@
       <div class="wedding__features" data-stagger>
         <div class="wedding__feature" data-reveal="right" data-delay="100">
           <div class="wedding__feature-text">
-            <strong>Coordinateur dédié</strong>
-            <span>Un seul interlocuteur pour toute la logistique transport du mariage</span>
+            <strong data-i18n="home.wedding.feat1.t">Coordinateur dédié</strong>
+            <span data-i18n="home.wedding.feat1.d">Un seul interlocuteur pour toute la logistique transport du mariage</span>
           </div>
         </div>
         <div class="wedding__feature" data-reveal="right" data-delay="200">
           <div class="wedding__feature-text">
-            <strong>Timing parfait</strong>
-            <span>Planification minutieuse et synchronisation en temps réel le jour J</span>
+            <strong data-i18n="home.wedding.feat2.t">Timing parfait</strong>
+            <span data-i18n="home.wedding.feat2.d">Planification minutieuse et synchronisation en temps réel le jour J</span>
           </div>
         </div>
         <div class="wedding__feature" data-reveal="right" data-delay="300">
           <div class="wedding__feature-text">
-            <strong>Service blanc gants</strong>
-            <span>Attention aux détails, présentation impeccable, atmosphère de prestige</span>
+            <strong data-i18n="home.wedding.feat3.t">Service blanc gants</strong>
+            <span data-i18n="home.wedding.feat3.d">Attention aux détails, présentation impeccable, atmosphère de prestige</span>
           </div>
         </div>
       </div>
 
       <div data-reveal="up" data-delay="400" style="margin-top: 2rem;">
         <a href="mariages.html" class="btn btn-primary">
-          Découvrir l'offre mariage <span class="btn-arrow">→</span>
+          <span data-i18n="home.wedding.cta">Découvrir l'offre mariage</span> <span class="btn-arrow">→</span>
         </a>
       </div>
     </div>
@@ -816,8 +813,8 @@
   <div class="container">
 
     <div class="section-header--center" data-stagger>
-      <span class="eyebrow" data-reveal="fade">Témoignages</span>
-      <h2 class="section-title" data-reveal="up">
+      <span class="eyebrow" data-reveal="fade" data-i18n="home.testimonials.eyebrow">Témoignages</span>
+      <h2 class="section-title" data-reveal="up" data-i18n-html="home.testimonials.title">
         Ce qu'ils <em>disent</em>
       </h2>
     </div>
@@ -826,42 +823,42 @@
 
       <div class="testimonial-card" data-reveal="up" data-delay="0">
         <div class="testimonial-card__stars" aria-label="5 étoiles">★★★★★</div>
-        <p class="testimonial-card__quote">
+        <p class="testimonial-card__quote" data-i18n="home.test1.quote">
           "Un service d'une précision absolue. Le chauffeur était là 20 minutes avant l'heure convenue, le véhicule impeccable. Aucun stress, aucune approximation."
         </p>
         <div class="testimonial-card__author">
           <div class="testimonial-card__avatar" aria-hidden="true">C</div>
           <div>
-            <span class="testimonial-card__name">Caroline M.</span>
-            <span class="testimonial-card__role">Directrice artistique, Paris</span>
+            <span class="testimonial-card__name" data-i18n="home.test1.name">Caroline M.</span>
+            <span class="testimonial-card__role" data-i18n="home.test1.role">Directrice artistique, Paris</span>
           </div>
         </div>
       </div>
 
       <div class="testimonial-card" data-reveal="up" data-delay="100">
         <div class="testimonial-card__stars" aria-label="5 étoiles">★★★★★</div>
-        <p class="testimonial-card__quote">
+        <p class="testimonial-card__quote" data-i18n="home.test2.quote">
           "Pour notre mariage en Provence, B.LIFTED a géré l'intégralité de nos transferts. Discrétion parfaite, coordination exemplaire. Nos invités ont été enchantés."
         </p>
         <div class="testimonial-card__author">
           <div class="testimonial-card__avatar" aria-hidden="true">S</div>
           <div>
-            <span class="testimonial-card__name">Sophie & Thomas L.</span>
-            <span class="testimonial-card__role">Mariés, Saint-Rémy-de-Provence</span>
+            <span class="testimonial-card__name" data-i18n="home.test2.name">Sophie & Thomas L.</span>
+            <span class="testimonial-card__role" data-i18n="home.test2.role">Mariés, Saint-Rémy-de-Provence</span>
           </div>
         </div>
       </div>
 
       <div class="testimonial-card" data-reveal="up" data-delay="200">
         <div class="testimonial-card__stars" aria-label="5 étoiles">★★★★★</div>
-        <p class="testimonial-card__quote">
+        <p class="testimonial-card__quote" data-i18n="home.test3.quote">
           "Partenaire de confiance depuis 3 ans pour tous mes déplacements professionnels sur la Riviera. La fiabilité n'est pas un mot, c'est une réalité quotidienne."
         </p>
         <div class="testimonial-card__author">
           <div class="testimonial-card__avatar" aria-hidden="true">A</div>
           <div>
-            <span class="testimonial-card__name">Alexandre D.</span>
-            <span class="testimonial-card__role">Chef d'entreprise, Monaco</span>
+            <span class="testimonial-card__name" data-i18n="home.test3.name">Alexandre D.</span>
+            <span class="testimonial-card__role" data-i18n="home.test3.role">Chef d'entreprise, Monaco</span>
           </div>
         </div>
       </div>
@@ -1115,8 +1112,8 @@
         &copy; <span id="footer-year">2026</span> B.LIFTED France · Tous droits réservés
       </p>
       <div class="footer__legal">
-        <a href="/mentions-legales">Mentions légales</a>
-        <a href="/confidentialite">Confidentialité</a>
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="confidentialite.html">Confidentialité</a>
       </div>
     </div>
 
@@ -1132,6 +1129,28 @@
 <script src="js/simulator.js" defer></script>
 
 <script src="js/i18n.js" defer></script>
+<script src="js/cookies.js" defer></script>
+
+<!-- Cookie Banner RGPD -->
+<div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Gestion des cookies">
+  <div class="cookie-banner__inner">
+    <p class="cookie-banner__text">Ce site utilise des cookies pour améliorer votre expérience. <a href="confidentialite.html" class="cookie-banner__link">En savoir plus</a></p>
+    <div class="cookie-banner__actions">
+      <button class="cookie-banner__btn cookie-banner__btn--accept" id="cookie-accept">Accepter</button>
+      <button class="cookie-banner__btn cookie-banner__btn--decline" id="cookie-decline">Refuser</button>
+    </div>
+  </div>
+</div>
+
+<div class="whatsapp-widget">
+  <div class="whatsapp-popup" id="whatsapp-popup" aria-hidden="true">
+    <button class="whatsapp-popup__close" id="whatsapp-close" aria-label="Fermer">✕</button>
+    <p class="whatsapp-popup__title">Confier un déplacement</p>
+    <p class="whatsapp-popup__msg">Bonjour,<br>Je suis disponible pour organiser votre transfert, répondre à vos questions et établir un devis personnalisé.</p>
+    <a href="https://wa.me/33636017235?text=Bonjour%2C%20je%20souhaite%20confier%20un%20d%C3%A9placement%20%C3%A0%20B.LIFTED." class="whatsapp-popup__cta" target="_blank" rel="noopener">Contacter sur WhatsApp</a>
+  </div>
+  <button class="whatsapp-float" id="whatsapp-toggle" aria-label="Contacter B.LIFTED par WhatsApp">WhatsApp</button>
+</div>
 
 </body>
 </html>
