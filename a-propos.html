@@ -67,7 +67,7 @@
     }
     .philosophy-item__text {
       font-size: var(--t-sm);
-      color: rgba(255,255,255,0.4);
+      color: rgba(255,255,255,0.82);
       font-weight: 300;
       line-height: 1.7;
     }
@@ -88,6 +88,7 @@
       color: rgba(255,255,255,0.012);
       pointer-events: none;
     }
+    .not-for-everyone p { color: var(--text-inv); }
     .not-for-everyone__inner {
       position: relative;
       z-index: 1;
@@ -231,11 +232,7 @@
     <p class="manifeste__text" data-reveal="up" data-delay="150">
       Il y a des déplacements ordinaires.<br>
       Et puis il y a ceux qui engagent<br>
-      <em>plus que votre ponctualité.</em><br><br>
-      B.LIFTED intervient lorsque<br>
-      la <strong>fiabilité</strong> doit être absolue,<br>
-      la <strong>discrétion</strong> doit être totale,<br>
-      la <strong>continuité</strong> ne peut pas se rompre.
+      <em>plus que votre ponctualité.</em>
     </p>
     <div style="margin-top:var(--sp-10);" data-reveal="up" data-delay="250">
       <a href="contact.html" class="btn btn-outline">Confier un déplacement</a>
@@ -251,7 +248,7 @@
         <!-- Aucune photo — confidentialité totale -->
         <div style="position:absolute;bottom:var(--sp-8);left:var(--sp-8);right:var(--sp-8);">
           <div style="padding:var(--sp-5);background:rgba(13,12,20,0.85);backdrop-filter:blur(12px);border:1px solid var(--or-border);border-radius:var(--radius-md);">
-            <p style="font-family:var(--font-serif);font-size:var(--t-lg);font-style:italic;color:rgba(255,255,255,0.6);line-height:1.5;">"La fondatrice est personnellement impliquée dans chaque mission critique."</p>
+            <p style="font-family:var(--font-serif);font-size:var(--t-lg);font-style:italic;color:rgba(255,255,255,0.6);line-height:1.5;">"La fondatrice est personnellement impliquée dans chaque mission."</p>
           </div>
         </div>
       </div>
@@ -261,7 +258,7 @@
         <h2 class="subtitle">Fondée et dirigée<br><em>par une femme.</em></h2>
         <div style="height:var(--sp-6);"></div>
         <p class="body-lead">
-          B.LIFTED est fondée et dirigée par une femme non nommée publiquement — un choix délibéré qui reflète le positionnement du service : discrétion, profil bas, résultats.
+          B.LIFTED est fondée et dirigée par une femme. Le positionnement du service : discrétion, profil bas, résultats.
         </p>
         <div style="height:var(--sp-5);"></div>
         <p class="body-text">
@@ -404,10 +401,10 @@
       <div class="footer__col">
         <p class="footer__col-title" data-i18n="footer.col.services">Services</p>
         <nav class="footer__nav" aria-label="Navigation services">
-          <a href="services.html" class="footer__nav-link" data-i18n="footer.svc.transfer">Transfert aéroport</a>
-          <a href="services.html" class="footer__nav-link" data-i18n="footer.svc.disposal">Mise à disposition</a>
+          <a href="services.html#transfert" class="footer__nav-link" data-i18n="footer.svc.transfer">Transfert aéroport</a>
+          <a href="services.html#disposition" class="footer__nav-link" data-i18n="footer.svc.disposal">Mise à disposition</a>
           <a href="mariages.html" class="footer__nav-link" data-i18n="footer.svc.wedding">Mariages &amp; événements</a>
-          <a href="services.html" class="footer__nav-link" data-i18n="footer.svc.stay">Séjours &amp; coordination</a>
+          <a href="services.html#multievent" class="footer__nav-link" data-i18n="footer.svc.stay">Séjours &amp; coordination</a>
           <a href="flotte.html" class="footer__nav-link" data-i18n="footer.svc.fleet">Notre flotte</a>
         </nav>
       </div>
