@@ -434,59 +434,20 @@
     </div>
 
     <!-- ══ PRÉSENTATION ══ -->
-    <section class="section" aria-labelledby="intro-heading">
+    <section class="section section-ivoire" id="presentation">
       <div class="container">
-        <div class="territory-intro">
-          <div class="territory-intro__image" data-reveal="left">
-            <div class="territory-intro__image-inner">
-              <!-- Remplacer par une photo : skyline Dubai de nuit, Sheikh Zayed Road, ou Mercedes devant Burj Khalifa -->
-            </div>
-            <blockquote class="territory-intro__quote">
-              « À Dubaï, le détail fait tout. Un chauffeur discret, ponctuel, bilingue — c'est votre première impression. »
-            </blockquote>
-          </div>
-
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-20);align-items:center;" class="territory-split">
           <div data-reveal="right">
-            <p class="eyebrow">Notre présence à Dubaï</p>
-            <h2 class="headline" id="intro-heading">
-              Une expertise<br>
-              <em>française au cœur<br>de l'Émirat</em>
-            </h2>
-            <p class="body-text" style="margin-top: 1.5rem; color: var(--taupe);">
-              Dubaï exige une prestation sans faille. Que vous soyez en déplacement professionnel pour
-              le GITEX, l'Arabian Travel Market ou une négociation en chambre, ou en séjour de prestige
-              sur le Palm ou au Burj Al Arab, notre service s'adapte à l'exigence de cet écosystème unique.
-            </p>
-            <p class="body-text" style="margin-top: 1rem; color: var(--taupe);">
-              Nos chauffeurs parlent français et anglais, connaissent les codes de la ville, les accès
-              VIP et les contraintes de protocole. Pas de taxi. Pas d'application. Une vraie relation
-              de confiance.
-            </p>
-
-            <ul style="margin-top: 2rem; list-style: none; display: flex; flex-direction: column; gap: .75rem;">
-              <li style="display:flex; align-items:flex-start; gap:.75rem; font-family: var(--font-sans); font-size: .875rem; color: var(--taupe);">
-                <span style="color: var(--or); flex-shrink:0; margin-top:.1rem;">✦</span>
-                Flotte Mercedes : Classe V, GLE, Classe E, Classe S
-              </li>
-              <li style="display:flex; align-items:flex-start; gap:.75rem; font-family: var(--font-sans); font-size: .875rem; color: var(--taupe);">
-                <span style="color: var(--or); flex-shrink:0; margin-top:.1rem;">✦</span>
-                Suivi de vol en temps réel — prise en charge adaptée aux retards
-              </li>
-              <li style="display:flex; align-items:flex-start; gap:.75rem; font-family: var(--font-sans); font-size: .875rem; color: var(--taupe);">
-                <span style="color: var(--or); flex-shrink:0; margin-top:.1rem;">✦</span>
-                Facturation en euros ou en dirhams selon votre préférence
-              </li>
-              <li style="display:flex; align-items:flex-start; gap:.75rem; font-family: var(--font-sans); font-size: .875rem; color: var(--taupe);">
-                <span style="color: var(--or); flex-shrink:0; margin-top:.1rem;">✦</span>
-                Devis personnalisé sous 24h pour tout séjour multi-jours
-              </li>
-            </ul>
-
-            <div style="margin-top: 2.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
-              <a href="../contact.html" class="btn btn--primary">Demander un devis</a>
-              <a href="../flotte.html" class="btn btn--outline">Voir la flotte</a>
+            <span class="eyebrow">Dubaï</span>
+            <div class="rule"></div>
+            <h2 class="subtitle">Une expertise<br><em>française au cœur de l'Émirat.</em></h2>
+            <p class="body-text" style="margin-top:var(--sp-5);">Dubaï exige une prestation sans faille. Que vous soyez en déplacement professionnel pour le GITEX, l'Arabian Travel Market, ou en séjour de prestige sur le Palm ou au Burj Al Arab, B.LIFTED s'adapte à l'exigence de cet écosystème unique.</p>
+            <p class="body-text" style="margin-top:var(--sp-4);">Nos chauffeurs parlent français et anglais, connaissent les codes de la ville, les accès VIP et les contraintes de protocole. Pas de taxi. Pas d'application. Une vraie relation de confiance.</p>
+            <div style="margin-top:var(--sp-8);">
+              <a href="../contact.html" class="btn btn-primary">Demander un devis Dubaï</a>
             </div>
           </div>
+          <div style="aspect-ratio:4/3;border-radius:var(--radius-lg);overflow:hidden;background:linear-gradient(135deg,#c9a850 0%,#8b6b28 40%,#2d2440 100%);" data-reveal="left"></div>
         </div>
       </div>
     </section>
@@ -634,6 +595,7 @@
 </div>
 
   <!-- ══ JS ══ -->
+  <style>.territory-split{} @media(max-width:900px){.territory-split{grid-template-columns:1fr!important;}}</style>
   <script src="../js/nav.js"></script>
   <script src="../js/scroll-reveal.js"></script>
   <script src="../js/main.js"></script>
