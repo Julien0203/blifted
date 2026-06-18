@@ -76,9 +76,9 @@
       'home.sim.next':           'Continuer',
       'home.sim.back':           '← Retour',
       'home.sim.calc':           'Soumettre ma demande',
-      'home.sim.result.label':   'Votre sélection',
-      'home.sim.result.note':    'Nos tarifs sont établis sur mesure. Parlez-nous de votre projet directement.',
-      'home.sim.result.cta':     'Discuter sur WhatsApp',
+      'home.sim.result.label':   'Un déplacement d\'exception se construit ensemble.',
+      'home.sim.result.note':    'Nos prestations ne s\'estiment pas — elles se conçoivent avec vous. Transmettez-nous votre programme sur WhatsApp, nous revenons vers vous sous 24h.',
+      'home.sim.result.cta':     'Échanger avec l\'équipe',
       'home.sim.restart':        'Nouvelle simulation',
 
       /* ── HOME — TERRITORIES ──────────────────────────── */
@@ -348,9 +348,9 @@
       'home.sim.next':           'Continue',
       'home.sim.back':           '← Back',
       'home.sim.calc':           'Submit my request',
-      'home.sim.result.label':   'Your selection',
-      'home.sim.result.note':    'Our rates are tailored to your project. Let\'s talk directly.',
-      'home.sim.result.cta':     'Chat on WhatsApp',
+      'home.sim.result.label':   'Every exceptional journey is built together.',
+      'home.sim.result.note':    'Our services aren\'t estimated — they\'re designed around you. Share your programme on WhatsApp and we\'ll get back to you within 24 hours.',
+      'home.sim.result.cta':     'Talk to the team',
       'home.sim.restart':        'New configuration',
 
       /* ── HOME — TERRITORIES ──────────────────────────── */
