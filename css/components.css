@@ -1280,6 +1280,7 @@ body:has(.page-hero) .header:not(.is-scrolled) .header__burger span {
 }
 .territory-card:hover .territory-card__link { opacity: 1; transform: translateY(0); }
 .territory-card__link::after { content: '→'; margin-left: 2px; }
+.territory-card__tag { color: rgba(250,250,248,0.75); font-size: var(--t-sm); font-weight: 300; letter-spacing: 0.05em; }
 
 /* Fallback bg si photo manquante */
 .territory-card--provence { background: #C4A896; }
