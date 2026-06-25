@@ -130,14 +130,76 @@
     /* Exterior panels: left */
     .fs-panel--ext .fs-panel__inner { margin-left: 0; }
 
-    /* Interior panels: right */
-    .fs-panel--int .fs-panel__inner {
-      margin-left: auto;
-      text-align: right;
+    /* ── Interior panels: editorial layout ──────────────── */
+    .fs-panel--int {
+      background: var(--ivoire, #FAFAF6);
+      align-items: flex-start;
+      padding-top: calc(var(--header-h, 72px) + 4rem);
+      padding-bottom: 6rem;
     }
-    .fs-panel--int .fs-tags { justify-content: flex-end; }
-    .fs-panel--int .fs-specs { justify-content: flex-end; }
-    .fs-panel--int .fs-cta { margin-left: auto; }
+    .fs-int-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+    .fs-int-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 4.5vw, 3.6rem);
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text);
+      line-height: 1;
+      margin-bottom: 0.9rem;
+    }
+    .fs-int-title .brand {
+      color: var(--texte-lt, #9A8A80);
+      font-weight: 300;
+    }
+    .fs-int-sub {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-style: italic;
+      color: var(--text);
+      font-weight: 300;
+    }
+    .fs-int-body {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+    .fs-int-text {
+      font-size: var(--t-base, 1rem);
+      color: var(--text);
+      line-height: 1.85;
+    }
+    .fs-int-text p { margin-bottom: 1.3em; }
+    .fs-int-text strong { font-weight: 600; }
+    .fs-int-list {
+      border-left: 2px solid var(--or, #B08D5A);
+      padding-left: 1.5rem;
+      margin-top: 0;
+      list-style: none;
+    }
+    .fs-int-list li {
+      margin-bottom: 0.45rem;
+      font-size: var(--t-sm, 0.9rem);
+      color: var(--text);
+    }
+    .fs-int-photo {
+      border-radius: var(--radius-lg, 32px);
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+    }
+    .fs-int-photo img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    @media (max-width: 760px) {
+      .fs-int-body { grid-template-columns: 1fr; gap: 2.5rem; }
+      .fs-int-photo { order: -1; }
+    }
 
     .fs-num {
       font-family: var(--font-serif);
@@ -397,10 +459,28 @@
       <!-- ── 01 · Classe V — Intérieur ──────────────────────── -->
       <div class="fs-panel fs-panel--int" data-img="1">
         <div class="container">
-          <div class="fs-panel__inner">
-            <span class="fs-eyebrow">Intérieur — Classe V</span>
-            <p class="fs-desc">Sièges capitaines, modularité totale, espace bagages intégré. Chaque passager voyage dans les mêmes conditions — sans compromis sur le confort.</p>
-            <a href="contact.html" class="fs-cta">Réserver la Classe V →</a>
+          <div class="fs-int-header">
+            <h2 class="fs-int-title"><span class="brand">Mercedes</span> Classe V</h2>
+            <p class="fs-int-sub">L'espace maîtrisé</p>
+          </div>
+          <div class="fs-int-body">
+            <div class="fs-int-text">
+              <p>Disponible en intérieur noir ou beige selon disponibilité.</p>
+              <p>Le <strong>Classe V</strong> accueille plusieurs passagers.<br>Pour un confort optimal, nous recommandons 4.</p>
+              <p>La <strong>luminosité naturelle</strong> adoucit l'atmosphère.<br>Les matériaux sont nobles. Les finitions, soignées.<br>L'espace absorbe les tensions du déplacement.</p>
+              <p>On peut travailler.<br>Échanger.<br>Se taire.</p>
+              <p>L'ambiance est stable, calme, structurée.</p>
+              <ul class="fs-int-list">
+                <li>→ Séjours en famille</li>
+                <li>→ Coordination d'invités</li>
+                <li>→ Transferts multi-passagers</li>
+                <li>→ Mise à disposition prolongée</li>
+              </ul>
+              <p>Le volume rassure.<br>La <strong>fluidité</strong> apaise.</p>
+            </div>
+            <div class="fs-int-photo">
+              <img src="assets/images/Vinterieur.png" alt="Intérieur Classe V" loading="lazy">
+            </div>
           </div>
         </div>
       </div>
@@ -440,10 +520,28 @@
       <!-- ── 02 · GLE — Intérieur ───────────────────────────── -->
       <div class="fs-panel fs-panel--int" data-img="3">
         <div class="container">
-          <div class="fs-panel__inner">
-            <span class="fs-eyebrow">Intérieur — GLE</span>
-            <p class="fs-desc">SUV de prestige avec finition AMG Line. La stature pour les routes de montagne, le raffinement pour l'entrée en ville. Un GLE dans les Alpes n'est pas un choix d'image — c'est une décision de sécurité.</p>
-            <a href="contact.html" class="fs-cta">Réserver le GLE →</a>
+          <div class="fs-int-header">
+            <h2 class="fs-int-title"><span class="brand">Mercedes</span> GLE</h2>
+            <p class="fs-int-sub">Le terrain, sans concession</p>
+          </div>
+          <div class="fs-int-body">
+            <div class="fs-int-text">
+              <p>Finition AMG Line. Cuir Nappa, ambiance sombre et structurée.</p>
+              <p>Le <strong>GLE</strong> transporte 2 passagers en confort absolu.<br>L'espace est calibré pour les grandes distances.</p>
+              <p>La <strong>position haute</strong> offre une lecture différente du trajet.<br>Les routes de montagne se parcourent sans effort.<br>Le véhicule absorbe ce que la route impose.</p>
+              <p>On arrive reposé.<br>Concentré.<br>Prêt.</p>
+              <p>Le SUV qui ne fait aucun compromis entre confort et maîtrise terrain.</p>
+              <ul class="fs-int-list">
+                <li>→ Transferts montagne &amp; Alpes</li>
+                <li>→ Missions executives</li>
+                <li>→ Villas isolées &amp; domaines privés</li>
+                <li>→ Liaisons aéroport longue distance</li>
+              </ul>
+              <p>La stature parle.<br>La <strong>discrétion</strong> aussi.</p>
+            </div>
+            <div class="fs-int-photo">
+              <img src="assets/images/GLE%20interieur.png" alt="Intérieur GLE" loading="lazy">
+            </div>
           </div>
         </div>
       </div>
@@ -486,10 +584,28 @@
       <!-- ── 03 · Classe E — Intérieur ─────────────────────── -->
       <div class="fs-panel fs-panel--int" data-img="5">
         <div class="container">
-          <div class="fs-panel__inner">
-            <span class="fs-eyebrow">Intérieur — Classe E</span>
-            <p class="fs-desc">Sobriété et excellence. Quand la mission exige qu'on ne remarque pas le véhicule — seulement la qualité du déplacement et l'attention portée à chaque détail.</p>
-            <a href="contact.html" class="fs-cta">Réserver la Classe E →</a>
+          <div class="fs-int-header">
+            <h2 class="fs-int-title"><span class="brand">Mercedes</span> Classe E</h2>
+            <p class="fs-int-sub">L'élégance sans bruit</p>
+          </div>
+          <div class="fs-int-body">
+            <div class="fs-int-text">
+              <p>Finition Executive. Cuir noir, équipement complet, présence discrète.</p>
+              <p>La <strong>Classe E</strong> accueille 2 passagers en berline executive.<br>Aucun détail ne dépasse. Tout est à sa place.</p>
+              <p>L'<strong>intérieur sobre</strong> invite à la concentration.<br>Pas de distraction.<br>Le trajet se déroule comme il doit se dérouler.</p>
+              <p>On travaille.<br>On prépare.<br>On arrive prêt.</p>
+              <p>La discrétion est ici une qualité première, pas une contrainte.</p>
+              <ul class="fs-int-list">
+                <li>→ Missions business solo</li>
+                <li>→ Transferts executives</li>
+                <li>→ Déplacements confidentiels</li>
+                <li>→ Réunions haute importance</li>
+              </ul>
+              <p>La sobriété est un choix.<br>La <strong>précision</strong>, une évidence.</p>
+            </div>
+            <div class="fs-int-photo">
+              <img src="assets/images/E_interieur.png" alt="Intérieur Classe E" loading="lazy">
+            </div>
           </div>
         </div>
       </div>
@@ -532,10 +648,28 @@
       <!-- ── 04 · Classe S — Intérieur ─────────────────────── -->
       <div class="fs-panel fs-panel--int" data-img="7">
         <div class="container">
-          <div class="fs-panel__inner">
-            <span class="fs-eyebrow">Intérieur — Classe S</span>
-            <p class="fs-desc">Confort actif, technologie de pointe, présence incontestable. Pour les missions qui exigent que chaque détail — y compris le véhicule — envoie le signal juste.</p>
-            <a href="contact.html" class="fs-cta">Réserver la Classe S →</a>
+          <div class="fs-int-header">
+            <h2 class="fs-int-title"><span class="brand">Mercedes</span> Classe S</h2>
+            <p class="fs-int-sub">L'excellence redéfinie</p>
+          </div>
+          <div class="fs-int-body">
+            <div class="fs-int-text">
+              <p>Finition Long. Cuir Nappa, sièges massants, écrans arrière intégrés.</p>
+              <p>La <strong>Classe S</strong> redéfinit ce que signifie voyager.<br>2 passagers dans un espace conçu pour l'exceptionnel.</p>
+              <p>La <strong>technologie</strong> s'efface derrière le confort.<br>Les sièges s'adaptent. L'atmosphère se règle.<br>Le trajet devient une expérience en soi.</p>
+              <p>On décompresse.<br>On arrive différemment.<br>Le signal est juste.</p>
+              <p>Pour les missions où chaque détail compte — y compris le véhicule.</p>
+              <ul class="fs-int-list">
+                <li>→ VIP &amp; personnalités</li>
+                <li>→ Cérémonies &amp; événements prestige</li>
+                <li>→ Transferts ultra-confidentiels</li>
+                <li>→ Accueil de partenaires stratégiques</li>
+              </ul>
+              <p>Le sommet de notre flotte.<br>La <strong>présence</strong> incarnée.</p>
+            </div>
+            <div class="fs-int-photo">
+              <img src="assets/images/Sinterieur.png" alt="Intérieur Classe S" loading="lazy">
+            </div>
           </div>
         </div>
       </div>
