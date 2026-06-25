@@ -150,7 +150,7 @@
   <!-- Fond image plein écran -->
   <div class="hero__bg" aria-hidden="true">
     <img
-      src="assets/images/hero.png"
+      src="assets/images/hero%20accueil%20finale.png"
       alt=""
       loading="eager"
       fetchpriority="high"
@@ -172,7 +172,7 @@
         <em>n'est pas une option.</em>
       </h1>
 
-      <p class="hero__geo" data-reveal="fade" data-delay="300" data-i18n="home.hero.geo">
+      <p class="hero__geo" data-reveal="fade" data-delay="300" data-i18n-html="home.hero.geo">
         Provence &nbsp;·&nbsp; French Riviera &nbsp;·&nbsp; Megève &nbsp;·&nbsp; Dubaï
       </p>
 
@@ -388,26 +388,29 @@
 <!-- ════════════════════════════════════════════════════════
      TERRITOIRES
 ════════════════════════════════════════════════════════ -->
-<section class="section" id="territoires">
-  <div class="container">
-    <div class="section-header" data-stagger>
+<section class="territories-section" id="territoires">
+
+  <!-- En-tête éditorial 2 colonnes -->
+  <div class="territories__head">
+    <div class="territories__head-left">
       <span class="eyebrow" data-reveal="fade" data-i18n="home.territories.eyebrow">Nos destinations</span>
-      <h2 class="section-title" data-reveal="up" data-i18n-html="home.territories.title">
+      <h2 class="territories__title" data-reveal="up" data-i18n-html="home.territories.title">
         Cinq <em>territoires</em> d'exception
       </h2>
-      <p class="section-sub" data-reveal="up" data-delay="150" data-i18n="home.territories.sub">
-        De la Provence aux Émirats, une présence locale, une connaissance intime des routes.
-      </p>
+    </div>
+    <div class="territories__head-right" data-reveal="up" data-delay="120">
+      <p data-i18n="home.territories.sub">De la Provence aux Émirats, une présence locale, une connaissance intime des routes.</p>
     </div>
   </div>
 
+  <!-- Bande défilante pleine largeur -->
   <div class="territories__scroll">
 
     <a href="territoires/provence.html" class="territory-card territory-card--provence" data-reveal="up" data-delay="0">
+      <span class="territory-card__num" aria-hidden="true">01</span>
       <img src="assets/images/1681.png" alt="Chauffeur privé Provence" class="territory-card__img" loading="lazy">
       <div class="territory-card__overlay" aria-hidden="true"></div>
       <div class="territory-card__content">
-        <div class="territory-card__bar" aria-hidden="true"></div>
         <span class="territory-card__eyebrow">France</span>
         <h3 class="territory-card__name">Provence</h3>
         <p class="territory-card__desc" data-i18n="home.prov.desc">Alpilles, Luberon, Avignon. Le berceau de l'élégance provençale.</p>
@@ -415,11 +418,11 @@
       </div>
     </a>
 
-    <a href="territoires/french-riviera.html" class="territory-card territory-card--riviera" data-reveal="up" data-delay="100">
+    <a href="territoires/french-riviera.html" class="territory-card territory-card--riviera" data-reveal="up" data-delay="60">
+      <span class="territory-card__num" aria-hidden="true">02</span>
       <img src="assets/images/01872.png" alt="Chauffeur privé French Riviera" class="territory-card__img" loading="lazy">
       <div class="territory-card__overlay" aria-hidden="true"></div>
       <div class="territory-card__content">
-        <div class="territory-card__bar" aria-hidden="true"></div>
         <span class="territory-card__eyebrow">France</span>
         <h3 class="territory-card__name">French Riviera</h3>
         <p class="territory-card__desc" data-i18n="home.riv.desc">Nice, Cannes, Monaco. La Côte d'Azur dans toute sa splendeur.</p>
@@ -427,11 +430,11 @@
       </div>
     </a>
 
-    <a href="territoires/megeve.html" class="territory-card territory-card--megeve" data-reveal="up" data-delay="200">
+    <a href="territoires/megeve.html" class="territory-card territory-card--megeve" data-reveal="up" data-delay="120">
+      <span class="territory-card__num" aria-hidden="true">03</span>
       <img src="assets/images/2726.png" alt="Chauffeur privé Megève" class="territory-card__img" loading="lazy">
       <div class="territory-card__overlay" aria-hidden="true"></div>
       <div class="territory-card__content">
-        <div class="territory-card__bar" aria-hidden="true"></div>
         <span class="territory-card__eyebrow">France</span>
         <h3 class="territory-card__name">Megève</h3>
         <p class="territory-card__desc" data-i18n="home.meg.desc">Alpes, Mont-Blanc. Le luxe discret des hauteurs enneigées.</p>
@@ -439,11 +442,11 @@
       </div>
     </a>
 
-    <a href="territoires/dubai.html" class="territory-card territory-card--dubai" data-reveal="up" data-delay="300">
+    <a href="territoires/dubai.html" class="territory-card territory-card--dubai" data-reveal="up" data-delay="180">
+      <span class="territory-card__num" aria-hidden="true">04</span>
       <img src="assets/images/1792.png" alt="Chauffeur privé Dubaï" class="territory-card__img" loading="lazy">
       <div class="territory-card__overlay" aria-hidden="true"></div>
       <div class="territory-card__content">
-        <div class="territory-card__bar" aria-hidden="true"></div>
         <span class="territory-card__eyebrow">Émirats</span>
         <h3 class="territory-card__name">Dubaï</h3>
         <p class="territory-card__desc" data-i18n="home.dub.desc">Émirats Arabes Unis. L'excellence au cœur du désert de cristal.</p>
@@ -451,11 +454,11 @@
       </div>
     </a>
 
-    <a href="territoires/paris.html" class="territory-card territory-card--paris" data-reveal="up" data-delay="400">
+    <a href="territoires/paris.html" class="territory-card territory-card--paris" data-reveal="up" data-delay="240">
+      <span class="territory-card__num" aria-hidden="true">05</span>
       <img src="assets/images/6262.png" alt="Chauffeur privé Paris" class="territory-card__img" loading="lazy">
       <div class="territory-card__overlay" aria-hidden="true"></div>
       <div class="territory-card__content">
-        <div class="territory-card__bar" aria-hidden="true"></div>
         <span class="territory-card__eyebrow">France</span>
         <h3 class="territory-card__name">Paris</h3>
         <p class="territory-card__desc" data-i18n="home.par.desc">Île-de-France, Versailles. Le prestige de la capitale à votre service.</p>
