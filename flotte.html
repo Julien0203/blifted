@@ -24,7 +24,7 @@
     #menu-overlay.is-active { opacity:1; visibility:visible; }
 
     .page-hero { position:relative; min-height:100vh; display:flex; align-items:center; overflow:hidden; }
-    .page-hero__bg { position:absolute; inset:0; background:url('assets/images/fleet-hero.png') center/cover no-repeat; }
+    .page-hero__bg { position:absolute; inset:0; background:url('assets/images/797227.png') center/cover no-repeat; }
     .page-hero__overlay { position:absolute; inset:0; background:linear-gradient(to right, rgba(17,19,17,0.88) 0%, rgba(17,19,17,0.6) 55%, rgba(17,19,17,0.2) 100%); }
     .page-hero__content { position:relative; z-index:1; width:100%; max-width:var(--container); margin-inline:auto; padding: calc(var(--header-h) + 3rem) var(--gutter) 4rem; }
     .page-hero__content .eyebrow { color:var(--rose-light); }
@@ -727,14 +727,14 @@
     dots.forEach((dot, i) => dot.classList.toggle('is-active', i === idx));
   }
 
-  // IntersectionObserver: switch bg when panel reaches 40% in view
+  // IntersectionObserver: switch bg when panel crosses the viewport midline
   const panelObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         activateBg(parseInt(entry.target.dataset.img));
       }
     });
-  }, { threshold: 0.4 });
+  }, { rootMargin: '-50% 0px -50% 0px', threshold: 0 });
 
   panels.forEach(p => panelObserver.observe(p));
 
