@@ -236,9 +236,11 @@
     }
   </style>
 </head>
-<body>
+<body class="no-scroll">
 
-<div class="scroll-progress"></div>
+<div class="page-curtain" id="pageCurtain" aria-hidden="true"></div>
+
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 <div class="cursor" id="cursor" aria-hidden="true"></div>
 <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
 
@@ -286,6 +288,8 @@
     </div>
   </div>
 </div>
+
+<div id="menu-overlay" aria-hidden="true"></div>
 
 <!-- ── Hero ── -->
 <section class="c-hero">

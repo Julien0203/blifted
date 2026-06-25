@@ -11,7 +11,10 @@
 
   function revealPage() {
     document.body.classList.remove('no-scroll');
-    if (curtain) curtain.classList.add('is-hidden');
+    if (curtain) {
+      curtain.classList.remove('is-leaving');
+      curtain.classList.add('is-hidden');
+    }
   }
 
   // Révèle la page dès que le DOM est prêt
@@ -20,6 +23,11 @@
   } else {
     setTimeout(revealPage, 200);
   }
+
+  // Fix bfcache : révèle la page lors du retour arrière navigateur
+  window.addEventListener('pageshow', (e) => {
+    if (e.persisted) revealPage();
+  });
 
   // Transition sortante sur les liens internes
   document.addEventListener('click', (e) => {
