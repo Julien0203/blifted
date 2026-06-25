@@ -1475,7 +1475,7 @@ body:has(.page-hero) .header:not(.is-scrolled) .header__logo .logo-noir  { displ
   width: 100%; height: 100%;
   border-radius: var(--r-xl);
   overflow: hidden;
-  background: url('../assets/images/wedding.png') center/cover no-repeat;
+  background: url('../assets/images/v%20paris.png') center/cover no-repeat;
   transition: transform 0.8s var(--ease-out);
 }
 .wedding__img-wrap:hover .wedding__img { transform: scale(1.04); }
