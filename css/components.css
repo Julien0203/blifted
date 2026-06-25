@@ -1694,7 +1694,7 @@ body:has(.page-hero) .header:not(.is-scrolled) .header__logo .logo-noir  { displ
 /* ══════════════════════════════════════════════════════════
    PROCESSUS
 ══════════════════════════════════════════════════════════ */
-.process-section { background: var(--bg-warm); padding-top: 0; }
+.process-section { background: var(--bg-warm); padding-top: 5rem; }
 
 .process__grid {
   display: grid;
