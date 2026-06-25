@@ -3,17 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chauffeur Privé Côte d'Azur & French Riviera — Nice, Cannes, Monaco | B.LIFTED France</title>
-  <meta name="description" content="Chauffeur privé haut de gamme sur la Côte d'Azur et la French Riviera. Transferts aéroport Nice NCE, Cannes, Monaco, Saint-Tropez. Mise à disposition, événements Cannes Lions, Grand Prix Monaco, mariages.">
-  <meta name="keywords" content="chauffeur privé Côte d'Azur, private chauffeur French Riviera, VTC haut de gamme Nice, transfert aéroport Nice NCE, chauffeur privé Monaco, chauffeur Cannes, luxury chauffeur Nice Cannes Monaco">
+  <title>Chauffeur Privé Paris — CDG, Orly, Versailles & Île-de-France | B.LIFTED France</title>
+  <meta name="description" content="Chauffeur privé et VTC haut de gamme à Paris et en Île-de-France : CDG, Orly, Paris intra-muros, Versailles. Transferts aéroport, mise à disposition, mariages de prestige. B.LIFTED France.">
+  <meta name="keywords" content="chauffeur privé Paris, VTC haut de gamme Paris, transfert aéroport CDG, chauffeur Versailles, transport privé Île-de-France, chauffeur mariage Paris, private driver Paris luxury">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://bliftedfrance.com/territoires/french-riviera.html">
-  <meta property="og:title" content="Chauffeur Privé French Riviera — B.LIFTED France">
-  <meta property="og:url" content="https://bliftedfrance.com/territoires/french-riviera.html">
-  <meta name="geo.region" content="FR-06">
-  <meta name="geo.placename" content="Côte d'Azur, French Riviera, France">
+  <link rel="canonical" href="https://bliftedfrance.com/territoires/paris.html">
+  <meta property="og:title" content="Chauffeur Privé Paris & Île-de-France — B.LIFTED France">
+  <meta property="og:description" content="Transport privé haut de gamme à Paris. CDG, Orly, Paris, Versailles, Île-de-France.">
+  <meta property="og:url" content="https://bliftedfrance.com/territoires/paris.html">
+  <meta name="geo.region" content="FR-IDF">
+  <meta name="geo.placename" content="Paris, Île-de-France">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Service","name":"Chauffeur Privé French Riviera — B.LIFTED France","provider":{"@type":"LocalBusiness","name":"B.LIFTED France","telephone":"+33636017235"},"areaServed":{"@type":"Place","name":"French Riviera, Côte d'Azur"},"serviceType":"Transport privé haut de gamme","description":"Chauffeur privé haut de gamme Nice, Cannes, Monaco, Saint-Tropez. Transferts aéroport NCE, mise à disposition, événements Cannes Lions, MIPIM, Grand Prix."}
+  {"@context":"https://schema.org","@type":"Service","name":"Chauffeur Privé Paris — B.LIFTED France","provider":{"@type":"LocalBusiness","name":"B.LIFTED France","telephone":"+33636017235","email":"contact@bliftedfrance.com"},"areaServed":{"@type":"Place","name":"Paris","containedInPlace":{"@type":"Place","name":"Île-de-France, France"}},"serviceType":"Transport privé haut de gamme","description":"Service de chauffeur privé haut de gamme à Paris et en Île-de-France : CDG, Orly, Paris intra-muros, Versailles, Châteaux privés."}
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,22 +29,23 @@
     #menu-overlay { position:fixed; inset:0; background:rgba(28,26,23,0.4); z-index:calc(var(--z-header) - 2); opacity:0; visibility:hidden; transition:opacity 0.3s,visibility 0.3s; }
     #menu-overlay.is-active { opacity:1; visibility:visible; }
 
-    .territory-hero-riviera { background: linear-gradient(160deg, #3b6ca8 0%, #1d4880 30%, #1A3040 100%); }
+    .territory-hero-paris { background: linear-gradient(160deg, #6a6070 0%, #3a2f3f 30%, #1a1620 100%); }
     .zones-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-5);margin-top:var(--sp-12); }
     .zone-card { padding:var(--sp-7);background:var(--blanc);border:1px solid var(--ivoire-dk);border-radius:var(--radius-md);transition:all var(--transition); }
     .zone-card:hover { border-color:var(--or-border);box-shadow:var(--shadow-sm); }
     .zone-card__name { font-family:var(--font-serif);font-size:var(--t-xl);font-weight:400;margin-bottom:var(--sp-3); }
     .zone-card__text { font-size:var(--t-sm);color:var(--texte-lt);font-weight:300;line-height:1.65; }
-    .event-badge { display:inline-flex;align-items:center;gap:var(--sp-2);padding:var(--sp-2) var(--sp-4);background:rgba(59,108,168,0.1);border:1px solid rgba(59,108,168,0.3);border-radius:var(--radius-full);font-size:var(--t-xs);color:#3b6ca8;font-weight:500;letter-spacing:0.1em;text-transform:uppercase; }
-    .events-row { display:flex;flex-wrap:wrap;gap:var(--sp-3);margin:var(--sp-6) 0; }
     @media(max-width:900px){.zones-grid{grid-template-columns:repeat(2,1fr);}}
     @media(max-width:600px){.zones-grid{grid-template-columns:1fr;}}
   </style>
 </head>
-<body>
-<div class="scroll-progress"></div>
+<body class="no-scroll">
+
+<div class="page-curtain" id="pageCurtain" aria-hidden="true"></div>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 <div class="cursor" id="cursor" aria-hidden="true"></div>
 <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+<div id="menu-overlay" aria-hidden="true"></div>
 
 <header class="header" id="header">
   <div class="header__inner">
@@ -61,7 +63,7 @@
       <a href="../contact.html" class="btn btn-primary btn--sm">
         <span data-i18n="nav.book">Réserver</span> <span class="btn-arrow">→</span>
       </a>
-            <div class="header__lang">
+      <div class="header__lang">
         <button class="header__lang-btn is-active" data-lang="fr">FR</button>
         <span class="header__lang-sep">|</span>
         <button class="header__lang-btn" data-lang="en">EN</button>
@@ -99,16 +101,16 @@
   </div>
 </div>
 
-<section class="page-hero territory-hero-riviera">
+<section class="page-hero territory-hero-paris">
   <div class="page-hero__bg">
-    <img src="https://images.unsplash.com/photo-1602253009722-9418de46b5e4?auto=format&fit=crop&w=1920&q=80" alt="" style="width:100%;height:100%;object-fit:cover;">
+    <img src="../assets/images/hero%20page%20paris.png" alt="" style="width:100%;height:100%;object-fit:cover;">
   </div>
   <div class="page-hero__overlay"></div>
   <div class="container page-hero__content">
-    <nav class="breadcrumb"><a href="/">Accueil</a><span class="breadcrumb__sep">—</span><a href="provence.html" data-i18n="nav.territories">Territoires</a><span class="breadcrumb__sep">—</span><span>French Riviera</span></nav>
-    <span class="eyebrow text-or" data-reveal="fade">Territoire — French Riviera</span>
-    <h1 class="headline text-inv" data-reveal="up" data-delay="100">Chauffeur privé<br><em style="color:var(--or-lt)">Côte d'Azur & Riviera.</em></h1>
-    <p class="body-lead text-inv-lt" style="max-width:520px;margin-top:var(--sp-5);" data-reveal="up" data-delay="200">Nice, Cannes, Monaco, Saint-Tropez, Antibes. La French Riviera exige un prestataire à la hauteur de son image.</p>
+    <nav class="breadcrumb"><a href="/">Accueil</a><span class="breadcrumb__sep">—</span><a href="provence.html" data-i18n="nav.territories">Territoires</a><span class="breadcrumb__sep">—</span><span>Paris</span></nav>
+    <span class="eyebrow text-or" data-reveal="fade" data-i18n="paris.hero.eyebrow">Territoire — Paris & Île-de-France</span>
+    <h1 class="headline text-inv" data-reveal="up" data-delay="100">Chauffeur privé<br><em style="color:var(--or-lt)">à Paris.</em></h1>
+    <p class="body-lead text-inv-lt" style="max-width:520px;margin-top:var(--sp-5);" data-reveal="up" data-delay="200">CDG, Orly, Paris intra-muros, Versailles. La capitale et ses alentours pour des déplacements qui ne tolèrent pas l'improvisation.</p>
   </div>
 </section>
 
@@ -116,16 +118,16 @@
   <div class="container">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-20);align-items:center;" class="territory-split">
       <div data-reveal="right">
-        <span class="eyebrow">French Riviera</span>
+        <span class="eyebrow" data-i18n="paris.pres.eyebrow">Paris & Île-de-France</span>
         <div class="rule"></div>
-        <h2 class="subtitle">Là où chaque détail<br><em>est observé.</em></h2>
-        <p class="body-text" style="margin-top:var(--sp-5);">Sur la Riviera, la visibilité est maximale. La qualité du transport n'est pas un détail — c'est une déclaration. B.LIFTED assure une présence discrète mais irréprochable, quel que soit l'événement.</p>
-        <p class="body-text" style="margin-top:var(--sp-4);">Événements internationaux, yachts privés, villas en surplomb, accès discrets — B.LIFTED connaît le territoire dans ses moindres particularités.</p>
+        <h2 class="subtitle">L'excellence parisienne,<br><em>sans la moindre friction.</em></h2>
+        <p class="body-text" style="margin-top:var(--sp-5);">Paris est un territoire unique — dense, exigeant, imprévisible. B.LIFTED y intervient avec la même rigueur qu'en Provence ou sur la Riviera : connaissance fine des axes, des hôtels de prestige, des venues privées et des contraintes de circulation.</p>
+        <p class="body-text" style="margin-top:var(--sp-4);">Des transferts depuis CDG et Orly jusqu'aux sorties de spectacles et dîners privés, votre chauffeur anticipe chaque détail. Ponctualité absolue, discrétion irréprochable.</p>
         <div style="margin-top:var(--sp-8);">
-          <a href="../contact.html" class="btn btn-primary">Organiser un transfert Riviera</a>
+          <a href="../contact.html" class="btn btn-primary" data-i18n="paris.pres.cta">Organiser un transfert Paris</a>
         </div>
       </div>
-      <div style="aspect-ratio:4/3;border-radius:var(--radius-lg);overflow:hidden;background:url('https://images.unsplash.com/photo-1602253009722-9418de46b5e4?auto=format&fit=crop&w=900&q=80') center/cover no-repeat, linear-gradient(160deg,#3b6ca8 0%,#1d4880 60%,#1A3040 100%);" data-reveal="left"></div>
+      <div style="aspect-ratio:4/3;border-radius:var(--radius-lg);overflow:hidden;background:url('../assets/images/paris.png') center/cover no-repeat;" data-reveal="left"></div>
     </div>
   </div>
 </section>
@@ -133,17 +135,50 @@
 <section class="section section-ivoire-dk" id="zones">
   <div class="container">
     <header class="section-header" data-reveal="up">
-      <span class="eyebrow">Zones couvertes</span>
+      <span class="eyebrow" data-i18n="paris.zones.eyebrow">Zones couvertes</span>
       <div class="rule"></div>
-      <h2 class="subtitle">De Nice à Saint-Tropez,<br><em>sans exception.</em></h2>
+      <h2 class="subtitle">Paris et Île-de-France,<br><em>avec le même niveau d'exigence.</em></h2>
     </header>
     <div class="zones-grid stagger-children">
-      <div class="zone-card" data-reveal="up"><h3 class="zone-card__name">Nice & Aéroport NCE</h3><p class="zone-card__text">Transferts aéroport Nice-Côte d'Azur, hôtels prestige, Promenade des Anglais. Connexions internationales.</p></div>
-      <div class="zone-card" data-reveal="up" data-delay="100"><h3 class="zone-card__name">Cannes & Croisette</h3><p class="zone-card__text">Festival, MIPIM, Cannes Lions, palaces de la Croisette. Rotation véhicules pour vos délégations.</p></div>
-      <div class="zone-card" data-reveal="up" data-delay="200"><h3 class="zone-card__name">Monaco</h3><p class="zone-card__text">Principauté, Grand Prix, yacht club, Casino. Connaissance des accès et des protocoles spécifiques à Monaco.</p></div>
-      <div class="zone-card" data-reveal="up" data-delay="100"><h3 class="zone-card__name">Saint-Tropez & Golfe</h3><p class="zone-card__text">Port privé, villas perchées, routes sinueuses du Golfe. Discrétion absolue garantie.</p></div>
-      <div class="zone-card" data-reveal="up" data-delay="200"><h3 class="zone-card__name">Antibes & Cap d'Antibes</h3><p class="zone-card__text">Hôtels du Cap, villa Eilenroc, port Vauban. L'élite internationale de la Riviera.</p></div>
-      <div class="zone-card" data-reveal="up" data-delay="300"><h3 class="zone-card__name">Héliports & Ports privés</h3><p class="zone-card__text">Coordination avec les héliports de Monaco et Cannes, les ports de plaisance et les amarrages privés.</p></div>
+      <div class="zone-card" data-reveal="up">
+        <h3 class="zone-card__name" data-i18n="paris.z1.title">Aéroport CDG</h3>
+        <p class="zone-card__text">Accueil en salle d'arrivée, suivi des vols en temps réel, attente sans limite. Connexions vers Paris et toute l'Île-de-France.</p>
+      </div>
+      <div class="zone-card" data-reveal="up" data-delay="100">
+        <h3 class="zone-card__name" data-i18n="paris.z2.title">Aéroport Orly</h3>
+        <p class="zone-card__text">Prise en charge personnalisée depuis Orly, départs aux aurores ou retours tardifs sans supplément d'horaire non annoncé.</p>
+      </div>
+      <div class="zone-card" data-reveal="up" data-delay="200">
+        <h3 class="zone-card__name" data-i18n="paris.z3.title">Paris intra-muros</h3>
+        <p class="zone-card__text">Hôtels palace, restaurants étoilés, musées, galeries, théâtres. Connaissance intime des axes et des accès privés.</p>
+      </div>
+      <div class="zone-card" data-reveal="up" data-delay="100">
+        <h3 class="zone-card__name" data-i18n="paris.z4.title">Versailles & Grand Paris</h3>
+        <p class="zone-card__text">Château de Versailles, Fontainebleau, domaines privés et propriétés de prestige en grande couronne.</p>
+      </div>
+      <div class="zone-card" data-reveal="up" data-delay="200">
+        <h3 class="zone-card__name" data-i18n="paris.z5.title">Gares Parisiennes</h3>
+        <p class="zone-card__text">Gare du Nord, Gare de Lyon, Montparnasse, Saint-Lazare. Connexions TGV et Eurostar assurées dans les délais.</p>
+      </div>
+      <div class="zone-card" data-reveal="up" data-delay="300">
+        <h3 class="zone-card__name" data-i18n="paris.z6.title">Châteaux & Sites privés</h3>
+        <p class="zone-card__text">Venues de mariage, domaines de réception, châteaux d'Île-de-France. Coordination complète de la logistique transport.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="cta-paris">
+  <div class="container" style="text-align:center;">
+    <span class="eyebrow" data-reveal="fade">Paris & Île-de-France</span>
+    <h2 class="section-title" data-reveal="up" style="max-width:600px;margin:var(--sp-5) auto;">
+      Confier un déplacement<br><em>à Paris.</em>
+    </h2>
+    <p class="section-sub" data-reveal="up" data-delay="150" style="max-width:480px;margin:0 auto var(--sp-8);">
+      Décrivez votre programme en quelques lignes. Nous revenons vers vous sous 24h avec une proposition sur mesure.
+    </p>
+    <div data-reveal="up" data-delay="250">
+      <a href="../contact.html" class="btn btn-primary" data-i18n="paris.cta">Confier un déplacement à Paris <span class="btn-arrow">→</span></a>
     </div>
   </div>
 </section>
@@ -204,7 +239,7 @@
 <script src="../js/nav.js" defer></script>
 <script src="../js/scroll-reveal.js" defer></script>
 <script src="../js/main.js" defer></script>
-<style>.territory-split{} @media(max-width:900px){.territory-split{grid-template-columns:1fr!important;}} .other-territories{} @media(max-width:700px){.other-territories{grid-template-columns:1fr!important;}}</style>
+<style>.territory-split{} @media(max-width:900px){.territory-split{grid-template-columns:1fr!important;}}</style>
 <script src="../js/i18n.js" defer></script>
 
 <script src="../js/cookies.js" defer></script>
@@ -224,8 +259,8 @@
   <div class="whatsapp-popup" id="whatsapp-popup" aria-hidden="true">
     <button class="whatsapp-popup__close" id="whatsapp-close" aria-label="Fermer">✕</button>
     <p class="whatsapp-popup__title">Confier un déplacement</p>
-    <p class="whatsapp-popup__msg">Bonjour,<br>Je suis disponible pour organiser votre transfert, répondre à vos questions et établir un devis personnalisé.</p>
-    <a href="https://wa.me/33636017235?text=Bonjour%2C%20je%20souhaite%20confier%20un%20d%C3%A9placement%20%C3%A0%20B.LIFTED." class="whatsapp-popup__cta" target="_blank" rel="noopener">Contacter sur WhatsApp</a>
+    <p class="whatsapp-popup__msg">Bonjour,<br>Je suis disponible pour organiser votre transfert à Paris, répondre à vos questions et établir un devis personnalisé.</p>
+    <a href="https://wa.me/33636017235?text=Bonjour%2C%20je%20souhaite%20confier%20un%20d%C3%A9placement%20%C3%A0%20Paris%20%C3%A0%20B.LIFTED." class="whatsapp-popup__cta" target="_blank" rel="noopener">Contacter sur WhatsApp</a>
   </div>
   <button class="whatsapp-float" id="whatsapp-toggle" aria-label="Contacter B.LIFTED par WhatsApp">
     <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>

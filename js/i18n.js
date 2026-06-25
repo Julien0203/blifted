@@ -32,6 +32,11 @@
 
       /* ── HOME — HERO ─────────────────────────────────── */
       'home.hero.eyebrow':       'Partenaire des Professionnels du Luxe',
+      'home.hero.title':         "Quand l'approximation<br><em>n'est pas une option.</em>",
+      'home.hero.geo':           'Provence &nbsp;·&nbsp; French Riviera &nbsp;·&nbsp; Megève &nbsp;·&nbsp; Dubaï',
+      'home.hero.stat2':         'Disponible 24h/24 · 7j/7',
+      'home.hero.stat3':         'Discrétion absolue',
+      'home.hero.stat4':         'Flotte Mercedes exclusivement',
       'home.hero.cta1':          'Confier un déplacement',
       'home.hero.cta2':          'Partenaires professionnels',
       'home.hero.trust':         'Wedding Planners · Travel Organizers',
@@ -40,6 +45,7 @@
       'home.hero.scroll':        'Découvrir',
 
       /* ── HOME — STATEMENT ────────────────────────────── */
+      'home.statement.text':     "Vos clients ne se demandent pas où est leur véhicule. Parce que nous avons <em>tout anticipé</em> avant qu'ils arrivent.",
       'home.statement.author':   'La promesse B.LIFTED',
 
       /* ── HOME — STATS ────────────────────────────────── */
@@ -50,21 +56,36 @@
 
       /* ── HOME — SERVICES ─────────────────────────────── */
       'home.services.eyebrow':   'Nos prestations',
+      'home.services.title':     'Ce que nous <em>coordonnons</em>',
+      'home.services.sub':       "Quatre expertises complémentaires, une seule exigence : l'irréprochable.",
       'home.svc1.title':         'Transfert aéroport & gare',
       'home.svc1.desc':          "Prise en charge personnalisée, suivi des vols en temps réel, attente sans limite. Votre chauffeur vous attend, quelle que soit l'heure.",
       'home.svc1.link':          'En savoir plus',
+      'home.svc1.tag1':          'Aéroport Avignon',
+      'home.svc1.tag2':          'Nice · Marseille',
+      'home.svc1.tag3':          'Gares TGV',
       'home.svc2.title':         'Mise à disposition',
       'home.svc2.desc':          "Votre chauffeur dédié, à votre entière disposition pour la journée ou la demi-journée. Liberté totale, agenda flexible.",
       'home.svc2.link':          'En savoir plus',
+      'home.svc2.tag1':          'Demi-journée',
+      'home.svc2.tag2':          'Journée complète',
+      'home.svc2.tag3':          'Multi-jours',
       'home.svc3.title':         'Mariages & événements',
       'home.svc3.desc':          "Coordination complète du transport pour votre jour J. Flotte adaptée, timing précis, discrétion absolue pour tous vos invités.",
       'home.svc3.link':          'Découvrir',
+      'home.svc3.tag2':          'Séminaires',
+      'home.svc3.tag3':          'Soirées privées',
       'home.svc4.title':         'Séjour & coordination',
       'home.svc4.desc':          "Accompagnement sur plusieurs jours pour vos séjours en Provence ou sur la Riviera. Votre chauffeur devient le fil conducteur de votre voyage.",
       'home.svc4.link':          'En savoir plus',
+      'home.svc4.tag1':          'Séjours VIP',
+      'home.svc4.tag2':          'Familles',
+      'home.svc4.tag3':          'Groupes',
 
       /* ── HOME — SIMULATOR ────────────────────────────── */
       'home.sim.eyebrow':        'Configurateur',
+      'home.sim.title':          'Décrivez votre <em>déplacement</em>',
+      'home.sim.sub':            'En quelques clics, obtenez une estimation personnalisée pour votre prochain trajet.',
       'home.sim.q1':             'Quelle prestation souhaitez-vous ?',
       'home.sim.q1.hint':        'Sélectionnez la nature de votre déplacement',
       'home.sim.q2':             'Quel est votre territoire ?',
@@ -73,6 +94,41 @@
       'home.sim.q3.hint':        'Pour les mariages et séjours notamment',
       'home.sim.q4':             'Combien de passagers ?',
       'home.sim.q4.hint':        'Pour adapter le véhicule à votre groupe',
+      'home.sim.svc1.label':     'Transfert',
+      'home.sim.svc1.sub':      'Aéroport / Gare',
+      'home.sim.svc1.desc':     'Prise en charge porte-à-porte, suivi vol en temps réel',
+      'home.sim.svc2.label':     'Mise à disposition',
+      'home.sim.svc2.sub':      'Chauffeur dédié',
+      'home.sim.svc2.desc':     "Disponible à l'heure ou à la journée, selon votre agenda",
+      'home.sim.svc3.label':     'Mariage',
+      'home.sim.svc3.sub':      'Jour J & invités',
+      'home.sim.svc3.desc':     'Coordination complète, véhicules décorés sur demande',
+      'home.sim.svc4.label':     'Séjour',
+      'home.sim.svc4.sub':      'Multi-événements',
+      'home.sim.svc4.desc':     'Itinéraires multi-étapes, assistance logistique intégrale',
+      'home.sim.ter1.desc':     'Avignon, Aix-en-Provence, Gordes, Les Baux',
+      'home.sim.ter2.desc':     "Antibes, Saint-Tropez, Menton, côte d'Azur",
+      'home.sim.ter3.desc':     "Chamonix, Courchevel, Val d'Isère, Albertville",
+      'home.sim.ter4.sub':      'Émirats Arabes Unis',
+      'home.sim.ter4.desc':     'Dubaï, Abu Dhabi, Sharjah — service bilingue',
+      'home.sim.dur1.label':     'Demi-journée',
+      'home.sim.dur1.sub':      "Jusqu'à 4h",
+      'home.sim.dur1.desc':     'Idéal pour un transfert ou une excursion courte',
+      'home.sim.dur2.label':     'Journée complète',
+      'home.sim.dur2.sub':      '4h à 10h',
+      'home.sim.dur2.desc':     "Visites, réunions d'affaires ou sorties culturelles",
+      'home.sim.dur3.label':     'Multi-jours',
+      'home.sim.dur3.sub':      '2 jours et plus',
+      'home.sim.dur3.desc':     "Accompagnement sur l'ensemble de votre séjour",
+      'home.sim.pax1.label':     '1 à 4 passagers',
+      'home.sim.pax1.sub':      'Berline Mercedes',
+      'home.sim.pax1.desc':     'Mercedes Classe E ou S, confort premium garanti',
+      'home.sim.pax2.label':     '5 à 7 passagers',
+      'home.sim.pax2.sub':      'Mercedes Classe V',
+      'home.sim.pax2.desc':     'Van luxe avec espace bagages généreux',
+      'home.sim.pax3.label':     '8 et plus',
+      'home.sim.pax3.sub':      'Flotte multiple',
+      'home.sim.pax3.desc':     'Flotte coordonnée, plusieurs véhicules si nécessaire',
       'home.sim.next':           'Continuer',
       'home.sim.back':           '← Retour',
       'home.sim.calc':           'Soumettre ma demande',
@@ -83,6 +139,8 @@
 
       /* ── HOME — TERRITORIES ──────────────────────────── */
       'home.territories.eyebrow': 'Nos destinations',
+      'home.territories.title':  'Quatre <em>territoires</em> d\'exception',
+      'home.territories.sub':    "De la Provence aux Émirats, une présence locale, une connaissance intime des routes.",
       'home.territories.explore': 'Explorer',
       'home.prov.desc':           "Alpilles, Luberon, Avignon. Le berceau de l'élégance provençale.",
       'home.riv.desc':            'Nice, Cannes, Monaco. La Côte d\'Azur dans toute sa splendeur.',
@@ -91,6 +149,8 @@
 
       /* ── HOME — FLEET TEASER ─────────────────────────── */
       'home.fleet.eyebrow':      'Notre flotte',
+      'home.fleet.title':        'Le confort<br><em>à l\'état pur</em>',
+      'home.fleet.sub':          "Exclusivement Mercedes-Benz. Des véhicules entretenus selon les standards les plus exigeants, pour un confort irréprochable à chaque trajet.",
       'home.fleet.cta':          'Découvrir la flotte',
       'home.fleet.v.pax':        "Jusqu'à 7 passagers",
       'home.fleet.gle.type':     'SUV haut de gamme',
@@ -99,6 +159,7 @@
 
       /* ── HOME — WEDDING ──────────────────────────────── */
       'home.wedding.eyebrow':    'Mariages & partenariats',
+      'home.wedding.title':      'Le partenaire transport<br><em>de vos événements.</em>',
       'home.wedding.badge':      'Partenariat wedding planner',
       'home.wedding.feat1.t':    'Coordinateur partenaire',
       'home.wedding.feat1.d':    'Ligne directe avec votre équipe — avant, pendant et après chaque événement',
@@ -110,6 +171,7 @@
 
       /* ── HOME — TESTIMONIALS ─────────────────────────── */
       'home.testimonials.eyebrow': 'Témoignages',
+      'home.testimonials.title': 'Ce qu\'ils <em>disent</em>',
       'home.test1.quote':   '"B.LIFTED est devenu notre partenaire transport exclusif en Provence. Réactivité parfaite, zéro surprise le Jour J. Exactement ce qu\'on attend quand on organise des mariages à 200 invités."',
       'home.test1.name':    'Marie-Charlotte P.',
       'home.test1.role':    'Wedding Planner, Avignon',
@@ -258,6 +320,19 @@
       'megeve.z6.title':       'Restaurants & Activités',
       'megeve.cta':            'Confier un déplacement à Megève',
 
+      /* ── PARIS ───────────────────────────────────────── */
+      'paris.hero.eyebrow':    'Territoire — Paris & Île-de-France',
+      'paris.pres.eyebrow':    'Paris & Île-de-France',
+      'paris.pres.cta':        'Organiser un transfert Paris',
+      'paris.zones.eyebrow':   'Zones couvertes',
+      'paris.z1.title':        'Aéroport CDG',
+      'paris.z2.title':        'Aéroport Orly',
+      'paris.z3.title':        'Paris intra-muros',
+      'paris.z4.title':        'Versailles & Grand Paris',
+      'paris.z5.title':        'Gares Parisiennes',
+      'paris.z6.title':        'Châteaux & Sites privés',
+      'paris.cta':             'Confier un déplacement à Paris',
+
       /* ── DUBAI ───────────────────────────────────────── */
       'dubai.hero.eyebrow':    'Territoire · Dubaï',
       'dubai.stat.avail':      'Disponibilité',
@@ -304,6 +379,11 @@
 
       /* ── HOME — HERO ─────────────────────────────────── */
       'home.hero.eyebrow':       'Partner for Luxury Professionals',
+      'home.hero.title':         'When approximation<br><em>is not an option.</em>',
+      'home.hero.geo':           'Provence &nbsp;·&nbsp; French Riviera &nbsp;·&nbsp; Megève &nbsp;·&nbsp; Dubai',
+      'home.hero.stat2':         'Available 24/7',
+      'home.hero.stat3':         'Absolute discretion',
+      'home.hero.stat4':         'Exclusively Mercedes fleet',
       'home.hero.cta1':          'Plan a journey',
       'home.hero.cta2':          'Professional partners',
       'home.hero.trust':         'Wedding Planners · Travel Organizers',
@@ -312,6 +392,7 @@
       'home.hero.scroll':        'Discover',
 
       /* ── HOME — STATEMENT ────────────────────────────── */
+      'home.statement.text':     "Your clients don't wonder where their vehicle is. Because we <em>anticipated everything</em> before they arrived.",
       'home.statement.author':   'The B.LIFTED promise',
 
       /* ── HOME — STATS ────────────────────────────────── */
@@ -322,21 +403,36 @@
 
       /* ── HOME — SERVICES ─────────────────────────────── */
       'home.services.eyebrow':   'Our services',
+      'home.services.title':     'What we <em>coordinate</em>',
+      'home.services.sub':       'Four complementary expertises, one single standard: irreproachable.',
       'home.svc1.title':         'Airport & station transfer',
       'home.svc1.desc':          'Personalised pick-up, real-time flight tracking, unlimited waiting. Your chauffeur awaits, whatever the hour.',
       'home.svc1.link':          'Learn more',
+      'home.svc1.tag1':          'Avignon Airport',
+      'home.svc1.tag2':          'Nice · Marseille',
+      'home.svc1.tag3':          'TGV Stations',
       'home.svc2.title':         'Private chauffeur',
       'home.svc2.desc':          'Your dedicated chauffeur, entirely at your disposal for the day or half-day. Total freedom, flexible schedule.',
       'home.svc2.link':          'Learn more',
+      'home.svc2.tag1':          'Half-day',
+      'home.svc2.tag2':          'Full day',
+      'home.svc2.tag3':          'Multi-day',
       'home.svc3.title':         'Weddings & events',
       'home.svc3.desc':          'Complete transport coordination for your wedding day. Adapted fleet, precise timing, absolute discretion for all your guests.',
       'home.svc3.link':          'Discover',
+      'home.svc3.tag2':          'Seminars',
+      'home.svc3.tag3':          'Private events',
       'home.svc4.title':         'Stay & coordination',
       'home.svc4.desc':          'Multi-day support for your stays in Provence or on the Riviera. Your chauffeur becomes the backbone of your journey.',
       'home.svc4.link':          'Learn more',
+      'home.svc4.tag1':          'VIP stays',
+      'home.svc4.tag2':          'Families',
+      'home.svc4.tag3':          'Groups',
 
       /* ── HOME — SIMULATOR ────────────────────────────── */
       'home.sim.eyebrow':        'Configurator',
+      'home.sim.title':          'Describe your <em>journey</em>',
+      'home.sim.sub':            'In a few clicks, get a personalised estimate for your next trip.',
       'home.sim.q1':             'Which service do you need?',
       'home.sim.q1.hint':        'Select the type of journey',
       'home.sim.q2':             'Which destination?',
@@ -345,6 +441,41 @@
       'home.sim.q3.hint':        'Especially for weddings and stays',
       'home.sim.q4':             'How many passengers?',
       'home.sim.q4.hint':        'To select the right vehicle',
+      'home.sim.svc1.label':     'Transfer',
+      'home.sim.svc1.sub':      'Airport / Station',
+      'home.sim.svc1.desc':     'Door-to-door pick-up, real-time flight tracking',
+      'home.sim.svc2.label':     'Private chauffeur',
+      'home.sim.svc2.sub':      'Dedicated driver',
+      'home.sim.svc2.desc':     'Available by the hour or day, according to your schedule',
+      'home.sim.svc3.label':     'Wedding',
+      'home.sim.svc3.sub':      'Wedding day & guests',
+      'home.sim.svc3.desc':     'Full coordination, decorated vehicles on request',
+      'home.sim.svc4.label':     'Stay',
+      'home.sim.svc4.sub':      'Multi-event',
+      'home.sim.svc4.desc':     'Multi-leg itineraries, full logistical support',
+      'home.sim.ter1.desc':     'Avignon, Aix-en-Provence, Gordes, Les Baux',
+      'home.sim.ter2.desc':     'Antibes, Saint-Tropez, Menton, Côte d\'Azur',
+      'home.sim.ter3.desc':     'Chamonix, Courchevel, Val d\'Isère, Albertville',
+      'home.sim.ter4.sub':      'United Arab Emirates',
+      'home.sim.ter4.desc':     'Dubai, Abu Dhabi, Sharjah — bilingual service',
+      'home.sim.dur1.label':     'Half-day',
+      'home.sim.dur1.sub':      'Up to 4 hours',
+      'home.sim.dur1.desc':     'Ideal for a transfer or short excursion',
+      'home.sim.dur2.label':     'Full day',
+      'home.sim.dur2.sub':      '4 to 10 hours',
+      'home.sim.dur2.desc':     'Visits, business meetings or cultural outings',
+      'home.sim.dur3.label':     'Multi-day',
+      'home.sim.dur3.sub':      '2 days or more',
+      'home.sim.dur3.desc':     'Accompaniment throughout your entire stay',
+      'home.sim.pax1.label':     '1 to 4 passengers',
+      'home.sim.pax1.sub':      'Mercedes saloon',
+      'home.sim.pax1.desc':     'Mercedes E-Class or S-Class, guaranteed premium comfort',
+      'home.sim.pax2.label':     '5 to 7 passengers',
+      'home.sim.pax2.sub':      'Mercedes V-Class',
+      'home.sim.pax2.desc':     'Luxury van with generous luggage space',
+      'home.sim.pax3.label':     '8 and above',
+      'home.sim.pax3.sub':      'Multiple fleet',
+      'home.sim.pax3.desc':     'Coordinated fleet, multiple vehicles as needed',
       'home.sim.next':           'Continue',
       'home.sim.back':           '← Back',
       'home.sim.calc':           'Submit my request',
@@ -355,6 +486,8 @@
 
       /* ── HOME — TERRITORIES ──────────────────────────── */
       'home.territories.eyebrow': 'Our destinations',
+      'home.territories.title':  'Four <em>exceptional</em> destinations',
+      'home.territories.sub':    'From Provence to the Emirates, a local presence, an intimate knowledge of the roads.',
       'home.territories.explore': 'Explore',
       'home.prov.desc':           'Alpilles, Luberon, Avignon. The cradle of Provençal elegance.',
       'home.riv.desc':            'Nice, Cannes, Monaco. The French Riviera in all its splendour.',
@@ -363,6 +496,8 @@
 
       /* ── HOME — FLEET TEASER ─────────────────────────── */
       'home.fleet.eyebrow':      'Our fleet',
+      'home.fleet.title':        'Comfort<br><em>in its purest form</em>',
+      'home.fleet.sub':          'Exclusively Mercedes-Benz. Vehicles maintained to the most demanding standards, for irreproachable comfort on every journey.',
       'home.fleet.cta':          'Discover the fleet',
       'home.fleet.v.pax':        'Up to 7 passengers',
       'home.fleet.gle.type':     'Premium SUV',
@@ -371,6 +506,7 @@
 
       /* ── HOME — WEDDING ──────────────────────────────── */
       'home.wedding.eyebrow':    'Weddings & partnerships',
+      'home.wedding.title':      'The transport partner<br><em>for your events.</em>',
       'home.wedding.badge':      'Wedding planner partner',
       'home.wedding.feat1.t':    'Partner coordinator',
       'home.wedding.feat1.d':    'Direct line to your team — before, during and after every event',
@@ -382,6 +518,7 @@
 
       /* ── HOME — TESTIMONIALS ─────────────────────────── */
       'home.testimonials.eyebrow': 'Testimonials',
+      'home.testimonials.title': 'What they <em>say</em>',
       'home.test1.quote':   '"B.LIFTED has become our exclusive transport partner in Provence. Perfect responsiveness, zero surprises on the day. Exactly what you expect when organising weddings for 200 guests."',
       'home.test1.name':    'Marie-Charlotte P.',
       'home.test1.role':    'Wedding Planner, Avignon',
@@ -529,6 +666,19 @@
       'megeve.z5.title':       'Ski Lifts & Domains',
       'megeve.z6.title':       'Restaurants & Activities',
       'megeve.cta':            'Plan a Megève transfer',
+
+      /* ── PARIS ───────────────────────────────────────── */
+      'paris.hero.eyebrow':    'Destination — Paris & Île-de-France',
+      'paris.pres.eyebrow':    'Paris & Île-de-France',
+      'paris.pres.cta':        'Plan a Paris transfer',
+      'paris.zones.eyebrow':   'Areas covered',
+      'paris.z1.title':        'CDG Airport',
+      'paris.z2.title':        'Orly Airport',
+      'paris.z3.title':        'Paris city centre',
+      'paris.z4.title':        'Versailles & Greater Paris',
+      'paris.z5.title':        'Paris Train Stations',
+      'paris.z6.title':        'Châteaux & Private Venues',
+      'paris.cta':             'Plan a Paris transfer',
 
       /* ── DUBAI ───────────────────────────────────────── */
       'dubai.hero.eyebrow':    'Destination · Dubai',
