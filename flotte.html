@@ -63,6 +63,206 @@
       .vehicle-grid { grid-template-columns:1fr; }
       .philosophy__inner { grid-template-columns:1fr; gap:3rem; }
     }
+
+    /* ══ Fleet Showroom — Sticky Scroll ══════════════════════ */
+    .fleet-showroom { position: relative; }
+
+    .fs-backdrop {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow: hidden;
+      z-index: 0;
+    }
+    .fs-bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transition: opacity 1s cubic-bezier(0.25,0.1,0.25,1);
+    }
+    .fs-bg.is-active { opacity: 1; }
+    .fs-overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to right, rgba(4,3,2,0.90) 0%, rgba(4,3,2,0.55) 45%, rgba(4,3,2,0.08) 100%),
+        linear-gradient(to top, rgba(4,3,2,0.70) 0%, transparent 48%);
+      z-index: 1;
+    }
+
+    .fs-panels {
+      position: relative;
+      margin-top: -100vh;
+      z-index: 2;
+    }
+    .fs-panel {
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-end;
+      padding-bottom: 7rem;
+      padding-top: calc(var(--header-h) + 2rem);
+    }
+    .fs-panel .container { width: 100%; }
+    .fs-panel__inner {
+      max-width: 520px;
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-5);
+    }
+
+    /* Exterior panels: left */
+    .fs-panel--ext .fs-panel__inner { margin-left: 0; }
+
+    /* Interior panels: right */
+    .fs-panel--int .fs-panel__inner {
+      margin-left: auto;
+      text-align: right;
+    }
+    .fs-panel--int .fs-tags { justify-content: flex-end; }
+    .fs-panel--int .fs-specs { justify-content: flex-end; }
+    .fs-panel--int .fs-cta { margin-left: auto; }
+
+    .fs-num {
+      font-family: var(--font-serif);
+      font-size: clamp(4rem, 10vw, 8rem);
+      font-weight: 300;
+      color: rgba(255,255,255,0.06);
+      line-height: 1;
+      margin-bottom: -0.5rem;
+      letter-spacing: -0.02em;
+    }
+    .fs-eyebrow {
+      font-size: var(--t-xs);
+      letter-spacing: var(--ls-widest);
+      text-transform: uppercase;
+      color: var(--rose-light);
+    }
+    .fs-title {
+      font-family: var(--font-serif);
+      font-size: clamp(var(--t-4xl), 7vw, 7rem);
+      font-weight: 300;
+      line-height: var(--lh-tight);
+      color: var(--text-inv);
+      letter-spacing: var(--ls-tight);
+      margin: 0;
+    }
+    .fs-tagline {
+      font-size: var(--t-lg);
+      color: rgba(250,248,244,0.68);
+      font-weight: 300;
+      max-width: 38ch;
+      line-height: var(--lh-relaxed);
+    }
+    .fs-specs {
+      display: flex;
+      gap: var(--sp-7);
+      flex-wrap: wrap;
+      padding-top: var(--sp-5);
+      border-top: 1px solid rgba(255,255,255,0.10);
+    }
+    .fs-spec { display: flex; flex-direction: column; gap: 4px; }
+    .fs-spec__l {
+      font-size: 10px;
+      letter-spacing: var(--ls-widest);
+      text-transform: uppercase;
+      color: rgba(250,248,244,0.38);
+    }
+    .fs-spec__v {
+      font-size: var(--t-sm);
+      color: rgba(250,248,244,0.85);
+      font-weight: 400;
+    }
+    .fs-spec__note {
+      font-size: 10px;
+      color: rgba(250,248,244,0.45);
+      margin-left: 4px;
+    }
+    .fs-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--sp-2);
+    }
+    .fs-tag {
+      padding: 5px 13px;
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: var(--radius-full);
+      font-size: 10px;
+      letter-spacing: var(--ls-wide);
+      text-transform: uppercase;
+      color: rgba(250,248,244,0.62);
+    }
+    .fs-desc {
+      font-size: var(--t-base);
+      color: rgba(250,248,244,0.68);
+      font-weight: 300;
+      line-height: var(--lh-relaxed);
+      max-width: 40ch;
+    }
+    .fs-cta {
+      display: inline-flex;
+      align-items: center;
+      font-size: var(--t-sm);
+      letter-spacing: 0.04em;
+      color: rgba(250,248,244,0.85);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255,255,255,0.25);
+      padding-bottom: 3px;
+      width: fit-content;
+      transition: color 0.3s var(--ease), border-color 0.3s var(--ease);
+    }
+    .fs-cta:hover { color: var(--rose-light); border-color: var(--rose-light); }
+
+    /* Nav dots */
+    .fs-nav {
+      position: fixed;
+      right: 1.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 50;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+    .fs-nav.is-visible { opacity: 1; }
+    .fs-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.25);
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .fs-dot.is-active {
+      background: rgba(255,255,255,0.85);
+      transform: scale(1.5);
+    }
+
+    /* Chapter label (vehicle separator) */
+    .fs-chapter-sep {
+      position: absolute;
+      right: var(--gutter);
+      bottom: 2.5rem;
+      font-size: 10px;
+      letter-spacing: var(--ls-widest);
+      text-transform: uppercase;
+      color: rgba(250,248,244,0.25);
+    }
+
+    @media (max-width: 768px) {
+      .fs-panel { padding-bottom: 4.5rem; }
+      .fs-panel--int .fs-panel__inner { margin-left: 0; text-align: left; }
+      .fs-panel--int .fs-tags { justify-content: flex-start; }
+      .fs-panel--int .fs-specs { justify-content: flex-start; }
+      .fs-panel--int .fs-cta { margin-left: 0; }
+      .fs-nav { display: none; }
+      .fs-tagline { font-size: var(--t-base); }
+    }
   </style>
 </head>
 <body class="no-scroll">
@@ -73,7 +273,7 @@
 
 <header class="header" id="header">
   <div class="header__inner">
-    <a href="index.html" class="header__logo">B · LIFTED<span></span></a>
+    <a href="index.html" class="header__logo"><img src="assets/images/BL%20BLANC.png" class="logo-blanc" alt="B.LIFTED France"><img src="assets/images/BL%20NOIR.png" class="logo-noir" alt="B.LIFTED France"></a>
     <nav class="header__nav">
       <a href="services.html" class="header__nav-link" data-i18n="nav.services">Prestations</a>
       <a href="flotte.html" class="header__nav-link is-active" data-i18n="nav.fleet">Flotte</a>
@@ -124,95 +324,221 @@
     </div>
   </section>
 
-  <!-- Véhicules -->
-  <section class="section">
-    <div class="container">
-      <div class="vehicle-grid" data-stagger>
+  <!-- Fleet Showroom — Sticky Scroll -->
+  <section class="fleet-showroom" id="fleetShowroom">
 
-        <!-- Classe V -->
-        <div class="vehicle-card" data-reveal="up" data-delay="100">
-          <img src="assets/images/fleet-classe-v.png" alt="Mercedes Classe V" class="vehicle-card__img" loading="lazy">
-          <div class="vehicle-card__body">
-            <span class="vehicle-card__brand">Mercedes-Benz</span>
-            <h2 class="vehicle-card__name">Classe V</h2>
-            <p class="vehicle-card__desc">Le choix pour les groupes, familles et transferts nécessitant de l'espace. Jusqu'à 7 passagers avec bagages. Intérieur modulable, confort premium.</p>
-            <div class="vehicle-card__specs">
-              <div class="vehicle-spec"><span class="vehicle-spec__label">Passagers</span><span class="vehicle-spec__val">Jusqu'à 7</span></div>
-              <div class="vehicle-spec"><span class="vehicle-spec__label">Bagages</span><span class="vehicle-spec__val">Grand volume</span></div>
-              <div class="vehicle-spec"><span class="vehicle-spec__label">Finition</span><span class="vehicle-spec__val">Business Select</span></div>
-            </div>
-            <div class="vehicle-card__contexts">
-              <span class="vehicle-tag">Familles</span>
-              <span class="vehicle-tag">Groupes</span>
-              <span class="vehicle-tag" data-i18n="nav.weddings">Mariages</span>
-              <span class="vehicle-tag">Séjours</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- GLE -->
-        <div class="vehicle-card" data-reveal="up" data-delay="200">
-          <img src="assets/images/fleet-gle.png" alt="Mercedes GLE" class="vehicle-card__img" loading="lazy">
-          <div class="vehicle-card__body">
-            <span class="vehicle-card__brand">Mercedes-Benz</span>
-            <h2 class="vehicle-card__name">GLE</h2>
-            <p class="vehicle-card__desc">SUV de prestige pour les routes de montagne et les missions nécessitant une stature affirmée. La référence pour Megève et les Alpes.</p>
-            <div class="vehicle-card__specs">
-              <div class="vehicle-spec"><span class="vehicle-spec__label">Passagers</span><span class="vehicle-spec__val">Jusqu'à 5</span></div>
-              <div class="vehicle-spec"><span class="vehicle-spec__label">Terrain</span><span class="vehicle-spec__val">Tout-terrain</span></div>
-              <div class="vehicle-spec"><span class="vehicle-spec__label">Finition</span><span class="vehicle-spec__val">AMG Line</span></div>
-            </div>
-            <div class="vehicle-card__contexts">
-              <span class="vehicle-tag">Alpes</span>
-              <span class="vehicle-tag">Megève</span>
-              <span class="vehicle-tag">Villas</span>
-              <span class="vehicle-tag">Prestige</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Classe E -->
-        <div class="vehicle-card" data-reveal="up" data-delay="100">
-          <img src="assets/images/fleet-classe-e.png" alt="Mercedes Classe E" class="vehicle-card__img" loading="lazy">
-          <div class="vehicle-card__body">
-            <span class="vehicle-card__brand">Mercedes-Benz</span>
-            <h2 class="vehicle-card__name">Classe E</h2>
-            <p class="vehicle-card__desc">Élégance et discrétion pour les déplacements professionnels. Silhouette sobre qui ne s'impose pas — la bonne voiture quand la sobriété est de mise.</p>
-            <div class="vehicle-card__specs">
-              <div class="vehicle-spec"><span class="vehicle-spec__label">Passagers</span><span class="vehicle-spec__val">Jusqu'à 4</span></div>
-              <div class="vehicle-spec"><span class="vehicle-spec__label">Ambiance</span><span class="vehicle-spec__val">Discrète</span></div>
-              <div class="vehicle-spec"><span class="vehicle-spec__label">Finition</span><span class="vehicle-spec__val">Executive</span></div>
-            </div>
-            <div class="vehicle-card__contexts">
-              <span class="vehicle-tag">Business</span>
-              <span class="vehicle-tag">Solo</span>
-              <span class="vehicle-tag">Discret</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Classe S -->
-        <div class="vehicle-card" data-reveal="up" data-delay="200">
-          <img src="assets/images/fleet-classe-s.png" alt="Mercedes Classe S" class="vehicle-card__img" loading="lazy">
-          <div class="vehicle-card__body">
-            <span class="vehicle-card__brand">Mercedes-Benz</span>
-            <h2 class="vehicle-card__name">Classe S</h2>
-            <p class="vehicle-card__desc">Le summum. Pour les missions qui exigent le symbole autant que la substance. Confort actif, technologie de pointe, présence incontestable.</p>
-            <div class="vehicle-card__specs">
-              <div class="vehicle-spec"><span class="vehicle-spec__label">Passagers</span><span class="vehicle-spec__val">Jusqu'à 4</span></div>
-              <div class="vehicle-spec"><span class="vehicle-spec__label">Ambiance</span><span class="vehicle-spec__val">Ultra-prestige</span></div>
-              <div class="vehicle-spec"><span class="vehicle-spec__label">Finition</span><span class="vehicle-spec__val">Long</span></div>
-            </div>
-            <div class="vehicle-card__contexts">
-              <span class="vehicle-tag">VIP</span>
-              <span class="vehicle-tag">Cérémonies</span>
-              <span class="vehicle-tag">Ultra-prestige</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
+    <!-- Sticky image backdrop -->
+    <div class="fs-backdrop" aria-hidden="true">
+      <div class="fs-bg is-active" data-index="0" style="background-image:url('assets/images/fleet-classe-v.png')"></div>
+      <div class="fs-bg"           data-index="1" style="background-image:url('assets/images/Vinterieur.png')"></div>
+      <div class="fs-bg"           data-index="2" style="background-image:url('assets/images/GLE.png')"></div>
+      <div class="fs-bg"           data-index="3" style="background-image:url('assets/images/GLE%20interieur.png')"></div>
+      <div class="fs-bg"           data-index="4" style="background-image:url('assets/images/Classe%20E%20avignon.png')"></div>
+      <div class="fs-bg"           data-index="5" style="background-image:url('assets/images/E_interieur.png')"></div>
+      <div class="fs-bg"           data-index="6" style="background-image:url('assets/images/classe%20S.png')"></div>
+      <div class="fs-bg"           data-index="7" style="background-image:url('assets/images/Sinterieur.png')"></div>
+      <div class="fs-overlay"></div>
     </div>
+
+    <!-- Scrollable panels -->
+    <div class="fs-panels">
+
+      <!-- ── 01 · Classe V — Extérieur ──────────────────────── -->
+      <div class="fs-panel fs-panel--ext" data-img="0">
+        <div class="container" style="position:relative;">
+          <div class="fs-panel__inner">
+            <span class="fs-num">01</span>
+            <span class="fs-eyebrow">Mercedes-Benz</span>
+            <h2 class="fs-title">Classe V</h2>
+            <p class="fs-tagline">L'espace comme standard de confort — pour ceux qui voyagent ensemble</p>
+            <div class="fs-specs">
+              <div class="fs-spec">
+                <span class="fs-spec__l">Recommandé</span>
+                <span class="fs-spec__v">4 passagers max<span class="fs-spec__note">pour le confort</span></span>
+              </div>
+              <div class="fs-spec">
+                <span class="fs-spec__l">Capacité</span>
+                <span class="fs-spec__v">7 passagers max</span>
+              </div>
+              <div class="fs-spec">
+                <span class="fs-spec__l">Bagages</span>
+                <span class="fs-spec__v">Grand volume</span>
+              </div>
+              <div class="fs-spec">
+                <span class="fs-spec__l">Finition</span>
+                <span class="fs-spec__v">Business Select</span>
+              </div>
+            </div>
+            <div class="fs-tags">
+              <span class="fs-tag">Familles</span>
+              <span class="fs-tag">Groupes</span>
+              <span class="fs-tag">Mariages</span>
+              <span class="fs-tag">Séjours</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── 01 · Classe V — Intérieur ──────────────────────── -->
+      <div class="fs-panel fs-panel--int" data-img="1">
+        <div class="container">
+          <div class="fs-panel__inner">
+            <span class="fs-eyebrow">Intérieur — Classe V</span>
+            <p class="fs-desc">Sièges capitaines, modularité totale, espace bagages intégré. Chaque passager voyage dans les mêmes conditions — sans compromis sur le confort.</p>
+            <a href="contact.html" class="fs-cta">Réserver la Classe V →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── 02 · GLE — Extérieur ───────────────────────────── -->
+      <div class="fs-panel fs-panel--ext" data-img="2">
+        <div class="container">
+          <div class="fs-panel__inner">
+            <span class="fs-num">02</span>
+            <span class="fs-eyebrow">Mercedes-Benz</span>
+            <h2 class="fs-title">GLE</h2>
+            <p class="fs-tagline">La référence pour les routes de montagne et les missions à stature affirmée</p>
+            <div class="fs-specs">
+              <div class="fs-spec">
+                <span class="fs-spec__l">Passagers</span>
+                <span class="fs-spec__v">2 max</span>
+              </div>
+              <div class="fs-spec">
+                <span class="fs-spec__l">Terrain</span>
+                <span class="fs-spec__v">Tout-terrain</span>
+              </div>
+              <div class="fs-spec">
+                <span class="fs-spec__l">Finition</span>
+                <span class="fs-spec__v">AMG Line</span>
+              </div>
+            </div>
+            <div class="fs-tags">
+              <span class="fs-tag">Alpes</span>
+              <span class="fs-tag">Megève</span>
+              <span class="fs-tag">Villas</span>
+              <span class="fs-tag">Prestige</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── 02 · GLE — Intérieur ───────────────────────────── -->
+      <div class="fs-panel fs-panel--int" data-img="3">
+        <div class="container">
+          <div class="fs-panel__inner">
+            <span class="fs-eyebrow">Intérieur — GLE</span>
+            <p class="fs-desc">SUV de prestige avec finition AMG Line. La stature pour les routes de montagne, le raffinement pour l'entrée en ville. Un GLE dans les Alpes n'est pas un choix d'image — c'est une décision de sécurité.</p>
+            <a href="contact.html" class="fs-cta">Réserver le GLE →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── 03 · Classe E — Extérieur ─────────────────────── -->
+      <div class="fs-panel fs-panel--ext" data-img="4">
+        <div class="container">
+          <div class="fs-panel__inner">
+            <span class="fs-num">03</span>
+            <span class="fs-eyebrow">Mercedes-Benz · Sur réservation</span>
+            <h2 class="fs-title">Classe E</h2>
+            <p class="fs-tagline">Élégance et discrétion — quand la sobriété est exactement le bon signal</p>
+            <div class="fs-specs">
+              <div class="fs-spec">
+                <span class="fs-spec__l">Passagers</span>
+                <span class="fs-spec__v">2 max</span>
+              </div>
+              <div class="fs-spec">
+                <span class="fs-spec__l">Disponibilité</span>
+                <span class="fs-spec__v">Sur réservation</span>
+              </div>
+              <div class="fs-spec">
+                <span class="fs-spec__l">Ambiance</span>
+                <span class="fs-spec__v">Discrète</span>
+              </div>
+              <div class="fs-spec">
+                <span class="fs-spec__l">Finition</span>
+                <span class="fs-spec__v">Executive</span>
+              </div>
+            </div>
+            <div class="fs-tags">
+              <span class="fs-tag">Business</span>
+              <span class="fs-tag">Solo</span>
+              <span class="fs-tag">Missions executives</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── 03 · Classe E — Intérieur ─────────────────────── -->
+      <div class="fs-panel fs-panel--int" data-img="5">
+        <div class="container">
+          <div class="fs-panel__inner">
+            <span class="fs-eyebrow">Intérieur — Classe E</span>
+            <p class="fs-desc">Sobriété et excellence. Quand la mission exige qu'on ne remarque pas le véhicule — seulement la qualité du déplacement et l'attention portée à chaque détail.</p>
+            <a href="contact.html" class="fs-cta">Réserver la Classe E →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── 04 · Classe S — Extérieur ─────────────────────── -->
+      <div class="fs-panel fs-panel--ext" data-img="6">
+        <div class="container">
+          <div class="fs-panel__inner">
+            <span class="fs-num">04</span>
+            <span class="fs-eyebrow">Mercedes-Benz · Sur réservation</span>
+            <h2 class="fs-title">Classe S</h2>
+            <p class="fs-tagline">Le summum. Quand le symbole doit rejoindre la substance.</p>
+            <div class="fs-specs">
+              <div class="fs-spec">
+                <span class="fs-spec__l">Passagers</span>
+                <span class="fs-spec__v">2 max</span>
+              </div>
+              <div class="fs-spec">
+                <span class="fs-spec__l">Disponibilité</span>
+                <span class="fs-spec__v">Sur réservation</span>
+              </div>
+              <div class="fs-spec">
+                <span class="fs-spec__l">Ambiance</span>
+                <span class="fs-spec__v">Ultra-prestige</span>
+              </div>
+              <div class="fs-spec">
+                <span class="fs-spec__l">Finition</span>
+                <span class="fs-spec__v">Long</span>
+              </div>
+            </div>
+            <div class="fs-tags">
+              <span class="fs-tag">VIP</span>
+              <span class="fs-tag">Cérémonies</span>
+              <span class="fs-tag">Ultra-prestige</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── 04 · Classe S — Intérieur ─────────────────────── -->
+      <div class="fs-panel fs-panel--int" data-img="7">
+        <div class="container">
+          <div class="fs-panel__inner">
+            <span class="fs-eyebrow">Intérieur — Classe S</span>
+            <p class="fs-desc">Confort actif, technologie de pointe, présence incontestable. Pour les missions qui exigent que chaque détail — y compris le véhicule — envoie le signal juste.</p>
+            <a href="contact.html" class="fs-cta">Réserver la Classe S →</a>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /.fs-panels -->
+
+    <!-- Navigation dots -->
+    <nav class="fs-nav" id="fsNav" aria-label="Navigation flotte">
+      <button class="fs-dot is-active" data-goto="0" aria-label="Classe V extérieur"></button>
+      <button class="fs-dot" data-goto="1" aria-label="Classe V intérieur"></button>
+      <button class="fs-dot" data-goto="2" aria-label="GLE extérieur"></button>
+      <button class="fs-dot" data-goto="3" aria-label="GLE intérieur"></button>
+      <button class="fs-dot" data-goto="4" aria-label="Classe E extérieur"></button>
+      <button class="fs-dot" data-goto="5" aria-label="Classe E intérieur"></button>
+      <button class="fs-dot" data-goto="6" aria-label="Classe S extérieur"></button>
+      <button class="fs-dot" data-goto="7" aria-label="Classe S intérieur"></button>
+    </nav>
+
   </section>
 
   <!-- Philosophie -->
@@ -254,9 +580,7 @@
 
       <!-- Brand -->
       <div class="footer__brand">
-        <a href="index.html" class="footer__brand-logo" aria-label="B.LIFTED France">
-          B · LIFTED
-        </a>
+        <a href="index.html" class="footer__brand-logo" aria-label="B.LIFTED France"><img src="assets/images/BL%20BLANC.png" alt="B.LIFTED France"></a>
         <p class="footer__brand-desc" data-i18n="footer.desc">
           Service de transport privé haut de gamme en Provence, French Riviera, Megève et Dubaï. Discrétion absolue, fiabilité sans compromis.
         </p>
@@ -343,6 +667,55 @@
 <script src="js/scroll-reveal.js" defer></script>
 <script src="js/main.js" defer></script>
 <script src="js/i18n.js" defer></script>
+<script>
+(function() {
+  'use strict';
+  const showroom  = document.getElementById('fleetShowroom');
+  const panels    = document.querySelectorAll('.fs-panel[data-img]');
+  const bgs       = document.querySelectorAll('.fs-bg');
+  const dots      = document.querySelectorAll('.fs-dot');
+  const nav       = document.getElementById('fsNav');
+  if (!showroom || !panels.length) return;
+
+  let currentIdx = 0;
+
+  function activateBg(idx) {
+    if (idx === currentIdx) return;
+    currentIdx = idx;
+    bgs.forEach((bg, i)   => bg.classList.toggle('is-active', i === idx));
+    dots.forEach((dot, i) => dot.classList.toggle('is-active', i === idx));
+  }
+
+  // IntersectionObserver: switch bg when panel reaches 40% in view
+  const panelObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        activateBg(parseInt(entry.target.dataset.img));
+      }
+    });
+  }, { threshold: 0.4 });
+
+  panels.forEach(p => panelObserver.observe(p));
+
+  // Show / hide nav dots only while showroom is in view
+  const showroomObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      nav.classList.toggle('is-visible', entry.isIntersecting);
+    });
+  }, { threshold: 0.01 });
+  showroomObserver.observe(showroom);
+
+  // Dot click: scroll to corresponding panel
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      const idx   = parseInt(dot.dataset.goto);
+      const panel = panels[idx];
+      if (!panel) return;
+      panel.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  });
+})();
+</script>
 
 <script src="js/cookies.js" defer></script>
 

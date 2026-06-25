@@ -139,13 +139,14 @@
 
       /* ── HOME — TERRITORIES ──────────────────────────── */
       'home.territories.eyebrow': 'Nos destinations',
-      'home.territories.title':  'Quatre <em>territoires</em> d\'exception',
+      'home.territories.title':  'Cinq <em>territoires</em> d\'exception',
       'home.territories.sub':    "De la Provence aux Émirats, une présence locale, une connaissance intime des routes.",
       'home.territories.explore': 'Explorer',
       'home.prov.desc':           "Alpilles, Luberon, Avignon. Le berceau de l'élégance provençale.",
       'home.riv.desc':            'Nice, Cannes, Monaco. La Côte d\'Azur dans toute sa splendeur.',
       'home.meg.desc':            'Alpes, Mont-Blanc. Le luxe discret des hauteurs enneigées.',
       'home.dub.desc':            "Émirats Arabes Unis. L'excellence au cœur du désert de cristal.",
+      'home.par.desc':            "Île-de-France, Versailles. Le prestige de la capitale à votre service.",
 
       /* ── HOME — FLEET TEASER ─────────────────────────── */
       'home.fleet.eyebrow':      'Notre flotte',
@@ -486,13 +487,14 @@
 
       /* ── HOME — TERRITORIES ──────────────────────────── */
       'home.territories.eyebrow': 'Our destinations',
-      'home.territories.title':  'Four <em>exceptional</em> destinations',
+      'home.territories.title':  'Five <em>exceptional</em> destinations',
       'home.territories.sub':    'From Provence to the Emirates, a local presence, an intimate knowledge of the roads.',
       'home.territories.explore': 'Explore',
       'home.prov.desc':           'Alpilles, Luberon, Avignon. The cradle of Provençal elegance.',
       'home.riv.desc':            'Nice, Cannes, Monaco. The French Riviera in all its splendour.',
       'home.meg.desc':            'Alps, Mont-Blanc. The discreet luxury of snow-covered heights.',
       'home.dub.desc':            'United Arab Emirates. Excellence at the heart of the crystal desert.',
+      'home.par.desc':            'Île-de-France, Versailles. The prestige of the French capital at your service.',
 
       /* ── HOME — FLEET TEASER ─────────────────────────── */
       'home.fleet.eyebrow':      'Our fleet',

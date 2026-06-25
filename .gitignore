@@ -4,3 +4,5 @@ node_modules/
 PHOTOS 2/
 PHOTOS BLIFTED/
 .claude/
+.vercel
+.env*.local
