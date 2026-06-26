@@ -698,10 +698,17 @@ body:has(.page-hero) .header:not(.is-scrolled) .header__logo .logo-noir  { displ
   top: -0.3em; left: 0.1em;
   font-family: var(--font-serif);
   font-size: clamp(12rem, 25vw, 22rem);
-  color: var(--rose-pale);
+  color: #F0E5CC;
+  opacity: 0.7;
   line-height: 1;
   pointer-events: none;
   user-select: none;
+}
+@media (max-width: 768px) {
+  .statement::before {
+    font-size: 8rem;
+    opacity: 0.5;
+  }
 }
 
 .statement__text {
