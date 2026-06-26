@@ -24,25 +24,25 @@
   --text-inv:     #FAFAF8;
   --text-inv-soft:rgba(250,250,248,0.72);
 
-  /* ── OR CHAMPAGNE (accent principal) ───────────────────── */
-  --rose:         #B08D5A;
-  --rose-deep:    #7A5F2E;
-  --rose-mid:     #C4A46A;
-  --rose-light:   #D9C090;
-  --rose-pale:    #F0E5CC;
-  --rose-ultra:   #FAF6EF;
+  /* ── VERT BOTANIQUE (accent principal) ─────────────────── */
+  --rose:         #2E6045;
+  --rose-deep:    #1A3D2A;
+  --rose-mid:     #4A8262;
+  --rose-light:   #7BB498;
+  --rose-pale:    #C8E5D6;
+  --rose-ultra:   #EBF5EF;
 
-  /* ── OR (même palette, alias utilitaires) ───────────────── */
-  --gold:         #B08D5A;
-  --gold-deep:    #7A5F2E;
-  --gold-light:   #D9C090;
-  --gold-pale:    #F0E5CC;
+  /* ── VERT (alias utilitaires) ───────────────────────────── */
+  --gold:         #2E6045;
+  --gold-deep:    #1A3D2A;
+  --gold-light:   #7BB498;
+  --gold-pale:    #C8E5D6;
 
   /* ── ALIAS ──────────────────────────────────────────────── */
-  --sage:         #B08D5A;
-  --sage-deep:    #7A5F2E;
-  --sage-light:   #C4A46A;
-  --sage-pale:    #F0E5CC;
+  --sage:         #2E6045;
+  --sage-deep:    #1A3D2A;
+  --sage-light:   #4A8262;
+  --sage-pale:    #C8E5D6;
 
   /* ── BORDURES ───────────────────────────────────────────── */
   --border:       #E8E0D0;
@@ -56,8 +56,8 @@
   --shadow:       0 4px 28px rgba(40,50,38,.09);
   --shadow-lg:    0 8px 56px rgba(40,50,38,.12);
   --shadow-xl:    0 16px 80px rgba(40,50,38,.16);
-  --shadow-rose:  0 4px 32px rgba(176,141,90,.22);
-  --shadow-gold:  0 4px 32px rgba(196,160,106,.20);
+  --shadow-rose:  0 4px 32px rgba(46,96,69,.22);
+  --shadow-gold:  0 4px 32px rgba(74,130,98,.20);
   --shadow-inset: inset 0 1px 0 rgba(255,255,255,0.6);
 
 
@@ -164,11 +164,11 @@
   --blanc:          #FFFFFF;
   --texte-lt:       #9A8A80;
 
-  --or:             #B08D5A;
-  --or-lt:          #D9C090;
-  --or-deep:        #7A5F2E;
-  --or-border:      rgba(176,141,90,0.20);
-  --or-glow:        rgba(176,141,90,0.08);
+  --or:             #2E6045;
+  --or-lt:          #7BB498;
+  --or-deep:        #1A3D2A;
+  --or-border:      rgba(46,96,69,0.20);
+  --or-glow:        rgba(46,96,69,0.08);
 
   --radius-md:      20px;
   --radius-lg:      32px;
@@ -181,7 +181,7 @@
 
   --noir:            #1A1C1A;
   --taupe:           #9A8A80;
-  --champagne:       #E8D5A0;
+  --champagne:       #B8DCC8;
 }
 
 /* ── RESPONSIVE ──────────────────────────────────────────── */
