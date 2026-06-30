@@ -758,24 +758,14 @@
     dots.forEach((dot, i) => dot.classList.toggle('is-active', i === idx));
   }
 
-  // Scroll-based bg switch: find the exterior panel closest to viewport center
-  function onScroll() {
-    const mid = window.innerHeight / 2;
-    let closest = currentIdx;
-    let minDist = Infinity;
-    panels.forEach(panel => {
-      const rect = panel.getBoundingClientRect();
-      const panelMid = (rect.top + rect.bottom) / 2;
-      const dist = Math.abs(panelMid - mid);
-      if (dist < minDist) {
-        minDist = dist;
-        closest = parseInt(panel.dataset.img);
-      }
+  // Switch bg as soon as the exterior panel enters the viewport
+  const bgObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) activateBg(parseInt(entry.target.dataset.img));
     });
-    if (minDist < window.innerHeight * 0.6) activateBg(closest);
-  }
+  }, { threshold: 0.1 });
 
-  window.addEventListener('scroll', onScroll, { passive: true });
+  panels.forEach(panel => bgObserver.observe(panel));
 
   // Show / hide nav dots only while showroom is in view
   const showroomObserver = new IntersectionObserver((entries) => {
