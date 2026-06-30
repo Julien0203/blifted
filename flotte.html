@@ -403,7 +403,13 @@
     <div class="fs-panels">
 
       <!-- ── 01 · Classe V — Extérieur ──────────────────────── -->
-      <div class="fs-panel fs-panel--ext" data-img="0"></div>
+      <div class="fs-panel fs-panel--ext" data-img="0">
+        <div class="container"><div class="fs-panel__inner">
+          <span class="fs-num" aria-hidden="true">01</span>
+          <h2 class="fs-title">Classe V</h2>
+          <p class="fs-tagline" data-i18n="fleet.v.tags">Familles · Groupes · Mariages · Séjours</p>
+        </div></div>
+      </div>
 
       <!-- ── 01 · Classe V — Intérieur ──────────────────────── -->
       <div class="fs-panel fs-panel--int">
@@ -447,7 +453,13 @@
       </div>
 
       <!-- ── 02 · GLE — Extérieur ───────────────────────────── -->
-      <div class="fs-panel fs-panel--ext" data-img="1"></div>
+      <div class="fs-panel fs-panel--ext" data-img="1">
+        <div class="container"><div class="fs-panel__inner">
+          <span class="fs-num" aria-hidden="true">02</span>
+          <h2 class="fs-title">GLE</h2>
+          <p class="fs-tagline" data-i18n="fleet.gle.tags">Alpes · Megève · Villas · Prestige</p>
+        </div></div>
+      </div>
 
       <!-- ── 02 · GLE — Intérieur ───────────────────────────── -->
       <div class="fs-panel fs-panel--int">
@@ -487,7 +499,13 @@
       </div>
 
       <!-- ── 03 · Classe E — Extérieur ─────────────────────── -->
-      <div class="fs-panel fs-panel--ext" data-img="2"></div>
+      <div class="fs-panel fs-panel--ext" data-img="2">
+        <div class="container"><div class="fs-panel__inner">
+          <span class="fs-num" aria-hidden="true">03</span>
+          <h2 class="fs-title">Classe E</h2>
+          <p class="fs-tagline" data-i18n="fleet.e.tags">Business · Solo · Discret</p>
+        </div></div>
+      </div>
 
       <!-- ── 03 · Classe E — Intérieur ─────────────────────── -->
       <div class="fs-panel fs-panel--int">
@@ -530,7 +548,13 @@
       </div>
 
       <!-- ── 04 · Classe S — Extérieur ─────────────────────── -->
-      <div class="fs-panel fs-panel--ext" data-img="3"></div>
+      <div class="fs-panel fs-panel--ext" data-img="3">
+        <div class="container"><div class="fs-panel__inner">
+          <span class="fs-num" aria-hidden="true">04</span>
+          <h2 class="fs-title">Classe S</h2>
+          <p class="fs-tagline" data-i18n="fleet.s.tags">VIP · Cérémonies · Ultra-prestige</p>
+        </div></div>
+      </div>
 
       <!-- ── 04 · Classe S — Intérieur ─────────────────────── -->
       <div class="fs-panel fs-panel--int">
@@ -606,11 +630,11 @@
   <!-- CTA -->
   <section class="cta-section">
     <div class="container">
-      <h2 class="cta-section__title" data-split="words">Quel véhicule pour votre <em>prochaine mission&nbsp;?</em></h2>
-      <p class="cta-section__sub" data-reveal="up" data-delay="200">Nous recommandons le véhicule adapté après avoir compris votre contexte.</p>
+      <h2 class="cta-section__title" data-split="words" data-i18n-html="fleet.cta.title">Quel véhicule pour votre <em>prochaine mission&nbsp;?</em></h2>
+      <p class="cta-section__sub" data-reveal="up" data-delay="200" data-i18n="fleet.cta.sub">Nous recommandons le véhicule adapté après avoir compris votre contexte.</p>
       <div class="cta-section__actions" data-reveal="up" data-delay="300">
-        <a href="contact.html" class="btn btn-primary">Confier un déplacement <span class="btn-arrow">→</span></a>
-        <a href="index.html#simulateur" class="btn btn-outline">Estimer le budget</a>
+        <a href="contact.html" class="btn btn-primary"><span data-i18n="fleet.cta.btn1">Confier un déplacement</span> <span class="btn-arrow">→</span></a>
+        <a href="index.html#simulateur" class="btn btn-outline" data-i18n="fleet.cta.btn2">Estimer le budget</a>
       </div>
     </div>
   </section>
@@ -636,6 +660,11 @@
           <a href="https://www.facebook.com/bliftedfrance" class="footer__social-link" aria-label="Facebook B.LIFTED" target="_blank" rel="noopener">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
               <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+            </svg>
+          </a>
+          <a href="https://fr.linkedin.com/in/sarah-m-blifted-france" class="footer__social-link" aria-label="LinkedIn B.LIFTED" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z"/>
             </svg>
           </a>
         </div>
@@ -736,7 +765,7 @@
         activateBg(parseInt(entry.target.dataset.img));
       }
     });
-  }, { rootMargin: '-50% 0px -50% 0px', threshold: 0 });
+  }, { rootMargin: '-35% 0px -35% 0px', threshold: 0 });
 
   panels.forEach(p => panelObserver.observe(p));
 
