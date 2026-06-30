@@ -31,7 +31,7 @@
       'whatsapp.cta':            'Contacter sur WhatsApp',
 
       /* ── FOOTER ──────────────────────────────────────── */
-      'footer.desc':             'Service de transport privé haut de gamme en Provence, French Riviera, Megève et Dubaï. Discrétion absolue, fiabilité sans compromis.',
+      'footer.desc':             'Service de transport privé haut de gamme en Provence, Luberon, Côte d\'Azur, Alpes, Paris et Dubaï. Discrétion absolue, fiabilité sans compromis.',
       'footer.col.services':     'Services',
       'footer.col.territories':  'Territoires',
       'footer.col.contact':      'Contact',
@@ -416,7 +416,7 @@
       'weddings.planners.li2': 'Planning de transport partagé, synchronisé avec votre rétroplanning',
       'weddings.planners.li3': 'Debriefing post-mission et rapport de coordination disponible sur demande',
       'weddings.planners.li4': 'Devis prioritaire et rapide, structure tarifaire B2B disponible',
-      'weddings.planners.li5': 'Présence sur Provence, French Riviera, Megève et Dubaï — un seul interlocuteur',
+      'weddings.planners.li5': 'Présence sur Provence, Luberon, Côte d\'Azur, Alpes, Paris et Dubaï — un seul interlocuteur',
       'weddings.planners.li6': 'Discrétion totale vis-à-vis de vos clients finaux — aucune communication directe sans accord',
       'weddings.planners.cta': 'Initier un partenariat →',
       'weddings.meg.eyebrow':  'Megève · Saison hiver',
@@ -691,7 +691,7 @@
       'whatsapp.cta':            'Contact on WhatsApp',
 
       /* ── FOOTER ──────────────────────────────────────── */
-      'footer.desc':             'Premium private chauffeur service in Provence, French Riviera, Megève and Dubai. Absolute discretion, uncompromising reliability.',
+      'footer.desc':             'Premium private chauffeur service in Provence, Luberon, Côte d\'Azur, Alps, Paris and Dubai. Absolute discretion, uncompromising reliability.',
       'footer.col.services':     'Services',
       'footer.col.territories':  'Destinations',
       'footer.col.contact':      'Contact',
@@ -1076,7 +1076,7 @@
       'weddings.planners.li2': 'Shared transport plan, synchronised with your run-of-show',
       'weddings.planners.li3': 'Post-event debrief and coordination report available on request',
       'weddings.planners.li4': 'Fast & priority quote, B2B pricing structure available',
-      'weddings.planners.li5': 'Coverage in Provence, French Riviera, Megève and Dubai — one single contact',
+      'weddings.planners.li5': 'Coverage in Provence, Luberon, Côte d\'Azur, Alps, Paris and Dubai — one single contact',
       'weddings.planners.li6': 'Total discretion towards your end clients — no direct communication without consent',
       'weddings.planners.cta': 'Start a partnership →',
       'weddings.meg.eyebrow':  'Megève · Winter season',
