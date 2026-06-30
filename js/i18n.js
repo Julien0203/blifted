@@ -230,6 +230,7 @@
 
       /* ── HOME — PROCESS ──────────────────────────────── */
       'home.process.eyebrow': 'Comment ça fonctionne',
+      'home.proc.title':   'Trois étapes, <em>zéro friction</em>',
       'home.proc1.title':  'Votre demande',
       'home.proc1.desc':   "Contactez-nous par téléphone, email ou via le formulaire. Décrivez votre déplacement en quelques lignes — nous nous chargeons du reste.",
       'home.proc2.title':  'Devis prioritaire et rapide',
@@ -239,6 +240,7 @@
 
       /* ── HOME — FAQ ──────────────────────────────────── */
       'home.faq.eyebrow':  'Questions fréquentes',
+      'home.faq.title':    'Ce que vous <em>nous demandez</em>',
       'home.faq.q1': 'Quels types de véhicules proposez-vous ?',
       'home.faq.a1': "Notre flotte est exclusivement composée de Mercedes-Benz : Classe E, Classe S, GLE et Classe V (jusqu'à 7 passagers). Tous nos véhicules sont récents, entretenus selon les standards les plus exigeants et préparés avant chaque mission.",
       'home.faq.q2': 'Intervenez-vous à toute heure, y compris la nuit ?',
@@ -251,9 +253,16 @@
       'home.faq.a5': "Absolument. Nous prenons en charge l'intégralité de la logistique transport de votre mariage : transfert des mariés, navettes invités, coordination avec les autres prestataires. Un seul interlocuteur du début à la fin.",
       'home.faq.q6': 'Comment obtenir un devis ?',
       'home.faq.a6': "Via notre formulaire en ligne, par email à contact@bliftedfrance.com ou par téléphone au +(33) 6 36 01 72 35. Vous recevez un devis personnalisé rapidement, en jours ouvrés.",
+      'home.faq.q7': 'Comment fonctionne le partenariat pour les wedding planners ?',
+      'home.faq.a7': "Nous proposons un partenariat B2B formalisé : ligne directe dédiée avec notre coordinatrice, accès prioritaire aux créneaux, planning de transport synchronisé avec votre rétroplanning, et debriefing post-mission disponible sur demande. La structure tarifaire partenaire est établie à l'entrée en relation. Contactez-nous via le formulaire en précisant votre activité — nous vous répondons rapidement.",
 
       /* ── HOME — CTA ──────────────────────────────────── */
       'home.cta.eyebrow': 'Prêt à commencer ?',
+      'home.cta.eyebrow2': 'Partenaires · Clients · Professionnels',
+      'home.cta.title':   'Construisons ensemble<br><em>votre offre transport.</em>',
+      'home.cta.sub':     'Wedding planners · Organisateurs de voyages · Concierge · Particuliers',
+      'home.cta.btn.partner': 'Initier un partenariat',
+      'home.cta.btn.journey': 'Confier un déplacement',
       'home.cta.btn1':    'Confier un déplacement',
       'home.cta.btn2':    'Simuler un tarif',
       'home.cta.phone':   'Ou appelez directement :',
@@ -431,6 +440,10 @@
       'weddings.territories.eyebrow': "Nos territoires mariage",
       'weddings.cta.btn1':     'Partenariat professionnel →',
       'weddings.cta.btn2':     'Coordonner notre mariage',
+      'weddings.finale.eyebrow': 'Wedding Planners · Couples · Organisateurs',
+      'weddings.finale.title':   'Construisons ensemble<br><em>la logistique parfaite.</em>',
+      'weddings.finale.sub':     "Partenariat formalisé ou coordination ponctuelle — nous nous adaptons à votre modèle, pas l'inverse.",
+      'weddings.finale.trust':   'Partenariat B2B · Devis prioritaire · Discrétion garantie',
 
       /* ── ABOUT PAGE ──────────────────────────────────── */
       'about.hero.eyebrow':    'B.LIFTED France',
@@ -890,6 +903,7 @@
 
       /* ── HOME — PROCESS ──────────────────────────────── */
       'home.process.eyebrow': 'How it works',
+      'home.proc.title':   'Three steps, <em>zero friction</em>',
       'home.proc1.title':  'Your request',
       'home.proc1.desc':   'Contact us by phone, email or via the form. Describe your journey in a few lines — we handle the rest.',
       'home.proc2.title':  'Fast & priority quote',
@@ -899,6 +913,7 @@
 
       /* ── HOME — FAQ ──────────────────────────────────── */
       'home.faq.eyebrow':  'Frequently asked questions',
+      'home.faq.title':    'What you <em>ask us</em>',
       'home.faq.q1': 'What types of vehicles do you offer?',
       'home.faq.a1': 'Our fleet consists exclusively of Mercedes-Benz: E-Class, S-Class, GLE and V-Class (up to 7 passengers). All vehicles are late-model, maintained to the highest standards and prepared before every assignment.',
       'home.faq.q2': 'Are you available at any hour, including at night?',
@@ -911,9 +926,16 @@
       'home.faq.a5': 'Absolutely. We take full charge of all wedding transport logistics: bride and groom transfers, guest shuttles, coordination with all other suppliers. One single contact from start to finish.',
       'home.faq.q6': 'How do I get a quote?',
       'home.faq.a6': 'Via our online form, by email at contact@bliftedfrance.com or by phone at +(33) 6 36 01 72 35. You receive a personalised quote promptly, on working days.',
+      'home.faq.q7': 'How does the B2B partnership work for wedding planners?',
+      'home.faq.a7': 'We offer a formalised B2B partnership: a dedicated direct line with our coordinator, priority access to slots, a transport schedule synchronised with your planning timeline, and a post-event debrief available on request. The partner pricing structure is established at the start of the relationship. Contact us via the form specifying your activity — we respond promptly.',
 
       /* ── HOME — CTA ──────────────────────────────────── */
       'home.cta.eyebrow': 'Ready to begin?',
+      'home.cta.eyebrow2': 'Partners · Clients · Professionals',
+      'home.cta.title':   "Let's build together<br><em>your transport offer.</em>",
+      'home.cta.sub':     'Wedding planners · Travel organisers · Concierge · Private clients',
+      'home.cta.btn.partner': 'Start a partnership',
+      'home.cta.btn.journey': 'Plan a journey',
       'home.cta.btn1':    'Plan a journey',
       'home.cta.btn2':    'Request an estimate',
       'home.cta.phone':   'Or call directly:',
@@ -1091,6 +1113,10 @@
       'weddings.territories.eyebrow': 'Our wedding territories',
       'weddings.cta.btn1':     'Professional partnership →',
       'weddings.cta.btn2':     'Coordinate our wedding',
+      'weddings.finale.eyebrow': 'Wedding Planners · Couples · Organisers',
+      'weddings.finale.title':   "Let's build together<br><em>perfect logistics.</em>",
+      'weddings.finale.sub':     'Formalised partnership or one-off coordination — we adapt to your model, not the other way around.',
+      'weddings.finale.trust':   'B2B Partnership · Priority quote · Guaranteed discretion',
 
       /* ── ABOUT PAGE ──────────────────────────────────── */
       'about.hero.eyebrow':    'B.LIFTED France',
