@@ -94,7 +94,8 @@
     .wp-section__image--mob { display: none; }
 
     @media (max-width: 900px) {
-      .process-grid, .coord-grid { grid-template-columns:1fr 1fr; }
+      .process-grid { grid-template-columns:1fr 1fr; }
+      .coord-grid { grid-template-columns:1fr 1fr; }
       .wp-section__inner { grid-template-columns:1fr; gap:2.5rem; }
       .wedding-duo { grid-template-columns:1fr; height:auto; }
       .wedding-duo__item:last-child { display:none; }
@@ -103,22 +104,44 @@
       .mariage-finale__actions { justify-content:flex-start; }
       .mariage-finale__trust { text-align:left; }
 
-      /* Hero image: décalé vers la droite sur mobile */
-      .hero__bg img { object-position: right center; }
+      /* Hero image: extrême droite sur mobile */
+      .hero__bg img { object-position: 80% center; }
 
       /* Image mobile inside text div: show, original: hide */
       .wp-section__image--mob { display: block; border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 4/3; }
       .wp-section__image--mob img { width:100%; height:100%; object-fit:cover; }
       .wp-section__image--orig { display: none; }
     }
-    @media (max-width: 540px) {
+    @media (max-width: 760px) {
       .process-grid, .coord-grid { grid-template-columns:1fr; }
+      .coord-item { padding:var(--sp-5) var(--sp-6); }
       .process-step {
-        max-width: 320px;
+        max-width: 360px;
         margin-inline: auto;
         padding-left: 1.25rem;
         border-left: 2px solid var(--or);
       }
+    }
+
+    /* Lieux partenaires (under processus) */
+    .proc-venues { margin-top: var(--sp-12); padding-top: var(--sp-10); border-top: 1px solid var(--border-soft); display: flex; align-items: center; gap: var(--sp-8); flex-wrap: wrap; }
+    .proc-venues__label { font-size: var(--t-xs); letter-spacing: var(--ls-widest); text-transform: uppercase; color: var(--text-muted); flex-shrink: 0; }
+    .proc-venues__logos { display: flex; align-items: center; gap: var(--sp-8); flex-wrap: wrap; }
+    .proc-venues__logos img { height: 2.5rem; width: auto; object-fit: contain; opacity: 0.65; filter: grayscale(1); transition: opacity 0.3s, filter 0.3s; }
+    .proc-venues__logos img:hover { opacity: 1; filter: grayscale(0); }
+
+    /* Ils nous font confiance */
+    .trust-strip { padding-block: var(--sp-16); border-bottom: 1px solid var(--border-soft); }
+    .trust-strip__inner { display: flex; align-items: center; gap: var(--sp-10); justify-content: center; flex-wrap: wrap; }
+    .trust-strip__label { font-size: var(--t-xs); letter-spacing: var(--ls-widest); text-transform: uppercase; color: var(--text-muted); flex-shrink: 0; white-space: nowrap; }
+    .trust-strip__sep { width: 1px; height: 2rem; background: var(--border-soft); flex-shrink: 0; }
+    .trust-strip__logos { display: flex; align-items: center; gap: var(--sp-10); flex-wrap: wrap; justify-content: center; }
+    .trust-strip__logos img { height: 3rem; width: auto; object-fit: contain; opacity: 0.65; filter: grayscale(1); transition: opacity 0.3s, filter 0.3s; }
+    .trust-strip__logos img:hover { opacity: 1; filter: grayscale(0); }
+    @media (max-width: 640px) {
+      .proc-venues { flex-direction: column; align-items: flex-start; gap: var(--sp-5); }
+      .trust-strip__sep { display: none; }
+      .trust-strip__logos { gap: var(--sp-7); }
     }
   </style>
 </head>
@@ -158,8 +181,13 @@
     <a href="mariages.html" class="mobile-menu__link" data-i18n="nav.weddings">Mariages</a>
     <a href="a-propos.html" class="mobile-menu__link" data-i18n="nav.about">À propos</a>
   </nav>
-  <div class="mobile-menu__bottom">
-    <a href="contact.html" class="btn btn-primary"><span data-i18n="nav.entrust">Confier un déplacement</span> →</a>
+  <div class="mobile-menu__foot">
+    <div class="mobile-menu__cta">
+      <a href="contact.html" class="btn btn-primary"><span data-i18n="nav.entrust">Confier un déplacement</span> →</a>
+    </div>
+    <div class="mobile-menu__info">
+      <span>contact@bliftedfrance.com</span>
+    </div>
   </div>
 </div>
 
@@ -262,6 +290,28 @@
           <div class="process-step__num">03</div>
           <h3 class="process-step__title" data-i18n="weddings.proc3.title">Exécution le Jour J</h3>
           <p class="process-step__text" data-i18n="weddings.proc3.text">Ligne directe avec votre coordinatrice, gestion des imprévus en silence totale. Vous ne saurez jamais qu'il y a eu une contrainte — parce que nous l'avons absorbée avant qu'elle vous atteigne.</p>
+        </div>
+      </div>
+      <div class="proc-venues" data-reveal="up" data-delay="400">
+        <p class="proc-venues__label">Lieux partenaires</p>
+        <div class="proc-venues__logos">
+          <img src="assets/images/NLR.png" alt="Nainville les Roches" loading="lazy">
+          <img src="assets/images/CDA.png" alt="Château d'Averny" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ils nous font confiance -->
+  <section class="trust-strip">
+    <div class="container">
+      <div class="trust-strip__inner" data-reveal="up">
+        <p class="trust-strip__label">Ils nous font confiance</p>
+        <div class="trust-strip__sep" aria-hidden="true"></div>
+        <div class="trust-strip__logos">
+          <img src="assets/images/ABW.png" alt="Alexandra B Wedding" loading="lazy">
+          <img src="assets/images/DWE.png" alt="Dream Weddings Europe" loading="lazy">
+          <img src="assets/images/DPW.png" alt="Dream Paris Wedding" loading="lazy">
         </div>
       </div>
     </div>
