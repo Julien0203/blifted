@@ -79,6 +79,20 @@
       .territories__grid { grid-template-columns: 1fr !important; grid-template-rows: repeat(3, 260px) !important; }
     }
 
+    /* Process section header: centered block, left-aligned text, green left border */
+    .section-header--bordered {
+      text-align: left;
+      max-width: 560px;
+      margin-inline: auto;
+      padding-left: 1.5rem;
+      border-left: 2px solid var(--or);
+      margin-bottom: clamp(3rem, 6vw, 5rem);
+    }
+    .section-header--bordered .eyebrow { margin-bottom: var(--sp-3); }
+
+    /* Mobile image clones (show inside text, above CTA) */
+    .wp-section__image--mob { display: none; }
+
     @media (max-width: 900px) {
       .process-grid, .coord-grid { grid-template-columns:1fr 1fr; }
       .wp-section__inner { grid-template-columns:1fr; gap:2.5rem; }
@@ -88,6 +102,14 @@
       .mariage-finale__bar { flex-direction:column; align-items:flex-start; }
       .mariage-finale__actions { justify-content:flex-start; }
       .mariage-finale__trust { text-align:left; }
+
+      /* Hero image: décalé vers la droite sur mobile */
+      .hero__bg img { object-position: right center; }
+
+      /* Image mobile inside text div: show, original: hide */
+      .wp-section__image--mob { display: block; border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 4/3; }
+      .wp-section__image--mob img { width:100%; height:100%; object-fit:cover; }
+      .wp-section__image--orig { display: none; }
     }
     @media (max-width: 540px) {
       .process-grid, .coord-grid { grid-template-columns:1fr; }
@@ -215,7 +237,7 @@
   <!-- Processus -->
   <section class="section section--bg-alt" id="processus">
     <div class="container">
-      <div class="section-header section-header--center" data-stagger>
+      <div class="section-header section-header--bordered" data-stagger>
         <span class="eyebrow" data-reveal="fade" data-i18n="weddings.proc.eyebrow">Notre processus</span>
         <h2 class="section-title" data-reveal="up" data-i18n-html="weddings.proc.title">Comment nous <em>travaillons ensemble</em></h2>
       </div>
@@ -257,7 +279,7 @@
   <section class="wp-section">
     <div class="container">
       <div class="wp-section__inner">
-        <div class="wp-section__image" data-reveal="right">
+        <div class="wp-section__image wp-section__image--orig" data-reveal="right">
           <img src="assets/images/V%20interieur%20exterieur.png" alt="Mariage de luxe — couple à la réception" loading="lazy">
         </div>
         <div class="wp-section__text" data-reveal="left">
@@ -272,6 +294,9 @@
             <li class="wp-list__item" data-i18n="weddings.planners.li5">Présence sur Provence, French Riviera, Megève et Dubaï — un seul interlocuteur</li>
             <li class="wp-list__item" data-i18n="weddings.planners.li6">Discrétion totale vis-à-vis de vos clients finaux — aucune communication directe sans accord</li>
           </ul>
+          <div class="wp-section__image wp-section__image--mob" aria-hidden="true">
+            <img src="assets/images/V%20interieur%20exterieur.png" alt="" loading="lazy">
+          </div>
           <a href="contact.html?type=partenariat" class="btn btn-ghost" style="margin-top:var(--sp-4);"><span data-i18n="weddings.planners.cta">Initier un partenariat →</span></a>
         </div>
       </div>
@@ -293,9 +318,12 @@
             <li class="wp-list__item" data-i18n="weddings.meg.li4">Accueil en station, disponibilité 24h/24 tout au long du séjour</li>
             <li class="wp-list__item" data-i18n="weddings.meg.li5">Partenariat exclusif envisageable pour les WP positionnés sur Megève</li>
           </ul>
+          <div class="wp-section__image wp-section__image--mob" aria-hidden="true">
+            <img src="assets/images/mariage-alpin.png" alt="" loading="lazy">
+          </div>
           <a href="contact.html?type=partenariat&territoire=megeve" class="btn btn-ghost" style="margin-top:var(--sp-4);"><span data-i18n="weddings.meg.cta">Parler de Megève hiver →</span></a>
         </div>
-        <div class="wp-section__image" data-reveal="left">
+        <div class="wp-section__image wp-section__image--orig" data-reveal="left">
           <img src="assets/images/mariage-alpin.png" alt="Mariage alpin Megève — transport hiver" loading="lazy">
         </div>
       </div>
