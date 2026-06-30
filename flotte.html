@@ -94,11 +94,12 @@
     }
 
     /* ── Interior panels: white editorial layout ────────── */
-    .fs-panel--int {
+    .fs-panel.fs-panel--int {
       background: var(--ivoire, #FAFAF6);
       align-items: center;
       justify-content: center;
-      padding-block: calc(var(--header-h, 72px) + 3rem);
+      padding-top: calc(var(--header-h, 72px) + 3rem);
+      padding-bottom: calc(var(--header-h, 72px) + 3rem);
     }
     .fs-int-body {
       display: grid;
@@ -757,16 +758,24 @@
     dots.forEach((dot, i) => dot.classList.toggle('is-active', i === idx));
   }
 
-  // IntersectionObserver: switch bg when panel crosses the viewport midline
-  const panelObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        activateBg(parseInt(entry.target.dataset.img));
+  // Scroll-based bg switch: find the exterior panel closest to viewport center
+  function onScroll() {
+    const mid = window.innerHeight / 2;
+    let closest = currentIdx;
+    let minDist = Infinity;
+    panels.forEach(panel => {
+      const rect = panel.getBoundingClientRect();
+      const panelMid = (rect.top + rect.bottom) / 2;
+      const dist = Math.abs(panelMid - mid);
+      if (dist < minDist) {
+        minDist = dist;
+        closest = parseInt(panel.dataset.img);
       }
     });
-  }, { rootMargin: '-35% 0px -35% 0px', threshold: 0 });
+    activateBg(closest);
+  }
 
-  panels.forEach(p => panelObserver.observe(p));
+  window.addEventListener('scroll', onScroll, { passive: true });
 
   // Show / hide nav dots only while showroom is in view
   const showroomObserver = new IntersectionObserver((entries) => {
