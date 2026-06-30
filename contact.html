@@ -357,22 +357,22 @@
           <div class="c-step">
             <div class="c-step__num">1</div>
             <div>
-              <div class="c-step__title">Analyse personnelle</div>
-              <p class="c-step__text">Votre demande est lue et analysée personnellement. Chaque détail compte.</p>
+              <div class="c-step__title" data-i18n="contact.process.step1.title">Analyse personnelle</div>
+              <p class="c-step__text" data-i18n="contact.process.step1.text">Votre demande est lue et analysée personnellement. Chaque détail compte.</p>
             </div>
           </div>
           <div class="c-step">
             <div class="c-step__num">2</div>
             <div>
-              <div class="c-step__title">Rappel sous 24h</div>
-              <p class="c-step__text">Un échange direct pour affiner les paramètres. Pas de devis automatisé.</p>
+              <div class="c-step__title" data-i18n="contact.process.step2.title">Rappel sous 24h</div>
+              <p class="c-step__text" data-i18n="contact.process.step2.text">Un échange direct pour affiner les paramètres. Pas de devis automatisé.</p>
             </div>
           </div>
           <div class="c-step">
             <div class="c-step__num">3</div>
             <div>
-              <div class="c-step__title">Confirmation ou refus motivé</div>
-              <p class="c-step__text">La mission est confirmée — ou refusée si le niveau d'exigence ne peut être garanti.</p>
+              <div class="c-step__title" data-i18n="contact.process.step3.title">Confirmation ou refus motivé</div>
+              <p class="c-step__text" data-i18n="contact.process.step3.text">La mission est confirmée — ou refusée si le niveau d'exigence ne peut être garanti.</p>
             </div>
           </div>
         </div>
@@ -381,26 +381,26 @@
       <!-- Droite : formulaire -->
       <div data-reveal="left">
         <div class="c-form-wrap">
-          <div class="c-form-wrap__title">Votre demande</div>
-          <div class="c-form-wrap__sub">Décrivez votre déplacement — nous revenons vers vous personnellement.</div>
+          <div class="c-form-wrap__title" data-i18n="contact.form.title">Votre demande</div>
+          <div class="c-form-wrap__sub" data-i18n="contact.form.sub">Décrivez votre déplacement — nous revenons vers vous personnellement.</div>
 
           <!-- ⚠️ Formspree : remplace YOUR_FORMSPREE_ID par ton ID (formspree.io → New Form) -->
           <form id="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" novalidate>
 
-            <label class="c-label">Type de mission</label>
+            <label class="c-label" data-i18n="contact.form.label.mission">Type de mission</label>
             <div class="c-chips" id="c-chips">
-              <span class="c-chip" data-val="transfert">Transfert aéroport</span>
-              <span class="c-chip" data-val="disposition">Mise à disposition</span>
-              <span class="c-chip" data-val="mariage">Mariage</span>
-              <span class="c-chip" data-val="evenement">Événement</span>
-              <span class="c-chip" data-val="sejour">Séjour VIP</span>
-              <span class="c-chip" data-val="autre">Autre</span>
+              <span class="c-chip" data-val="transfert" data-i18n="contact.form.chip.transfer">Transfert aéroport</span>
+              <span class="c-chip" data-val="disposition" data-i18n="contact.form.chip.disposal">Mise à disposition</span>
+              <span class="c-chip" data-val="mariage" data-i18n="contact.form.chip.wedding">Mariage</span>
+              <span class="c-chip" data-val="evenement" data-i18n="contact.form.chip.event">Événement</span>
+              <span class="c-chip" data-val="sejour" data-i18n="contact.form.chip.stay">Séjour VIP</span>
+              <span class="c-chip" data-val="autre" data-i18n="contact.form.chip.other">Autre</span>
             </div>
             <input type="hidden" name="mission" id="f-mission">
 
             <div class="c-row">
               <div>
-                <label class="c-label" for="f-territoire">Territoire</label>
+                <label class="c-label" for="f-territoire" data-i18n="contact.form.label.territory">Territoire</label>
                 <select class="c-select" id="f-territoire" name="territoire">
                   <option value="" disabled selected>Sélectionner</option>
                   <option value="provence">Provence</option>
@@ -411,40 +411,40 @@
                 </select>
               </div>
               <div>
-                <label class="c-label" for="f-date">Date souhaitée</label>
+                <label class="c-label" for="f-date" data-i18n="contact.form.label.date">Date souhaitée</label>
                 <input class="c-input" type="date" id="f-date" name="date">
               </div>
             </div>
 
             <div class="c-row">
               <div>
-                <label class="c-label" for="f-prenom">Prénom</label>
-                <input class="c-input" type="text" id="f-prenom" name="prenom" placeholder="Votre prénom" required autocomplete="given-name">
+                <label class="c-label" for="f-prenom" data-i18n="contact.form.label.firstname">Prénom</label>
+                <input class="c-input" type="text" id="f-prenom" name="prenom" data-i18n-placeholder="contact.form.placeholder.firstname" placeholder="Votre prénom" required autocomplete="given-name">
               </div>
               <div>
-                <label class="c-label" for="f-nom">Nom</label>
-                <input class="c-input" type="text" id="f-nom" name="nom" placeholder="Votre nom" required autocomplete="family-name">
+                <label class="c-label" for="f-nom" data-i18n="contact.form.label.lastname">Nom</label>
+                <input class="c-input" type="text" id="f-nom" name="nom" data-i18n-placeholder="contact.form.placeholder.lastname" placeholder="Votre nom" required autocomplete="family-name">
               </div>
             </div>
 
             <div class="c-row">
               <div>
-                <label class="c-label" for="f-email">Email</label>
+                <label class="c-label" for="f-email" data-i18n="contact.form.label.email">Email</label>
                 <input class="c-input" type="email" id="f-email" name="email" placeholder="votre@email.com" required autocomplete="email">
               </div>
               <div>
-                <label class="c-label" for="f-tel">Téléphone</label>
+                <label class="c-label" for="f-tel" data-i18n="contact.form.label.phone">Téléphone</label>
                 <input class="c-input" type="tel" id="f-tel" name="tel" placeholder="+33 6 00 00 00 00" autocomplete="tel">
               </div>
             </div>
 
-            <label class="c-label" for="f-contexte">Contexte du déplacement</label>
-            <textarea class="c-textarea" id="f-contexte" name="contexte" placeholder="Lieu de départ, destination, contraintes, nombre de personnes, enjeu particulier…"></textarea>
+            <label class="c-label" for="f-contexte" data-i18n="contact.form.label.context">Contexte du déplacement</label>
+            <textarea class="c-textarea" id="f-contexte" name="contexte" data-i18n-placeholder="contact.form.placeholder.context" placeholder="Lieu de départ, destination, contraintes, nombre de personnes, enjeu particulier…"></textarea>
 
             <div class="c-foot">
-              <p class="c-foot__note">Réponse personnelle<br>sous 24h ouvrées</p>
+              <p class="c-foot__note" data-i18n-html="contact.form.note">Réponse personnelle<br>sous 24h ouvrées</p>
               <button type="submit" class="btn btn-primary">
-                Envoyer la demande <span class="btn-arrow">→</span>
+                <span data-i18n="contact.form.submit">Envoyer la demande</span> <span class="btn-arrow">→</span>
               </button>
             </div>
 
@@ -456,11 +456,11 @@
                 <path d="M5 12l5 5L20 7"/>
               </svg>
             </div>
-            <div class="c-success__title">Demande reçue</div>
-            <p class="c-success__text">Nous avons bien reçu votre demande et vous rappellerons personnellement sous 24h.</p>
+            <div class="c-success__title" data-i18n="contact.success.title">Demande reçue</div>
+            <p class="c-success__text" data-i18n="contact.success.text">Nous avons bien reçu votre demande et vous rappellerons personnellement sous 24h.</p>
             <div style="display:flex;gap:var(--sp-4);flex-wrap:wrap;justify-content:center;">
-              <a href="tel:+33636017235" class="btn btn-primary">Appeler directement</a>
-              <a href="index.html" class="btn btn-secondary">Retour à l'accueil</a>
+              <a href="tel:+33636017235" class="btn btn-primary" data-i18n="contact.success.cta.call">Appeler directement</a>
+              <a href="index.html" class="btn btn-secondary" data-i18n="contact.success.cta.home">Retour à l'accueil</a>
             </div>
           </div>
 
