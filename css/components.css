@@ -1225,6 +1225,10 @@ body:has(.page-hero) .header:not(.is-scrolled) .header__logo .logo-noir  { displ
   .sim-contact-form__field:last-child { grid-column: auto; }
 }
 
+@media (max-width: 768px) {
+  /* Extra padding so WhatsApp float button doesn't overlap "Continuer" */
+  .simulator { padding-bottom: 5rem; }
+}
 @media (max-width: 600px) {
   .simulator__options { grid-template-columns: 1fr; gap: var(--sp-3); }
   .sim-option { padding: var(--sp-4); }

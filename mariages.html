@@ -116,9 +116,7 @@
       .process-grid, .coord-grid { grid-template-columns:1fr; }
       .coord-item { padding:var(--sp-5) var(--sp-6); }
       .process-step {
-        max-width: 360px;
-        margin-inline: auto;
-        padding-left: 1.25rem;
+        padding-left: 1.5rem;
         border-left: 2px solid var(--or);
       }
     }
@@ -130,18 +128,17 @@
     .proc-venues__logos img { height: 2.5rem; width: auto; object-fit: contain; opacity: 0.65; filter: grayscale(1); transition: opacity 0.3s, filter 0.3s; }
     .proc-venues__logos img:hover { opacity: 1; filter: grayscale(0); }
 
-    /* Ils nous font confiance */
-    .trust-strip { padding-block: var(--sp-16); border-bottom: 1px solid var(--border-soft); }
-    .trust-strip__inner { display: flex; align-items: center; gap: var(--sp-10); justify-content: center; flex-wrap: wrap; }
-    .trust-strip__label { font-size: var(--t-xs); letter-spacing: var(--ls-widest); text-transform: uppercase; color: var(--text-muted); flex-shrink: 0; white-space: nowrap; }
-    .trust-strip__sep { width: 1px; height: 2rem; background: var(--border-soft); flex-shrink: 0; }
-    .trust-strip__logos { display: flex; align-items: center; gap: var(--sp-10); flex-wrap: wrap; justify-content: center; }
-    .trust-strip__logos img { height: 3rem; width: auto; object-fit: contain; opacity: 0.65; filter: grayscale(1); transition: opacity 0.3s, filter 0.3s; }
-    .trust-strip__logos img:hover { opacity: 1; filter: grayscale(0); }
+    /* Auto-scroll partenaires marquee */
+    .partners-marquee { background: var(--blanc); padding-block: var(--sp-12); overflow: hidden; border-top: 1px solid var(--border-soft); border-bottom: 1px solid var(--border-soft); }
+    .partners-marquee__label { text-align: center; font-size: var(--t-xs); letter-spacing: var(--ls-widest); text-transform: uppercase; color: var(--text-muted); margin-bottom: var(--sp-8); }
+    .partners-marquee__track { overflow: hidden; }
+    .partners-marquee__inner { display: flex; align-items: center; gap: clamp(3rem, 8vw, 6rem); width: max-content; animation: marquee 22s linear infinite; }
+    .partners-marquee__inner img { height: 3.5rem; width: auto; object-fit: contain; opacity: 0.55; filter: grayscale(1); flex-shrink: 0; transition: opacity 0.3s, filter 0.3s; }
+    .partners-marquee__inner img:hover { opacity: 0.9; filter: grayscale(0); }
     @media (max-width: 640px) {
       .proc-venues { flex-direction: column; align-items: flex-start; gap: var(--sp-5); }
-      .trust-strip__sep { display: none; }
-      .trust-strip__logos { gap: var(--sp-7); }
+      .partners-marquee__inner { gap: 2.5rem; }
+      .partners-marquee__inner img { height: 2.5rem; }
     }
   </style>
 </head>
@@ -302,21 +299,6 @@
     </div>
   </section>
 
-  <!-- Ils nous font confiance -->
-  <section class="trust-strip">
-    <div class="container">
-      <div class="trust-strip__inner" data-reveal="up">
-        <p class="trust-strip__label">Ils nous font confiance</p>
-        <div class="trust-strip__sep" aria-hidden="true"></div>
-        <div class="trust-strip__logos">
-          <img src="assets/images/ABW.png" alt="Alexandra B Wedding" loading="lazy">
-          <img src="assets/images/DWE.png" alt="Dream Weddings Europe" loading="lazy">
-          <img src="assets/images/DPW.png" alt="Dream Paris Wedding" loading="lazy">
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Galerie 2 photos -->
   <section class="section">
     <div class="container">
@@ -355,6 +337,21 @@
           </div>
           <a href="contact.html?type=partenariat" class="btn btn-ghost" style="margin-top:var(--sp-4);"><span data-i18n="weddings.planners.cta">Initier un partenariat →</span></a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partenaires — défilement automatique -->
+  <section class="partners-marquee" aria-label="Ils nous font confiance">
+    <p class="partners-marquee__label">Ils nous font confiance</p>
+    <div class="partners-marquee__track">
+      <div class="partners-marquee__inner">
+        <img src="assets/images/ABW.png" alt="Alexandra B Wedding" loading="lazy">
+        <img src="assets/images/DWE.png" alt="Dream Weddings Europe" loading="lazy">
+        <img src="assets/images/DPW.png" alt="Dream Paris Wedding" loading="lazy">
+        <img src="assets/images/ABW.png" alt="" aria-hidden="true" loading="lazy">
+        <img src="assets/images/DWE.png" alt="" aria-hidden="true" loading="lazy">
+        <img src="assets/images/DPW.png" alt="" aria-hidden="true" loading="lazy">
       </div>
     </div>
   </section>
