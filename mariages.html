@@ -113,6 +113,12 @@
     }
     @media (max-width: 540px) {
       .process-grid, .coord-grid { grid-template-columns:1fr; }
+      .process-step {
+        max-width: 320px;
+        margin-inline: auto;
+        padding-left: 1.25rem;
+        border-left: 2px solid var(--or);
+      }
     }
   </style>
 </head>
@@ -237,7 +243,7 @@
   <!-- Processus -->
   <section class="section section--bg-alt" id="processus">
     <div class="container">
-      <div class="section-header section-header--bordered" data-stagger>
+      <div class="section-header section-header--center" data-stagger>
         <span class="eyebrow" data-reveal="fade" data-i18n="weddings.proc.eyebrow">Notre processus</span>
         <h2 class="section-title" data-reveal="up" data-i18n-html="weddings.proc.title">Comment nous <em>travaillons ensemble</em></h2>
       </div>
