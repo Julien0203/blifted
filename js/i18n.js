@@ -68,6 +68,10 @@
       'home.stats.experience':   "Années d'expérience",
       'home.stats.availability': 'Disponibilité totale',
 
+      /* ── HOME — GALLERY ──────────────────────────────── */
+      'home.gallery.eyebrow':    'Galerie',
+      'home.gallery.title':      'L\'élégance <em>en images</em>',
+
       /* ── HOME — SERVICES ─────────────────────────────── */
       'home.services.eyebrow':   'Nos prestations',
       'home.services.title':     'Ce que nous <em>coordonnons</em>',
@@ -717,6 +721,10 @@
       'home.stats.satisfaction': 'Satisfaction rate',
       'home.stats.experience':   'Years of experience',
       'home.stats.availability': 'Total availability',
+
+      /* ── HOME — GALLERY ──────────────────────────────── */
+      'home.gallery.eyebrow':    'Gallery',
+      'home.gallery.title':      'Elegance <em>in images</em>',
 
       /* ── HOME — SERVICES ─────────────────────────────── */
       'home.services.eyebrow':   'Our services',

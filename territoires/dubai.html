@@ -86,19 +86,21 @@
       display: inline-flex;
       align-items: center;
       gap: .5rem;
-      padding: .45rem 1rem;
-      background: rgba(184,151,90,.15);
-      border: 1px solid rgba(184,151,90,.4);
+      padding: .45rem 1.1rem;
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.45);
       border-radius: 2rem;
       font-family: var(--font-sans);
       font-size: .75rem;
       letter-spacing: .06em;
-      color: var(--or);
+      color: rgba(255,255,255,0.95);
       text-transform: uppercase;
+      backdrop-filter: blur(6px);
     }
     .territory-badge::before {
       content: '✦';
-      font-size: .6rem;
+      font-size: .55rem;
+      opacity: 0.7;
     }
 
     /* ── Zones grid ── */
@@ -434,7 +436,7 @@
 
         <div class="zones-grid stagger-children">
           <div class="zone-card" data-reveal="up">
-            <span class="zone-card__icon">✦</span>
+
             <h3 class="zone-card__name" data-i18n="dubai.z1.title">Aéroport DXB</h3>
             <p class="zone-card__desc" data-i18n="dubai.z1.desc">
               Terminal 1, 2 & 3. Accueil en zone d'arrivée, pancarte nominative, suivi de vol en temps réel.
@@ -444,7 +446,7 @@
           </div>
 
           <div class="zone-card" data-reveal="up">
-            <span class="zone-card__icon">✦</span>
+
             <h3 class="zone-card__name" data-i18n="dubai.z2.title">Aéroport DWC</h3>
             <p class="zone-card__desc" data-i18n="dubai.z2.desc">
               Al Maktoum International. Service identique sur le second hub dubaiote, de plus en plus
@@ -454,7 +456,7 @@
           </div>
 
           <div class="zone-card" data-reveal="up">
-            <span class="zone-card__icon">✦</span>
+
             <h3 class="zone-card__name" data-i18n="dubai.z3.title">Palm Jumeirah</h3>
             <p class="zone-card__desc" data-i18n="dubai.z3.desc">
               Hôtels Atlantis, One & Only, Waldorf Astoria. Transferts discrets depuis et vers les
@@ -464,7 +466,7 @@
           </div>
 
           <div class="zone-card" data-reveal="up">
-            <span class="zone-card__icon">✦</span>
+
             <h3 class="zone-card__name" data-i18n="dubai.z4.title">Downtown & Burj Khalifa</h3>
             <p class="zone-card__desc" data-i18n="dubai.z4.desc">
               Hôtels Address, Armani, Four Seasons DIFC. Dépose et prise en charge aux entrées
@@ -474,7 +476,7 @@
           </div>
 
           <div class="zone-card" data-reveal="up">
-            <span class="zone-card__icon">✦</span>
+
             <h3 class="zone-card__name" data-i18n="dubai.z5.title">DIFC & Business Bay</h3>
             <p class="zone-card__desc" data-i18n="dubai.z5.desc">
               Centre financier international, tours de bureaux, Gate Village.
@@ -484,7 +486,7 @@
           </div>
 
           <div class="zone-card" data-reveal="up">
-            <span class="zone-card__icon">✦</span>
+
             <h3 class="zone-card__name" data-i18n="dubai.z6.title">Marina & JBR</h3>
             <p class="zone-card__desc" data-i18n="dubai.z6.desc">
               Intercontinental, W Dubai, Sofitel Jumeirah Beach. Transferts en soirée,
