@@ -1552,11 +1552,47 @@ body:has(.page-hero) .header:not(.is-scrolled) .header__logo .logo-noir  { displ
   padding-block: var(--section-py) var(--section-py-sm);
 }
 
-.testimonials__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--sp-6);
+.testimonials__carousel {
+  position: relative;
+  margin-top: var(--sp-10);
 }
+.testimonials__grid {
+  display: flex;
+  gap: var(--sp-6);
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-bottom: 4px;
+}
+.testimonials__grid::-webkit-scrollbar { display: none; }
+
+.testimonials__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: var(--blanc);
+  border: 1px solid var(--or-border);
+  color: var(--text);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+}
+.testimonials__arrow:hover {
+  background: var(--or);
+  color: var(--blanc);
+  border-color: var(--or);
+}
+.testimonials__arrow--prev { left: -22px; }
+.testimonials__arrow--next { right: -22px; }
 
 .testimonial-card {
   background: var(--bg-card);
@@ -1567,6 +1603,10 @@ body:has(.page-hero) .header:not(.is-scrolled) .header__logo .logo-noir  { displ
   flex-direction: column;
   gap: var(--sp-6);
   transition: transform var(--dur) var(--ease-out), box-shadow var(--dur) var(--ease);
+  flex: 0 0 calc(33.33vw - 3rem);
+  width: calc(33.33vw - 3rem);
+  max-width: 420px;
+  scroll-snap-align: start;
 }
 .testimonial-card:hover {
   transform: translateY(-3px);
@@ -1624,10 +1664,11 @@ body:has(.page-hero) .header:not(.is-scrolled) .header__logo .logo-noir  { displ
 }
 
 @media (max-width: 900px) {
-  .testimonials__grid { grid-template-columns: 1fr; }
+  .testimonial-card { flex: 0 0 calc(100vw - 4rem); width: calc(100vw - 4rem); max-width: 480px; }
+  .testimonials__arrow { display: none; }
 }
 @media (min-width: 600px) and (max-width: 900px) {
-  .testimonials__grid { grid-template-columns: repeat(2, 1fr); }
+  .testimonial-card { flex: 0 0 calc(50vw - 2rem); width: calc(50vw - 2rem); }
 }
 
 

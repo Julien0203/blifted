@@ -148,7 +148,7 @@
   <!-- Fond image plein écran -->
   <div class="hero__bg" aria-hidden="true">
     <img
-      src="assets/images/9900.png"
+      src="assets/images/9901.png"
       alt=""
       loading="eager"
       fetchpriority="high"
@@ -814,151 +814,135 @@
       </h2>
     </div>
 
-    <div class="testimonials__grid">
+    <div class="testimonials__carousel" data-reveal="up">
+      <button class="testimonials__arrow testimonials__arrow--prev" id="testPrev" aria-label="Avis précédent">‹</button>
+      <div class="testimonials__grid" id="testimonialsTrack">
 
-      <div class="testimonial-card" data-reveal="up" data-delay="0">
-        <div class="testimonial-card__stars" aria-label="5 étoiles">★★★★★</div>
-        <p class="testimonial-card__quote" data-i18n="home.test1.quote">
-          "J'ai vécu une expérience exceptionnelle avec Sarah lors de mon séjour à Marseille en septembre et je ferai sans aucun doute appel à ses services lors de mon prochain voyage ! Elle s'est assurée que tous les détails de mon séjour soient parfaitement organisés et m'a rassurée après un très long vol. Elle est aimable, avenante, ponctuelle, professionnelle et connaît parfaitement la région."
-        </p>
-        <div class="testimonial-card__author">
-          <div class="testimonial-card__avatar" aria-hidden="true">C</div>
-          <div>
-            <span class="testimonial-card__name" data-i18n="home.test1.name">Christina</span>
-            <span class="testimonial-card__role" data-i18n="home.test1.role">Marseille</span>
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars" aria-label="5 étoiles">★★★★★</div>
+          <p class="testimonial-card__quote" data-i18n="home.test1.quote">"J'ai vécu une expérience exceptionnelle avec Sarah lors de mon séjour à Marseille en septembre et je ferai sans aucun doute appel à ses services lors de mon prochain voyage ! Elle s'est assurée que tous les détails de mon séjour soient parfaitement organisés et m'a rassurée après un très long vol. Elle est aimable, avenante, ponctuelle, professionnelle et connaît parfaitement la région."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar" aria-hidden="true">C</div>
+            <div><span class="testimonial-card__name" data-i18n="home.test1.name">Christina</span><span class="testimonial-card__role" data-i18n="home.test1.role">Marseille</span></div>
           </div>
         </div>
-      </div>
 
-      <div class="testimonial-card" data-reveal="up" data-delay="50">
-        <div class="testimonial-card__stars" aria-label="5 étoiles">★★★★★</div>
-        <p class="testimonial-card__quote" data-i18n="home.test2.quote">
-          "Très satisfait de la qualité du service. Trajet de Orange vers Avignon, très tard, dans la nuit. Chauffeur ponctuel, souriant et agréable, qui a attendu de nous voir rentrer à l'hôtel avant de repartir. Tarif plus que correct. Nous referons appel à leurs services. Je recommande !"
-        </p>
-        <div class="testimonial-card__author">
-          <div class="testimonial-card__avatar" aria-hidden="true">S</div>
-          <div>
-            <span class="testimonial-card__name" data-i18n="home.test2.name">Sourya</span>
-            <span class="testimonial-card__role" data-i18n="home.test2.role">Orange → Avignon</span>
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars" aria-label="5 étoiles">★★★★★</div>
+          <p class="testimonial-card__quote" data-i18n="home.test2.quote">"Très satisfait de la qualité du service. Trajet de Orange vers Avignon, très tard, dans la nuit. Chauffeur ponctuel, souriant et agréable, qui a attendu de nous voir rentrer à l'hôtel avant de repartir. Tarif plus que correct. Nous referons appel à leurs services. Je recommande !"</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar" aria-hidden="true">S</div>
+            <div><span class="testimonial-card__name" data-i18n="home.test2.name">Sourya</span><span class="testimonial-card__role" data-i18n="home.test2.role">Orange → Avignon</span></div>
           </div>
         </div>
-      </div>
 
-      <div class="testimonial-card" data-reveal="up" data-delay="100">
-        <div class="testimonial-card__stars" aria-label="5 étoiles">★★★★★</div>
-        <p class="testimonial-card__quote" data-i18n="home.test3.quote">
-          "Trajet Avignon TGV vers Maussane à 23h30. Service professionnel, Sarah est super ponctuelle et vous informe avant l'arrivée du train qu'elle est à la gare et qu'elle vous attend : rassurant ! Non moins attentionnée avec le client (bagage, porte ouverte…) et particulièrement agréable de discuter sur le trajet. Conduite sécurisée. Je recommande à 200%."
-        </p>
-        <div class="testimonial-card__author">
-          <div class="testimonial-card__avatar" aria-hidden="true">F</div>
-          <div>
-            <span class="testimonial-card__name" data-i18n="home.test3.name">Frédéric</span>
-            <span class="testimonial-card__role" data-i18n="home.test3.role">Avignon TGV → Maussane</span>
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars" aria-label="5 étoiles">★★★★★</div>
+          <p class="testimonial-card__quote" data-i18n="home.test3.quote">"Trajet Avignon TGV vers Maussane à 23h30. Service professionnel, Sarah est super ponctuelle et vous informe avant l'arrivée du train qu'elle est à la gare et qu'elle vous attend : rassurant ! Non moins attentionnée avec le client (bagage, porte ouverte…) et particulièrement agréable de discuter sur le trajet. Conduite sécurisée. Je recommande à 200%."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar" aria-hidden="true">F</div>
+            <div><span class="testimonial-card__name" data-i18n="home.test3.name">Frédéric</span><span class="testimonial-card__role" data-i18n="home.test3.role">Avignon TGV → Maussane</span></div>
           </div>
         </div>
-      </div>
 
-      <div class="testimonial-card" data-reveal="up" data-delay="150">
-        <div class="testimonial-card__stars" aria-label="5 étoiles">★★★★★</div>
-        <p class="testimonial-card__quote" data-i18n="home.test4.quote">
-          "Professionnelle de la route, élégante et chic, c'est important ce respect du client. Je la recommande pour son accueil, sa serviabilité, sa ponctualité et son sérieux. Une voiture impeccable et une excellente conduite, merci Sarah pour votre compagnie le temps d'un trajet d'Avignon TGV à notre lieu de résidence."
-        </p>
-        <div class="testimonial-card__author">
-          <div class="testimonial-card__avatar" aria-hidden="true">F</div>
-          <div>
-            <span class="testimonial-card__name" data-i18n="home.test4.name">Fran</span>
-            <span class="testimonial-card__role" data-i18n="home.test4.role">Avignon TGV</span>
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars" aria-label="5 étoiles">★★★★★</div>
+          <p class="testimonial-card__quote" data-i18n="home.test4.quote">"Professionnelle de la route, élégante et chic, c'est important ce respect du client. Je la recommande pour son accueil, sa serviabilité, sa ponctualité et son sérieux. Une voiture impeccable et une excellente conduite, merci Sarah pour votre compagnie le temps d'un trajet d'Avignon TGV à notre lieu de résidence."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar" aria-hidden="true">F</div>
+            <div><span class="testimonial-card__name" data-i18n="home.test4.name">Fran</span><span class="testimonial-card__role" data-i18n="home.test4.role">Avignon TGV</span></div>
           </div>
         </div>
-      </div>
 
-      <div class="testimonial-card" data-reveal="up" data-delay="200">
-        <div class="testimonial-card__stars" aria-label="5 étoiles">★★★★★</div>
-        <p class="testimonial-card__quote" data-i18n="home.test5.quote">
-          "Souriante et très professionnelle. L'idéal pour voyager sur Avignon et ses environs, sereinement et en toute sécurité ! Je recommande absolument."
-        </p>
-        <div class="testimonial-card__author">
-          <div class="testimonial-card__avatar" aria-hidden="true">S</div>
-          <div>
-            <span class="testimonial-card__name" data-i18n="home.test5.name">Suheda</span>
-            <span class="testimonial-card__role" data-i18n="home.test5.role">Avignon & environs</span>
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars" aria-label="5 étoiles">★★★★★</div>
+          <p class="testimonial-card__quote" data-i18n="home.test5.quote">"Souriante et très professionnelle. L'idéal pour voyager sur Avignon et ses environs, sereinement et en toute sécurité ! Je recommande absolument."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar" aria-hidden="true">S</div>
+            <div><span class="testimonial-card__name" data-i18n="home.test5.name">Suheda</span><span class="testimonial-card__role" data-i18n="home.test5.role">Avignon & environs</span></div>
           </div>
         </div>
-      </div>
 
-      <div class="testimonial-card" data-reveal="up" data-delay="250">
-        <div class="testimonial-card__stars" aria-label="5 étoiles">★★★★★</div>
-        <p class="testimonial-card__quote" data-i18n="home.test6.quote">
-          "Excellent taxi sur Avignon, je recommande vivement ! À l'écoute, ponctuelle et très agréable !"
-        </p>
-        <div class="testimonial-card__author">
-          <div class="testimonial-card__avatar" aria-hidden="true">M</div>
-          <div>
-            <span class="testimonial-card__name" data-i18n="home.test6.name">Margot</span>
-            <span class="testimonial-card__role" data-i18n="home.test6.role">Avignon</span>
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars" aria-label="5 étoiles">★★★★★</div>
+          <p class="testimonial-card__quote" data-i18n="home.test6.quote">"Excellent taxi sur Avignon, je recommande vivement ! À l'écoute, ponctuelle et très agréable !"</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar" aria-hidden="true">M</div>
+            <div><span class="testimonial-card__name" data-i18n="home.test6.name">Margot</span><span class="testimonial-card__role" data-i18n="home.test6.role">Avignon</span></div>
           </div>
         </div>
-      </div>
 
-      <div class="testimonial-card" data-reveal="up" data-delay="300">
-        <div class="testimonial-card__stars" aria-label="5 étoiles">★★★★★</div>
-        <p class="testimonial-card__quote" data-i18n="home.test7.quote">
-          "Service très professionnel ! J'ai utilisé ce service dans le cadre de mon travail et pour utilisation personnelle. Sarah offre un service ponctuel et professionnel. Je le conseille vivement."
-        </p>
-        <div class="testimonial-card__author">
-          <div class="testimonial-card__avatar" aria-hidden="true">G</div>
-          <div>
-            <span class="testimonial-card__name" data-i18n="home.test7.name">Grazia</span>
-            <span class="testimonial-card__role" data-i18n="home.test7.role">Provence</span>
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars" aria-label="5 étoiles">★★★★★</div>
+          <p class="testimonial-card__quote" data-i18n="home.test7.quote">"Service très professionnel ! J'ai utilisé ce service dans le cadre de mon travail et pour utilisation personnelle. Sarah offre un service ponctuel et professionnel. Je le conseille vivement."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar" aria-hidden="true">G</div>
+            <div><span class="testimonial-card__name" data-i18n="home.test7.name">Grazia</span><span class="testimonial-card__role" data-i18n="home.test7.role">Provence</span></div>
           </div>
         </div>
-      </div>
 
-      <div class="testimonial-card" data-reveal="up" data-delay="350">
-        <div class="testimonial-card__stars" aria-label="5 étoiles">★★★★★</div>
-        <p class="testimonial-card__quote" data-i18n="home.test8.quote">
-          "Super service. Je recommande chaleureusement. Très professionnelle."
-        </p>
-        <div class="testimonial-card__author">
-          <div class="testimonial-card__avatar" aria-hidden="true">B</div>
-          <div>
-            <span class="testimonial-card__name" data-i18n="home.test8.name">Benoit</span>
-            <span class="testimonial-card__role" data-i18n="home.test8.role">Provence</span>
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars" aria-label="5 étoiles">★★★★★</div>
+          <p class="testimonial-card__quote" data-i18n="home.test8.quote">"Super service. Je recommande chaleureusement. Très professionnelle."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar" aria-hidden="true">B</div>
+            <div><span class="testimonial-card__name" data-i18n="home.test8.name">Benoit</span><span class="testimonial-card__role" data-i18n="home.test8.role">Provence</span></div>
           </div>
         </div>
-      </div>
 
-      <div class="testimonial-card" data-reveal="up" data-delay="400">
-        <div class="testimonial-card__stars" aria-label="5 étoiles">★★★★★</div>
-        <p class="testimonial-card__quote" data-i18n="home.test9.quote">
-          "Super trajet ! Merci beaucoup pour l'efficacité !"
-        </p>
-        <div class="testimonial-card__author">
-          <div class="testimonial-card__avatar" aria-hidden="true">M</div>
-          <div>
-            <span class="testimonial-card__name" data-i18n="home.test9.name">Marie</span>
-            <span class="testimonial-card__role" data-i18n="home.test9.role">Provence</span>
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars" aria-label="5 étoiles">★★★★★</div>
+          <p class="testimonial-card__quote" data-i18n="home.test9.quote">"Super trajet ! Merci beaucoup pour l'efficacité !"</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar" aria-hidden="true">M</div>
+            <div><span class="testimonial-card__name" data-i18n="home.test9.name">Marie</span><span class="testimonial-card__role" data-i18n="home.test9.role">Provence</span></div>
           </div>
         </div>
-      </div>
 
-      <div class="testimonial-card" data-reveal="up" data-delay="450">
-        <div class="testimonial-card__stars" aria-label="5 étoiles">★★★★★</div>
-        <p class="testimonial-card__quote" data-i18n="home.test10.quote">
-          "Personne charmante et fiable, très ponctuelle."
-        </p>
-        <div class="testimonial-card__author">
-          <div class="testimonial-card__avatar" aria-hidden="true">I</div>
-          <div>
-            <span class="testimonial-card__name" data-i18n="home.test10.name">Isabelle</span>
-            <span class="testimonial-card__role" data-i18n="home.test10.role">Provence</span>
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars" aria-label="5 étoiles">★★★★★</div>
+          <p class="testimonial-card__quote" data-i18n="home.test10.quote">"Personne charmante et fiable, très ponctuelle."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar" aria-hidden="true">I</div>
+            <div><span class="testimonial-card__name" data-i18n="home.test10.name">Isabelle</span><span class="testimonial-card__role" data-i18n="home.test10.role">Provence</span></div>
           </div>
         </div>
-      </div>
 
+      </div>
+      <button class="testimonials__arrow testimonials__arrow--next" id="testNext" aria-label="Avis suivant">›</button>
     </div>
   </div>
 </section>
+<script>
+(function() {
+  var track = document.getElementById('testimonialsTrack');
+  var prev  = document.getElementById('testPrev');
+  var next  = document.getElementById('testNext');
+  if (!track) return;
+
+  function cardWidth() {
+    var card = track.querySelector('.testimonial-card');
+    return card ? card.offsetWidth + 24 : 320;
+  }
+  function scrollBy(dir) {
+    var max = track.scrollWidth - track.clientWidth;
+    var target = track.scrollLeft + cardWidth() * dir;
+    if (target > max) target = 0;
+    if (target < 0)   target = max;
+    track.scrollTo({ left: target, behavior: 'smooth' });
+  }
+
+  if (prev) prev.addEventListener('click', function() { clearInterval(auto); scrollBy(-1); resetAuto(); });
+  if (next) next.addEventListener('click', function() { clearInterval(auto); scrollBy(1);  resetAuto(); });
+
+  track.addEventListener('mouseenter', function() { clearInterval(auto); });
+  track.addEventListener('mouseleave', resetAuto);
+
+  var auto;
+  function resetAuto() { clearInterval(auto); auto = setInterval(function() { scrollBy(1); }, 4500); }
+  resetAuto();
+})();
+</script>
 
 
 <!-- ════════════════════════════════════════════════════════
