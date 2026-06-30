@@ -920,26 +920,38 @@
   var next  = document.getElementById('testNext');
   if (!track) return;
 
-  function cardWidth() {
-    var card = track.querySelector('.testimonial-card');
-    return card ? card.offsetWidth + 24 : 320;
+  var GAP = 24;
+
+  function setWidths() {
+    var visible = window.innerWidth >= 900 ? 3 : 1;
+    var w = Math.floor((track.clientWidth - GAP * (visible - 1)) / visible);
+    track.querySelectorAll('.testimonial-card').forEach(function(c) {
+      c.style.flex = '0 0 ' + w + 'px';
+      c.style.width = w + 'px';
+    });
   }
-  function scrollBy(dir) {
-    var max = track.scrollWidth - track.clientWidth;
-    var target = track.scrollLeft + cardWidth() * dir;
+
+  function navigate(dir) {
+    var card = track.querySelector('.testimonial-card');
+    var step = card ? card.offsetWidth + GAP : 320;
+    var max  = track.scrollWidth - track.clientWidth;
+    var target = track.scrollLeft + step * dir;
     if (target > max) target = 0;
     if (target < 0)   target = max;
     track.scrollTo({ left: target, behavior: 'smooth' });
   }
 
-  if (prev) prev.addEventListener('click', function() { clearInterval(auto); scrollBy(-1); resetAuto(); });
-  if (next) next.addEventListener('click', function() { clearInterval(auto); scrollBy(1);  resetAuto(); });
+  setWidths();
+  window.addEventListener('resize', setWidths);
+
+  if (prev) prev.addEventListener('click', function() { clearInterval(auto); navigate(-1); resetAuto(); });
+  if (next) next.addEventListener('click', function() { clearInterval(auto); navigate(1);  resetAuto(); });
 
   track.addEventListener('mouseenter', function() { clearInterval(auto); });
   track.addEventListener('mouseleave', resetAuto);
 
   var auto;
-  function resetAuto() { clearInterval(auto); auto = setInterval(function() { scrollBy(1); }, 4500); }
+  function resetAuto() { clearInterval(auto); auto = setInterval(function() { navigate(1); }, 4500); }
   resetAuto();
 })();
 </script>

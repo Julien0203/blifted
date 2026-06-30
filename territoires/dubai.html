@@ -107,45 +107,39 @@
     .zones-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      margin-top: 3rem;
+      gap: var(--sp-5);
+      margin-top: var(--sp-12);
     }
     @media (max-width: 900px) { .zones-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 600px) { .zones-grid { grid-template-columns: 1fr; } }
 
     .zone-card {
-      background: var(--ivoire);
-      border: 1px solid rgba(0,0,0,.08);
-      border-radius: 4px;
-      padding: 2rem;
-      transition: transform .3s var(--ease), box-shadow .3s var(--ease);
+      background: var(--blanc);
+      border: 1px solid var(--ivoire-dk);
+      border-radius: var(--radius-md);
+      padding: var(--sp-7);
+      transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
     }
     .zone-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 16px 40px rgba(0,0,0,.1);
-    }
-    .zone-card__icon {
-      font-size: 1.6rem;
-      margin-bottom: 1rem;
-      display: block;
+      border-color: var(--or-border);
+      box-shadow: var(--shadow-sm);
     }
     .zone-card__name {
       font-family: var(--font-serif);
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: var(--noir);
-      margin-bottom: .5rem;
+      font-size: var(--t-xl);
+      font-weight: 400;
+      color: var(--text);
+      margin-bottom: var(--sp-3);
     }
     .zone-card__desc {
-      font-family: var(--font-sans);
-      font-size: .875rem;
-      color: var(--taupe);
-      line-height: 1.6;
+      font-size: var(--t-sm);
+      color: var(--texte-lt);
+      font-weight: 300;
+      line-height: 1.65;
     }
     .zone-card__time {
-      margin-top: 1rem;
-      font-family: var(--font-sans);
-      font-size: .75rem;
+      margin-top: var(--sp-4);
+      font-size: var(--t-xs);
       color: var(--or);
       letter-spacing: .06em;
       text-transform: uppercase;
@@ -426,7 +420,7 @@
     <!-- ══ ZONES ══ -->
     <section class="section" style="background: var(--ivoire); padding: 5rem 0;" aria-labelledby="zones-heading">
       <div class="container">
-        <div class="section-header" style="text-align:center;" data-reveal="up">
+        <div class="section-header" data-reveal="up">
           <p class="eyebrow">Zones desservies</p>
           <h2 class="headline" id="zones-heading" data-i18n-html="dubai.zones.h2">
             De l'aéroport<br>
