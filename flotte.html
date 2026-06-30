@@ -772,7 +772,7 @@
         closest = parseInt(panel.dataset.img);
       }
     });
-    activateBg(closest);
+    if (minDist < window.innerHeight * 0.6) activateBg(closest);
   }
 
   window.addEventListener('scroll', onScroll, { passive: true });
