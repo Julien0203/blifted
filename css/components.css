@@ -274,7 +274,8 @@ body:has(.page-hero) .header:not(.is-scrolled) .header__logo .logo-noir  { displ
   line-height: 1;
 }
 @media (max-width: 960px) {
-  .header__lang { display: none; }
+  .header__lang { display: flex; }
+  .header__lang-btn { cursor: pointer; }
 }
 .header__nav-link::after {
   content: '';
@@ -381,6 +382,7 @@ body:has(.page-hero) .header:not(.is-scrolled) .header__logo .logo-noir  { displ
   flex-direction: column;
   gap: var(--sp-4);
 }
+.mobile-menu__cta { padding: var(--sp-6) 0; }
 .mobile-menu__cta .btn { width: 100%; }
 .mobile-menu__info {
   font-size: var(--t-sm);
@@ -2128,6 +2130,13 @@ body:has(.page-hero) .header:not(.is-scrolled) .header__logo .logo-noir  { displ
   flex-shrink: 0;
   white-space: nowrap;
 }
+.whatsapp-float__icon {
+  display: none;
+  width: 20px; height: 20px;
+  flex-shrink: 0;
+  fill: #25D366;
+}
+.whatsapp-float__label { flex-shrink: 0; }
 .whatsapp-float::before {
   content: '';
   width: 7px;
@@ -2149,15 +2158,10 @@ body:has(.page-hero) .header:not(.is-scrolled) .header__logo .logo-noir  { displ
 }
 @media (max-width: 480px) {
   .whatsapp-widget { bottom: 16px; right: 16px; }
-  .whatsapp-float {
-    width: 48px;
-    height: 48px;
-    padding: 0;
-    justify-content: center;
-    font-size: 0;
-    overflow: hidden;
-  }
-  .whatsapp-float::before { width: 10px; height: 10px; }
+  .whatsapp-float { padding: 0 14px 0 10px; }
+  .whatsapp-float__icon { display: block; }
+  .whatsapp-float__label { display: none; }
+  .whatsapp-float::before { width: 8px; height: 8px; }
   .whatsapp-popup { width: calc(100vw - 32px); }
 }
 
