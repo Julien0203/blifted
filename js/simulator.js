@@ -59,7 +59,7 @@
   lines['3-4'] = document.getElementById('line-3-4');
 
   const resultPanel  = document.getElementById('sim-result');
-  const waLink       = document.getElementById('sim-whatsapp');
+  const contactForm  = document.getElementById('sim-contact-form');
 
   if (!panels[1]) return; // Pas de simulateur sur cette page
 
@@ -177,10 +177,13 @@
   }
 
 
-  /* ── RÉSULTAT → WHATSAPP ────────────────────────────────── */
+  /* ── RÉSULTAT → FORMULAIRE → WHATSAPP ──────────────────── */
   function showResult() {
-    if (!waLink) return;
+    // Reset form on each new result display
+    if (contactForm) contactForm.reset();
+  }
 
+  function buildWhatsAppUrl(name, phone, email) {
     const svc  = SERVICE_LABEL[state.service]       || state.service    || '–';
     const ter  = TERRITORY_LABEL[state.territory]   || state.territory  || '–';
     const dur  = DURATION_LABEL[state.duration]     || state.duration   || '–';
@@ -188,13 +191,29 @@
 
     const msg = encodeURIComponent(
       'Bonjour, je souhaite un devis B.LIFTED :\n' +
-      '• Prestation : ' + svc  + '\n' +
-      '• Territoire : ' + ter  + '\n' +
-      '• Durée : '      + dur  + '\n' +
+      '• Nom : '        + name  + '\n' +
+      '• Téléphone : '  + phone + '\n' +
+      '• Email : '      + email + '\n' +
+      '• Prestation : ' + svc   + '\n' +
+      '• Territoire : ' + ter   + '\n' +
+      '• Durée : '      + dur   + '\n' +
       '• Groupe : '     + pas
     );
 
-    waLink.href = 'https://wa.me/33636017235?text=' + msg;
+    return 'https://wa.me/33636017235?text=' + msg;
+  }
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name  = (document.getElementById('sim-field-name')?.value  || '').trim();
+      const phone = (document.getElementById('sim-field-phone')?.value || '').trim();
+      const email = (document.getElementById('sim-field-email')?.value || '').trim();
+
+      if (!name || !phone || !email) return;
+
+      window.open(buildWhatsAppUrl(name, phone, email), '_blank', 'noopener,noreferrer');
+    });
   }
 
 })();

@@ -284,14 +284,6 @@
      GALERIE
 ════════════════════════════════════════════════════════ -->
 <section class="gallery-strip" aria-label="Galerie B.LIFTED">
-  <div class="container">
-    <div class="section-header" data-stagger>
-      <span class="eyebrow" data-reveal="fade" data-i18n="home.gallery.eyebrow">Galerie</span>
-      <h2 class="section-title" data-reveal="up" data-i18n-html="home.gallery.title">
-        L'élégance <em>en images</em>
-      </h2>
-    </div>
-  </div>
   <div class="gallery-strip__grid">
     <div class="gallery-strip__item" data-reveal="fade" data-delay="0">
       <img src="assets/images/classe%20E2.png" alt="Mercedes Classe E — B.LIFTED France" loading="lazy">
@@ -729,16 +721,36 @@
         <div class="simulator__result">
           <p class="result__label" data-i18n="home.sim.result.label">Un déplacement d'exception se construit ensemble.</p>
           <p class="result__note" data-i18n="home.sim.result.note">
-            Nos prestations ne s'estiment pas — elles se conçoivent avec vous. Transmettez-nous votre programme sur WhatsApp, nous revenons vers vous sous 24h.
+            Nos prestations ne s'estiment pas — elles se conçoivent avec vous. Laissez-nous vos coordonnées et nous revenons vers vous sous 24h.
           </p>
-          <div class="result__ctas">
-            <a id="sim-whatsapp" href="https://wa.me/33636017235" target="_blank" rel="noopener" class="btn btn-primary">
-              <span data-i18n="home.sim.result.cta">Échanger avec l'équipe</span> <span class="btn-arrow">→</span>
-            </a>
-            <button class="btn btn-outline" id="sim-restart" type="button" data-i18n="home.sim.restart">
-              Nouvelle simulation
-            </button>
-          </div>
+
+          <form class="sim-contact-form" id="sim-contact-form" novalidate>
+            <div class="sim-contact-form__fields">
+              <div class="sim-contact-form__field">
+                <label for="sim-field-name" data-i18n="home.sim.form.name">Nom</label>
+                <input type="text" id="sim-field-name" name="name" autocomplete="name" required
+                  data-i18n-placeholder="home.sim.form.name.ph" placeholder="Votre nom">
+              </div>
+              <div class="sim-contact-form__field">
+                <label for="sim-field-phone" data-i18n="home.sim.form.phone">Téléphone</label>
+                <input type="tel" id="sim-field-phone" name="phone" autocomplete="tel" required
+                  data-i18n-placeholder="home.sim.form.phone.ph" placeholder="+33 6 00 00 00 00">
+              </div>
+              <div class="sim-contact-form__field">
+                <label for="sim-field-email" data-i18n="home.sim.form.email">Email</label>
+                <input type="email" id="sim-field-email" name="email" autocomplete="email" required
+                  data-i18n-placeholder="home.sim.form.email.ph" placeholder="votre@email.com">
+              </div>
+            </div>
+            <div class="result__ctas">
+              <button type="submit" id="sim-whatsapp-btn" class="btn btn-primary">
+                <span data-i18n="home.sim.result.cta">Envoyer ma demande</span> <span class="btn-arrow">→</span>
+              </button>
+              <button class="btn btn-outline" id="sim-restart" type="button" data-i18n="home.sim.restart">
+                Nouvelle simulation
+              </button>
+            </div>
+          </form>
         </div>
       </div>
 
