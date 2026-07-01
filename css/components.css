@@ -2157,6 +2157,7 @@ body:has(.page-hero) .header:not(.is-scrolled) .header__logo .logo-noir  { displ
   opacity: 0.5;
   font-weight: 300;
   transition: opacity var(--dur-fast) var(--ease);
+  padding-block: 0.5rem;
 }
 .footer__legal a:hover { opacity: 1; }
 

@@ -13,18 +13,18 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/variables.css?v=3">
-  <link rel="stylesheet" href="css/reset.css?v=3">
-  <link rel="stylesheet" href="css/typography.css?v=3">
-  <link rel="stylesheet" href="css/animations.css?v=3">
-  <link rel="stylesheet" href="css/components.css?v=3">
+  <link rel="stylesheet" href="css/variables.css?v=4">
+  <link rel="stylesheet" href="css/reset.css?v=4">
+  <link rel="stylesheet" href="css/typography.css?v=4">
+  <link rel="stylesheet" href="css/animations.css?v=4">
+  <link rel="stylesheet" href="css/components.css?v=4">
   <style>
     body.no-scroll { overflow: hidden; }
     #menu-overlay { position:fixed; inset:0; background:rgba(28,26,23,0.4); z-index:calc(var(--z-header) - 2); opacity:0; visibility:hidden; transition:opacity var(--dur) var(--ease),visibility var(--dur); }
     #menu-overlay.is-active { opacity:1; visibility:visible; }
 
     /* Processus */
-    .process-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:var(--sp-8); }
+    .process-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:var(--sp-8); padding-left: clamp(0.75rem, 3vw, 2.5rem); }
     .process-step { display:flex; flex-direction:column; gap:var(--sp-5); }
     .process-step__num { font-family:var(--font-serif); font-size:var(--t-5xl); font-weight:300; color:var(--rose-light); line-height:1; }
     .process-step__title { font-family:var(--font-serif); font-size:var(--t-xl); font-weight:400; color:var(--text); }
@@ -121,22 +121,14 @@
       }
     }
 
-    /* Lieux partenaires (under processus) */
-    .proc-venues { margin-top: var(--sp-12); padding-top: var(--sp-10); border-top: 1px solid var(--border-soft); display: flex; align-items: center; gap: var(--sp-8); flex-wrap: wrap; }
-    .proc-venues__label { font-size: var(--t-xs); letter-spacing: var(--ls-widest); text-transform: uppercase; color: var(--text-muted); flex-shrink: 0; }
-    .proc-venues__logos { display: flex; align-items: center; gap: var(--sp-8); flex-wrap: wrap; }
-    .proc-venues__logos img { height: 2.5rem; width: auto; object-fit: contain; opacity: 0.65; filter: grayscale(1); transition: opacity 0.3s, filter 0.3s; }
-    .proc-venues__logos img:hover { opacity: 1; filter: grayscale(0); }
-
     /* Auto-scroll partenaires marquee */
     .partners-marquee { background: var(--blanc); padding-block: var(--sp-12); overflow: hidden; border-top: 1px solid var(--border-soft); border-bottom: 1px solid var(--border-soft); }
     .partners-marquee__label { text-align: center; font-size: var(--t-xs); letter-spacing: var(--ls-widest); text-transform: uppercase; color: var(--text-muted); margin-bottom: var(--sp-8); }
     .partners-marquee__track { overflow: hidden; }
-    .partners-marquee__inner { display: flex; align-items: center; gap: clamp(3rem, 8vw, 6rem); width: max-content; animation: marquee 22s linear infinite; }
+    .partners-marquee__inner { display: flex; align-items: center; gap: clamp(2.5rem, 6vw, 5rem); width: max-content; animation: marquee 16s linear infinite; }
     .partners-marquee__inner img { height: 3.5rem; width: auto; object-fit: contain; opacity: 0.55; filter: grayscale(1); flex-shrink: 0; transition: opacity 0.3s, filter 0.3s; }
     .partners-marquee__inner img:hover { opacity: 0.9; filter: grayscale(0); }
     @media (max-width: 640px) {
-      .proc-venues { flex-direction: column; align-items: flex-start; gap: var(--sp-5); }
       .partners-marquee__inner { gap: 2.5rem; }
       .partners-marquee__inner img { height: 2.5rem; }
     }
@@ -289,13 +281,6 @@
           <p class="process-step__text" data-i18n="weddings.proc3.text">Ligne directe avec votre coordinatrice, gestion des imprévus en silence totale. Vous ne saurez jamais qu'il y a eu une contrainte — parce que nous l'avons absorbée avant qu'elle vous atteigne.</p>
         </div>
       </div>
-      <div class="proc-venues" data-reveal="up" data-delay="400">
-        <p class="proc-venues__label">Lieux partenaires</p>
-        <div class="proc-venues__logos">
-          <img src="assets/images/NLR.png" alt="Nainville les Roches" loading="lazy">
-          <img src="assets/images/CDA.png" alt="Château d'Averny" loading="lazy">
-        </div>
-      </div>
     </div>
   </section>
 
@@ -349,9 +334,13 @@
         <img src="assets/images/ABW.png" alt="Alexandra B Wedding" loading="lazy">
         <img src="assets/images/DWE.png" alt="Dream Weddings Europe" loading="lazy">
         <img src="assets/images/DPW.png" alt="Dream Paris Wedding" loading="lazy">
+        <img src="assets/images/NLR.png" alt="Nainville les Roches" loading="lazy">
+        <img src="assets/images/CDA.png" alt="Château d'Averny" loading="lazy">
         <img src="assets/images/ABW.png" alt="" aria-hidden="true" loading="lazy">
         <img src="assets/images/DWE.png" alt="" aria-hidden="true" loading="lazy">
         <img src="assets/images/DPW.png" alt="" aria-hidden="true" loading="lazy">
+        <img src="assets/images/NLR.png" alt="" aria-hidden="true" loading="lazy">
+        <img src="assets/images/CDA.png" alt="" aria-hidden="true" loading="lazy">
       </div>
     </div>
   </section>
@@ -475,7 +464,7 @@
 
 <script src="js/nav.js" defer></script>
 <script src="js/scroll-reveal.js" defer></script>
-<script src="js/i18n.js?v=3" defer></script>
+<script src="js/i18n.js?v=4" defer></script>
 <script src="js/main.js" defer></script>
 <script src="js/cookies.js" defer></script>
 
