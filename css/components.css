@@ -4,47 +4,6 @@
    ============================================================ */
 
 
-/* ══════════════════════════════════════════════════════════
-   CURSEUR PERSONNALISÉ
-══════════════════════════════════════════════════════════ */
-.cursor {
-  position: fixed;
-  top: 0; left: 0;
-  width: 4px; height: 4px;
-  background: var(--rose);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: var(--z-cursor);
-  transform: translate(-50%, -50%);
-  transition:
-    width  0.18s var(--ease-out),
-    height 0.18s var(--ease-out),
-    background 0.18s var(--ease-out),
-    opacity 0.18s;
-  animation: cursorAppear 0.5s var(--ease-out) forwards;
-}
-.cursor-ring {
-  position: fixed;
-  top: 0; left: 0;
-  width: 18px; height: 18px;
-  border: 1px solid rgba(77,92,56,0.5);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: calc(var(--z-cursor) - 1);
-  transform: translate(-50%, -50%);
-  transition:
-    width  0.18s var(--ease-out),
-    height 0.18s var(--ease-out),
-    border-color 0.18s var(--ease-out),
-    opacity 0.25s;
-}
-body:has(a:hover) .cursor,
-body:has(button:hover) .cursor { width: 4px; height: 4px; }
-body:has(a:hover) .cursor-ring,
-body:has(button:hover) .cursor-ring { width: 28px; height: 28px; border-color: var(--rose); }
-body:has(.hero__img-wrap:hover) .cursor { width: 36px; height: 36px; background: transparent; border: 1px solid rgba(250,250,248,0.6); }
-body:has(.hero__img-wrap:hover) .cursor-ring { opacity: 0; }
-
 
 /* ══════════════════════════════════════════════════════════
    BARRE DE SCROLL
@@ -84,7 +43,7 @@ body:has(.hero__img-wrap:hover) .cursor-ring { opacity: 0; }
     box-shadow var(--dur) var(--ease),
     background var(--dur-fast) var(--ease),
     color var(--dur-fast) var(--ease);
-  cursor: none;
+  cursor: pointer;
   touch-action: manipulation;
 }
 .btn::before {
@@ -262,7 +221,7 @@ body:has(.page-hero) .header:not(.is-scrolled) .header__logo .logo-noir  { displ
   font-weight: 500;
   letter-spacing: 0.09em;
   color: var(--text-muted);
-  cursor: none;
+  cursor: pointer;
   transition: color var(--dur-fast) var(--ease);
   line-height: 1;
 }
@@ -306,7 +265,7 @@ body:has(.page-hero) .header:not(.is-scrolled) .header__logo .logo-noir  { displ
   gap: 5px;
   width: 36px; height: 36px;
   padding: 6px;
-  cursor: none;
+  cursor: pointer;
   transition: opacity var(--dur-fast) var(--ease);
 }
 .header__burger span {
@@ -822,7 +781,7 @@ body:has(.page-hero) .header:not(.is-scrolled) .header__logo .logo-noir  { displ
     transform var(--dur) var(--ease-out),
     box-shadow var(--dur) var(--ease),
     border-color var(--dur) var(--ease);
-  cursor: none;
+  cursor: pointer;
 }
 .service-card::before {
   content: '';
@@ -1297,7 +1256,7 @@ body:has(.page-hero) .header:not(.is-scrolled) .header__logo .logo-noir  { displ
   overflow: hidden;
   aspect-ratio: 3/4;
   border-radius: 0;
-  cursor: none;
+  cursor: pointer;
   display: block;
   text-decoration: none;
   flex: 0 0 22vw;
@@ -1486,7 +1445,7 @@ body:has(.page-hero) .header:not(.is-scrolled) .header__logo .logo-noir  { displ
   border-radius: var(--r-md);
   padding: var(--sp-5);
   transition: background var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease);
-  cursor: none;
+  cursor: pointer;
 }
 .fleet-mini:hover {
   background: rgba(255,255,255,0.09);
@@ -1615,7 +1574,6 @@ body:has(.page-hero) .header:not(.is-scrolled) .header__logo .logo-noir  { displ
   gap: var(--sp-6);
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
   scrollbar-width: none;
   -ms-overflow-style: none;
   padding-bottom: 4px;
@@ -1959,7 +1917,7 @@ body:has(.page-hero) .header:not(.is-scrolled) .header__logo .logo-noir  { displ
   background: transparent;
   border: none;
   text-align: left;
-  cursor: none;
+  cursor: pointer;
   font-family: var(--font-serif);
   font-size: var(--t-lg);
   font-weight: 400;

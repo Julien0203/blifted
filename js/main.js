@@ -47,27 +47,6 @@
   });
 
 
-  /* ── CURSEUR PERSONNALISÉ ───────────────────────────────── */
-  const cursor     = document.getElementById('cursor');
-  const cursorRing = document.getElementById('cursorRing');
-
-  if (cursor && cursorRing && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
-    let mouseX = 0, mouseY = 0;
-
-    document.addEventListener('mousemove', (e) => {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-      const t = `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%)`;
-      cursor.style.transform     = t;
-      cursorRing.style.transform = t;
-    });
-
-  } else {
-    if (cursor)     cursor.style.display     = 'none';
-    if (cursorRing) cursorRing.style.display = 'none';
-  }
-
-
   /* ── BARRE DE PROGRESSION SCROLL ───────────────────────── */
   const progressBar = document.getElementById('scrollProgress');
   if (progressBar) {

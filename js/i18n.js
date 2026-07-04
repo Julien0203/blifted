@@ -23,7 +23,7 @@
       'breadcrumb.contact':      'Contact',
 
       /* ── COOKIE / WHATSAPP ───────────────────────────── */
-      'cookie.text':             'Ce site utilise des cookies pour améliorer votre expérience. <a href="confidentialite.html" class="cookie-banner__link">En savoir plus</a>',
+      'cookie.text':             'Ce site utilise des cookies pour améliorer votre expérience. <a href="/confidentialite" class="cookie-banner__link">En savoir plus</a>',
       'cookie.accept':           'Accepter',
       'cookie.decline':          'Refuser',
       'whatsapp.title':          'Confier un déplacement',
@@ -696,7 +696,7 @@
       'breadcrumb.contact':      'Contact',
 
       /* ── COOKIE / WHATSAPP ───────────────────────────── */
-      'cookie.text':             'This site uses cookies to improve your experience. <a href="confidentialite.html" class="cookie-banner__link">Learn more</a>',
+      'cookie.text':             'This site uses cookies to improve your experience. <a href="/confidentialite" class="cookie-banner__link">Learn more</a>',
       'cookie.accept':           'Accept',
       'cookie.decline':          'Decline',
       'whatsapp.title':          'Plan a journey',
