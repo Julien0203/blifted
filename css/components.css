@@ -438,8 +438,8 @@ body:has(.page-hero) .header:not(.is-scrolled) .header__logo .logo-noir  { displ
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(to right, rgba(8,6,4,0.90) 0%, rgba(8,6,4,0.55) 60%, rgba(8,6,4,0.20) 100%),
-    linear-gradient(to top, rgba(8,6,4,0.85) 0%, rgba(8,6,4,0.30) 55%, transparent 100%);
+    linear-gradient(to right, rgba(8,6,4,0.65) 0%, rgba(8,6,4,0.35) 60%, rgba(8,6,4,0.10) 100%),
+    linear-gradient(to top, rgba(8,6,4,0.58) 0%, rgba(8,6,4,0.18) 55%, transparent 100%);
 }
 
 /* Grain subtil pour texture */

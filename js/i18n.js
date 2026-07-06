@@ -44,6 +44,15 @@
       'footer.legal.privacy':    'Confidentialité',
       'footer.rights':           'Tous droits réservés',
 
+      /* ── HOME — MARQUEE ──────────────────────────────── */
+      'home.mq1': 'Discrétion absolue',
+      'home.mq2': 'Fiabilité sans compromis',
+      'home.mq3': 'Coordination experte',
+      'home.mq4': 'Anti-volume',
+      'home.mq5': 'Ultra-sélectif',
+      'home.mq6': 'Personnel & attentionné',
+      'home.mq7': 'Disponible 24h/24',
+
       /* ── HOME — HERO ─────────────────────────────────── */
       'home.hero.eyebrow':       'Partenaire des Professionnels du Luxe',
       'home.hero.title':         "Quand l'approximation<br><em>n'est pas une option.</em>",
@@ -716,6 +725,15 @@
       'footer.legal.mentions':   'Legal notice',
       'footer.legal.privacy':    'Privacy',
       'footer.rights':           'All rights reserved',
+
+      /* ── HOME — MARQUEE ──────────────────────────────── */
+      'home.mq1': 'Absolute discretion',
+      'home.mq2': 'Uncompromising reliability',
+      'home.mq3': 'Expert coordination',
+      'home.mq4': 'Anti-volume',
+      'home.mq5': 'Ultra-selective',
+      'home.mq6': 'Personal & attentive',
+      'home.mq7': 'Available 24/7',
 
       /* ── HOME — HERO ─────────────────────────────────── */
       'home.hero.eyebrow':       'Partner for Luxury Professionals',
