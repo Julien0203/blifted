@@ -135,6 +135,13 @@
 [data-reveal="down"]  { transform: translateY(-28px); }
 [data-reveal="left"]  { transform: translateX(28px); }
 [data-reveal="right"] { transform: translateX(-28px); }
+
+/* Sur mobile, les translations horizontales causent un scroll lateral —
+   on les convertit en translation verticale */
+@media (max-width: 768px) {
+  [data-reveal="left"],
+  [data-reveal="right"] { transform: translateY(16px); }
+}
 [data-reveal="scale"] { transform: scale(0.94); }
 [data-reveal="rotate"]{ transform: rotate(-4deg) scale(0.96); }
 
