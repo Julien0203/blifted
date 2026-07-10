@@ -9,24 +9,37 @@
   /* ── RIDEAU DE PAGE ─────────────────────────────────────── */
   const curtain = document.getElementById('pageCurtain');
 
-  function revealPage() {
+  function revealPage(instant) {
     document.body.classList.remove('no-scroll');
     if (curtain) {
       curtain.classList.remove('is-leaving');
-      curtain.classList.add('is-hidden');
+      if (instant) {
+        curtain.style.transition = 'none';
+        curtain.classList.add('is-hidden');
+        // Double rAF garantit que le navigateur a peint avant de restaurer la transition
+        requestAnimationFrame(() => requestAnimationFrame(() => { curtain.style.transition = ''; }));
+      } else {
+        curtain.classList.add('is-hidden');
+      }
     }
   }
 
-  // Révèle la page dès que le DOM est prêt
+  // Navigation directe ou retour arrière → révèle instantanément
+  // Navigation via nos liens internes (forward) → révèle avec animation
+  const isForwardNav = sessionStorage.getItem('bl-nav') === '1';
+  sessionStorage.removeItem('bl-nav');
+
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => setTimeout(revealPage, 200));
+    document.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => revealPage(!isForwardNav), isForwardNav ? 200 : 0);
+    });
   } else {
-    setTimeout(revealPage, 200);
+    setTimeout(() => revealPage(!isForwardNav), isForwardNav ? 200 : 0);
   }
 
-  // Fix bfcache : révèle la page lors du retour arrière navigateur
+  // Fix bfcache : révèle instantanément lors du retour arrière navigateur
   window.addEventListener('pageshow', (e) => {
-    if (e.persisted) revealPage();
+    if (e.persisted) revealPage(true);
   });
 
   // Transition sortante sur les liens internes
@@ -39,6 +52,7 @@
         link.target === '_blank') return;
 
     e.preventDefault();
+    sessionStorage.setItem('bl-nav', '1'); // Marque comme navigation forward
     if (curtain) {
       curtain.classList.remove('is-hidden');
       curtain.classList.add('is-leaving');
