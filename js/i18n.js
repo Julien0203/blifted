@@ -102,7 +102,7 @@
       'home.designed.c8':      'Événements Corporate',
 
       /* ── HOME — BIG QUOTE ────────────────────────────── */
-      'home.bigquote.text':    'Invisible à vos invités.<br>Essentiel à votre succès.',
+      'home.bigquote.text':    'Discret pour vos invités.<br>Décisif pour votre événement.',
 
       /* ── HOME — EVERY DETAIL ─────────────────────────── */
       'home.detail.eyebrow':      'Chaque détail compte',
@@ -112,7 +112,7 @@
       'home.detail.d2.title':     'Timeline synchronisée',
       'home.detail.d2.text':      'Votre rétroplanning devient le nôtre. Chaque rotation validée à la minute.',
       'home.detail.d3.title':     'Confidentialité opérationnelle',
-      'home.detail.d3.text':      'Aucun nom, aucune photo communiquée. La discrétion est une méthode, pas une promesse.',
+      'home.detail.d3.text':      'Aucun nom communiqué, aucune photo partagée. C\'est opérationnel, pas rhétorique.',
       'home.detail.d4.title':     'Coordination multi-véhicules',
       'home.detail.d4.text':      'Plusieurs véhicules, plusieurs sites, un seul poste de coordination. Déploiement simultané maîtrisé.',
       'home.detail.d5.title':     'Interlocuteur unique',
@@ -386,7 +386,7 @@
       'services.std3.title':   'Ponctualité sans négo',
       'services.std3.text':    "Le véhicule est en position avant l'heure. Toujours. Suivi de vol, anticipation des aléas routiers, plan B intégré.",
       'services.std4.title':   'Véhicule parfait',
-      'services.std4.text':    "Intérieur impeccable, plein fait, climatisation réglée, eau minérale disponible. Rien n'est laissé au hasard.",
+      'services.std4.text':    "Intérieur impeccable, plein fait, climatisation réglée, eau minérale disponible. Le standard B.LIFTED, sans exception.",
       'services.std5.title':   'Tenue et posture',
       'services.std5.text':    "Tenue sobre et professionnelle, attitude discrète. Conversation limitée à ce que le client initie. Présence utile, jamais envahissante.",
       'services.std6.title':   'Réponse rapide et personnelle',
@@ -514,7 +514,7 @@
       'about.founder.eyebrow': 'Sarah, la fondatrice',
       'about.founder.h2':      'Fondée et dirigée<br><em>par Sarah.</em>',
       'about.founder.lead':    "B.LIFTED est fondée et dirigée par Sarah. Le positionnement du service : discrétion, profil bas, résultats.",
-      'about.founder.body1':   "Sarah est personnellement impliquée dans chaque mission à fort enjeu. Sa présence sur le terrain n'est pas une exception — c'est une méthode. Lorsque le contexte l'exige, elle répond.",
+      'about.founder.body1':   "Sarah est personnellement impliquée dans chaque mission à fort enjeu. Quand le contexte l'exige, elle est sur le terrain — pas en supervision à distance.",
       'about.founder.body2':   "Un service impersonnel délègue. Un service incarné répond. B.LIFTED a choisi son camp depuis le premier jour.",
       'about.founder.badge1':  'Anti-volume',
       'about.founder.badge2':  'Ultra-sélectif',
@@ -527,7 +527,7 @@
       'about.pillar2.title':   'Discrétion',
       'about.pillar2.text':    "Confidentialité contractuelle systématique. Ce que vous nous confiez ne quitte jamais notre périmètre. Vos clients, vos déplacements, vos agendas.",
       'about.pillar3.title':   'Fiabilité',
-      'about.pillar3.text':    "La fiabilité n'est pas une promesse marketing. C'est une méthode. Anticipation, sélection, supervision, coordination — jusqu'à l'arrivée.",
+      'about.pillar3.text':    "La fiabilité se construit avant le départ : anticipation des aléas, sélection des itinéraires, supervision active — jusqu'à l'arrivée.",
       'about.selective.eyebrow': 'Sélectivité assumée',
       'about.selective.h2':    "B.LIFTED n'est probablement<br><em style=\"color:var(--or-lt)\">pas faite pour vous.</em>",
       'about.selective.body1': "B.LIFTED s'adresse à ceux pour qui la rigueur prime sur le tarif, la confiance sur la commodité, l'exigence sur l'impulsion.",
@@ -834,7 +834,7 @@
       'home.designed.c8':      'Corporate Events',
 
       /* ── HOME — BIG QUOTE ────────────────────────────── */
-      'home.bigquote.text':    'Invisible to your guests.<br>Essential to your success.',
+      'home.bigquote.text':    'Discreet for your guests.<br>Decisive for your event.',
 
       /* ── HOME — EVERY DETAIL ─────────────────────────── */
       'home.detail.eyebrow':      'Every Detail',
@@ -844,7 +844,7 @@
       'home.detail.d2.title':     'Synchronised timeline',
       'home.detail.d2.text':      'Your event schedule becomes ours. Every rotation confirmed to the minute.',
       'home.detail.d3.title':     'Operational confidentiality',
-      'home.detail.d3.text':      'No names, no photos shared. Discretion is a method, not a promise.',
+      'home.detail.d3.text':      'No names shared. No photos taken. Operational, not rhetorical.',
       'home.detail.d4.title':     'Multi-vehicle coordination',
       'home.detail.d4.text':      'Multiple vehicles, multiple sites, one coordination hub. Simultaneous deployment, perfectly managed.',
       'home.detail.d5.title':     'Single point of contact',
@@ -1118,7 +1118,7 @@
       'services.std3.title':   'Punctuality, without exception',
       'services.std3.text':    'The vehicle is in position before the agreed time. Always. Flight tracking, anticipation of road conditions, integrated plan B.',
       'services.std4.title':   'Immaculate vehicle',
-      'services.std4.text':    'Immaculate interior, fully fuelled, climate set to preference, mineral water at hand. Nothing is left to chance.',
+      'services.std4.text':    'Immaculate interior, fully fuelled, climate set to preference, mineral water at hand. The B.LIFTED standard, without exception.',
       'services.std5.title':   'Dress & demeanour',
       'services.std5.text':    'Understated professional dress, discreet attitude. Conversation limited to what the client initiates. A useful presence, never intrusive.',
       'services.std6.title':   'Fast & personal response',
@@ -1246,7 +1246,7 @@
       'about.founder.eyebrow': 'Sarah, the founder',
       'about.founder.h2':      'Founded and led<br><em>by Sarah.</em>',
       'about.founder.lead':    'B.LIFTED is founded and led by Sarah. The service ethos: discretion, a low profile, results.',
-      'about.founder.body1':   'Sarah is personally involved in every high-stakes mission. Her presence in the field is not the exception — it is the method. When the situation demands it, she responds.',
+      'about.founder.body1':   'Sarah is personally involved in every high-stakes mission. When the situation demands it, she is on the ground — not supervising remotely.',
       'about.founder.body2':   'An impersonal service delegates. A personal service responds. B.LIFTED made its choice from day one.',
       'about.founder.badge1':  'Anti-volume',
       'about.founder.badge2':  'Ultra-selective',
@@ -1259,7 +1259,7 @@
       'about.pillar2.title':   'Discretion',
       'about.pillar2.text':    'Systematic contractual confidentiality. What you entrust to us never leaves our circle. Your clients, your itineraries, your schedules.',
       'about.pillar3.title':   'Reliability',
-      'about.pillar3.text':    'Reliability is not a marketing promise. It is a method. Anticipation, selection, oversight, coordination — right through to arrival.',
+      'about.pillar3.text':    'Reliability is built before departure: anticipating setbacks, selecting routes, active oversight — right through to arrival.',
       'about.selective.eyebrow': 'Deliberate selectivity',
       'about.selective.h2':    'B.LIFTED is probably<br><em style="color:var(--or-lt)">not for you.</em>',
       'about.selective.body1': 'B.LIFTED is for those who place rigour above price, trust above convenience, and exacting standards above impulse.',
