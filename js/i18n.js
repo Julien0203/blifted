@@ -54,8 +54,8 @@
       'home.mq7': 'Conciergerie de luxe',
 
       /* ── HOME — HERO ─────────────────────────────────── */
-      'home.hero.eyebrow':       'Luxury Ground Logistics',
-      'home.hero.title':         'YOUR JOURNEY<br><em>ELEVATED.</em>',
+      'home.hero.eyebrow':       'Logistique de Luxe',
+      'home.hero.title':         'VOTRE VOYAGE<br><em>SUBLIMÉ.</em>',
       'home.hero.geo':           'Logistique de luxe pour Mariages, Événements Privés & Voyages VIP',
       'home.hero.phrase':        "Nous coordonnons chaque déplacement pour vos événements d'exception — libérant votre attention sur ce qui compte vraiment.",
       'home.hero.stat2':         'Disponible 24h/24 · 7j/7',
