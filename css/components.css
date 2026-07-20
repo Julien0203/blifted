@@ -3,6 +3,41 @@
    Ultra-Moderne · Féminin · Éditorial
    ============================================================ */
 
+/* ══════════════════════════════════════════════════════════
+   CURSEUR PERSONNALISÉ (desktop uniquement)
+══════════════════════════════════════════════════════════ */
+@media (hover: hover) and (pointer: fine) {
+  body, a, button, [role="button"], label, select, input, .btn { cursor: none !important; }
+  .cursor-ring {
+    position: fixed;
+    top: 0; left: 0;
+    width: 34px; height: 34px;
+    border: 1.5px solid rgba(77,92,56,0.65);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 999999;
+    transform: translate(-50%, -50%);
+    transition: width 0.22s ease, height 0.22s ease, border-color 0.22s ease, opacity 0.25s ease;
+    will-change: left, top;
+  }
+  .cursor-dot {
+    position: fixed;
+    top: 0; left: 0;
+    width: 5px; height: 5px;
+    background: var(--or);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 999999;
+    transform: translate(-50%, -50%);
+    will-change: left, top;
+  }
+  .cursor-ring.is-hovering {
+    width: 52px; height: 52px;
+    border-color: var(--or);
+  }
+  .cursor-ring.is-out { opacity: 0; }
+}
+
 
 
 /* ══════════════════════════════════════════════════════════

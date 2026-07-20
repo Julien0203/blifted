@@ -145,6 +145,43 @@
     });
   });
 
+  /* ── CURSEUR PERSONNALISÉ ────────────────────────────────── */
+  if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    const ring = document.createElement('div');
+    ring.className = 'cursor-ring is-out';
+    const dot = document.createElement('div');
+    dot.className = 'cursor-dot';
+    document.body.appendChild(ring);
+    document.body.appendChild(dot);
+
+    let mx = -200, my = -200, rx = -200, ry = -200;
+
+    document.addEventListener('mousemove', e => {
+      mx = e.clientX; my = e.clientY;
+      dot.style.left = mx + 'px';
+      dot.style.top  = my + 'px';
+      ring.classList.remove('is-out');
+    });
+    document.addEventListener('mouseleave', () => ring.classList.add('is-out'));
+    document.addEventListener('mouseenter', () => ring.classList.remove('is-out'));
+
+    const hoverSel = 'a, button, [role="button"], .btn, label, select, input, .gallery-strip__item';
+    document.addEventListener('mouseover', e => {
+      if (e.target.closest(hoverSel)) ring.classList.add('is-hovering');
+    });
+    document.addEventListener('mouseout', e => {
+      if (e.target.closest(hoverSel)) ring.classList.remove('is-hovering');
+    });
+
+    (function animRing() {
+      rx += (mx - rx) * 0.13;
+      ry += (my - ry) * 0.13;
+      ring.style.left = rx + 'px';
+      ring.style.top  = ry + 'px';
+      requestAnimationFrame(animRing);
+    })();
+  }
+
   /* ── WHATSAPP WIDGET ─────────────────────────────────────── */
   const waToggle = document.getElementById('whatsapp-toggle');
   const waPopup  = document.getElementById('whatsapp-popup');
