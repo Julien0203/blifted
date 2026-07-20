@@ -1754,11 +1754,17 @@ body:has(.page-hero) .header:not(.is-scrolled) .header__logo .logo-noir  { displ
   padding-bottom: 0;
 }
 .gallery-strip__grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
   gap: 4px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
+.gallery-strip__grid::-webkit-scrollbar { display: none; }
 .gallery-strip__item {
+  flex: 0 0 22vw;
   aspect-ratio: 3 / 4;
   overflow: hidden;
   background: var(--ivoire-dk);
@@ -1773,27 +1779,12 @@ body:has(.page-hero) .header:not(.is-scrolled) .header__logo .logo-noir  { displ
 .gallery-strip__item:hover img {
   transform: scale(1.06);
 }
-/* Masque les doublons hors mobile */
-.gallery-strip__item[aria-hidden="true"] { display: none; }
 @media (max-width: 900px) {
-  .gallery-strip__grid { grid-template-columns: repeat(3, 1fr); }
+  .gallery-strip__item { flex: 0 0 40vw; }
 }
 @media (max-width: 760px) {
-  .gallery-strip__item[aria-hidden="true"] { display: block; }
-  .gallery-strip__grid {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    overflow-y: hidden;
-    gap: 3px;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    touch-action: pan-x;
-  }
-  .gallery-strip__grid::-webkit-scrollbar { display: none; }
-  .gallery-strip__item {
-    flex: 0 0 72vw;
-  }
+  .gallery-strip__item { flex: 0 0 72vw; }
+  .gallery-strip__grid { gap: 3px; }
 }
 
 /* ── Territories scroll hint (mobile) ── */

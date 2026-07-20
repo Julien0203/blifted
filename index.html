@@ -60,7 +60,7 @@
   <link rel="stylesheet" href="css/reset.css?v=21">
   <link rel="stylesheet" href="css/typography.css?v=21">
   <link rel="stylesheet" href="css/animations.css?v=21">
-  <link rel="stylesheet" href="css/components.css?v=23">
+  <link rel="stylesheet" href="css/components.css?v=24">
 </head>
 
 <body class="no-scroll">
@@ -419,10 +419,9 @@
 </section>
 <script>
 (function() {
-  if (window.innerWidth > 760) return;
   var grid = document.querySelector('.gallery-strip__grid');
   if (!grid) return;
-  var speed = 0.7; // px/frame (~42px/s à 60fps)
+  var speed = 0.8;
   var paused = false;
   function tick() {
     if (!paused) {
@@ -432,6 +431,8 @@
     }
     requestAnimationFrame(tick);
   }
+  grid.addEventListener('mouseenter', function() { paused = true; });
+  grid.addEventListener('mouseleave', function() { paused = false; });
   grid.addEventListener('touchstart', function() { paused = true; }, { passive: true });
   grid.addEventListener('touchend',   function() { setTimeout(function() { paused = false; }, 1200); }, { passive: true });
   requestAnimationFrame(tick);
