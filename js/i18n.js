@@ -593,7 +593,7 @@
       /* ── PROVENCE ────────────────────────────────────── */
       'provence.hero.eyebrow': 'Territoire — Provence',
       'provence.hero.h1':      'Luxury Ground Logistics<br><em style="color:var(--or-lt)">en Provence.</em>',
-      'provence.hero.sub':     "Avignon, Lubéron, Alpilles, Aix-en-Provence. Un territoire d'exception pour des déplacements qui ne tolèrent pas l'improvisation.",
+      'provence.hero.sub':     "Avignon, Luberon, Alpilles, Aix-en-Provence. Un territoire d'exception pour des déplacements qui ne tolèrent pas l'improvisation.",
       'provence.pres.eyebrow': 'Provence',
       'provence.pres.h2':      "L'exigence au cœur<br><em>du territoire.</em>",
       'provence.pres.body1':   "La Provence est le territoire d'origine de B.LIFTED. Un ancrage fort, une connaissance intime des routes, des accès privés, des domaines viticoles, des bastides et des propriétés isolées.",
@@ -604,7 +604,7 @@
       'provence.zones.h2':     "Partout en Provence,<br><em>avec le même niveau d'exigence.</em>",
       'provence.z1.title':     'Avignon & Grand Avignon',
       'provence.z1.text':      "Palais des Papes, villas privées, hôtels prestige, Relais & Châteaux. Partenaire officiel de l'aéroport d'Avignon-Caumont.",
-      'provence.z2.title':     'Lubéron',
+      'provence.z2.title':     'Luberon',
       'provence.z2.text':      "Gordes, Bonnieux, Lacoste, Ménerbes. Accès aux domaines et propriétés isolées. Routes de campagne maîtrisées.",
       'provence.z3.title':     'Alpilles',
       'provence.z3.text':      "Saint-Rémy-de-Provence, Les Baux-de-Provence, Eygalières. Le cœur élégant de la Provence.",
