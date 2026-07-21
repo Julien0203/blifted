@@ -60,7 +60,7 @@
   <link rel="stylesheet" href="css/reset.css?v=21">
   <link rel="stylesheet" href="css/typography.css?v=21">
   <link rel="stylesheet" href="css/animations.css?v=21">
-  <link rel="stylesheet" href="css/components.css?v=26">
+  <link rel="stylesheet" href="css/components.css?v=27">
 </head>
 
 <body class="no-scroll">
@@ -458,85 +458,77 @@
 
     <div class="services__grid">
 
-      <!-- Transfert aéroport -->
-      <div class="service-card" data-reveal="up" data-delay="0">
+      <!-- 01 Transfert aéroport -->
+      <a href="services.html#transfert" class="service-card" data-reveal="up" data-delay="0">
+        <div class="service-card__bg" style="background-image:url('assets/images/services-transfert.jpg')"></div>
         <span class="service-card__number" aria-hidden="true">01</span>
-        <div class="service-card__icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81C2.18 7.22 2 4.92 2 4a2 2 0 012-2h3a2 2 0 012 1.72c.13 1 .4 1.97.71 2.9a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.93.31 1.9.58 2.9.71A2 2 0 0122 16.92z"/>
-          </svg>
+        <div class="service-card__content">
+          <h3 class="service-card__title" data-i18n="home.svc1.title">Transfert aéroport & gare</h3>
+          <p class="service-card__desc" data-i18n="home.svc1.desc">
+            Prise en charge personnalisée, suivi des vols en temps réel, attente sans limite.
+          </p>
+          <div class="service-card__tags">
+            <span class="service-card__tag" data-i18n="home.svc1.tag1">Aéroport Avignon</span>
+            <span class="service-card__tag" data-i18n="home.svc1.tag2">Nice · Marseille</span>
+            <span class="service-card__tag" data-i18n="home.svc1.tag3">Gares TGV</span>
+          </div>
+          <span class="service-card__link" data-i18n="home.svc1.link">En savoir plus</span>
         </div>
-        <h3 class="service-card__title" data-i18n="home.svc1.title">Transfert aéroport & gare</h3>
-        <p class="service-card__desc" data-i18n="home.svc1.desc">
-          Prise en charge personnalisée, suivi des vols en temps réel, attente sans limite. Votre coordinateur vous attend, quelle que soit l'heure.
-        </p>
-        <div class="service-card__tags">
-          <span class="service-card__tag" data-i18n="home.svc1.tag1">Aéroport Avignon</span>
-          <span class="service-card__tag" data-i18n="home.svc1.tag2">Nice · Marseille</span>
-          <span class="service-card__tag" data-i18n="home.svc1.tag3">Gares TGV</span>
-        </div>
-        <a href="services.html" class="service-card__link" data-i18n="home.svc1.link">En savoir plus</a>
-      </div>
+      </a>
 
-      <!-- Mise à disposition -->
-      <div class="service-card" data-reveal="up" data-delay="100">
+      <!-- 02 Mise à disposition -->
+      <a href="services.html#disposition" class="service-card" data-reveal="up" data-delay="80">
+        <div class="service-card__bg" style="background-image:url('assets/images/services-disposition.png')"></div>
         <span class="service-card__number" aria-hidden="true">02</span>
-        <div class="service-card__icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
-          </svg>
+        <div class="service-card__content">
+          <h3 class="service-card__title" data-i18n="home.svc2.title">Mise à disposition</h3>
+          <p class="service-card__desc" data-i18n="home.svc2.desc">
+            Un coordinateur dédié, disponible pour la journée ou la demi-journée. Agenda flexible.
+          </p>
+          <div class="service-card__tags">
+            <span class="service-card__tag" data-i18n="home.svc2.tag1">Demi-journée</span>
+            <span class="service-card__tag" data-i18n="home.svc2.tag2">Journée complète</span>
+            <span class="service-card__tag" data-i18n="home.svc2.tag3">Multi-jours</span>
+          </div>
+          <span class="service-card__link" data-i18n="home.svc2.link">En savoir plus</span>
         </div>
-        <h3 class="service-card__title" data-i18n="home.svc2.title">Mise à disposition</h3>
-        <p class="service-card__desc" data-i18n="home.svc2.desc">
-          Un coordinateur dédié, à votre entière disposition pour la journée ou la demi-journée. Liberté totale, agenda flexible.
-        </p>
-        <div class="service-card__tags">
-          <span class="service-card__tag" data-i18n="home.svc2.tag1">Demi-journée</span>
-          <span class="service-card__tag" data-i18n="home.svc2.tag2">Journée complète</span>
-          <span class="service-card__tag" data-i18n="home.svc2.tag3">Multi-jours</span>
-        </div>
-        <a href="services.html" class="service-card__link" data-i18n="home.svc2.link">En savoir plus</a>
-      </div>
+      </a>
 
-      <!-- Mariages & Événements -->
-      <div class="service-card" data-reveal="up" data-delay="200">
+      <!-- 03 Mariages & Événements -->
+      <a href="mariages.html" class="service-card" data-reveal="up" data-delay="160">
+        <div class="service-card__bg" style="background-image:url('assets/images/services-mariage.png')"></div>
         <span class="service-card__number" aria-hidden="true">03</span>
-        <div class="service-card__icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
-          </svg>
+        <div class="service-card__content">
+          <h3 class="service-card__title" data-i18n="home.svc3.title">Mariages & événements</h3>
+          <p class="service-card__desc" data-i18n="home.svc3.desc">
+            Coordination complète de la flotte. Timing précis, discrétion absolue pour tous les invités.
+          </p>
+          <div class="service-card__tags">
+            <span class="service-card__tag" data-i18n="nav.weddings">Mariages</span>
+            <span class="service-card__tag" data-i18n="home.svc3.tag2">Séminaires</span>
+            <span class="service-card__tag" data-i18n="home.svc3.tag3">Soirées privées</span>
+          </div>
+          <span class="service-card__link" data-i18n="home.svc3.link">Découvrir</span>
         </div>
-        <h3 class="service-card__title" data-i18n="home.svc3.title">Mariages & événements</h3>
-        <p class="service-card__desc" data-i18n="home.svc3.desc">
-          Coordination complète du transport pour votre jour J. Flotte adaptée, timing précis, discrétion absolue pour tous vos invités.
-        </p>
-        <div class="service-card__tags">
-          <span class="service-card__tag" data-i18n="nav.weddings">Mariages</span>
-          <span class="service-card__tag" data-i18n="home.svc3.tag2">Séminaires</span>
-          <span class="service-card__tag" data-i18n="home.svc3.tag3">Soirées privées</span>
-        </div>
-        <a href="mariages.html" class="service-card__link" data-i18n="home.svc3.link">Découvrir</a>
-      </div>
+      </a>
 
-      <!-- Multi-événements -->
-      <div class="service-card" data-reveal="up" data-delay="300">
+      <!-- 04 Séjour multi-sites -->
+      <a href="services.html#multievent" class="service-card" data-reveal="up" data-delay="240">
+        <div class="service-card__bg" style="background-image:url('assets/images/services-event.png')"></div>
         <span class="service-card__number" aria-hidden="true">04</span>
-        <div class="service-card__icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
-          </svg>
+        <div class="service-card__content">
+          <h3 class="service-card__title" data-i18n="home.svc4.title">Séjour & coordination</h3>
+          <p class="service-card__desc" data-i18n="home.svc4.desc">
+            Accompagnement multi-jours. Un coordinateur dédié pour chaque étape du séjour de vos clients.
+          </p>
+          <div class="service-card__tags">
+            <span class="service-card__tag" data-i18n="home.svc4.tag1">Séjours VIP</span>
+            <span class="service-card__tag" data-i18n="home.svc4.tag2">Familles</span>
+            <span class="service-card__tag" data-i18n="home.svc4.tag3">Groupes</span>
+          </div>
+          <span class="service-card__link" data-i18n="home.svc4.link">En savoir plus</span>
         </div>
-        <h3 class="service-card__title" data-i18n="home.svc4.title">Séjour & coordination</h3>
-        <p class="service-card__desc" data-i18n="home.svc4.desc">
-          Accompagnement sur plusieurs jours pour vos séjours en Provence ou sur la Riviera. Un coordinateur dédié devient le fil conducteur de votre voyage.
-        </p>
-        <div class="service-card__tags">
-          <span class="service-card__tag" data-i18n="home.svc4.tag1">Séjours VIP</span>
-          <span class="service-card__tag" data-i18n="home.svc4.tag2">Familles</span>
-          <span class="service-card__tag" data-i18n="home.svc4.tag3">Groupes</span>
-        </div>
-        <a href="services.html" class="service-card__link" data-i18n="home.svc4.link">En savoir plus</a>
-      </div>
+      </a>
 
     </div>
   </div>
