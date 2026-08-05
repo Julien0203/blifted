@@ -9,6 +9,7 @@
   <meta name="description" content="B.LIFTED France assure la coordination de déplacements de luxe pour les wedding planners, organisateurs d'événements et voyageurs VIP. Provence, Côte d'Azur, Paris, Megève et Dubaï. Discrétion absolue, fiabilité sans compromis.">
   <meta name="keywords" content="luxury ground logistics Provence, coordination mariage French Riviera, partenaire wedding planner Avignon, déplacements VIP Paris, coordination événements Megève, ground logistics Dubaï">
   <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="google-site-verification" content="1zYfw8jf2pxMaPn-SXLwmXBfX-AyLuYj_4iyuNTTm-o" />
   <link rel="canonical" href="https://bliftedfrance.com/">
   <meta name="geo.region" content="FR-PAC">
 
@@ -60,7 +61,7 @@
   <link rel="stylesheet" href="css/reset.css?v=21">
   <link rel="stylesheet" href="css/typography.css?v=21">
   <link rel="stylesheet" href="css/animations.css?v=21">
-  <link rel="stylesheet" href="css/components.css?v=28">
+  <link rel="stylesheet" href="css/components.css?v=34">
 </head>
 
 <body class="no-scroll">
@@ -443,7 +444,7 @@
 <!-- ════════════════════════════════════════════════════════
      SERVICES
 ════════════════════════════════════════════════════════ -->
-<section class="section" id="services">
+<section class="section section--svc" id="services">
   <div class="container">
 
     <div class="section-header" data-stagger>
@@ -451,83 +452,40 @@
       <h2 class="section-title" data-reveal="up" data-i18n-html="home.services.title">
         Ce que nous <em>coordonnons</em>
       </h2>
-      <p class="section-sub" data-reveal="up" data-delay="150" data-i18n="home.services.sub">
-        Quatre expertises complémentaires, une seule exigence : l'irréprochable.
-      </p>
     </div>
 
-    <div class="services__grid">
+    <div class="services__list" data-reveal="fade">
 
-      <!-- 01 Transfert aéroport -->
-      <a href="services.html#transfert" class="service-card" data-reveal="up" data-delay="0">
-        <div class="service-card__bg" style="background-image:url('assets/images/services-transfert.jpg')"></div>
-        <span class="service-card__number" aria-hidden="true">01</span>
-        <div class="service-card__content">
-          <h3 class="service-card__title" data-i18n="home.svc1.title">Transfert aéroport & gare</h3>
-          <p class="service-card__desc" data-i18n="home.svc1.desc">
-            Prise en charge personnalisée, suivi des vols en temps réel, attente sans limite.
-          </p>
-          <div class="service-card__tags">
-            <span class="service-card__tag" data-i18n="home.svc1.tag1">Aéroport Avignon</span>
-            <span class="service-card__tag" data-i18n="home.svc1.tag2">Nice · Marseille</span>
-            <span class="service-card__tag" data-i18n="home.svc1.tag3">Gares TGV</span>
-          </div>
-          <span class="service-card__link" data-i18n="home.svc1.link">En savoir plus</span>
-        </div>
+      <!-- 01 Transfert -->
+      <a href="services.html#transfert" class="svc-row">
+        <span class="svc-row__num" aria-hidden="true">01</span>
+        <h3 class="svc-row__name" data-i18n="home.svc1.title">Transfert aéroport & gare</h3>
+        <p class="svc-row__desc" data-i18n="home.svc1.desc">Prise en charge personnalisée, suivi des vols en temps réel, attente sans limite.</p>
+        <span class="svc-row__arrow"><span data-i18n="home.svc1.link">En savoir plus</span></span>
       </a>
 
       <!-- 02 Mise à disposition -->
-      <a href="services.html#disposition" class="service-card" data-reveal="up" data-delay="80">
-        <div class="service-card__bg" style="background-image:url('assets/images/services-disposition.png')"></div>
-        <span class="service-card__number" aria-hidden="true">02</span>
-        <div class="service-card__content">
-          <h3 class="service-card__title" data-i18n="home.svc2.title">Mise à disposition</h3>
-          <p class="service-card__desc" data-i18n="home.svc2.desc">
-            Un coordinateur dédié, disponible pour la journée ou la demi-journée. Agenda flexible.
-          </p>
-          <div class="service-card__tags">
-            <span class="service-card__tag" data-i18n="home.svc2.tag1">Demi-journée</span>
-            <span class="service-card__tag" data-i18n="home.svc2.tag2">Journée complète</span>
-            <span class="service-card__tag" data-i18n="home.svc2.tag3">Multi-jours</span>
-          </div>
-          <span class="service-card__link" data-i18n="home.svc2.link">En savoir plus</span>
-        </div>
+      <a href="services.html#disposition" class="svc-row">
+        <span class="svc-row__num" aria-hidden="true">02</span>
+        <h3 class="svc-row__name" data-i18n="home.svc2.title">Mise à disposition</h3>
+        <p class="svc-row__desc" data-i18n="home.svc2.desc">Un coordinateur dédié, disponible pour la journée ou la demi-journée. Agenda flexible.</p>
+        <span class="svc-row__arrow"><span data-i18n="home.svc2.link">En savoir plus</span></span>
       </a>
 
       <!-- 03 Mariages & Événements -->
-      <a href="mariages.html" class="service-card" data-reveal="up" data-delay="160">
-        <div class="service-card__bg" style="background-image:url('assets/images/services-mariage.png')"></div>
-        <span class="service-card__number" aria-hidden="true">03</span>
-        <div class="service-card__content">
-          <h3 class="service-card__title" data-i18n="home.svc3.title">Mariages & événements</h3>
-          <p class="service-card__desc" data-i18n="home.svc3.desc">
-            Coordination complète de la flotte. Timing précis, discrétion absolue pour tous les invités.
-          </p>
-          <div class="service-card__tags">
-            <span class="service-card__tag" data-i18n="nav.weddings">Mariages</span>
-            <span class="service-card__tag" data-i18n="home.svc3.tag2">Séminaires</span>
-            <span class="service-card__tag" data-i18n="home.svc3.tag3">Soirées privées</span>
-          </div>
-          <span class="service-card__link" data-i18n="home.svc3.link">Découvrir</span>
-        </div>
+      <a href="mariages.html" class="svc-row">
+        <span class="svc-row__num" aria-hidden="true">03</span>
+        <h3 class="svc-row__name" data-i18n="home.svc3.title">Mariages & événements</h3>
+        <p class="svc-row__desc" data-i18n="home.svc3.desc">Coordination complète de la flotte. Timing précis, discrétion absolue pour tous les invités.</p>
+        <span class="svc-row__arrow"><span data-i18n="home.svc3.link">Découvrir</span></span>
       </a>
 
-      <!-- 04 Séjour multi-sites -->
-      <a href="services.html#multievent" class="service-card" data-reveal="up" data-delay="240">
-        <div class="service-card__bg" style="background-image:url('assets/images/services-event.png')"></div>
-        <span class="service-card__number" aria-hidden="true">04</span>
-        <div class="service-card__content">
-          <h3 class="service-card__title" data-i18n="home.svc4.title">Séjour & coordination</h3>
-          <p class="service-card__desc" data-i18n="home.svc4.desc">
-            Accompagnement multi-jours. Un coordinateur dédié pour chaque étape du séjour de vos clients.
-          </p>
-          <div class="service-card__tags">
-            <span class="service-card__tag" data-i18n="home.svc4.tag1">Séjours VIP</span>
-            <span class="service-card__tag" data-i18n="home.svc4.tag2">Familles</span>
-            <span class="service-card__tag" data-i18n="home.svc4.tag3">Groupes</span>
-          </div>
-          <span class="service-card__link" data-i18n="home.svc4.link">En savoir plus</span>
-        </div>
+      <!-- 04 Séjour & coordination -->
+      <a href="services.html#multievent" class="svc-row">
+        <span class="svc-row__num" aria-hidden="true">04</span>
+        <h3 class="svc-row__name" data-i18n="home.svc4.title">Séjour & coordination</h3>
+        <p class="svc-row__desc" data-i18n="home.svc4.desc">Accompagnement multi-jours. Un coordinateur dédié pour chaque étape du séjour de vos clients.</p>
+        <span class="svc-row__arrow"><span data-i18n="home.svc4.link">En savoir plus</span></span>
       </a>
 
     </div>
@@ -1466,7 +1424,15 @@
       </div>
 
       <!-- Contact -->
+      
       <div class="footer__col">
+        <p class="footer__col-title">Articles &amp; Guides</p>
+        <nav class="footer__nav">
+          <a href="blog/index.html" class="footer__nav-link">Tous les articles</a>
+          <a href="blog/transport-mariage-megeve-guide-wedding-planners.html" class="footer__nav-link">Transport mariage Megève</a>
+        </nav>
+      </div>
+<div class="footer__col">
         <p class="footer__col-title" data-i18n="footer.col.contact">Contact</p>
         <div class="footer__contact-item">
           <svg class="footer__contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -1508,13 +1474,13 @@
 
 
 <!-- ── JavaScript ── -->
-<script src="js/main.js?v=28" defer></script>
+<script src="js/main.js?v=33" defer></script>
 <script src="js/faq.js" defer></script>
 <script src="js/nav.js" defer></script>
 <script src="js/scroll-reveal.js" defer></script>
 <script src="js/simulator.js" defer></script>
 
-<script src="js/i18n.js?v=28" defer></script>
+<script src="js/i18n.js?v=34" defer></script>
 <script src="js/cookies.js" defer></script>
 
 <!-- Cookie Banner RGPD -->
