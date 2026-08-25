@@ -656,6 +656,28 @@ body:has(.page-hero) .header:not(.is-scrolled) .header__logo .logo-noir  { displ
   .hero__title { line-height: 0.93; }
   .hero__stat-sep { display: none; }
   .hero__stats { gap: var(--sp-4); }
+
+  /* ── Hero mobile simplifié ── */
+  .hero { justify-content: center; }
+  .hero__inner { padding-top: calc(var(--header-h) + 2rem); padding-bottom: 3rem; }
+  .hero__eyebrow { display: none; }
+  .hero__geo { display: none; }
+  .hero__stats { display: none; }
+
+  /* Seul le btn "Confier un projet" — transparent */
+  .hero__ctas .btn-ghost { display: none; }
+  .hero__ctas .btn-primary {
+    background: transparent;
+    border-color: rgba(255,255,255,0.45);
+    color: var(--blanc);
+    box-shadow: none;
+  }
+  .hero__ctas .btn-primary:hover,
+  .hero__ctas .btn-primary:focus-visible {
+    background: rgba(255,255,255,0.12);
+    border-color: rgba(255,255,255,0.7);
+  }
+  .hero__ctas .btn-primary .btn-arrow { color: var(--blanc); }
 }
 
 
