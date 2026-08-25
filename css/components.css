@@ -659,7 +659,7 @@ body:has(.page-hero) .header:not(.is-scrolled) .header__logo .logo-noir  { displ
 
   /* ── Hero mobile simplifié ── */
   .hero { justify-content: flex-start; }
-  .hero__inner { padding-top: calc(var(--header-h) + 6rem); padding-bottom: 3rem; }
+  .hero__inner { padding-top: calc(var(--header-h) + 9rem); padding-bottom: 3rem; }
   .hero__eyebrow { display: none; }
   .hero__geo { display: none; }
   .hero__stats { display: none; }
