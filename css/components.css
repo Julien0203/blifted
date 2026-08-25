@@ -664,18 +664,27 @@ body:has(.page-hero) .header:not(.is-scrolled) .header__logo .logo-noir  { displ
   .hero__geo { display: none; }
   .hero__stats { display: none; }
 
-  /* Seul le btn "Confier un projet" — transparent */
+  /* Titre + phrase serrés en haut, bouton plus bas */
+  .hero__content { gap: var(--sp-3); }
+  .hero__ctas { margin-top: var(--sp-9); justify-content: flex-start; }
+
+  /* Seul le btn "Confier un projet" — transparent, texte aligné au titre */
   .hero__ctas .btn-ghost { display: none; }
   .hero__ctas .btn-primary {
     background: transparent;
-    border-color: rgba(255,255,255,0.45);
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+    border-radius: 0;
+    padding-left: 0;
+    padding-right: 0;
     color: var(--blanc);
     box-shadow: none;
+    letter-spacing: 0.12em;
   }
   .hero__ctas .btn-primary:hover,
   .hero__ctas .btn-primary:focus-visible {
-    background: rgba(255,255,255,0.12);
-    border-color: rgba(255,255,255,0.7);
+    background: transparent;
+    border-bottom-color: rgba(255,255,255,0.9);
   }
   .hero__ctas .btn-primary .btn-arrow { color: var(--blanc); }
 }
