@@ -61,7 +61,7 @@
   <link rel="stylesheet" href="css/reset.css?v=21">
   <link rel="stylesheet" href="css/typography.css?v=21">
   <link rel="stylesheet" href="css/animations.css?v=21">
-  <link rel="stylesheet" href="css/components.css?v=34">
+  <link rel="stylesheet" href="css/components.css?v=36">
 </head>
 
 <body class="no-scroll">
@@ -143,14 +143,14 @@
 ════════════════════════════════════════════════════════ -->
 <section class="hero page-hero" id="accueil" aria-label="En-tête principal">
 
-  <!-- Fond image plein écran -->
+  <!-- Fond vidéo plein écran -->
   <div class="hero__bg" aria-hidden="true">
-    <img
-      src="assets/images/9901.png"
-      alt=""
-      loading="eager"
-      fetchpriority="high"
+    <video
+      autoplay muted loop playsinline
+      poster="assets/images/9901.png"
     >
+      <source src="hero.mov" type="video/mp4">
+    </video>
   </div>
 
   <div class="hero__inner">
