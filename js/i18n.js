@@ -787,7 +787,7 @@
 
       /* ── HOME — HERO ─────────────────────────────────── */
       'home.hero.eyebrow':       'Luxury Ground Logistics',
-      'home.hero.title':         'EXCELLENCE<br><em>FOR YOUR CLIENTS.</em>',
+      'home.hero.title':         'YOUR JOURNEY<br><em>ELEVATED.</em>',
       'home.hero.geo':           'Partner to luxury professionals — Weddings, Events & VIP Travel',
       'home.hero.phrase':        'We coordinate every transfer for your clients — so you can stay focused on what matters most.',
       'home.hero.stat2':         'Available 24/7',

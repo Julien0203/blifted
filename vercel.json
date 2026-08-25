@@ -13,7 +13,9 @@
     { "source": "/flotte",                    "destination": "/flotte.html" },
     { "source": "/mariages",                  "destination": "/mariages.html" },
     { "source": "/a-propos",                  "destination": "/a-propos.html" },
-    { "source": "/contact",                   "destination": "/contact.html" }
+    { "source": "/contact",                   "destination": "/contact.html" },
+    { "source": "/blog",                      "destination": "/blog/index.html" },
+    { "source": "/blog/transport-mariage-megeve-guide-wedding-planners", "destination": "/blog/transport-mariage-megeve-guide-wedding-planners.html" }
   ],
   "headers": [
     {
