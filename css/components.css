@@ -658,8 +658,8 @@ body:has(.page-hero) .header:not(.is-scrolled) .header__logo .logo-noir  { displ
   .hero__stats { gap: var(--sp-4); }
 
   /* ── Hero mobile simplifié ── */
-  .hero { justify-content: center; }
-  .hero__inner { padding-top: calc(var(--header-h) + 2rem); padding-bottom: 3rem; }
+  .hero { justify-content: flex-start; }
+  .hero__inner { padding-top: calc(var(--header-h) + 3.5rem); padding-bottom: 3rem; }
   .hero__eyebrow { display: none; }
   .hero__geo { display: none; }
   .hero__stats { display: none; }
