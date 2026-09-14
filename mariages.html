@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="css/reset.css?v=21">
   <link rel="stylesheet" href="css/typography.css?v=21">
   <link rel="stylesheet" href="css/animations.css?v=21">
-  <link rel="stylesheet" href="css/components.css?v=34">
+  <link rel="stylesheet" href="css/components.css?v=40">
   <style>
     body.no-scroll { overflow: hidden; }
     #menu-overlay { position:fixed; inset:0; background:rgba(28,26,23,0.4); z-index:calc(var(--z-header) - 2); opacity:0; visibility:hidden; transition:opacity var(--dur) var(--ease),visibility var(--dur); }
@@ -362,6 +362,41 @@
         </div>
         <div class="wp-section__image wp-section__image--orig" data-reveal="left">
           <img src="assets/images/mariage-alpin.png" alt="Mariage alpin Megève — B.LIFTED hiver" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Témoignages vidéo -->
+  <section class="video-testimonials">
+    <div class="video-testimonials__inner">
+      <div class="video-testimonials__header" data-stagger>
+        <span class="video-testimonials__eyebrow" data-reveal="fade">Ils témoignent</span>
+        <h2 class="video-testimonials__title" data-reveal="up">Ce que vivent vraiment <em>nos mariés</em></h2>
+        <p class="video-testimonials__sub" data-reveal="up">Des témoignages authentiques, sans filtre.</p>
+      </div>
+      <div class="video-testimonials__grid">
+        <div class="video-testimonials__item reveal-up">
+          <div class="video-testimonials__player-wrap">
+            <video class="video-testimonials__video" controls playsinline preload="metadata" aria-label="Témoignage Vanessa">
+              <source src="assets/videos/temoignage-vanessa.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-testimonials__caption">
+            <strong>Vanessa</strong>
+            <span>Mariée · Mariage en Provence</span>
+          </div>
+        </div>
+        <div class="video-testimonials__item reveal-up">
+          <div class="video-testimonials__player-wrap">
+            <video class="video-testimonials__video" controls playsinline preload="metadata" aria-label="Témoignage client B.LIFTED">
+              <source src="assets/videos/temoignage-client.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-testimonials__caption">
+            <strong>Client B.LIFTED</strong>
+            <span>Événement privé · Côte d'Azur</span>
+          </div>
         </div>
       </div>
     </div>
