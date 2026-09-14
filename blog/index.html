@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ressources & Guides — B.LIFTED France</title>
-  <meta name="description" content="Guides experts pour wedding planners et agences événementielles de luxe. Transport, logistique, mariage destination : les ressources B.LIFTED France.">
+  <title>Ressources & Guides B2B — Coordination transport luxe | B.LIFTED France</title>
+  <meta name="description" content="Guides experts pour agences événementielles, DMC, hôtels 5 étoiles, conciergeries et MICE. Coordination transport VIP, logistique événementielle, mobilité groupes luxe — les ressources B.LIFTED France.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://bliftedfrance.com/blog/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="../css/reset.css?v=21">
   <link rel="stylesheet" href="../css/typography.css?v=21">
   <link rel="stylesheet" href="../css/animations.css?v=21">
-  <link rel="stylesheet" href="../css/components.css?v=34">
+  <link rel="stylesheet" href="../css/components.css?v=39">
   <style>
     body.no-scroll { overflow: hidden; }
     #menu-overlay { position:fixed; inset:0; background:rgba(28,26,23,0.4); z-index:calc(var(--z-header) - 2); opacity:0; visibility:hidden; transition:opacity 0.3s,visibility 0.3s; }
@@ -163,10 +163,40 @@
       line-height: 1.35;
       font-style: italic;
     }
+    .blog-card {
+      background: var(--blanc);
+      border: 1px solid var(--or-border);
+      border-radius: var(--radius-lg);
+      display: flex;
+      flex-direction: column;
+      padding: clamp(1.5rem, 2.5vw, 2rem);
+      text-decoration: none;
+      transition: box-shadow var(--transition), transform var(--transition);
+      gap: var(--sp-3);
+    }
+    @media (hover: hover) {
+      .blog-card:hover { box-shadow: 0 12px 40px rgba(77,92,56,0.1); transform: translateY(-3px); }
+    }
+    .blog-card__tags { display:flex; flex-wrap:wrap; gap:0.35rem; }
+    .blog-card__tag { font-size:0.6rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--or-lt); background:rgba(77,92,56,0.06); border:1px solid rgba(77,92,56,0.15); padding:0.18rem 0.55rem; border-radius:var(--radius-full); }
+    .blog-card__title { font-family:var(--font-serif); font-size:clamp(1rem,1.6vw,1.15rem); font-weight:400; line-height:1.3; color:var(--text); letter-spacing:-0.015em; margin:0; }
+    .blog-card__desc { font-size:0.82rem; color:var(--texte-lt); line-height:1.65; margin:0; }
+    .blog-card__meta { font-size:0.68rem; color:rgba(155,138,128,0.55); display:flex; gap:0.6rem; margin-top:auto; padding-top:var(--sp-3); border-top:1px solid rgba(77,92,56,0.08); }
+    .blog-card__cta { font-size:0.78rem; font-weight:600; color:var(--or); letter-spacing:0.04em; }
+    .blog-grid-secondary {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--sp-6);
+      margin-top: var(--sp-8);
+    }
     @media (max-width: 900px) {
       .blog-grid { grid-template-columns: 1fr; }
       .blog-featured { grid-template-columns: 1fr; }
       .blog-featured__img { min-height: 220px; }
+      .blog-grid-secondary { grid-template-columns: 1fr; }
+    }
+    @media (min-width: 601px) and (max-width: 900px) {
+      .blog-grid-secondary { grid-template-columns: repeat(2, 1fr); }
     }
   </style>
 </head>
@@ -258,30 +288,114 @@
         </div>
       </a>
 
-      <!-- Article 2 -->
-      <a href="/blog/transport-mariage-hiver-alpes-guide-wedding-planners.html" class="blog-empty-card" style="text-decoration:none;background:var(--blanc);border:1px solid var(--or-border);border-style:solid;align-items:flex-start;padding:clamp(2rem,3vw,2.5rem);min-height:280px;justify-content:flex-start;gap:var(--sp-4);">
-        <div style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:0.25rem;">
-          <span class="blog-featured__tag">Mariage d'hiver</span>
-          <span class="blog-featured__tag">Alpes</span>
-          <span class="blog-featured__tag">International</span>
-        </div>
-        <p style="font-family:var(--font-serif);font-size:clamp(1rem,1.6vw,1.2rem);font-weight:400;line-height:1.3;color:var(--text);letter-spacing:-0.015em;margin:0;">Mariage d'hiver de luxe dans les Alpes françaises : le guide ultime du transport VIP pour les wedding planners internationaux</p>
-        <p style="font-size:0.82rem;color:var(--texte-lt);line-height:1.6;margin:0;">180 invités · 14 nationalités · 4 jours · FBO, jets privés, conditions hivernales — le guide expert complet.</p>
-        <div style="margin-top:auto;font-size:0.72rem;color:rgba(155,138,128,0.55);display:flex;gap:0.75rem;">
-          <span>29 juillet 2026</span><span>·</span><span>14 min de lecture</span>
-        </div>
-        <span style="margin-top:var(--sp-3);font-size:0.8rem;font-weight:600;color:var(--or);letter-spacing:0.04em;">Lire le guide →</span>
+    </div>
+
+    <!-- 13 nouveaux articles -->
+    <div class="blog-grid-secondary">
+
+      <a href="/blog/coordination-transport-evenementiel-agences.html" class="blog-card">
+        <div class="blog-card__tags"><span class="blog-card__tag">Événementiel</span><span class="blog-card__tag">Agences</span><span class="blog-card__tag">DMC</span></div>
+        <p class="blog-card__title">Coordination transport événementiel haut de gamme : le guide opérationnel pour les agences</p>
+        <p class="blog-card__desc">Arrivées échelonnées, multi-groupes VIP, gestion des imprévus — le guide complet pour les agences événementielles qui refusent l'approximation.</p>
+        <div class="blog-card__meta"><span>1 juillet 2026</span><span>·</span><span>13 min</span></div>
+        <span class="blog-card__cta">Lire le guide →</span>
       </a>
 
-      <!-- Placeholders -->
-      <div class="blog-empty-card">
-        <span class="blog-empty-card__label">Prochainement</span>
-        <p class="blog-empty-card__title">Mariage en Provence : organiser le transport entre plusieurs domaines</p>
-      </div>
-      <div class="blog-empty-card">
-        <span class="blog-empty-card__label">Prochainement</span>
-        <p class="blog-empty-card__title">French Riviera : transferts VIP pour événements et mariages sur la Côte d'Azur</p>
-      </div>
+      <a href="/blog/coordination-transport-seminaires-corporate.html" class="blog-card">
+        <div class="blog-card__tags"><span class="blog-card__tag">MICE</span><span class="blog-card__tag">Corporate</span><span class="blog-card__tag">Séminaires</span></div>
+        <p class="blog-card__title">Transport séminaires corporate : comment la mobilité contribue au succès de l'événement</p>
+        <p class="blog-card__desc">Multi-sites, navettes hôtel-salle, dîner de gala — le guide pour les travel managers et agences MICE qui veulent une mobilité sans friction.</p>
+        <div class="blog-card__meta"><span>8 juillet 2026</span><span>·</span><span>12 min</span></div>
+        <span class="blog-card__cta">Lire le guide →</span>
+      </a>
+
+      <a href="/blog/coordination-transport-fashion-week-paris.html" class="blog-card">
+        <div class="blog-card__tags"><span class="blog-card__tag">Fashion Week</span><span class="blog-card__tag">Paris</span><span class="blog-card__tag">Mode</span></div>
+        <p class="blog-card__title">Coordination transport Fashion Week Paris : la mobilité comme élément de production</p>
+        <p class="blog-card__desc">7 jours intenses, timing serré, équipes internationales — comment les maisons de mode et agences RP coordonnent la mobilité de leurs invités.</p>
+        <div class="blog-card__meta"><span>15 juillet 2026</span><span>·</span><span>11 min</span></div>
+        <span class="blog-card__cta">Lire le guide →</span>
+      </a>
+
+      <a href="/blog/partenaire-hotels-5-etoiles-coordination-transport.html" class="blog-card">
+        <div class="blog-card__tags"><span class="blog-card__tag">Hôtels</span><span class="blog-card__tag">Palaces</span><span class="blog-card__tag">Conciergerie</span></div>
+        <p class="blog-card__title">Partenaire transport recommandé pour les hôtels 5 étoiles : élever l'expérience au-delà des murs</p>
+        <p class="blog-card__desc">Discrétion absolue, non-démarchage garanti, intégration conciergerie — le modèle de partenariat B.LIFTED pour les palaces et établissements de prestige.</p>
+        <div class="blog-card__meta"><span>22 juillet 2026</span><span>·</span><span>14 min</span></div>
+        <span class="blog-card__cta">Lire le guide →</span>
+      </a>
+
+      <a href="/blog/mobilite-vip-internationale-dubai-paris-alpes.html" class="blog-card">
+        <div class="blog-card__tags"><span class="blog-card__tag">International</span><span class="blog-card__tag">Dubaï</span><span class="blog-card__tag">Conciergerie</span></div>
+        <p class="blog-card__title">Mobilité VIP internationale Paris · Alpes · Dubaï : un coordinateur unique pour tous vos marchés</p>
+        <p class="blog-card__desc">Clients UHNW du Golfe, réseau France + Dubaï, fuseaux horaires multiples — le guide pour les conciergeries et DMC internationaux.</p>
+        <div class="blog-card__meta"><span>28 juillet 2026</span><span>·</span><span>12 min</span></div>
+        <span class="blog-card__cta">Lire le guide →</span>
+      </a>
+
+      <a href="/blog/coordination-transport-evenements-prives-villas-chateaux.html" class="blog-card">
+        <div class="blog-card__tags"><span class="blog-card__tag">Événements Privés</span><span class="blog-card__tag">Villas</span><span class="blog-card__tag">Châteaux</span></div>
+        <p class="blog-card__title">Transport événements privés dans les villas et châteaux : la coordination discrète qui élève la réception</p>
+        <p class="blog-card__desc">Anniversaires, dîners de gala, réceptions privées — comment coordonner 100 invités dans une propriété isolée sans perturber l'atmosphère.</p>
+        <div class="blog-card__meta"><span>4 août 2026</span><span>·</span><span>12 min</span></div>
+        <span class="blog-card__cta">Lire le guide →</span>
+      </a>
+
+      <a href="/blog/coordination-transport-dirigeants-delegations-vip.html" class="blog-card">
+        <div class="blog-card__tags"><span class="blog-card__tag">Corporate VIP</span><span class="blog-card__tag">Dirigeants</span><span class="blog-card__tag">Discrétion</span></div>
+        <p class="blog-card__title">Mobilité des dirigeants et délégations VIP : la coordination discrète et précise que votre direction mérite</p>
+        <p class="blog-card__desc">Comités exécutifs, délégations internationales, déplacements sensibles — tout ce que les assistantes de direction et DRH doivent savoir.</p>
+        <div class="blog-card__meta"><span>11 août 2026</span><span>·</span><span>13 min</span></div>
+        <span class="blog-card__cta">Lire le guide →</span>
+      </a>
+
+      <a href="/blog/mobilite-vip-cote-azur-yachts-jets.html" class="blog-card">
+        <div class="blog-card__tags"><span class="blog-card__tag">Côte d'Azur</span><span class="blog-card__tag">Yachts</span><span class="blog-card__tag">Jets Privés</span></div>
+        <p class="blog-card__title">Coordination mobilité terrestre Côte d'Azur : le chaînon manquant entre votre jet, votre yacht et votre villa</p>
+        <p class="blog-card__desc">Nice, Cannes, Monaco, Saint-Tropez — le protocole complet pour conciergeries et sociétés de charter qui coordonnent la mobilité terrestre de leurs clients.</p>
+        <div class="blog-card__meta"><span>18 août 2026</span><span>·</span><span>12 min</span></div>
+        <span class="blog-card__cta">Lire le guide →</span>
+      </a>
+
+      <a href="/blog/coordination-transport-galas-lancements-marques-luxe.html" class="blog-card">
+        <div class="blog-card__tags"><span class="blog-card__tag">Galas</span><span class="blog-card__tag">Lancements</span><span class="blog-card__tag">Luxe</span></div>
+        <p class="blog-card__title">Transport galas et lancements de marques luxe : quand la mobilité devient partie intégrante de l'image</p>
+        <p class="blog-card__desc">Presse, VIP, influenceurs — comment les maisons de luxe et agences RP intègrent la coordination mobilité dans leur production événementielle.</p>
+        <div class="blog-card__meta"><span>25 août 2026</span><span>·</span><span>12 min</span></div>
+        <span class="blog-card__cta">Lire le guide →</span>
+      </a>
+
+      <a href="/blog/mercedes-classe-v-coordination-groupes-vip.html" class="blog-card">
+        <div class="blog-card__tags"><span class="blog-card__tag">Flotte</span><span class="blog-card__tag">Mercedes Classe V</span><span class="blog-card__tag">Groupes</span></div>
+        <p class="blog-card__title">La Mercedes Classe V dans la coordination VIP : bien plus qu'un véhicule, un outil de logistique de groupe</p>
+        <p class="blog-card__desc">Famille UHNW, délégation corporate, équipe mode — 3 cas d'usage professionnels et pourquoi la Classe V est la référence pour les groupes de 5 à 7 personnes.</p>
+        <div class="blog-card__meta"><span>1 sept. 2026</span><span>·</span><span>11 min</span></div>
+        <span class="blog-card__cta">Lire le guide →</span>
+      </a>
+
+      <a href="/blog/coordination-transport-groupes-voyages-affaires.html" class="blog-card">
+        <div class="blog-card__tags"><span class="blog-card__tag">Voyages d'Affaires</span><span class="blog-card__tag">Groupes</span><span class="blog-card__tag">Travel Manager</span></div>
+        <p class="blog-card__title">Coordination transport groupes voyages d'affaires : un seul interlocuteur pour toute la mobilité</p>
+        <p class="blog-card__desc">Séminaires multi-sites, activités corporate, retours individualisés — comment les travel managers simplifient la logistique groupe avec un coordinateur unique.</p>
+        <div class="blog-card__meta"><span>7 sept. 2026</span><span>·</span><span>12 min</span></div>
+        <span class="blog-card__cta">Lire le guide →</span>
+      </a>
+
+      <a href="/blog/choisir-partenaire-coordination-transport-evenementiel.html" class="blog-card">
+        <div class="blog-card__tags"><span class="blog-card__tag">Guide Sélection</span><span class="blog-card__tag">Prestataire</span><span class="blog-card__tag">Qualité</span></div>
+        <p class="blog-card__title">Comment choisir son prestataire de coordination transport événementiel : les 9 critères qui font la différence</p>
+        <p class="blog-card__desc">Questions révélatrices, red flags, checklist opérationnelle — le guide outil pour les agences événementielles qui évaluent leurs prestataires.</p>
+        <div class="blog-card__meta"><span>10 sept. 2026</span><span>·</span><span>13 min</span></div>
+        <span class="blog-card__cta">Lire le guide →</span>
+      </a>
+
+      <a href="/blog/partenaire-transport-dmc-conciergeries.html" class="blog-card">
+        <div class="blog-card__tags"><span class="blog-card__tag">DMC</span><span class="blog-card__tag">Conciergeries</span><span class="blog-card__tag">Partenariat</span></div>
+        <p class="blog-card__title">B.LIFTED, partenaire mobilité intégré des DMC et conciergeries : la coordination invisible qui valorise votre offre</p>
+        <p class="blog-card__desc">Non-ingérence client, réseau France + Dubaï, 3 formules de partenariat — tout ce que les DMC et conciergeries doivent savoir sur l'intégration d'un coordinateur mobilité.</p>
+        <div class="blog-card__meta"><span>14 sept. 2026</span><span>·</span><span>13 min</span></div>
+        <span class="blog-card__cta">Lire le guide →</span>
+      </a>
 
     </div>
   </div>
@@ -337,8 +451,10 @@
         <p class="footer__col-title">Articles &amp; Guides</p>
         <nav class="footer__nav">
           <a href="/blog/index.html" class="footer__nav-link">Tous les articles</a>
+          <a href="/blog/coordination-transport-evenementiel-agences.html" class="footer__nav-link">Transport événementiel agences</a>
+          <a href="/blog/partenaire-hotels-5-etoiles-coordination-transport.html" class="footer__nav-link">Partenariat hôtels 5★</a>
+          <a href="/blog/mobilite-vip-cote-azur-yachts-jets.html" class="footer__nav-link">Mobilité VIP Côte d'Azur</a>
           <a href="/blog/transport-mariage-megeve-guide-wedding-planners.html" class="footer__nav-link">Transport mariage Megève</a>
-          <a href="/blog/transport-mariage-hiver-alpes-guide-wedding-planners.html" class="footer__nav-link">Mariage hiver Alpes</a>
         </nav>
       </div>
       <div class="footer__col">
