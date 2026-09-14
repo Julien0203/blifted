@@ -123,6 +123,52 @@
     .blog-share__btn { display:inline-flex; align-items:center; gap:0.4rem; font-size:0.75rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--or); background:none; border:1px solid var(--or-border,rgba(77,92,56,0.2)); border-radius:var(--radius-full); padding:0.4rem 0.9rem; cursor:pointer; transition:background 0.2s, color 0.2s; }
     .blog-share__btn:hover { background:var(--or); color:#fff; }
     .blog-share__btn svg { width:13px; height:13px; stroke:currentColor; fill:none; stroke-width:2; }
+
+    /* ── Conversion elements ── */
+    .blog-hero__cta-zone { display:flex; align-items:center; gap:1rem; flex-wrap:wrap; margin-top:2rem; padding-top:1.5rem; border-top:1px solid rgba(255,255,255,0.15); }
+    .blog-hero__cta-zone .btn { font-size:0.88rem; }
+    .blog-hero__cta-wa { display:inline-flex; align-items:center; gap:0.5rem; color:rgba(255,255,255,0.8); font-size:0.82rem; font-weight:500; text-decoration:none; transition:color 0.2s; }
+    .blog-hero__cta-wa:hover { color:#25D366; }
+    .blog-hero__cta-wa svg { fill:#25D366; flex-shrink:0; }
+    .blog-urgency { background:var(--or); color:#fff; text-align:center; padding:0.65rem 1.5rem; font-size:0.82rem; font-weight:600; letter-spacing:0.04em; }
+    .blog-urgency strong { font-weight:700; }
+    .blog-for-who { background:var(--ivoire,#FAFAF6); border-left:3px solid var(--or); border-radius:var(--radius-md,20px); padding:1.75rem 2rem; margin:2rem 0; }
+    .blog-for-who__title { font-size:0.7rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--or); margin-bottom:1rem; }
+    .blog-for-who ul { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:0.5rem; }
+    .blog-for-who ul li { padding-left:1.4rem; position:relative; font-size:0.9rem; line-height:1.5; }
+    .blog-for-who ul li::before { content:"✓"; position:absolute; left:0; color:var(--or); font-weight:700; }
+    .blog-risk-box { background:rgba(220,38,38,0.04); border:1px solid rgba(220,38,38,0.15); border-radius:var(--radius-md,20px); padding:1.75rem 2rem; margin:2rem 0; }
+    .blog-risk-box__title { font-size:0.7rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#DC2626; margin-bottom:1rem; }
+    .blog-risk-box ul { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:0.5rem; }
+    .blog-risk-box ul li { padding-left:1.6rem; position:relative; font-size:0.9rem; line-height:1.5; }
+    .blog-risk-box ul li::before { content:"✗"; position:absolute; left:0; color:#DC2626; font-weight:700; }
+    .blog-comparison { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin:2rem 0; }
+    @media(max-width:640px){ .blog-comparison { grid-template-columns:1fr; } }
+    .blog-comparison__col { border-radius:var(--radius-md,20px); padding:1.5rem; }
+    .blog-comparison__col--before { background:rgba(220,38,38,0.04); border:1px solid rgba(220,38,38,0.15); }
+    .blog-comparison__col--after { background:rgba(77,92,56,0.06); border:1px solid rgba(77,92,56,0.2); }
+    .blog-comparison__label { display:block; font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:1rem; }
+    .blog-comparison__col--before .blog-comparison__label { color:#DC2626; }
+    .blog-comparison__col--after .blog-comparison__label { color:var(--or); }
+    .blog-comparison__col ul { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:0.4rem; }
+    .blog-comparison__col ul li { font-size:0.875rem; line-height:1.5; padding-left:1.4rem; position:relative; }
+    .blog-comparison__col--before ul li::before { content:"–"; position:absolute; left:0; color:#DC2626; }
+    .blog-comparison__col--after ul li::before { content:"✓"; position:absolute; left:0; color:var(--or); font-weight:700; }
+    .blog-testimonial { background:var(--bg-dark,#1C1A17); color:#fff; border-radius:var(--radius-lg,32px); padding:2rem 2.5rem; margin:2rem 0; position:relative; }
+    .blog-testimonial::before { content:"\201C"; position:absolute; top:1rem; left:1.5rem; font-family:var(--font-serif,'Cormorant Garamond',serif); font-size:5rem; line-height:1; color:var(--or); opacity:0.3; }
+    .blog-testimonial__quote { font-style:italic; font-size:1rem; line-height:1.7; margin:0 0 1rem; padding-left:1rem; }
+    .blog-testimonial__author { font-size:0.78rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--or); }
+    .blog-steps { background:var(--ivoire,#FAFAF6); border-radius:var(--radius-lg,32px); padding:2.5rem; margin:3rem 0; }
+    .blog-steps__title { font-family:var(--font-serif,'Cormorant Garamond',serif); font-size:1.4rem; font-weight:400; margin-bottom:2rem; text-align:center; color:var(--bg-dark,#1C1A17); }
+    .blog-steps__grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; }
+    @media(max-width:640px){ .blog-steps__grid { grid-template-columns:1fr; } }
+    .blog-steps__step { display:flex; flex-direction:column; gap:0.5rem; }
+    .blog-steps__num { font-family:var(--font-serif,'Cormorant Garamond',serif); font-size:2.5rem; font-weight:300; color:var(--or); line-height:1; }
+    .blog-steps__step strong { font-size:0.9rem; font-weight:700; color:var(--bg-dark,#1C1A17); }
+    .blog-steps__step p { font-size:0.85rem; line-height:1.6; color:var(--texte-lt,#9A8A80); margin:0; }
+    .blog-steps__cta { display:inline-flex; align-items:center; gap:0.5rem; background:var(--or); color:#fff; font-size:0.85rem; font-weight:600; letter-spacing:0.06em; text-decoration:none; padding:0.75rem 1.75rem; border-radius:var(--radius-full,9999px); transition:opacity 0.2s; }
+    .blog-steps__cta:hover { opacity:0.85; }
+    .blog-sidebar__urgency { font-size:0.75rem; color:var(--or); font-weight:500; margin-top:0.5rem; line-height:1.4; }
   </style>
 </head>
 <body>
@@ -210,8 +256,17 @@
         <li><a href="#faq">Questions fréquentes des assistantes de direction et DRH</a></li>
       </ul>
     </div>
+    <div class="blog-hero__cta-zone">
+      <a href="../contact.html" class="btn btn-primary">Discuter de votre mobilité corporate <span class="btn-arrow">→</span></a>
+      <a href="https://wa.me/33636017235" class="blog-hero__cta-wa" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp Sarah
+      </a>
+    </div>
   </div>
 </section>
+
+<div class="blog-urgency">⏱ Agenda corporate chargé — <strong>Disponibilités limitées pour les accords-cadres Q4.</strong> Premier échange sans engagement.</div>
 
 <div class="blog-stats">
   <div class="blog-stats__grid">
@@ -257,6 +312,17 @@
 
         <p>Ce guide s'adresse aux <strong>assistantes de direction, directeurs des ressources humaines, responsables de sécurité et directeurs administratifs</strong> qui organisent les déplacements de dirigeants et de délégations VIP. Il pose les bases d'une organisation mobilité qui libère la direction de toute préoccupation logistique et protège les informations sensibles associées à ses déplacements.</p>
 
+        <div class="blog-for-who reveal-up">
+          <p class="blog-for-who__title">Ce guide est fait pour vous si…</p>
+          <ul>
+            <li>Vous êtes assistante de direction, DRH ou travel manager d'une entreprise dont les dirigeants se déplacent régulièrement</li>
+            <li>Vos dirigeants ont des agendas Paris–Alpes–Côte d'Azur avec des impératifs d'exactitude et de confidentialité</li>
+            <li>Vous gérez des délégations internationales qui arrivent en France (Dubaï, Londres, New York) et attendez une prise en charge sans faille dès la sortie d'avion</li>
+            <li>La confidentialité des déplacements est un impératif — pas une option</li>
+            <li>Vous cherchez un partenaire avec qui établir un accord-cadre plutôt que de repartir de zéro à chaque mission</li>
+          </ul>
+        </div>
+
         <h2 id="s1">La mobilité des dirigeants : une question stratégique, pas logistique</h2>
 
         <p>La première chose que toute entreprise sérieuse doit comprendre sur la mobilité de ses dirigeants, c'est que ce n'est pas un poste de coût à optimiser. C'est un investissement dans la productivité, la sécurité et l'image de l'entreprise.</p>
@@ -266,6 +332,16 @@
         <p><strong>La sécurité ensuite.</strong> Les déplacements des dirigeants contiennent des informations extrêmement sensibles : qui ils rencontrent, quand, où, avec quelles personnes. Dans un contexte d'espionnage économique et d'intelligence compétitive active, la gestion des informations relatives aux déplacements d'un PDG ou d'un membre de comex est un enjeu de sécurité réel. Un prestataire de mobilité professionnelle comprend cette dimension et la traite avec les protocoles adaptés.</p>
 
         <p><strong>L'image enfin.</strong> La façon dont un dirigeant arrive à une réunion envoie un message. Arriver dans un véhicule impeccable, à l'heure, sans stress apparent, contribue à l'autorité et à la crédibilité du dirigeant. Arriver en retard dans un véhicule mal coordonné envoie un message inverse.</p>
+
+        <div class="blog-risk-box reveal-up">
+          <p class="blog-risk-box__title">Ce qui arrive quand la coordination est insuffisante</p>
+          <ul>
+            <li>Un PDG arrive en retard à une réunion stratégique parce que le véhicule a été commandé sans tenir compte du trafic à La Défense un lundi matin</li>
+            <li>Des informations de déplacement circulent entre les coordinateurs sans NDA, exposant des rencontres confidentielles</li>
+            <li>Une délégation internationale atterrit à CDG sans prise en charge coordonnée — premier contact catastrophique avec la France</li>
+            <li>L'assistante de direction passe ses matinées à coordonner quatre prestataires différents au lieu de se concentrer sur son cœur de métier</li>
+          </ul>
+        </div>
 
         <h2 id="s2">Les exigences spécifiques d'une délégation VIP internationale</h2>
 
@@ -308,6 +384,29 @@
 
         <p><strong>La coordination avec les équipes de sécurité corporate.</strong> Pour les dirigeants qui bénéficient d'une protection rapprochée, B.LIFTED coordonne directement avec le responsable de sécurité. Les trajets sont planifiés en tenant compte des contraintes de contre-surveillance, des itinéraires alternatifs et des protocoles de communication définis par l'équipe de sécurité. Notre rôle est de compléter le dispositif de sécurité, pas d'interférer avec lui.</p>
 
+        <div class="blog-comparison reveal-up">
+          <div class="blog-comparison__col blog-comparison__col--before">
+            <span class="blog-comparison__label">Sans coordinateur dédié</span>
+            <ul>
+              <li>Application grand public — aucune connaissance du dirigeant ni de ses habitudes</li>
+              <li>Pas de NDA — les informations de déplacement ne sont pas protégées contractuellement</li>
+              <li>L'assistante gère plusieurs prestataires, coordonne à la main, absorbe les imprévus</li>
+              <li>Standards de service variables selon le prestataire et la date</li>
+              <li>Rebriefier le prestataire à chaque nouvelle mission depuis zéro</li>
+            </ul>
+          </div>
+          <div class="blog-comparison__col blog-comparison__col--after">
+            <span class="blog-comparison__label">Coordination B.LIFTED</span>
+            <ul>
+              <li>Coordinateur dédié qui connaît les habitudes, préférences et contraintes de chaque dirigeant</li>
+              <li>Confidentialité contractuelle — NDA signé, données de déplacement sécurisées</li>
+              <li>L'assistante envoie un message — B.LIFTED gère tout le reste</li>
+              <li>Standards identiques sur toutes les zones : Paris, Megève, Côte d'Azur, Dubaï</li>
+              <li>Accord-cadre : votre contexte est connu, la mission démarre immédiatement</li>
+            </ul>
+          </div>
+        </div>
+
         <h2 id="s5">Le rôle de l'assistante de direction dans la coordination mobilité</h2>
 
         <p>Dans la plupart des grandes entreprises, c'est l'assistante de direction — ou l'équipe d'assistantes — qui est le véritable pivot de la coordination mobilité des dirigeants. Ce sont elles qui connaissent les préférences du DG, qui gèrent les changements de programme, qui communiquent avec les prestataires, et qui portent la responsabilité de s'assurer que les déplacements se déroulent sans accroc.</p>
@@ -342,6 +441,12 @@
       <div class="blog-pullquote reveal-up">
         <p>« Un accord-cadre, c'est l'assurance que votre direction ne perd jamais de temps avec la logistique de sa mobilité — et que vos assistantes n'ont jamais à improviser. »</p>
       </div>
+
+      <div class="blog-testimonial reveal-up">
+        <p class="blog-testimonial__quote">« Nos dirigeants n'ont plus à attendre, n'ont jamais à s'expliquer deux fois. B.LIFTED connaît leurs préférences, leurs habitudes, leurs contraintes. C'est devenu une évidence dans notre organisation. »</p>
+        <span class="blog-testimonial__author">— Assistante de direction, groupe CAC 40</span>
+      </div>
+
       <div class="blog-article__inner">
 
         <h2 id="faq">Questions fréquentes</h2>
@@ -426,6 +531,11 @@
           +(33) 6 36 01 72 35
         </a>
         <p class="blog-sidebar__note">Réponse sous 24h · Devis gratuit · Discrétion assurée</p>
+        <a href="https://wa.me/33636017235" class="blog-sidebar__whatsapp" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Contacter Sarah sur WhatsApp
+        </a>
+        <p class="blog-sidebar__urgency">🗓 Accords-cadres Q4 — <strong>disponibilités limitées</strong>, prenez contact maintenant</p>
       </div>
       <div class="blog-sidebar__toc">
         <span class="blog-sidebar__toc-label">Dans cet article</span>
@@ -472,6 +582,30 @@
     </div>
   </div>
 </section>
+
+<div class="blog-steps reveal-up">
+  <h3 class="blog-steps__title">3 étapes pour sécuriser la mobilité de votre direction</h3>
+  <div class="blog-steps__grid">
+    <div class="blog-steps__step">
+      <span class="blog-steps__num">01</span>
+      <strong>Échange de qualification</strong>
+      <p>30 minutes pour comprendre vos dirigeants, leurs habitudes, vos impératifs de confidentialité et le volume de missions.</p>
+    </div>
+    <div class="blog-steps__step">
+      <span class="blog-steps__num">02</span>
+      <strong>Accord-cadre sur mesure</strong>
+      <p>Coordinateur référent identifié, conditions tarifaires stables, procédures d'urgence définies. Opérationnel en une semaine.</p>
+    </div>
+    <div class="blog-steps__step">
+      <span class="blog-steps__num">03</span>
+      <strong>Vos dirigeants n'y pensent plus</strong>
+      <p>L'assistante envoie un message. B.LIFTED gère tout. Zéro friction, discrétion absolue, disponibilité permanente.</p>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:2rem;">
+    <a href="https://wa.me/33636017235" class="blog-steps__cta" target="_blank" rel="noopener">Discuter d'un accord-cadre →</a>
+  </div>
+</div>
 
 <section class="blog-cta-final reveal-up">
   <div class="blog-cta-final__inner">
