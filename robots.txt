@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://bliftedfrance.com/sitemap.xml
+
+# Bloquer les dossiers non pertinents
+Disallow: /.git/
