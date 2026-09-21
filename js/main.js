@@ -108,6 +108,21 @@
   });
 
 
+  /* ── REVEAL-UP SCROLL ANIMATION ────────────────────────── */
+  const revealUpObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-revealed');
+        revealUpObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+
+  document.querySelectorAll('.reveal-up').forEach((el) => {
+    revealUpObserver.observe(el);
+  });
+
+
   /* ── FOOTER ANNÉE ───────────────────────────────────────── */
   const yearEl = document.getElementById('footer-year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
