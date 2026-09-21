@@ -3395,7 +3395,7 @@ body:has(.blog-index-hero) .header:not(.is-scrolled) .header__logo .logo-noir  {
 .blog-article-layout {
   max-width: 1260px;
   margin: 0 auto;
-  padding: clamp(4rem, 7vw, 6rem) var(--gutter) clamp(5rem, 9vw, 8rem);
+  padding: clamp(3rem, 5vw, 4.5rem) var(--gutter) clamp(5rem, 9vw, 8rem);
   display: grid;
   grid-template-columns: 1fr 288px;
   gap: clamp(3.5rem, 5.5vw, 5.5rem);
@@ -3944,7 +3944,7 @@ body:has(.blog-index-hero) .header:not(.is-scrolled) .header__logo .logo-noir  {
 /* ─ Visual break (full-width cinematic image strip) ────────*/
 .blog-visual-break {
   position: relative;
-  height: clamp(220px, 28vw, 400px);
+  height: clamp(260px, 32vw, 480px);
   overflow: hidden;
 }
 .blog-visual-break img {
@@ -3952,8 +3952,12 @@ body:has(.blog-index-hero) .header:not(.is-scrolled) .header__logo .logo-noir  {
   object-fit: cover;
   object-position: center 30%;
   display: block;
-  transform: scale(1.02);
-  transition: transform 6s ease-out;
+  transform: scale(1);
+  animation: vb-kenburns 10s ease-out forwards;
+}
+@keyframes vb-kenburns {
+  from { transform: scale(1.05); }
+  to   { transform: scale(1); }
 }
 .blog-visual-break.is-revealed img { transform: scale(1); }
 .blog-visual-break__overlay {
