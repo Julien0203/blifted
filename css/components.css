@@ -230,6 +230,8 @@ body:has(.blog-index-hero) .header:not(.is-scrolled) .header__burger span {
   flex-shrink: 0;
   transition: opacity var(--dur-fast) var(--ease);
 }
+/* Defensive: NEVER show any img in header__logo that isn't a logo */
+.header__logo img:not(.logo-blanc):not(.logo-noir) { display: none !important; }
 /* Default (pages without hero = white header): show noir, hide blanc */
 .header__logo .logo-blanc { display: none; }
 .header__logo .logo-noir  { display: block; }
