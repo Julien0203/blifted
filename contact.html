@@ -207,6 +207,67 @@
     }
     .c-foot__note { font-size: var(--t-xs); color: rgba(250,250,248,0.22); line-height: 1.5; }
 
+    /* ── Stepper ── */
+    .c-stepper {
+      display: flex; align-items: center; gap: 0;
+      margin-bottom: var(--sp-8);
+    }
+    .c-stepper__item {
+      display: flex; flex-direction: column; align-items: center; gap: 6px;
+      flex: 1; position: relative;
+    }
+    .c-stepper__item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      top: 14px; left: 50%; width: 100%;
+      height: 1px;
+      background: rgba(250,250,248,0.1);
+      transition: background 0.3s;
+    }
+    .c-stepper__item.is-done:not(:last-child)::after { background: var(--rose); }
+    .c-stepper__dot {
+      width: 28px; height: 28px; border-radius: 50%;
+      background: rgba(250,250,248,0.06);
+      border: 1px solid rgba(250,250,248,0.15);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 11px; font-weight: 600; color: rgba(250,250,248,0.3);
+      position: relative; z-index: 1;
+      transition: all 0.3s;
+    }
+    .c-stepper__item.is-active .c-stepper__dot {
+      background: var(--rose); border-color: var(--rose);
+      color: #fff;
+    }
+    .c-stepper__item.is-done .c-stepper__dot {
+      background: rgba(77,92,56,0.3); border-color: var(--rose);
+      color: var(--rose-light);
+    }
+    .c-stepper__label {
+      font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase;
+      color: rgba(250,250,248,0.25); transition: color 0.3s;
+    }
+    .c-stepper__item.is-active .c-stepper__label { color: var(--rose-light); }
+
+    /* Steps */
+    .c-step-panel { display: none; }
+    .c-step-panel.is-active { display: block; }
+
+    .c-step-nav {
+      display: flex; justify-content: space-between; align-items: center;
+      gap: var(--sp-4); margin-top: var(--sp-6);
+      padding-top: var(--sp-6);
+      border-top: 1px solid rgba(250,250,248,0.06);
+      flex-wrap: wrap;
+    }
+    .c-step-back {
+      background: none; border: 1px solid rgba(250,250,248,0.12);
+      color: rgba(250,250,248,0.45); font-size: var(--t-sm);
+      padding: 10px 18px; border-radius: var(--r-sm);
+      cursor: pointer; font-family: var(--font-sans);
+      transition: all 0.18s;
+    }
+    .c-step-back:hover { border-color: rgba(250,250,248,0.3); color: rgba(250,250,248,0.7); }
+
     /* Succès */
     .c-success {
       display: none;
@@ -336,7 +397,7 @@
               <div class="c-channel__value">contact@bliftedfrance.com</div>
             </div>
           </a>
-          <a href="https://wa.me/33636017235?text=Bonjour%2C%20je%20souhaite%20confier%20un%20d%C3%A9placement%20%C3%A0%20B.LIFTED." class="c-channel" target="_blank" rel="noopener">
+          <a href="https://wa.me/33636017235?text=Bonjour%20Sarah%2C%20je%20vous%20contacte%20depuis%20votre%20site%20web.%20%C3%8Ates-vous%20disponible%20pour%20un%20%C3%A9change%20%3F%20J%27ai%20quelque%20chose%20%C3%A0%20confier%20%C3%A0%20B.LIFTED.%20Merci." class="c-channel" target="_blank" rel="noopener">
             <div class="c-channel__icon" style="background:rgba(37,211,102,0.08);border-color:rgba(37,211,102,0.2);color:#25D366;">
               <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
@@ -381,70 +442,105 @@
           <div class="c-form-wrap__title" data-i18n="contact.form.title">Votre demande</div>
           <div class="c-form-wrap__sub" data-i18n="contact.form.sub">Décrivez le projet — nous revenons vers vous personnellement.</div>
 
-          <form id="contact-form" novalidate>
+          <!-- Stepper -->
+          <div class="c-stepper" id="c-stepper" aria-hidden="true">
+            <div class="c-stepper__item is-active" data-step="1">
+              <div class="c-stepper__dot">1</div>
+              <span class="c-stepper__label">Mission</span>
+            </div>
+            <div class="c-stepper__item" data-step="2">
+              <div class="c-stepper__dot">2</div>
+              <span class="c-stepper__label">Contact</span>
+            </div>
+            <div class="c-stepper__item" data-step="3">
+              <div class="c-stepper__dot">3</div>
+              <span class="c-stepper__label">Contexte</span>
+            </div>
+          </div>
 
+          <!-- Étape 1 : Mission + Territoire + Date -->
+          <div class="c-step-panel is-active" id="step-1">
             <label class="c-label" data-i18n="contact.form.label.mission">Type de mission</label>
             <div class="c-chips" id="c-chips">
-              <span class="c-chip" data-val="transfert" data-i18n="contact.form.chip.transfer">Transfert aéroport</span>
-              <span class="c-chip" data-val="disposition" data-i18n="contact.form.chip.disposal">Mise à disposition</span>
-              <span class="c-chip" data-val="mariage" data-i18n="contact.form.chip.wedding">Mariage</span>
-              <span class="c-chip" data-val="evenement" data-i18n="contact.form.chip.event">Événement</span>
-              <span class="c-chip" data-val="sejour" data-i18n="contact.form.chip.stay">Séjour VIP</span>
-              <span class="c-chip" data-val="autre" data-i18n="contact.form.chip.other">Autre</span>
+              <span class="c-chip" data-val="Transfert aéroport" data-i18n="contact.form.chip.transfer">Transfert aéroport</span>
+              <span class="c-chip" data-val="Mise à disposition" data-i18n="contact.form.chip.disposal">Mise à disposition</span>
+              <span class="c-chip" data-val="Mariage" data-i18n="contact.form.chip.wedding">Mariage</span>
+              <span class="c-chip" data-val="Événement" data-i18n="contact.form.chip.event">Événement</span>
+              <span class="c-chip" data-val="Séjour VIP" data-i18n="contact.form.chip.stay">Séjour VIP</span>
+              <span class="c-chip" data-val="Autre" data-i18n="contact.form.chip.other">Autre</span>
             </div>
-            <input type="hidden" name="mission" id="f-mission">
+            <input type="hidden" id="f-mission">
 
             <div class="c-row">
               <div>
                 <label class="c-label" for="f-territoire" data-i18n="contact.form.label.territory">Territoire</label>
-                <select class="c-select" id="f-territoire" name="territoire">
+                <select class="c-select" id="f-territoire">
                   <option value="" disabled selected>Sélectionner</option>
-                  <option value="provence">Provence</option>
-                  <option value="french-riviera">French Riviera</option>
-                  <option value="megeve">Megève &amp; Alpes</option>
-                  <option value="dubai">Dubaï</option>
-                  <option value="autre">Autre</option>
+                  <option value="Provence">Provence</option>
+                  <option value="French Riviera">French Riviera</option>
+                  <option value="Megève &amp; Alpes">Megève &amp; Alpes</option>
+                  <option value="Dubaï">Dubaï</option>
+                  <option value="Autre">Autre</option>
                 </select>
               </div>
               <div>
                 <label class="c-label" for="f-date" data-i18n="contact.form.label.date">Date souhaitée</label>
-                <input class="c-input" type="date" id="f-date" name="date">
+                <input class="c-input" type="date" id="f-date">
               </div>
             </div>
 
+            <div class="c-step-nav">
+              <span></span>
+              <button type="button" class="btn btn-primary" id="btn-next-1">
+                Continuer <span class="btn-arrow">→</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Étape 2 : Coordonnées -->
+          <div class="c-step-panel" id="step-2">
             <div class="c-row">
               <div>
                 <label class="c-label" for="f-prenom" data-i18n="contact.form.label.firstname">Prénom</label>
-                <input class="c-input" type="text" id="f-prenom" name="prenom" data-i18n-placeholder="contact.form.placeholder.firstname" placeholder="Votre prénom" required autocomplete="given-name">
+                <input class="c-input" type="text" id="f-prenom" placeholder="Votre prénom" required autocomplete="given-name">
               </div>
               <div>
                 <label class="c-label" for="f-nom" data-i18n="contact.form.label.lastname">Nom</label>
-                <input class="c-input" type="text" id="f-nom" name="nom" data-i18n-placeholder="contact.form.placeholder.lastname" placeholder="Votre nom" required autocomplete="family-name">
+                <input class="c-input" type="text" id="f-nom" placeholder="Votre nom" required autocomplete="family-name">
               </div>
             </div>
-
             <div class="c-row">
               <div>
                 <label class="c-label" for="f-email" data-i18n="contact.form.label.email">Email</label>
-                <input class="c-input" type="email" id="f-email" name="email" placeholder="votre@email.com" required autocomplete="email">
+                <input class="c-input" type="email" id="f-email" placeholder="votre@email.com" required autocomplete="email">
               </div>
               <div>
                 <label class="c-label" for="f-tel" data-i18n="contact.form.label.phone">Téléphone</label>
-                <input class="c-input" type="tel" id="f-tel" name="tel" placeholder="+33 6 00 00 00 00" autocomplete="tel">
+                <input class="c-input" type="tel" id="f-tel" placeholder="+33 6 00 00 00 00" autocomplete="tel">
               </div>
             </div>
 
-            <label class="c-label" for="f-contexte" data-i18n="contact.form.label.context">Contexte du déplacement</label>
-            <textarea class="c-textarea" id="f-contexte" name="contexte" data-i18n-placeholder="contact.form.placeholder.context" placeholder="Lieu de départ, destination, contraintes, nombre de personnes, enjeu particulier…"></textarea>
-
-            <div class="c-foot">
-              <p class="c-foot__note" data-i18n-html="contact.form.note">Réponse personnelle<br>sous 24h ouvrées</p>
-              <button type="submit" class="btn btn-primary">
-                <span data-i18n="contact.form.submit">Envoyer la demande</span> <span class="btn-arrow">→</span>
+            <div class="c-step-nav">
+              <button type="button" class="c-step-back" id="btn-prev-2">← Retour</button>
+              <button type="button" class="btn btn-primary" id="btn-next-2">
+                Continuer <span class="btn-arrow">→</span>
               </button>
             </div>
+          </div>
 
-          </form>
+          <!-- Étape 3 : Contexte + envoi WhatsApp -->
+          <div class="c-step-panel" id="step-3">
+            <label class="c-label" for="f-contexte" data-i18n="contact.form.label.context">Contexte du déplacement</label>
+            <textarea class="c-textarea" id="f-contexte" placeholder="Lieu de départ, destination, contraintes, nombre de personnes, enjeu particulier…"></textarea>
+
+            <div class="c-step-nav">
+              <button type="button" class="c-step-back" id="btn-prev-3">← Retour</button>
+              <button type="button" class="btn btn-primary" id="btn-submit">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Envoyer sur WhatsApp
+              </button>
+            </div>
+          </div>
 
           <div class="c-success" id="form-success" role="status" aria-live="polite">
             <div class="c-success__icon">
@@ -452,8 +548,8 @@
                 <path d="M5 12l5 5L20 7"/>
               </svg>
             </div>
-            <div class="c-success__title" data-i18n="contact.success.title">Demande reçue</div>
-            <p class="c-success__text" data-i18n="contact.success.text">Nous avons bien reçu votre demande et vous rappellerons personnellement sous 24h.</p>
+            <div class="c-success__title" data-i18n="contact.success.title">Demande envoyée</div>
+            <p class="c-success__text">WhatsApp s'est ouvert avec votre message pré-rempli. Sarah vous répond personnellement sous 24h.</p>
             <div style="display:flex;gap:var(--sp-4);flex-wrap:wrap;justify-content:center;">
               <a href="tel:+33636017235" class="btn btn-primary" data-i18n="contact.success.cta.call">Appeler directement</a>
               <a href="index.html" class="btn btn-secondary" data-i18n="contact.success.cta.home">Retour à l'accueil</a>
@@ -560,7 +656,7 @@
     <button class="whatsapp-popup__close" id="whatsapp-close" aria-label="Fermer">✕</button>
     <p class="whatsapp-popup__title" data-i18n="whatsapp.title">Confier un déplacement</p>
     <p class="whatsapp-popup__msg" data-i18n-html="whatsapp.msg">Bonjour,<br>Je suis disponible pour organiser votre transfert, répondre à vos questions et établir un devis personnalisé.</p>
-    <a href="https://wa.me/33636017235?text=Bonjour%2C%20je%20souhaite%20confier%20un%20d%C3%A9placement%20%C3%A0%20B.LIFTED." class="whatsapp-popup__cta" data-i18n="whatsapp.cta" target="_blank" rel="noopener">Contacter sur WhatsApp</a>
+    <a href="https://wa.me/33636017235?text=Bonjour%20Sarah%2C%20je%20vous%20contacte%20depuis%20votre%20site%20web.%20%C3%8Ates-vous%20disponible%20pour%20un%20%C3%A9change%20%3F%20J%27ai%20quelque%20chose%20%C3%A0%20confier%20%C3%A0%20B.LIFTED.%20Merci." class="whatsapp-popup__cta" data-i18n="whatsapp.cta" target="_blank" rel="noopener">Contacter sur WhatsApp</a>
   </div>
   <button class="whatsapp-float" id="whatsapp-toggle" aria-label="Contacter B.LIFTED par WhatsApp">
     <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -568,7 +664,25 @@
 </div>
 
 <script>
-  // Chips — sélection du type de mission
+  // ── Formulaire 3 étapes → WhatsApp ──
+  var currentStep = 1;
+
+  function setStep(n) {
+    // Panels
+    document.querySelectorAll('.c-step-panel').forEach(function(p) { p.classList.remove('is-active'); });
+    var panel = document.getElementById('step-' + n);
+    if (panel) panel.classList.add('is-active');
+
+    // Stepper dots
+    document.querySelectorAll('.c-stepper__item').forEach(function(item) {
+      var s = parseInt(item.dataset.step);
+      item.classList.toggle('is-active', s === n);
+      item.classList.toggle('is-done', s < n);
+    });
+    currentStep = n;
+  }
+
+  // Chips
   document.querySelectorAll('#c-chips .c-chip').forEach(function(chip) {
     chip.addEventListener('click', function() {
       document.querySelectorAll('#c-chips .c-chip').forEach(function(c) { c.classList.remove('is-on'); });
@@ -577,44 +691,56 @@
     });
   });
 
-  // Envoi formulaire → WhatsApp
-  var form    = document.getElementById('contact-form');
-  var success = document.getElementById('form-success');
+  // Étape 1 → 2
+  document.getElementById('btn-next-1').addEventListener('click', function() {
+    setStep(2);
+    document.getElementById('f-prenom').focus();
+  });
 
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
+  // Étape 2 → 1
+  document.getElementById('btn-prev-2').addEventListener('click', function() { setStep(1); });
 
-    var prenom    = document.getElementById('f-prenom').value.trim();
-    var nom       = document.getElementById('f-nom').value.trim();
-    var email     = document.getElementById('f-email').value.trim();
-    var tel       = document.getElementById('f-tel').value.trim();
-    var territoire= document.getElementById('f-territoire').value;
-    var date      = document.getElementById('f-date').value;
-    var mission   = document.getElementById('f-mission').value;
-    var contexte  = document.getElementById('f-contexte').value.trim();
+  // Étape 2 → 3
+  document.getElementById('btn-next-2').addEventListener('click', function() {
+    var prenom = document.getElementById('f-prenom').value.trim();
+    var nom    = document.getElementById('f-nom').value.trim();
+    var email  = document.getElementById('f-email').value.trim();
+    if (!prenom) { document.getElementById('f-prenom').focus(); return; }
+    if (!nom)    { document.getElementById('f-nom').focus(); return; }
+    if (!email)  { document.getElementById('f-email').focus(); return; }
+    setStep(3);
+    document.getElementById('f-contexte').focus();
+  });
 
-    if (!prenom || !nom || !email) {
-      var champ = !prenom ? 'f-prenom' : !nom ? 'f-nom' : 'f-email';
-      document.getElementById(champ).focus();
-      return;
-    }
+  // Étape 3 → 2
+  document.getElementById('btn-prev-3').addEventListener('click', function() { setStep(2); });
 
-    var lignes = ['Bonjour B.LIFTED France,', '', 'Nouvelle demande :'];
-    lignes.push('• Nom : ' + prenom + ' ' + nom);
-    lignes.push('• Email : ' + email);
-    if (tel)        lignes.push('• Téléphone : ' + tel);
+  // Envoi → WhatsApp
+  document.getElementById('btn-submit').addEventListener('click', function() {
+    var prenom     = document.getElementById('f-prenom').value.trim();
+    var nom        = document.getElementById('f-nom').value.trim();
+    var email      = document.getElementById('f-email').value.trim();
+    var tel        = document.getElementById('f-tel').value.trim();
+    var territoire = document.getElementById('f-territoire').value;
+    var date       = document.getElementById('f-date').value;
+    var mission    = document.getElementById('f-mission').value;
+    var contexte   = document.getElementById('f-contexte').value.trim();
+
+    var lignes = ['Bonjour Sarah,', '', 'Nouvelle demande depuis le site :'];
     if (mission)    lignes.push('• Mission : ' + mission);
     if (territoire) lignes.push('• Territoire : ' + territoire);
     if (date)       lignes.push('• Date : ' + date);
+    lignes.push('• Nom : ' + prenom + ' ' + nom);
+    lignes.push('• Email : ' + email);
+    if (tel)        lignes.push('• Téléphone : ' + tel);
     if (contexte)   lignes.push('', contexte);
 
-    var message = lignes.join('\n');
-    var url = 'https://wa.me/33636017235?text=' + encodeURIComponent(message);
-
+    var url = 'https://wa.me/33636017235?text=' + encodeURIComponent(lignes.join('\n'));
     window.open(url, '_blank', 'noopener');
 
-    form.style.display = 'none';
-    success.classList.add('is-visible');
+    document.getElementById('c-stepper').style.display = 'none';
+    document.querySelectorAll('.c-step-panel').forEach(function(p) { p.classList.remove('is-active'); });
+    document.getElementById('form-success').classList.add('is-visible');
   });
 
   // Footer year

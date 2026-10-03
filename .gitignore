@@ -3,6 +3,13 @@ node_modules/
 *.log
 PHOTOS 2/
 PHOTOS BLIFTED/
+PHOTOS MARIAGES/
 .claude/
 .vercel
 .env*.local
+avis/
+ASSETS blog/
+"nouveaux articles de blog à rédiger/"
+.impeccable/
+*.MOV
+*.mov
