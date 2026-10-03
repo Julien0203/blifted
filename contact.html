@@ -381,8 +381,7 @@
           <div class="c-form-wrap__title" data-i18n="contact.form.title">Votre demande</div>
           <div class="c-form-wrap__sub" data-i18n="contact.form.sub">Décrivez le projet — nous revenons vers vous personnellement.</div>
 
-          <!-- ⚠️ Formspree : remplace YOUR_FORMSPREE_ID par ton ID (formspree.io → New Form) -->
-          <form id="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" novalidate>
+          <form id="contact-form" novalidate>
 
             <label class="c-label" data-i18n="contact.form.label.mission">Type de mission</label>
             <div class="c-chips" id="c-chips">
@@ -578,40 +577,44 @@
     });
   });
 
-  // Envoi formulaire → Formspree
+  // Envoi formulaire → WhatsApp
   var form    = document.getElementById('contact-form');
   var success = document.getElementById('form-success');
 
-  form.addEventListener('submit', async function(e) {
+  form.addEventListener('submit', function(e) {
     e.preventDefault();
 
-    var btn = form.querySelector('[type="submit"]');
-    var originalText = btn.innerHTML;
-    btn.disabled = true;
-    btn.textContent = 'Envoi en cours…';
+    var prenom    = document.getElementById('f-prenom').value.trim();
+    var nom       = document.getElementById('f-nom').value.trim();
+    var email     = document.getElementById('f-email').value.trim();
+    var tel       = document.getElementById('f-tel').value.trim();
+    var territoire= document.getElementById('f-territoire').value;
+    var date      = document.getElementById('f-date').value;
+    var mission   = document.getElementById('f-mission').value;
+    var contexte  = document.getElementById('f-contexte').value.trim();
 
-    try {
-      var res = await fetch(form.action, {
-        method: 'POST',
-        headers: { 'Accept': 'application/json' },
-        body: new FormData(form)
-      });
-
-      if (res.ok) {
-        form.style.display = 'none';
-        success.classList.add('is-visible');
-      } else {
-        var data = await res.json();
-        var msg = (data && data.errors) ? data.errors.map(function(e){ return e.message; }).join(', ') : 'Erreur lors de l\'envoi.';
-        alert('Erreur : ' + msg + '\nVous pouvez nous appeler directement au +33 6 36 01 72 35');
-        btn.disabled = false;
-        btn.innerHTML = originalText;
-      }
-    } catch(err) {
-      alert('Problème de connexion. Vous pouvez nous appeler directement au +33 6 36 01 72 35');
-      btn.disabled = false;
-      btn.innerHTML = originalText;
+    if (!prenom || !nom || !email) {
+      var champ = !prenom ? 'f-prenom' : !nom ? 'f-nom' : 'f-email';
+      document.getElementById(champ).focus();
+      return;
     }
+
+    var lignes = ['Bonjour B.LIFTED France,', '', 'Nouvelle demande :'];
+    lignes.push('• Nom : ' + prenom + ' ' + nom);
+    lignes.push('• Email : ' + email);
+    if (tel)        lignes.push('• Téléphone : ' + tel);
+    if (mission)    lignes.push('• Mission : ' + mission);
+    if (territoire) lignes.push('• Territoire : ' + territoire);
+    if (date)       lignes.push('• Date : ' + date);
+    if (contexte)   lignes.push('', contexte);
+
+    var message = lignes.join('\n');
+    var url = 'https://wa.me/33636017235?text=' + encodeURIComponent(message);
+
+    window.open(url, '_blank', 'noopener');
+
+    form.style.display = 'none';
+    success.classList.add('is-visible');
   });
 
   // Footer year
