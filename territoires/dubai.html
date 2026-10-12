@@ -15,6 +15,56 @@
   <meta name="geo.region" content="AE-DU">
   <meta name="geo.placename" content="Dubai">
 
+  <!-- FAQPage JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Comment se passe l'accueil à l'aéroport DXB ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Le coordinateur B.LIFTED vous attend en zone d'arrivée avec une pancarte nominative, quel que soit le terminal (T1, T2 ou T3). Le vol est suivi en temps réel — en cas de retard, le coordinateur ajuste sa présence sans surcoût."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Intervenez-vous vers Abu Dhabi, Sharjah ou d'autres émirats ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sur demande et selon disponibilité. B.LIFTED peut coordonner des transferts entre Dubaï et Abu Dhabi (environ 1h30 de route), vers Sharjah ou Ajman. Contactez-nous avec les détails de votre besoin."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quelle est la flotte disponible à Dubaï ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Flotte Mercedes premium : Classe V pour les groupes (jusqu'à 7 passagers), GLE pour les trajets SUV, Classe E et Classe S pour les missions executive et ultra-prestige."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Proposez-vous un service pour GITEX, l'Arabian Travel Market ou Art Dubai ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui. B.LIFTED intervient lors des grands événements dubaiotes. La coordination multi-véhicules, la gestion des rotations entre hôtels et salons, et le suivi des délégations sont pris en charge de A à Z."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Comment réserver et quel est le délai de réponse ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Via le formulaire de contact sur bliftedfrance.com ou directement par WhatsApp au +33 6 36 01 72 35. B.LIFTED répond personnellement sous 2h en journée."
+        }
+      }
+    ]
+  }
+  </script>
+
   <!-- Canonical -->
   <link rel="canonical" href="https://bliftedfrance.com/territoires/dubai">
 
@@ -49,7 +99,7 @@
       "@type": "LocalBusiness",
       "name": "B.LIFTED France",
       "url": "https://bliftedfrance.com",
-      "telephone": "+33600000000",
+      "telephone": "+33636017235",
       "email": "contact@bliftedfrance.com"
     },
     "areaServed": {
@@ -280,6 +330,28 @@
       letter-spacing: .08em;
       margin-top: .3rem;
     }
+    /* ── FAQ ── */
+    .faq-list { display: flex; flex-direction: column; gap: 0; }
+    .faq-item {
+      border-bottom: 1px solid var(--ivoire-dk);
+      padding: var(--sp-5) 0;
+    }
+    .faq-item__q {
+      font-family: var(--font-serif);
+      font-size: var(--t-lg);
+      font-weight: 400;
+      color: var(--text);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: var(--sp-4);
+    }
+    .faq-item__q::after { content: '+'; font-family: var(--font-sans); font-weight: 300; color: var(--or); font-size: 1.4rem; flex-shrink: 0; }
+    .faq-item[open] .faq-item__q::after { content: '−'; }
+    .faq-item__a { padding-top: var(--sp-4); }
+    .faq-item__a p { font-size: var(--t-sm); color: var(--texte-lt); line-height: 1.75; }
   </style>
 </head>
 <body class="no-scroll">
@@ -475,6 +547,129 @@
             </p>
             <p class="zone-card__time" data-i18n="dubai.z6.time">↳ Port Rashid · Dubai Cruise Terminal</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ SERVICES ══ -->
+    <section class="territory-services" aria-labelledby="services-dubai-heading">
+      <div class="container">
+        <div class="section-header" data-reveal="up">
+          <p class="eyebrow" style="color:rgba(248,245,239,.5)">Prestations</p>
+          <h2 class="headline text-inv" id="services-dubai-heading">Trois formules,<br><em>un seul niveau d'exigence</em></h2>
+        </div>
+        <div class="territory-services__grid stagger-children">
+          <div class="territory-service-card" data-reveal="up">
+            <div class="territory-service-card__icon">✈</div>
+            <h3 class="territory-service-card__title">Transfert aéroport DXB & DWC</h3>
+            <p class="territory-service-card__desc">Accueil nominatif en zone d'arrivée, suivi de vol en temps réel, attente incluse en cas de retard. Prise en charge à Terminal 1, 2 ou 3 (DXB) et à Al Maktoum International (DWC) — pour vols commerciaux comme privés.</p>
+          </div>
+          <div class="territory-service-card" data-reveal="up">
+            <div class="territory-service-card__icon">◈</div>
+            <h3 class="territory-service-card__title">Coordinateur Dédié à la journée</h3>
+            <p class="territory-service-card__desc">Un véhicule Mercedes et un coordinateur bilingue à votre disposition de 4h à 12h. Rendez-vous d'affaires enchaînés au DIFC, visites Palm Jumeirah, déjeuners Business Bay : un interlocuteur unique qui anticipe chaque étape.</p>
+          </div>
+          <div class="territory-service-card" data-reveal="up">
+            <div class="territory-service-card__icon">◇</div>
+            <h3 class="territory-service-card__title">Coordination événementielle</h3>
+            <p class="territory-service-card__desc">GITEX, Arabian Travel Market, Art Dubai, mariages dans les palaces de la Palm : B.LIFTED coordonne la logistique mobilité de bout en bout — de l'arrivée des délégations à la clôture de l'événement, avec une flotte adaptée au volume.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ POURQUOI B.LIFTED À DUBAI ══ -->
+    <section class="section section-ivoire" aria-labelledby="contexte-dubai-heading">
+      <div class="container">
+        <div style="max-width:780px;margin:0 auto;text-align:center;" data-reveal="up">
+          <p class="eyebrow">Pourquoi B.LIFTED à Dubaï</p>
+          <div class="rule" style="margin:0 auto var(--sp-6);"></div>
+          <h2 class="headline" id="contexte-dubai-heading">La rigueur française<br><em>dans un marché sans compromis</em></h2>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-14);margin-top:var(--sp-12);max-width:960px;margin-left:auto;margin-right:auto;" class="territory-split" data-reveal="up">
+          <div>
+            <h3 style="font-family:var(--font-serif);font-size:var(--t-xl);margin-bottom:var(--sp-4);">Un marché sans droit à l'erreur</h3>
+            <p class="body-text">Dubaï concentre une clientèle internationale habituée aux standards les plus élevés. Une arrivée mal gérée, un véhicule en retard, une communication approximative — l'impact est immédiat sur la relation. B.LIFTED apporte la rigueur d'un prestataire français sélectif dans un environnement où l'improvisation n'existe pas.</p>
+          </div>
+          <div>
+            <h3 style="font-family:var(--font-serif);font-size:var(--t-xl);margin-bottom:var(--sp-4);">Partenaire B2B & corporate</h3>
+            <p class="body-text">Agences françaises opérant à Dubaï, DMC, conciergeries d'hôtels de luxe, groupes corporate en déplacement GITEX ou ATM : B.LIFTED est le partenaire que vous mettez une fois en place et sur lequel vous vous reposez mission après mission. Interlocuteur unique, reporting disponible sur demande.</p>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-14);margin-top:var(--sp-10);max-width:960px;margin-left:auto;margin-right:auto;" class="territory-split" data-reveal="up">
+          <div>
+            <h3 style="font-family:var(--font-serif);font-size:var(--t-xl);margin-bottom:var(--sp-4);">Hôtels 5 étoiles & résidences</h3>
+            <p class="body-text">Atlantis The Palm, Burj Al Arab, Armani Hotel, Four Seasons DIFC, One & Only The Palm, Jumeirah Al Qasr : B.LIFTED connaît les protocoles d'accès, les entrées VIP et les points de prise en charge de chaque établissement. Une connaissance terrain qui évite les frictions inutiles à l'arrivée.</p>
+          </div>
+          <div>
+            <h3 style="font-family:var(--font-serif);font-size:var(--t-xl);margin-bottom:var(--sp-4);">Coordination multi-sites</h3>
+            <p class="body-text">Dubaï s'étend sur plus de 35 kilomètres entre Deira et Dubai South. Une journée peut enchaîner le DIFC le matin, le Mall of the Emirates à midi et la Marina en soirée. Le Coordinateur Dédié anticipe les créneaux, le stationnement et la communication entre les parties.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ FAQ ══ -->
+    <section class="section" style="background:var(--blanc);" aria-labelledby="faq-dubai-heading">
+      <div class="container">
+        <div class="section-header" data-reveal="up">
+          <p class="eyebrow">Questions fréquentes</p>
+          <h2 class="headline" id="faq-dubai-heading">Tout ce qu'il faut savoir<br><em>avant de réserver</em></h2>
+        </div>
+        <div style="max-width:760px;margin:var(--sp-12) auto 0;" class="faq-list" data-reveal="up">
+          <details class="faq-item" open>
+            <summary class="faq-item__q">Comment se passe l'accueil à l'aéroport DXB ?</summary>
+            <div class="faq-item__a"><p>Le coordinateur B.LIFTED vous attend en zone d'arrivée avec une pancarte nominative, quel que soit le terminal (T1, T2 ou T3). Le vol est suivi en temps réel — en cas de retard, le coordinateur ajuste sa présence sans surcoût. Le transfert vers votre destination démarre dès la sortie du terminal, véhicule garé au plus proche.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-item__q">Intervenez-vous vers Abu Dhabi, Sharjah ou d'autres émirats ?</summary>
+            <div class="faq-item__a"><p>Sur demande et selon disponibilité. B.LIFTED peut coordonner des transferts entre Dubaï et Abu Dhabi (environ 1h30 de route), vers Sharjah ou Ajman. Ces missions sont traitées au cas par cas : contactez-nous avec les détails de votre besoin pour une confirmation et un devis.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-item__q">Quelle est la flotte disponible à Dubaï ?</summary>
+            <div class="faq-item__a"><p>Flotte Mercedes premium : Classe V pour les groupes (jusqu'à 7 passagers), GLE pour les trajets SUV et les routes du désert, Classe E et Classe S pour les missions executive et ultra-prestige. Les véhicules sont sélectionnés selon le contexte — type d'événement, nombre de passagers, niveau de discrétion requis.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-item__q">Proposez-vous un service pour GITEX, l'Arabian Travel Market ou Art Dubai ?</summary>
+            <div class="faq-item__a"><p>Oui. B.LIFTED intervient lors des grands événements dubaiotes. La coordination multi-véhicules, la gestion des rotations entre hôtels et salons, et le suivi des délégations sont pris en charge de A à Z. Anticipez votre demande : les disponibilités s'ouvrent plusieurs semaines à l'avance lors de ces périodes de forte demande.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-item__q">Comment réserver et quel est le délai de réponse ?</summary>
+            <div class="faq-item__a"><p>Via le formulaire de contact sur ce site ou directement par WhatsApp au +33 6 36 01 72 35. B.LIFTED répond personnellement sous 2h en journée. Pour les missions complexes (événements multi-jours, coordination de groupes), un échange préalable est proposé pour cadrer précisément les besoins.</p></div>
+          </details>
+        </div>
+        <div style="text-align:center;margin-top:var(--sp-12);" data-reveal="up">
+          <a href="../contact.html" class="btn btn-primary">Confier un déplacement à Dubaï <span class="btn-arrow">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ AUTRES TERRITOIRES ══ -->
+    <section class="other-territories" aria-labelledby="autres-territoires-heading">
+      <div class="container">
+        <p class="eyebrow" data-reveal="up">Autres destinations</p>
+        <h2 class="headline" id="autres-territoires-heading" data-reveal="up">B.LIFTED<br><em>partout où vous allez</em></h2>
+        <div class="other-territories__grid stagger-children">
+          <a href="provence.html" class="other-territory-card" data-reveal="up">
+            <p class="other-territory-card__name">Provence</p>
+            <p class="other-territory-card__desc">Avignon · Luberon · Aix-en-Provence</p>
+            <span class="other-territory-card__arrow">Découvrir →</span>
+          </a>
+          <a href="french-riviera.html" class="other-territory-card" data-reveal="up">
+            <p class="other-territory-card__name">French Riviera</p>
+            <p class="other-territory-card__desc">Nice · Cannes · Monaco · Saint-Tropez</p>
+            <span class="other-territory-card__arrow">Découvrir →</span>
+          </a>
+          <a href="megeve.html" class="other-territory-card" data-reveal="up">
+            <p class="other-territory-card__name">Megève & Alpes</p>
+            <p class="other-territory-card__desc">Megève · Courchevel · Val d'Isère</p>
+            <span class="other-territory-card__arrow">Découvrir →</span>
+          </a>
+          <a href="paris.html" class="other-territory-card" data-reveal="up">
+            <p class="other-territory-card__name">Paris & Île-de-France</p>
+            <p class="other-territory-card__desc">CDG · Orly · Paris · Versailles</p>
+            <span class="other-territory-card__arrow">Découvrir →</span>
+          </a>
         </div>
       </div>
     </section>
