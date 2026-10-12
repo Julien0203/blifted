@@ -2387,7 +2387,7 @@ body:has(.blog-index-hero) .header:not(.is-scrolled) .header__logo .logo-noir  {
 }
 .whatsapp-popup__cta {
   display: block;
-  background: #25D366;
+  background: var(--wa-green);
   color: #fff;
   font-family: var(--font-sans);
   font-size: 0.88rem;
@@ -2398,7 +2398,7 @@ body:has(.blog-index-hero) .header:not(.is-scrolled) .header__logo .logo-noir  {
   text-decoration: none;
   transition: background 0.2s;
 }
-.whatsapp-popup__cta:hover { background: #1fc25e; }
+.whatsapp-popup__cta:hover { background: var(--wa-green-hover); }
 .whatsapp-float {
   height: 42px;
   padding: 0 16px 0 12px;
@@ -2427,7 +2427,7 @@ body:has(.blog-index-hero) .header:not(.is-scrolled) .header__logo .logo-noir  {
   display: none;
   width: 20px; height: 20px;
   flex-shrink: 0;
-  fill: #25D366;
+  fill: var(--wa-green);
 }
 .whatsapp-float__label { flex-shrink: 0; }
 .whatsapp-float::before {
@@ -2435,7 +2435,7 @@ body:has(.blog-index-hero) .header:not(.is-scrolled) .header__logo .logo-noir  {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: #25D366;
+  background: var(--wa-green);
   box-shadow: 0 0 0 0 rgba(37,211,102,.5);
   animation: wa-pulse 2.2s ease-in-out infinite;
   flex-shrink: 0;
@@ -4563,6 +4563,14 @@ details.faq-item .faq-item__a p {
     width: 18px;
     height: 18px;
     flex-shrink: 0;
+  }
+  .mobile-cta-bar__btn--wa {
+    color: var(--wa-green);
+  }
+  .mobile-cta-bar__btn--wa:hover,
+  .mobile-cta-bar__btn--wa:active {
+    background: rgba(37,211,102,0.12);
+    color: var(--wa-green);
   }
   .mobile-cta-bar__btn:hover,
   .mobile-cta-bar__btn:active {

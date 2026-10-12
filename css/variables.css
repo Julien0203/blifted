@@ -158,6 +158,10 @@
   --btn-h-sm:   42px;
   --input-h:    54px;
 
+  /* ── TIERS PARTIES ──────────────────────────────────────── */
+  --wa-green:       #25D366;
+  --wa-green-hover: #1EBE5A;
+
   /* ── ALIAS COMPLÉMENTAIRES ───────────────────────────────── */
   --ivoire:         #FAFAF6;
   --ivoire-dk:      #EAE5D8;
