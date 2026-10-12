@@ -3107,6 +3107,44 @@ body:has(.blog-index-hero) .header:not(.is-scrolled) .header__logo .logo-noir  {
   margin: 0;
 }
 
+/* ── FAQ natif <details>/<summary> ─────────────────────── */
+details.faq-item {
+  border-bottom: 1px solid var(--or-border);
+  padding: var(--sp-5) 0;
+}
+details.faq-item:first-child { border-top: 1px solid var(--or-border); }
+details.faq-item .faq-item__q {
+  font-family: var(--font-serif);
+  font-size: clamp(0.95rem, 1.7vw, 1.05rem);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--sp-4);
+  color: var(--text);
+  line-height: 1.38;
+}
+details.faq-item .faq-item__q::-webkit-details-marker { display: none; }
+details.faq-item .faq-item__q::after {
+  content: '+';
+  font-family: var(--font-sans);
+  font-weight: 300;
+  color: var(--or);
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+details.faq-item[open] .faq-item__q::after { content: '−'; }
+details.faq-item .faq-item__a {
+  padding-top: var(--sp-4);
+}
+details.faq-item .faq-item__a p {
+  font-size: 0.9rem;
+  line-height: 1.78;
+  color: var(--texte-lt);
+  margin: 0;
+}
+
 /* Final CTA section */
 .blog-cta-final {
   background: var(--bg-darker);
