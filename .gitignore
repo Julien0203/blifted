@@ -9,7 +9,7 @@ PHOTOS MARIAGES/
 .env*.local
 avis/
 ASSETS blog/
-"nouveaux articles de blog à rédiger/"
+nouveaux articles de blog à rédiger/
 .impeccable/
 *.MOV
 *.mov
