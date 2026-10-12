@@ -197,6 +197,33 @@
     })();
   }
 
+  /* ── VIDÉOS : PAUSE HORS ÉCRAN + REDUCED MOTION ─────────── */
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  document.querySelectorAll('.video-testimonials__video').forEach((vid) => {
+    const wasAutoplay = vid.hasAttribute('autoplay');
+
+    if (reduceMotion && wasAutoplay) {
+      vid.pause();
+      vid.removeAttribute('autoplay');
+      vid.removeAttribute('loop');
+    }
+
+    if (wasAutoplay) {
+      const vidObs = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            if (!reduceMotion) vid.play().catch(() => {});
+          } else {
+            vid.pause();
+          }
+        });
+      }, { threshold: 0.1 });
+      vidObs.observe(vid);
+    }
+  });
+
+
   /* ── WHATSAPP WIDGET ─────────────────────────────────────── */
   const waToggle = document.getElementById('whatsapp-toggle');
   const waPopup  = document.getElementById('whatsapp-popup');
