@@ -119,6 +119,11 @@ body::before {
 }
 ::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
 
+/* ── SCROLL OFFSET — compense la nav sticky ─────────────── */
+html {
+  scroll-padding-top: var(--header-h, 80px);
+}
+
 /* ── SÉLECTION ──────────────────────────────────────────── */
 ::selection {
   background: var(--rose-pale);

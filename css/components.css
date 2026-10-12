@@ -461,7 +461,19 @@ body:has(.blog-index-hero) .header:not(.is-scrolled) .header__logo .logo-noir  {
 }
 
 @media (max-width: 768px) {
-  .page-hero { min-height: 60vh; }
+  .page-hero {
+    min-height: 70vh;
+    align-items: flex-start;
+  }
+  .page-hero__content,
+  .page-hero__inner {
+    padding-top: calc(var(--header-h) + 2rem);
+    padding-bottom: 3rem;
+  }
+  .page-hero__content h1,
+  .page-hero__inner h1 {
+    font-size: clamp(1.9rem, 9vw, 2.6rem);
+  }
   .page-hero__overlay {
     background: linear-gradient(to top, rgba(8,6,4,0.80) 0%, rgba(8,6,4,0.45) 60%, rgba(8,6,4,0.25) 100%);
   }
@@ -4502,4 +4514,73 @@ details.faq-item .faq-item__a p {
 /* Override old grid on carousel pages */
 .video-testimonials__inner:has(.video-testimonials__carousel-wrap) .video-testimonials__grid {
   display: none;
+}
+
+
+/* ══════════════════════════════════════════════════════════
+   BARRE D'ACTION MOBILE — fixe en bas, masquée sur desktop
+   Compensée par padding-bottom sur <body>
+══════════════════════════════════════════════════════════ */
+.mobile-cta-bar {
+  display: none;
+}
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 68px;
+  }
+  .mobile-cta-bar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9000;
+    height: 60px;
+    background: var(--bg-darker, #0A0806);
+    border-top: 1px solid rgba(255,255,255,0.10);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .mobile-cta-bar__btn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    color: rgba(255,255,255,0.80);
+    text-decoration: none;
+    font-family: var(--font-sans);
+    font-size: 0.65rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: color var(--transition-fast), background var(--transition-fast);
+    border-right: 1px solid rgba(255,255,255,0.08);
+  }
+  .mobile-cta-bar__btn:last-child {
+    border-right: none;
+  }
+  .mobile-cta-bar__btn svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+  }
+  .mobile-cta-bar__btn:hover,
+  .mobile-cta-bar__btn:active {
+    background: rgba(255,255,255,0.06);
+    color: #fff;
+  }
+  .mobile-cta-bar__btn--cta {
+    background: var(--or, #4D5C38);
+    color: #fff;
+    border-right: none;
+  }
+  .mobile-cta-bar__btn--cta:hover,
+  .mobile-cta-bar__btn--cta:active {
+    background: var(--or-deep, #2E3820);
+    color: #fff;
+  }
+  /* Masque le WhatsApp float sur mobile (remplacé par la barre) */
+  .whatsapp-widget {
+    display: none;
+  }
 }

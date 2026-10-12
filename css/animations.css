@@ -177,3 +177,44 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+/* ══════════════════════════════════════════════════════════
+   PREFERS-REDUCED-MOTION — désactive les animations non critiques
+   Conserve : changements de couleur/opacité fonctionnels (hover boutons,
+   focus visible), page-curtain (évite le flash de contenu non stylé).
+══════════════════════════════════════════════════════════ */
+@media (prefers-reduced-motion: reduce) {
+  /* Reveal animations (scroll-triggered opacity + transform) */
+  [data-reveal],
+  [data-reveal].is-visible {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  [data-delay] {
+    transition-delay: 0s !important;
+  }
+
+  /* Word-split animations */
+  .word-inner,
+  .word-inner.is-visible {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  /* Toutes les animations CSS (keyframes) — sauf celles marquées safe-motion */
+  *:not(.page-curtain):not(.scroll-progress),
+  *:not(.page-curtain):not(.scroll-progress)::before,
+  *:not(.page-curtain):not(.scroll-progress)::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  /* scroll-behavior: supprimé globalement (déjà en commentaire dans reset,
+     mais certains composants pouvaient le réactiver) */
+  html, .carousel__track {
+    scroll-behavior: auto !important;
+  }
+}

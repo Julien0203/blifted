@@ -9,13 +9,34 @@
     { "source": "/territoires/paris",         "destination": "/territoires/paris.html" },
     { "source": "/mentions-legales",          "destination": "/mentions-legales.html" },
     { "source": "/confidentialite",           "destination": "/confidentialite.html" },
+    { "source": "/plan-du-site",              "destination": "/plan-du-site.html" },
     { "source": "/services",                  "destination": "/services.html" },
     { "source": "/flotte",                    "destination": "/flotte.html" },
     { "source": "/mariages",                  "destination": "/mariages.html" },
     { "source": "/a-propos",                  "destination": "/a-propos.html" },
     { "source": "/contact",                   "destination": "/contact.html" },
     { "source": "/blog",                      "destination": "/blog/index.html" },
-    { "source": "/blog/transport-mariage-megeve-guide-wedding-planners", "destination": "/blog/transport-mariage-megeve-guide-wedding-planners.html" }
+    { "source": "/blog/transport-mariage-megeve-guide-wedding-planners",         "destination": "/blog/transport-mariage-megeve-guide-wedding-planners.html" },
+    { "source": "/blog/transport-mariage-hiver-alpes-guide-wedding-planners",    "destination": "/blog/transport-mariage-hiver-alpes-guide-wedding-planners.html" },
+    { "source": "/blog/coordination-transport-paris",                            "destination": "/blog/coordination-transport-paris.html" },
+    { "source": "/blog/coordination-transport-provence",                         "destination": "/blog/coordination-transport-provence.html" },
+    { "source": "/blog/coordination-transport-megeve",                           "destination": "/blog/coordination-transport-megeve.html" },
+    { "source": "/blog/mobilite-vip-cote-azur-yachts-jets",                      "destination": "/blog/mobilite-vip-cote-azur-yachts-jets.html" },
+    { "source": "/blog/mobilite-vip-internationale-dubai-paris-alpes",           "destination": "/blog/mobilite-vip-internationale-dubai-paris-alpes.html" },
+    { "source": "/blog/coordination-transport-evenements-sensibles-megeve",      "destination": "/blog/coordination-transport-evenements-sensibles-megeve.html" },
+    { "source": "/blog/coordination-transport-evenements-sensibles-paris",       "destination": "/blog/coordination-transport-evenements-sensibles-paris.html" },
+    { "source": "/blog/coordination-transport-evenements-sensibles-provence",    "destination": "/blog/coordination-transport-evenements-sensibles-provence.html" },
+    { "source": "/blog/coordination-transport-fashion-week-paris",               "destination": "/blog/coordination-transport-fashion-week-paris.html" },
+    { "source": "/blog/coordination-transport-galas-lancements-marques-luxe",    "destination": "/blog/coordination-transport-galas-lancements-marques-luxe.html" },
+    { "source": "/blog/coordination-transport-groupes-voyages-affaires",         "destination": "/blog/coordination-transport-groupes-voyages-affaires.html" },
+    { "source": "/blog/coordination-transport-seminaires-corporate",             "destination": "/blog/coordination-transport-seminaires-corporate.html" },
+    { "source": "/blog/coordination-transport-dirigeants-delegations-vip",       "destination": "/blog/coordination-transport-dirigeants-delegations-vip.html" },
+    { "source": "/blog/coordination-transport-evenementiel-agences",             "destination": "/blog/coordination-transport-evenementiel-agences.html" },
+    { "source": "/blog/coordination-transport-evenements-prives-villas-chateaux","destination": "/blog/coordination-transport-evenements-prives-villas-chateaux.html" },
+    { "source": "/blog/choisir-partenaire-coordination-transport-evenementiel",  "destination": "/blog/choisir-partenaire-coordination-transport-evenementiel.html" },
+    { "source": "/blog/partenaire-hotels-5-etoiles-coordination-transport",      "destination": "/blog/partenaire-hotels-5-etoiles-coordination-transport.html" },
+    { "source": "/blog/partenaire-transport-dmc-conciergeries",                  "destination": "/blog/partenaire-transport-dmc-conciergeries.html" },
+    { "source": "/blog/mercedes-classe-v-coordination-groupes-vip",              "destination": "/blog/mercedes-classe-v-coordination-groupes-vip.html" }
   ],
   "headers": [
     {
@@ -25,6 +46,12 @@
         { "key": "X-Frame-Options",           "value": "SAMEORIGIN" },
         { "key": "X-XSS-Protection",          "value": "1; mode=block" },
         { "key": "Referrer-Policy",           "value": "strict-origin-when-cross-origin" }
+      ]
+    },
+    {
+      "source": "/(.*)\\.html",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
       ]
     },
     {
@@ -40,7 +67,19 @@
       ]
     },
     {
-      "source": "/images/(.*)",
+      "source": "/assets/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/(.*)\\.webp",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/(.*)\\.mov",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
       ]
