@@ -165,8 +165,8 @@
 }
 .header.is-scrolled {
   background: var(--bg-glass);
-  backdrop-filter: blur(20px) saturate(1.5);
-  -webkit-backdrop-filter: blur(20px) saturate(1.5);
+  backdrop-filter: blur(14px) saturate(1.4);
+  -webkit-backdrop-filter: blur(14px) saturate(1.4);
   box-shadow: 0 1px 0 var(--border-soft), var(--shadow-sm);
   height: calc(var(--header-h) - 10px);
 }
@@ -2305,7 +2305,6 @@ body:has(.blog-index-hero) .header:not(.is-scrolled) .header__logo .logo-noir  {
   z-index: calc(var(--z-header) - 2);
   opacity: 0; visibility: hidden;
   transition: opacity var(--dur) var(--ease), visibility var(--dur);
-  backdrop-filter: blur(2px);
 }
 #menu-overlay.is-active { opacity: 1; visibility: visible; }
 
@@ -2394,8 +2393,8 @@ body:has(.blog-index-hero) .header:not(.is-scrolled) .header__logo .logo-noir  {
   border-radius: 50px;
   background: rgba(10, 8, 6, 0.80);
   pointer-events: auto;
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(255,255,255,0.10);
   cursor: pointer;
   display: flex;
@@ -2456,7 +2455,6 @@ body:has(.blog-index-hero) .header:not(.is-scrolled) .header__logo .logo-noir  {
   bottom: 0; left: 0; right: 0;
   background: rgba(17,19,17,.97);
   border-top: 1px solid rgba(77,92,56,.2);
-  backdrop-filter: blur(12px);
   z-index: var(--z-modal);
   transform: translateY(100%);
   transition: transform var(--dur) var(--ease-out);
@@ -3806,8 +3804,6 @@ body:has(.blog-index-hero) .header:not(.is-scrolled) .header__logo .logo-noir  {
   z-index: var(--z-sticky);
   background: rgba(17,19,17,0.97);
   border-top: 1px solid rgba(77,92,56,0.3);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
   padding: var(--sp-4) var(--gutter);
   display: flex;
   align-items: center;
