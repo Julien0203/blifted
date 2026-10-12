@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plan du site B.LIFTED — Luxury Ground Logistics</title>
+  <meta name="description" content="Plan du site B.LIFTED France — toutes les pages du prestataire de Luxury Ground Logistics en Provence, Côte d'Azur, Megève, Paris et Dubaï.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://bliftedfrance.com/plan-du-site">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css?v=21">
+  <link rel="stylesheet" href="css/reset.css?v=21">
+  <link rel="stylesheet" href="css/typography.css?v=21">
+  <link rel="stylesheet" href="css/animations.css?v=21">
+  <link rel="stylesheet" href="css/components.css?v=44">
+  <style>
+    .sitemap-hero {
+      padding-top: calc(var(--header-h) + 4rem);
+      padding-bottom: var(--sp-14);
+      background: var(--ivoire);
+      position: relative;
+      overflow: hidden;
+    }
+    .sitemap-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(var(--border-soft) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border-soft) 1px, transparent 1px);
+      background-size: 60px 60px;
+      opacity: 0.5;
+    }
+    .sitemap-hero__inner { position: relative; z-index: 1; }
+    .sitemap-hero__eyebrow {
+      display: block;
+      font-size: var(--t-xs);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--or);
+      margin-bottom: var(--sp-4);
+    }
+    .sitemap-hero__title {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 300;
+      line-height: 1.15;
+      color: var(--text);
+      margin-bottom: var(--sp-5);
+    }
+    .sitemap-hero__sub {
+      font-size: var(--t-base);
+      color: var(--texte-lt);
+      max-width: 50ch;
+      line-height: 1.6;
+    }
+    .sitemap-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--sp-10);
+      padding: var(--sp-16) 0;
+    }
+    .sitemap-cat__label {
+      font-size: var(--t-xs);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--or);
+      font-family: var(--font-sans);
+      font-weight: 500;
+      margin-bottom: var(--sp-5);
+      padding-bottom: var(--sp-3);
+      border-bottom: 1px solid var(--or-border);
+    }
+    .sitemap-cat__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-2);
+    }
+    .sitemap-cat__item a {
+      font-size: var(--t-sm);
+      color: var(--text);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: var(--sp-3);
+      padding: var(--sp-2) 0;
+      border-bottom: 1px solid transparent;
+      transition: color var(--transition-fast), border-color var(--transition-fast);
+    }
+    .sitemap-cat__item a::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--or);
+      flex-shrink: 0;
+    }
+    .sitemap-cat__item a:hover {
+      color: var(--or);
+      border-color: var(--or-border);
+    }
+    .sitemap-cat__item--tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: var(--or-glow);
+      color: var(--or);
+      padding: 2px 8px;
+      border-radius: 20px;
+      margin-left: auto;
+      white-space: nowrap;
+    }
+    @media (max-width: 600px) {
+      .sitemap-grid { grid-template-columns: 1fr; gap: var(--sp-8); }
+    }
+  </style>
+</head>
+<body class="no-scroll">
+
+<div class="page-curtain" id="pageCurtain" aria-hidden="true"></div>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<header class="header" id="header">
+  <div class="header__inner">
+    <a href="index.html" class="header__logo" aria-label="B.LIFTED France — Accueil"><img src="assets/images/BL%20BLANC.webp" width="3125" height="1250" class="logo-blanc" alt="B.LIFTED France"><img src="assets/images/BL%20NOIR.webp" width="3125" height="1250" class="logo-noir" alt="B.LIFTED France"></a>
+    <nav class="header__nav" aria-label="Navigation principale">
+      <a href="services.html"  class="header__nav-link" data-i18n="nav.services">Prestations</a>
+      <a href="flotte.html"    class="header__nav-link" data-i18n="nav.fleet">Flotte</a>
+      <a href="territoires/provence.html" class="header__nav-link" data-i18n="nav.territories">Territoires</a>
+      <a href="mariages.html"  class="header__nav-link" data-i18n="nav.weddings">Mariages</a>
+      <a href="a-propos.html"  class="header__nav-link" data-i18n="nav.about">À propos</a>
+    </nav>
+    <div class="header__actions">
+      <a href="contact.html" class="btn btn-primary btn--sm"><span data-i18n="nav.book">Réserver</span> <span class="btn-arrow">→</span></a>
+      <div class="header__lang">
+        <button class="header__lang-btn is-active" data-lang="fr">FR</button>
+        <span class="header__lang-sep">|</span>
+        <button class="header__lang-btn" data-lang="en">EN</button>
+      </div>
+      <button class="header__burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu principal">
+  <nav class="mobile-menu__nav">
+    <a href="services.html"  class="mobile-menu__link" data-i18n="nav.services">Prestations</a>
+    <a href="flotte.html"    class="mobile-menu__link" data-i18n="nav.fleet">Flotte</a>
+    <a href="territoires/provence.html" class="mobile-menu__link" data-i18n="nav.territories">Territoires</a>
+    <a href="mariages.html"  class="mobile-menu__link" data-i18n="nav.weddings">Mariages</a>
+    <a href="a-propos.html"  class="mobile-menu__link" data-i18n="nav.about">À propos</a>
+  </nav>
+  <div class="mobile-menu__foot">
+    <div class="mobile-menu__cta">
+      <a href="contact.html" class="btn btn-primary"><span data-i18n="nav.entrust">Confier un déplacement</span> →</a>
+    </div>
+    <div class="mobile-menu__info"><span>contact@bliftedfrance.com</span></div>
+  </div>
+</div>
+<div id="menu-overlay" aria-hidden="true"></div>
+
+<main>
+
+  <section class="sitemap-hero">
+    <div class="container">
+      <div class="sitemap-hero__inner">
+        <span class="sitemap-hero__eyebrow">Navigation</span>
+        <h1 class="sitemap-hero__title">Plan du site <em>B.LIFTED France</em></h1>
+        <p class="sitemap-hero__sub">Toutes les pages du site organisées par catégorie — Luxury Ground Logistics en Provence, Côte d'Azur, Megève, Paris et Dubaï.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-ivoire" style="padding-top:0;">
+    <div class="container">
+      <div class="sitemap-grid">
+
+        <!-- Pages principales -->
+        <div class="sitemap-cat" data-reveal="up">
+          <p class="sitemap-cat__label">Pages principales</p>
+          <ul class="sitemap-cat__list" role="list">
+            <li class="sitemap-cat__item"><a href="index.html">Accueil</a></li>
+            <li class="sitemap-cat__item"><a href="services.html">Prestations</a></li>
+            <li class="sitemap-cat__item"><a href="flotte.html">Notre flotte</a></li>
+            <li class="sitemap-cat__item"><a href="mariages.html">Mariages &amp; événements</a></li>
+            <li class="sitemap-cat__item"><a href="a-propos.html">À propos de B.LIFTED</a></li>
+            <li class="sitemap-cat__item"><a href="contact.html">Confier un projet</a></li>
+          </ul>
+        </div>
+
+        <!-- Territoires -->
+        <div class="sitemap-cat" data-reveal="up" data-delay="80">
+          <p class="sitemap-cat__label">Pages territoire</p>
+          <ul class="sitemap-cat__list" role="list">
+            <li class="sitemap-cat__item"><a href="territoires/provence.html">Transport Privatif Provence</a></li>
+            <li class="sitemap-cat__item"><a href="territoires/french-riviera.html">Transport Privatif Côte d'Azur</a></li>
+            <li class="sitemap-cat__item"><a href="territoires/megeve.html">Transport Privatif Megève &amp; Alpes</a></li>
+            <li class="sitemap-cat__item"><a href="territoires/paris.html">Transport Privatif Paris</a></li>
+            <li class="sitemap-cat__item"><a href="territoires/dubai.html">Luxury Ground Logistics Dubaï</a></li>
+          </ul>
+        </div>
+
+        <!-- Blog – Mariages & Événements -->
+        <div class="sitemap-cat" data-reveal="up" data-delay="120">
+          <p class="sitemap-cat__label">Blog — Mariages &amp; Événements</p>
+          <ul class="sitemap-cat__list" role="list">
+            <li class="sitemap-cat__item"><a href="blog/transport-mariage-megeve-guide-wedding-planners.html">Guide transport mariage Megève</a></li>
+            <li class="sitemap-cat__item"><a href="blog/transport-mariage-hiver-alpes-guide-wedding-planners.html">Transport mariage hiver Alpes</a></li>
+            <li class="sitemap-cat__item"><a href="blog/coordination-transport-evenements-prives-villas-chateaux.html">Coordination événements privés villas &amp; châteaux</a></li>
+            <li class="sitemap-cat__item"><a href="blog/coordination-transport-fashion-week-paris.html">Transport Fashion Week Paris</a></li>
+            <li class="sitemap-cat__item"><a href="blog/coordination-transport-galas-lancements-marques-luxe.html">Transport galas &amp; lancements marques luxe</a></li>
+          </ul>
+        </div>
+
+        <!-- Blog – Territoires -->
+        <div class="sitemap-cat" data-reveal="up" data-delay="160">
+          <p class="sitemap-cat__label">Blog — Zones d'intervention</p>
+          <ul class="sitemap-cat__list" role="list">
+            <li class="sitemap-cat__item"><a href="blog/coordination-transport-provence.html">Coordination transport en Provence</a></li>
+            <li class="sitemap-cat__item"><a href="blog/coordination-transport-megeve.html">Coordination transport à Megève</a></li>
+            <li class="sitemap-cat__item"><a href="blog/coordination-transport-paris.html">Coordination transport à Paris</a></li>
+            <li class="sitemap-cat__item"><a href="blog/mobilite-vip-cote-azur-yachts-jets.html">Mobilité VIP Côte d'Azur — yachts &amp; jets</a></li>
+            <li class="sitemap-cat__item"><a href="blog/mobilite-vip-internationale-dubai-paris-alpes.html">Mobilité VIP internationale — Dubaï · Paris · Alpes</a></li>
+            <li class="sitemap-cat__item"><a href="blog/coordination-transport-evenements-sensibles-megeve.html">Coordination événements sensibles à Megève</a></li>
+            <li class="sitemap-cat__item"><a href="blog/coordination-transport-evenements-sensibles-provence.html">Coordination événements sensibles en Provence</a></li>
+            <li class="sitemap-cat__item"><a href="blog/coordination-transport-evenements-sensibles-paris.html">Coordination événements sensibles à Paris</a></li>
+          </ul>
+        </div>
+
+        <!-- Blog – Partenaires & B2B -->
+        <div class="sitemap-cat" data-reveal="up" data-delay="200">
+          <p class="sitemap-cat__label">Blog — Partenaires &amp; B2B</p>
+          <ul class="sitemap-cat__list" role="list">
+            <li class="sitemap-cat__item"><a href="blog/partenaire-hotels-5-etoiles-coordination-transport.html">Partenariat hôtels 5 étoiles &amp; palaces</a></li>
+            <li class="sitemap-cat__item"><a href="blog/partenaire-transport-dmc-conciergeries.html">Partenaire transport DMC &amp; conciergeries</a></li>
+            <li class="sitemap-cat__item"><a href="blog/choisir-partenaire-coordination-transport-evenementiel.html">Comment choisir son partenaire transport événementiel</a></li>
+            <li class="sitemap-cat__item"><a href="blog/coordination-transport-evenementiel-agences.html">Coordination transport événementiel haut de gamme</a></li>
+          </ul>
+        </div>
+
+        <!-- Blog – Corporate -->
+        <div class="sitemap-cat" data-reveal="up" data-delay="240">
+          <p class="sitemap-cat__label">Blog — Corporate &amp; VIP</p>
+          <ul class="sitemap-cat__list" role="list">
+            <li class="sitemap-cat__item"><a href="blog/coordination-transport-dirigeants-delegations-vip.html">Transport dirigeants &amp; délégations VIP</a></li>
+            <li class="sitemap-cat__item"><a href="blog/coordination-transport-groupes-voyages-affaires.html">Transport groupes voyages d'affaires</a></li>
+            <li class="sitemap-cat__item"><a href="blog/coordination-transport-seminaires-corporate.html">Transport séminaires corporate &amp; MICE</a></li>
+            <li class="sitemap-cat__item"><a href="blog/mercedes-classe-v-coordination-groupes-vip.html">Mercedes Classe V — coordination groupes VIP</a></li>
+            <li class="sitemap-cat__item"><a href="blog/index.html">Tous les articles du blog →</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer__inner">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__brand-logo" aria-label="B.LIFTED France"><img loading="lazy" src="assets/images/BL%20BLANC.webp" width="3125" height="1250" alt="B.LIFTED France"></a>
+        <p class="footer__brand-desc" data-i18n="footer.desc">Luxury Ground Logistics · Mariages, Événements Privés &amp; Voyages VIP. Provence · Côte d'Azur · Alpes · Paris · Dubaï.</p>
+        <div class="footer__social">
+          <a href="https://www.instagram.com/blifted.france" class="footer__social-link" aria-label="Instagram B.LIFTED" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+          </a>
+          <a href="mailto:contact@bliftedfrance.com" class="footer__social-link" aria-label="Email B.LIFTED">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+          <a href="https://fr.linkedin.com/in/sarah-m-blifted-france" class="footer__social-link" aria-label="LinkedIn B.LIFTED" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <p class="footer__col-title" data-i18n="footer.col.services">Services</p>
+        <nav class="footer__nav">
+          <a href="services.html#transfert" class="footer__nav-link" data-i18n="footer.svc.transfer">Transfert aéroport</a>
+          <a href="services.html#disposition" class="footer__nav-link" data-i18n="footer.svc.disposal">Mise à disposition</a>
+          <a href="mariages.html" class="footer__nav-link" data-i18n="footer.svc.wedding">Mariages &amp; événements</a>
+          <a href="services.html#multievent" class="footer__nav-link" data-i18n="footer.svc.stay">Séjours &amp; coordination</a>
+          <a href="flotte.html" class="footer__nav-link" data-i18n="footer.svc.fleet">Notre flotte</a>
+        </nav>
+      </div>
+      <div class="footer__col">
+        <p class="footer__col-title" data-i18n="nav.territories">Territoires</p>
+        <nav class="footer__nav">
+          <a href="territoires/provence.html" class="footer__nav-link">Provence</a>
+          <a href="territoires/french-riviera.html" class="footer__nav-link">French Riviera</a>
+          <a href="territoires/megeve.html" class="footer__nav-link">Megève</a>
+          <a href="territoires/dubai.html" class="footer__nav-link">Dubaï</a>
+          <a href="territoires/paris.html" class="footer__nav-link">Paris</a>
+        </nav>
+      </div>
+      <div class="footer__col">
+        <p class="footer__col-title">Articles &amp; Guides</p>
+        <nav class="footer__nav">
+          <a href="blog/index.html" class="footer__nav-link">Tous les articles</a>
+          <a href="blog/transport-mariage-megeve-guide-wedding-planners.html" class="footer__nav-link">Transport mariage Megève</a>
+          <a href="plan-du-site.html" class="footer__nav-link">Plan du site</a>
+        </nav>
+      </div>
+      <div class="footer__col">
+        <p class="footer__col-title" data-i18n="footer.col.contact">Contact</p>
+        <div class="footer__contact-item">
+          <svg class="footer__contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81C2.18 7.22 2 4.92 2 4a2 2 0 012-2h3a2 2 0 012 1.72c.13 1 .4 1.97.71 2.9a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.93.31 1.9.58 2.9.71A2 2 0 0122 16.92z"/></svg>
+          <p class="footer__contact-text"><a href="tel:+33636017235">+(33) 6 36 01 72 35</a></p>
+        </div>
+        <div class="footer__contact-item">
+          <svg class="footer__contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <p class="footer__contact-text"><a href="mailto:contact@bliftedfrance.com">contact@bliftedfrance.com</a></p>
+        </div>
+        <div style="margin-top:1.5rem;">
+          <a href="contact.html" class="btn btn-primary btn--sm"><span data-i18n="nav.book">Réserver</span> <span class="btn-arrow">→</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">&copy; <span id="footer-year">2026</span> B.LIFTED France · Tous droits réservés</p>
+      <div class="footer__legal">
+        <a href="mentions-legales.html" data-i18n="footer.legal.mentions">Mentions légales</a>
+        <a href="confidentialite.html" data-i18n="footer.legal.privacy">Confidentialité</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Cookie Banner RGPD -->
+<div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Gestion des cookies">
+  <div class="cookie-banner__inner">
+    <p class="cookie-banner__text" data-i18n-html="cookie.text">
+      Ce site utilise des cookies pour améliorer votre expérience.
+      <a href="confidentialite.html" class="cookie-banner__link">En savoir plus</a>
+    </p>
+    <div class="cookie-banner__actions">
+      <button class="cookie-banner__btn cookie-banner__btn--accept" id="cookie-accept" data-i18n="cookie.accept">Accepter</button>
+      <button class="cookie-banner__btn cookie-banner__btn--decline" id="cookie-decline" data-i18n="cookie.decline">Refuser</button>
+    </div>
+  </div>
+</div>
+
+<div class="whatsapp-widget">
+  <div class="whatsapp-popup" id="whatsapp-popup" aria-hidden="true">
+    <button class="whatsapp-popup__close" id="whatsapp-close" aria-label="Fermer">✕</button>
+    <p class="whatsapp-popup__title" data-i18n="whatsapp.title">Confier un déplacement</p>
+    <p class="whatsapp-popup__msg" data-i18n-html="whatsapp.msg">Bonjour,<br>Je suis disponible pour organiser votre transfert, répondre à vos questions et établir un devis personnalisé.</p>
+    <a href="https://wa.me/33636017235?text=Bonjour%20Sarah%2C%20je%20vous%20contacte%20depuis%20le%20plan%20du%20site%20B.LIFTED.%20Je%20souhaite%20confier%20un%20d%C3%A9placement." class="whatsapp-popup__cta" data-i18n="whatsapp.cta" target="_blank" rel="noopener">Contacter sur WhatsApp</a>
+  </div>
+  <button class="whatsapp-float" id="whatsapp-toggle" aria-label="Contacter B.LIFTED par WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </button>
+</div>
+
+<script src="js/nav.js" defer></script>
+<script src="js/scroll-reveal.js" defer></script>
+<script src="js/main.js?v=34" defer></script>
+<script src="js/i18n.js?v=34" defer></script>
+<script src="js/cookies.js" defer></script>
+
+</body>
+</html>
